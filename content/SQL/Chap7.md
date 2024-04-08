@@ -13,46 +13,58 @@ Example: Let’s say you have a table called “Candies” that lists the number
 
 ![](https://cdn-images-1.medium.com/max/1600/1*f3ia0fh0UHQRtBObfB2Khw.png)Candies
 
-#### Aggregate Function Examples:
+## Aggregate Function Examples:
 
-#### COUNT():
+### COUNT():
 
 Count the total number of candies.
-
+```html
 SELECT COUNT(Candies) AS TotalCandies FROM Candies;
+```
 
 This query will count the total number of candies from all friends combined.
 
-#### SUM():
+### SUM():
 
 Find the total number of candies.
 
+```html 
 SELECT SUM(Candies) AS TotalCandies FROM Candies;
+```
 
 This query will add up all the candies from all friends to give you the total number of candies.
 
-#### AVG():
+### AVG():
 
 Calculate the average number of candies per person.
 
+```html 
 SELECT AVG(Candies) AS AverageCandies FROM Candies;
+```
+
 
 This query will calculate the average number of candies by dividing the total number of candies by the number of friends.
 
-#### MAX():
+### MAX():
 
 Find out who has the most candies.
 
+```html 
 SELECT Person, MAX(Candies) AS MaxCandies FROM Candies;
+```
+
 
 This query will tell you which friend has the highest number of candies.
 
-#### MIN():
+### MIN():
 
 Find out who has the fewest candies.
 
+```html 
 SELECT Person, MIN(Candies) AS MinCandies FROM Candies;
+```
 
 This query will tell you which friend has the lowest number of candies.
+
 
 > _So, in simple terms, aggregate functions in SQL are like magical tools that help you perform calculations on groups of data. Just like counting candies at a party, you can use these functions to count, sum, average, find the maximum, or minimum values in a dataset._ 

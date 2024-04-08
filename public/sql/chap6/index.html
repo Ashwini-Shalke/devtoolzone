@@ -9,8 +9,7 @@
 <meta name="keywords" content="">
 <meta name="description" content="Let’s say we have a table named “Games” with the following data:
 GROUP BY: Think of GROUP BY like organizing your games into groups based on their ratings. It&rsquo;s like sorting them into piles of similar ratings.
-SELECT Rating, COUNT(*) AS NumOfGames FROM Games GROUP BY Rating;
-This query will count the number of games for each rating group. For example, it will show how many games have a rating of 4.">
+SELECT Rating, COUNT(\*) AS NumOfGames FROM Games GROUP BY Rating; This query will count the number of games for each rating group. For example, it will show how many games have a rating of 4.">
 <meta name="author" content="">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1623190812203974"
      crossorigin="anonymous"></script>
@@ -143,34 +142,34 @@ This query will count the number of games for each rating group. For example, it
 </p>
 <h3 id="group-by">GROUP BY:<a hidden class="anchor" aria-hidden="true" href="#group-by">#</a></h3>
 <p>Think of <code>GROUP BY</code> like organizing your games into groups based on their ratings. It&rsquo;s like sorting them into piles of similar ratings.</p>
-<p>SELECT Rating, COUNT(*) AS NumOfGames FROM Games GROUP BY Rating;</p>
-<p>This query will count the number of games for each rating group. For example, it will show how many games have a rating of 4.5, how many have a rating of 4.0, and so on.</p>
-<h4 id="having">HAVING:<a hidden class="anchor" aria-hidden="true" href="#having">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>SELECT Rating, COUNT(\*) AS NumOfGames FROM Games GROUP BY Rating;
+</span></span></code></pre></div><p>This query will count the number of games for each rating group. For example, it will show how many games have a rating of 4.5, how many have a rating of 4.0, and so on.</p>
+<h3 id="having">HAVING:<a hidden class="anchor" aria-hidden="true" href="#having">#</a></h3>
 <p>Now, imagine you want to filter out groups with fewer than 2 games. <code>HAVING</code> helps you do this. It&rsquo;s like saying, &ldquo;Show me only the rating groups that have at least 2 games.&rdquo;</p>
-<p>SELECT Rating, COUNT(*) AS NumOfGames FROM Games GROUP BY Rating HAVING COUNT(*) &gt;= 2;</p>
-<p>This query will only show the rating groups that have at least 2 games. So, if there’s a rating with only one game, it won’t be shown.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>SELECT Rating, COUNT(\*) AS NumOfGames FROM Games GROUP BY Rating HAVING COUNT(\*) &gt;= 2;
+</span></span></code></pre></div><p>This query will only show the rating groups that have at least 2 games. So, if there’s a rating with only one game, it won’t be shown.</p>
 <p><em>These clauses are commonly used in combination with aggregate functions to perform operations on groups of data within a database table.</em></p>
-<h4 id="in">IN:<a hidden class="anchor" aria-hidden="true" href="#in">#</a></h4>
+<h3 id="in">IN:<a hidden class="anchor" aria-hidden="true" href="#in">#</a></h3>
 <p><code>IN</code> is like picking out specific games from your collection. It&rsquo;s like saying, &ldquo;Show me games with ratings of 4.5 or 4.7.&rdquo;</p>
-<p>SELECT Game, Rating FROM Games WHERE Rating IN (4.5, 4.7);</p>
-<p>This query will show you games that have a rating of either 4.5 or 4.7.</p>
-<h4 id="not-in">NOT IN:<a hidden class="anchor" aria-hidden="true" href="#not-in">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>SELECT Game, Rating FROM Games WHERE Rating IN (4.5, 4.7);
+</span></span></code></pre></div><p>This query will show you games that have a rating of either 4.5 or 4.7.</p>
+<h3 id="not-in">NOT IN:<a hidden class="anchor" aria-hidden="true" href="#not-in">#</a></h3>
 <p>On the other hand, <code>NOT IN</code> is like saying, &ldquo;Show me games that don&rsquo;t have a rating of 4.5 or 4.7.&rdquo;</p>
-<p>SELECT Game, Rating FROM Games WHERE Rating NOT IN (4.5, 4.7);</p>
-<p>This query will show you games that have a rating other than 4.5 or 4.7.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>SELECT Game, Rating FROM Games WHERE Rating NOT IN (4.5, 4.7);
+</span></span></code></pre></div><p>This query will show you games that have a rating other than 4.5 or 4.7.</p>
 <p><code>_IN_</code> <em>and</em> <code>_NOT IN_</code> <em>are operators used in SQL to filter data based on a specified set of values. They are used in the</em> <code>_WHERE_</code><em>clause of SQL queries to match values in a column against a list of predefined values.</em></p>
-<blockquote>
-<p>So, in simple terms,</p>
-</blockquote>
-<blockquote>
+<p><strong>So, in simple terms,</strong></p>
+<ul>
+<li>
 <p><code>GROUP BY</code> helps organize your data into groups.</p>
-</blockquote>
-<blockquote>
+</li>
+<li>
 <p><code>HAVING</code> filters those groups based on condition.</p>
-</blockquote>
-<blockquote>
+</li>
+<li>
 <p><code>IN</code> helps you select specific values, and <code>NOT IN</code> helps you exclude specific values from your selection.</p>
-</blockquote>
+</li>
+</ul>
 <p>They&rsquo;re like different tools you use to organize, filter, and select games from your collection based on their ratings.</p>
 
 
@@ -185,10 +184,10 @@ This query will count the number of games for each rating group. For example, it
     <br>
     <span>For Beginners — TCL Commands in SQL with Example</span>
   </a>
-  <a class="next" href="http://localhost:1313/sql/chap5/">
+  <a class="next" href="http://localhost:1313/sql/chap2/">
     <span class="title">Next »</span>
     <br>
-    <span>Window Functions in SQL</span>
+    <span>SQL language — DDL, DML, DCL, and TCL</span>
   </a>
 </nav>
 

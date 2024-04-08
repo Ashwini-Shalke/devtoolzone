@@ -14,11 +14,14 @@ TCL commands are COMMIT, ROLLBACK, and SAVEPOINT.
 *   The COMMIT command is used to permanently save the changes made during the current transaction.
 *   Once a COMMIT command is executed, all changes made within the transaction become permanent and are visible to other users.
 
-Example:Suppose we have a transaction that updates the age of a student in the database:
+**Example:**
+Suppose we have a transaction that updates the age of a student in the database:
 
+```html
 BEGIN TRANSACTION; 
 UPDATE Students SET Age = 16 WHERE Name = 'Alice'; 
 COMMIT;
+```
 
 **In this example:**
 
@@ -32,12 +35,16 @@ COMMIT;
 *   The ROLLBACK command is used to discard changes made during the current transaction and restore the database to its state before the transaction began.
 *   It is typically used to undo changes if an error occurs during the transaction or to cancel incomplete or incorrect transactions.
 
-Example:Suppose we have started a transaction to update the age of a student but encounter an error:
+**Example:**
 
+Suppose we have started a transaction to update the age of a student but encounter an error:
+
+```html
 BEGIN TRANSACTION; 
 UPDATE Students SET Age = 16 WHERE Name = 'Alice'; 
 -- Error occurs, transaction needs to be rolled back 
 ROLLBACK;
+```
 
 **In this example:**
 
@@ -50,8 +57,10 @@ ROLLBACK;
 *   SAVEPOINT allows you to set a point within the current transaction from which you can later roll back.
 *   It is useful for dividing a transaction into smaller parts and selectively rolling back to specific points in the transaction.
 
-Example: Suppose we want to update the age of multiple students but want to be able to roll back changes for each student individually:
+**Example:**
+Suppose we want to update the age of multiple students but want to be able to roll back changes for each student individually:
 
+```html
 BEGIN TRANSACTION; 
 UPDATE Students SET Age = 16 WHERE Name = 'Alice';
 SAVEPOINT sp1; 
@@ -59,6 +68,7 @@ UPDATE Students SET Age = 17 WHERE Name = 'Bob';
 -- Error occurs, need to roll back to the savepoint 
 ROLLBACK TO SAVEPOINT sp1; 
 COMMIT;
+```
 
 **In this example:**
 

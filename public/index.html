@@ -175,8 +175,8 @@ Now, using SQL queries, you can ask questions to find out specific information f
   </header>
   <div class="entry-content">
     <p>TCL commands are COMMIT, ROLLBACK, and SAVEPOINT.
-COMMIT: The COMMIT command is used to permanently save the changes made during the current transaction. Once a COMMIT command is executed, all changes made within the transaction become permanent and are visible to other users. Example:Suppose we have a transaction that updates the age of a student in the database:
-BEGIN TRANSACTION; UPDATE Students SET Age = 16 WHERE Name = ‘Alice’; COMMIT;...</p>
+COMMIT: The COMMIT command is used to permanently save the changes made during the current transaction. Once a COMMIT command is executed, all changes made within the transaction become permanent and are visible to other users. Example: Suppose we have a transaction that updates the age of a student in the database:
+BEGIN TRANSACTION; UPDATE Students SET Age = 16 WHERE Name = &#39;Alice&#39;; COMMIT; In this example:...</p>
   </div>
   <footer class="entry-footer"><span title='2024-04-08 12:28:23 +0530 IST'>April 8, 2024</span>&nbsp;·&nbsp;3 min</footer>
   <a class="entry-link" aria-label="post link to For Beginners — TCL Commands in SQL with Example" href="http://localhost:1313/sql/chap4/"></a>
@@ -190,24 +190,10 @@ BEGIN TRANSACTION; UPDATE Students SET Age = 16 WHERE Name = ‘Alice’; COMMIT
   <div class="entry-content">
     <p>Let’s say we have a table named “Games” with the following data:
 GROUP BY: Think of GROUP BY like organizing your games into groups based on their ratings. It’s like sorting them into piles of similar ratings.
-SELECT Rating, COUNT(*) AS NumOfGames FROM Games GROUP BY Rating;
-This query will count the number of games for each rating group. For example, it will show how many games have a rating of 4....</p>
+SELECT Rating, COUNT(\*) AS NumOfGames FROM Games GROUP BY Rating; This query will count the number of games for each rating group. For example, it will show how many games have a rating of 4....</p>
   </div>
   <footer class="entry-footer"><span title='2024-04-08 12:28:23 +0530 IST'>April 8, 2024</span>&nbsp;·&nbsp;2 min</footer>
   <a class="entry-link" aria-label="post link to SQL Clause: Group By, Having, IN and NOT IN" href="http://localhost:1313/sql/chap6/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Window Functions in SQL
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Window functions are a type of function in SQL that allow you to perform calculations across a set of rows related to the current row, called a “window,” without collapsing the result set. They are used to perform aggregate calculations (like sum, average, count) and ranking operations (like row number, rank) within a specific partition or window of data.
-Syntax Types of Window Functions: There are a few common window functions you might encounter:...</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-04-08 12:28:23 +0530 IST'>April 8, 2024</span>&nbsp;·&nbsp;2 min</footer>
-  <a class="entry-link" aria-label="post link to Window Functions in SQL" href="http://localhost:1313/sql/chap5/"></a>
 </article>
 
 <article class="post-entry"> 

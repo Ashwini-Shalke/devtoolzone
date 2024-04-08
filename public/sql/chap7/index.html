@@ -141,27 +141,27 @@ In SQL, aggregate functions are like magical candy counters that help you answer
 <p>Example: Let’s say you have a table called “Candies” that lists the number of candies each person has:</p>
 <p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*f3ia0fh0UHQRtBObfB2Khw.png" alt=""  />
 Candies</p>
-<h4 id="aggregate-function-examples">Aggregate Function Examples:<a hidden class="anchor" aria-hidden="true" href="#aggregate-function-examples">#</a></h4>
-<h4 id="count">COUNT():<a hidden class="anchor" aria-hidden="true" href="#count">#</a></h4>
+<h2 id="aggregate-function-examples">Aggregate Function Examples:<a hidden class="anchor" aria-hidden="true" href="#aggregate-function-examples">#</a></h2>
+<h3 id="count">COUNT():<a hidden class="anchor" aria-hidden="true" href="#count">#</a></h3>
 <p>Count the total number of candies.</p>
-<p>SELECT COUNT(Candies) AS TotalCandies FROM Candies;</p>
-<p>This query will count the total number of candies from all friends combined.</p>
-<h4 id="sum">SUM():<a hidden class="anchor" aria-hidden="true" href="#sum">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>SELECT COUNT(Candies) AS TotalCandies FROM Candies;
+</span></span></code></pre></div><p>This query will count the total number of candies from all friends combined.</p>
+<h3 id="sum">SUM():<a hidden class="anchor" aria-hidden="true" href="#sum">#</a></h3>
 <p>Find the total number of candies.</p>
-<p>SELECT SUM(Candies) AS TotalCandies FROM Candies;</p>
-<p>This query will add up all the candies from all friends to give you the total number of candies.</p>
-<h4 id="avg">AVG():<a hidden class="anchor" aria-hidden="true" href="#avg">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>SELECT SUM(Candies) AS TotalCandies FROM Candies;
+</span></span></code></pre></div><p>This query will add up all the candies from all friends to give you the total number of candies.</p>
+<h3 id="avg">AVG():<a hidden class="anchor" aria-hidden="true" href="#avg">#</a></h3>
 <p>Calculate the average number of candies per person.</p>
-<p>SELECT AVG(Candies) AS AverageCandies FROM Candies;</p>
-<p>This query will calculate the average number of candies by dividing the total number of candies by the number of friends.</p>
-<h4 id="max">MAX():<a hidden class="anchor" aria-hidden="true" href="#max">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>SELECT AVG(Candies) AS AverageCandies FROM Candies;
+</span></span></code></pre></div><p>This query will calculate the average number of candies by dividing the total number of candies by the number of friends.</p>
+<h3 id="max">MAX():<a hidden class="anchor" aria-hidden="true" href="#max">#</a></h3>
 <p>Find out who has the most candies.</p>
-<p>SELECT Person, MAX(Candies) AS MaxCandies FROM Candies;</p>
-<p>This query will tell you which friend has the highest number of candies.</p>
-<h4 id="min">MIN():<a hidden class="anchor" aria-hidden="true" href="#min">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>SELECT Person, MAX(Candies) AS MaxCandies FROM Candies;
+</span></span></code></pre></div><p>This query will tell you which friend has the highest number of candies.</p>
+<h3 id="min">MIN():<a hidden class="anchor" aria-hidden="true" href="#min">#</a></h3>
 <p>Find out who has the fewest candies.</p>
-<p>SELECT Person, MIN(Candies) AS MinCandies FROM Candies;</p>
-<p>This query will tell you which friend has the lowest number of candies.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>SELECT Person, MIN(Candies) AS MinCandies FROM Candies;
+</span></span></code></pre></div><p>This query will tell you which friend has the lowest number of candies.</p>
 <blockquote>
 <p><em>So, in simple terms, aggregate functions in SQL are like magical tools that help you perform calculations on groups of data. Just like counting candies at a party, you can use these functions to count, sum, average, find the maximum, or minimum values in a dataset.</em></p>
 </blockquote>

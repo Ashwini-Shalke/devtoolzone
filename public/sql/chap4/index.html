@@ -8,8 +8,8 @@
 <title>For Beginners — TCL Commands in SQL with Example | Re-Learn Tech</title>
 <meta name="keywords" content="">
 <meta name="description" content="TCL commands are COMMIT, ROLLBACK, and SAVEPOINT.
-COMMIT: The COMMIT command is used to permanently save the changes made during the current transaction. Once a COMMIT command is executed, all changes made within the transaction become permanent and are visible to other users. Example:Suppose we have a transaction that updates the age of a student in the database:
-BEGIN TRANSACTION; UPDATE Students SET Age = 16 WHERE Name = &lsquo;Alice&rsquo;; COMMIT;">
+COMMIT: The COMMIT command is used to permanently save the changes made during the current transaction. Once a COMMIT command is executed, all changes made within the transaction become permanent and are visible to other users. Example: Suppose we have a transaction that updates the age of a student in the database:
+BEGIN TRANSACTION; UPDATE Students SET Age = 16 WHERE Name = &#39;Alice&#39;; COMMIT; In this example:">
 <meta name="author" content="">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1623190812203974"
      crossorigin="anonymous"></script>
@@ -145,11 +145,12 @@ BEGIN TRANSACTION; UPDATE Students SET Age = 16 WHERE Name = &lsquo;Alice&rsquo;
 <li>The COMMIT command is used to permanently save the changes made during the current transaction.</li>
 <li>Once a COMMIT command is executed, all changes made within the transaction become permanent and are visible to other users.</li>
 </ul>
-<p>Example:Suppose we have a transaction that updates the age of a student in the database:</p>
-<p>BEGIN TRANSACTION;
-UPDATE Students SET Age = 16 WHERE Name = &lsquo;Alice&rsquo;;
-COMMIT;</p>
-<p><strong>In this example:</strong></p>
+<p><strong>Example:</strong>
+Suppose we have a transaction that updates the age of a student in the database:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>BEGIN TRANSACTION; 
+</span></span><span style="display:flex;"><span>UPDATE Students SET Age = 16 WHERE Name = &#39;Alice&#39;; 
+</span></span><span style="display:flex;"><span>COMMIT;
+</span></span></code></pre></div><p><strong>In this example:</strong></p>
 <ul>
 <li>The BEGIN TRANSACTION command marks the start of a transaction.</li>
 <li>The UPDATE statement modifies the age of the student named ‘Alice’.</li>
@@ -161,12 +162,13 @@ COMMIT;</p>
 <li>The ROLLBACK command is used to discard changes made during the current transaction and restore the database to its state before the transaction began.</li>
 <li>It is typically used to undo changes if an error occurs during the transaction or to cancel incomplete or incorrect transactions.</li>
 </ul>
-<p>Example:Suppose we have started a transaction to update the age of a student but encounter an error:</p>
-<p>BEGIN TRANSACTION;
-UPDATE Students SET Age = 16 WHERE Name = &lsquo;Alice&rsquo;;
-&ndash; Error occurs, transaction needs to be rolled back
-ROLLBACK;</p>
-<p><strong>In this example:</strong></p>
+<p><strong>Example:</strong></p>
+<p>Suppose we have started a transaction to update the age of a student but encounter an error:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>BEGIN TRANSACTION; 
+</span></span><span style="display:flex;"><span>UPDATE Students SET Age = 16 WHERE Name = &#39;Alice&#39;; 
+</span></span><span style="display:flex;"><span>-- Error occurs, transaction needs to be rolled back 
+</span></span><span style="display:flex;"><span>ROLLBACK;
+</span></span></code></pre></div><p><strong>In this example:</strong></p>
 <ul>
 <li>The BEGIN TRANSACTION command marks the start of a transaction.</li>
 <li>The UPDATE statement modifies the age of the student named ‘Alice’.</li>
@@ -177,15 +179,16 @@ ROLLBACK;</p>
 <li>SAVEPOINT allows you to set a point within the current transaction from which you can later roll back.</li>
 <li>It is useful for dividing a transaction into smaller parts and selectively rolling back to specific points in the transaction.</li>
 </ul>
-<p>Example: Suppose we want to update the age of multiple students but want to be able to roll back changes for each student individually:</p>
-<p>BEGIN TRANSACTION;
-UPDATE Students SET Age = 16 WHERE Name = &lsquo;Alice&rsquo;;
-SAVEPOINT sp1;
-UPDATE Students SET Age = 17 WHERE Name = &lsquo;Bob&rsquo;;
-&ndash; Error occurs, need to roll back to the savepoint
-ROLLBACK TO SAVEPOINT sp1;
-COMMIT;</p>
-<p><strong>In this example:</strong></p>
+<p><strong>Example:</strong>
+Suppose we want to update the age of multiple students but want to be able to roll back changes for each student individually:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>BEGIN TRANSACTION; 
+</span></span><span style="display:flex;"><span>UPDATE Students SET Age = 16 WHERE Name = &#39;Alice&#39;;
+</span></span><span style="display:flex;"><span>SAVEPOINT sp1; 
+</span></span><span style="display:flex;"><span>UPDATE Students SET Age = 17 WHERE Name = &#39;Bob&#39;; 
+</span></span><span style="display:flex;"><span>-- Error occurs, need to roll back to the savepoint 
+</span></span><span style="display:flex;"><span>ROLLBACK TO SAVEPOINT sp1; 
+</span></span><span style="display:flex;"><span>COMMIT;
+</span></span></code></pre></div><p><strong>In this example:</strong></p>
 <ul>
 <li>The BEGIN TRANSACTION command marks the start of a transaction.</li>
 <li>The UPDATE statement modifies the age of the student named ‘Alice’.</li>
