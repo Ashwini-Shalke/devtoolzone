@@ -6,8 +6,27 @@
     <description>Recent content on Re-Learn Tech</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Apr 2024 12:28:23 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 08 Apr 2024 12:28:23 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Basic SQL Queries — SELECT, WHERE,UPDATE and DELETE</title>
+      <link>http://localhost:1313/sql/chap3/</link>
+      <pubDate>Mon, 08 Apr 2024 12:28:23 +0530</pubDate>
+      <guid>http://localhost:1313/sql/chap3/</guid>
+      <description>hink of SQL queries as requests you make to find specific snacks in your snack box. Just like asking your friend to find your favorite candy in the snack box, SQL queries help you find specific information from a database.
+Example:
+Let’s say you have a table that lists all your favorite snacks and their quantities in your snack box, like this:
+Now, using SQL queries, you can ask questions to find out specific information from this table.</description>
+    </item>
+    <item>
+      <title>For Beginners — TCL Commands in SQL with Example</title>
+      <link>http://localhost:1313/sql/chap4/</link>
+      <pubDate>Mon, 08 Apr 2024 12:28:23 +0530</pubDate>
+      <guid>http://localhost:1313/sql/chap4/</guid>
+      <description>For Beginners — TCL Commands in SQL with Example TCL commands are COMMIT, ROLLBACK, and SAVEPOINT.
+COMMIT: The COMMIT command is used to permanently save the changes made during the current transaction. Once a COMMIT command is executed, all changes made within the transaction become permanent and are visible to other users. Example:Suppose we have a transaction that updates the age of a student in the database:
+BEGIN TRANSACTION; UPDATE Students SET Age = 16 WHERE Name = &amp;lsquo;Alice&amp;rsquo;; COMMIT;</description>
+    </item>
     <item>
       <title>SQL language — DDL, DML, DCL, and TCL</title>
       <link>http://localhost:1313/sql/chap2/</link>
