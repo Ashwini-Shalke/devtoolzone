@@ -1,4 +1,4 @@
-baseURL: "https://re-learntech.netlify.app"
+baseURL: "learnerloft.com"
 languageCode: en-us
 title: Re-Learn Tech
 theme: PaperMod
@@ -16,6 +16,10 @@ params:
   #     url: "https://twitter.com/"
   #   - name: github
   #     url: "https://github.com/"
+
+  ShowAllPagesInArchive: true
+  ShowPageNums: true
+  ShowCodeCopyButtons: true
 
   cover:
     linkFullImages: true
