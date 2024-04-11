@@ -5,8 +5,17 @@
     <loc>http://localhost:1313/sql/chap1/</loc>
     <lastmod>2024-04-05T12:28:23+05:30</lastmod>
   </url><url>
+    <loc>http://localhost:1313/sql/ch5/</loc>
+    <lastmod>2024-04-11T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/sql/chap7/</loc>
-    <lastmod>2024-04-08T12:28:23+05:30</lastmod>
+    <lastmod>2024-04-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-04-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/sql/</loc>
+    <lastmod>2024-04-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/sql/chap3/</loc>
     <lastmod>2024-04-08T12:28:23+05:30</lastmod>
@@ -14,13 +23,7 @@
     <loc>http://localhost:1313/sql/chap4/</loc>
     <lastmod>2024-04-08T12:28:23+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-04-08T12:28:23+05:30</lastmod>
-  </url><url>
     <loc>http://localhost:1313/sql/chap6/</loc>
-    <lastmod>2024-04-08T12:28:23+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/sql/</loc>
     <lastmod>2024-04-08T12:28:23+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/sql/chap2/</loc>

@@ -6,7 +6,7 @@
     <description>Recent content in SQLs on Leaner Loft</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Apr 2024 12:28:23 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 11 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/sql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What is SQL, Data and Database with examples</title>
@@ -15,6 +15,13 @@
       <guid>http://localhost:1313/sql/chap1/</guid>
       <description>Imagine you have a big collection of toys scattered all over your room. You want to find your favorite toy, but searching through the mess by yourself might take a lot of time and effort. Here’s where your friend SQL comes in!
 SQL is like having a magic wand that helps you organize and find your toys quickly and easily. It stands for Structured Query Language, but you can just think of it as a special language that lets you talk to a smart toy organizer.</description>
+    </item>
+    <item>
+      <title>test</title>
+      <link>http://localhost:1313/sql/ch5/</link>
+      <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/sql/ch5/</guid>
+      <description></description>
     </item>
     <item>
       <title>Aggregate Functions in SQL</title>
