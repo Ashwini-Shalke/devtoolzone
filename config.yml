@@ -6,7 +6,7 @@ theme: PaperMod
 params:
   homeInfoParams:
     Title: "Hello, Pals !!"
-    Content: Welcome to Re-Learn. Whether you're a code ninja or a curious newbie, we've got the goodies to make your tech dreams come true.
+    Content: Welcome to Learner Loft. Whether you're a code ninja or a curious newbie, we've got the goodies to make your tech dreams come true.
             Get ready for a rollercoaster ride through articles, tutorials, and tools that'll make you say, "JSON, who's your daddy?" and "Word count? 
             More like word WOW!" So strap in, grab your keyboard, and let's rock this tech party!
   # socialIcons:
