@@ -1,7 +1,9 @@
 +++
 title = 'SQL language — DDL, DML, DCL, and TCL'
-date = 2024-04-05T12:28:23+05:30
+date = 2024-04-05
 draft = false
+author = "Ashwini Shalke"
+weight = 2
 +++
 
 ## DDL (Data Definition Language):

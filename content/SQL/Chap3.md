@@ -1,7 +1,9 @@
 +++
 title = 'Basic SQL Queries — SELECT, WHERE,UPDATE and DELETE'
-date = 2024-04-08T12:28:23+05:30
+date = 2024-04-08
 draft = false
+author = "Ashwini Shalke"
+weight = 3
 +++
 
 Think of SQL queries as requests you make to find specific snacks in your snack box. Just like asking your friend to find your favorite candy in the snack box, SQL queries help you find specific information from a database.

@@ -1,7 +1,9 @@
 +++
 title = 'SQL Clause: Group By, Having, IN and NOT IN'
-date = 2024-04-08T12:28:23+05:30
+date = 2024-04-08
 draft = false
+author = "Ashwini Shalke"
+weight = 6
 +++
 
 

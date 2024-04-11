@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>SQLs on Leaner Loft</title>
+    <title>SQLs on Learner Loft</title>
     <link>http://localhost:1313/sql/</link>
-    <description>Recent content in SQLs on Leaner Loft</description>
+    <description>Recent content in SQLs on Learner Loft</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 11 Apr 2024 00:00:00 +0000</lastBuildDate>
@@ -11,17 +11,57 @@
     <item>
       <title>What is SQL, Data and Database with examples</title>
       <link>http://localhost:1313/sql/chap1/</link>
-      <pubDate>Fri, 05 Apr 2024 12:28:23 +0530</pubDate>
+      <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/sql/chap1/</guid>
       <description>Imagine you have a big collection of toys scattered all over your room. You want to find your favorite toy, but searching through the mess by yourself might take a lot of time and effort. Here’s where your friend SQL comes in!
 SQL is like having a magic wand that helps you organize and find your toys quickly and easily. It stands for Structured Query Language, but you can just think of it as a special language that lets you talk to a smart toy organizer.</description>
     </item>
     <item>
+      <title>SQL language — DDL, DML, DCL, and TCL</title>
+      <link>http://localhost:1313/sql/chap2/</link>
+      <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/sql/chap2/</guid>
+      <description>DDL (Data Definition Language): DDL is used to define and manage the structure of database objects. Here are some common DDL commands:
+CREATE: Used to create new database objects such as tables, views, indexes, etc.
+ALTER: Used to modify the structure of existing database objects, such as adding, modifying, or dropping columns.
+Here are few examples :-
+1.Adding a new column:
+This command adds a new column named “Email” to the “Students” table with a data type of VARCHAR(100).</description>
+    </item>
+    <item>
+      <title>Basic SQL Queries — SELECT, WHERE,UPDATE and DELETE</title>
+      <link>http://localhost:1313/sql/chap3/</link>
+      <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/sql/chap3/</guid>
+      <description>Think of SQL queries as requests you make to find specific snacks in your snack box. Just like asking your friend to find your favorite candy in the snack box, SQL queries help you find specific information from a database.
+Example:
+Let’s say you have a table that lists all your favorite snacks and their quantities in your snack box, like this:
+Now, using SQL queries, you can ask questions to find out specific information from this table.</description>
+    </item>
+    <item>
+      <title>For Beginners — TCL Commands in SQL with Example</title>
+      <link>http://localhost:1313/sql/chap4/</link>
+      <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/sql/chap4/</guid>
+      <description>TCL commands are COMMIT, ROLLBACK, and SAVEPOINT.
+COMMIT: The COMMIT command is used to permanently save the changes made during the current transaction. Once a COMMIT command is executed, all changes made within the transaction become permanent and are visible to other users. Example: Suppose we have a transaction that updates the age of a student in the database:
+BEGIN TRANSACTION; UPDATE Students SET Age = 16 WHERE Name = &amp;#39;Alice&amp;#39;; COMMIT; In this example:</description>
+    </item>
+    <item>
       <title>test</title>
-      <link>http://localhost:1313/sql/chapp5/</link>
+      <link>http://localhost:1313/sql/chap5/</link>
       <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/sql/chapp5/</guid>
+      <guid>http://localhost:1313/sql/chap5/</guid>
       <description></description>
+    </item>
+    <item>
+      <title>SQL Clause: Group By, Having, IN and NOT IN</title>
+      <link>http://localhost:1313/sql/chap6/</link>
+      <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/sql/chap6/</guid>
+      <description>Let’s say we have a table named “Games” with the following data:
+GROUP BY: Think of GROUP BY like organizing your games into groups based on their ratings. It&amp;rsquo;s like sorting them into piles of similar ratings.
+SELECT Rating, COUNT(\*) AS NumOfGames FROM Games GROUP BY Rating; This query will count the number of games for each rating group. For example, it will show how many games have a rating of 4.</description>
     </item>
     <item>
       <title>Aggregate Functions in SQL</title>
@@ -37,46 +77,6 @@ In SQL, aggregate functions are like magical candy counters that help you answer
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/sql/chap8/</guid>
       <description>DDL (Data Definition Language): DDL is used to define and manage the structure of database objects. Here are some common DDL commands:</description>
-    </item>
-    <item>
-      <title>Basic SQL Queries — SELECT, WHERE,UPDATE and DELETE</title>
-      <link>http://localhost:1313/sql/chap3/</link>
-      <pubDate>Mon, 08 Apr 2024 12:28:23 +0530</pubDate>
-      <guid>http://localhost:1313/sql/chap3/</guid>
-      <description>Think of SQL queries as requests you make to find specific snacks in your snack box. Just like asking your friend to find your favorite candy in the snack box, SQL queries help you find specific information from a database.
-Example:
-Let’s say you have a table that lists all your favorite snacks and their quantities in your snack box, like this:
-Now, using SQL queries, you can ask questions to find out specific information from this table.</description>
-    </item>
-    <item>
-      <title>For Beginners — TCL Commands in SQL with Example</title>
-      <link>http://localhost:1313/sql/chap4/</link>
-      <pubDate>Mon, 08 Apr 2024 12:28:23 +0530</pubDate>
-      <guid>http://localhost:1313/sql/chap4/</guid>
-      <description>TCL commands are COMMIT, ROLLBACK, and SAVEPOINT.
-COMMIT: The COMMIT command is used to permanently save the changes made during the current transaction. Once a COMMIT command is executed, all changes made within the transaction become permanent and are visible to other users. Example: Suppose we have a transaction that updates the age of a student in the database:
-BEGIN TRANSACTION; UPDATE Students SET Age = 16 WHERE Name = &amp;#39;Alice&amp;#39;; COMMIT; In this example:</description>
-    </item>
-    <item>
-      <title>SQL Clause: Group By, Having, IN and NOT IN</title>
-      <link>http://localhost:1313/sql/chap6/</link>
-      <pubDate>Mon, 08 Apr 2024 12:28:23 +0530</pubDate>
-      <guid>http://localhost:1313/sql/chap6/</guid>
-      <description>Let’s say we have a table named “Games” with the following data:
-GROUP BY: Think of GROUP BY like organizing your games into groups based on their ratings. It&amp;rsquo;s like sorting them into piles of similar ratings.
-SELECT Rating, COUNT(\*) AS NumOfGames FROM Games GROUP BY Rating; This query will count the number of games for each rating group. For example, it will show how many games have a rating of 4.</description>
-    </item>
-    <item>
-      <title>SQL language — DDL, DML, DCL, and TCL</title>
-      <link>http://localhost:1313/sql/chap2/</link>
-      <pubDate>Fri, 05 Apr 2024 12:28:23 +0530</pubDate>
-      <guid>http://localhost:1313/sql/chap2/</guid>
-      <description>DDL (Data Definition Language): DDL is used to define and manage the structure of database objects. Here are some common DDL commands:
-CREATE: Used to create new database objects such as tables, views, indexes, etc.
-ALTER: Used to modify the structure of existing database objects, such as adding, modifying, or dropping columns.
-Here are few examples :-
-1.Adding a new column:
-This command adds a new column named “Email” to the “Students” table with a data type of VARCHAR(100).</description>
     </item>
   </channel>
 </rss>

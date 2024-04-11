@@ -1,7 +1,9 @@
 +++
 title = 'For Beginners — TCL Commands in SQL with Example'
-date = 2024-04-08T12:28:23+05:30
+date = 2024-04-08
 draft = false
+author = "Ashwini Shalke"
+weight = 4
 +++
 
 
