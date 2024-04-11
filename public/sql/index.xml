@@ -32,6 +32,13 @@ SQL is like having a magic wand that helps you organize and find your toys quick
 In SQL, aggregate functions are like magical candy counters that help you answer these questions by performing calculations on groups of data.</description>
     </item>
     <item>
+      <title>Aggregate Functions in SQL</title>
+      <link>http://localhost:1313/sql/chap8/</link>
+      <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/sql/chap8/</guid>
+      <description>DDL (Data Definition Language): DDL is used to define and manage the structure of database objects. Here are some common DDL commands:</description>
+    </item>
+    <item>
       <title>Basic SQL Queries — SELECT, WHERE,UPDATE and DELETE</title>
       <link>http://localhost:1313/sql/chap3/</link>
       <pubDate>Mon, 08 Apr 2024 12:28:23 +0530</pubDate>
