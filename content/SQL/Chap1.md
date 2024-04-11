@@ -2,6 +2,8 @@
 title = 'What is SQL, Data and Database with examples'
 date = 2024-04-05T12:28:23+05:30
 draft = false
+author = "Ashwini Shalke"
+weight = 1
 +++
 
 
