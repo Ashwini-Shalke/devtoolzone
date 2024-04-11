@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:50716/sql/chap1/</loc>
+    <loc>http://localhost:1313/sql/chap1/</loc>
     <lastmod>2024-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50716/sql/chap2/</loc>
+    <loc>http://localhost:1313/sql/chap2/</loc>
     <lastmod>2024-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50716/sql/chap3/</loc>
+    <loc>http://localhost:1313/sql/chap3/</loc>
     <lastmod>2024-04-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50716/sql/chap4/</loc>
+    <loc>http://localhost:1313/sql/chap4/</loc>
     <lastmod>2024-04-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50716/sql/chap5/</loc>
+    <loc>http://localhost:1313/sql/chapp5/</loc>
     <lastmod>2024-04-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50716/sql/chap6/</loc>
+    <loc>http://localhost:1313/sql/chap6/</loc>
     <lastmod>2024-04-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50716/sql/chap7/</loc>
+    <loc>http://localhost:1313/sql/chap7/</loc>
     <lastmod>2024-04-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50716/sql/chap8/</loc>
+    <loc>http://localhost:1313/sql/chap8/</loc>
     <lastmod>2024-04-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50716/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-04-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50716/sql/</loc>
+    <loc>http://localhost:1313/sql/</loc>
     <lastmod>2024-04-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:50716/archives/</loc>
+    <loc>http://localhost:1313/archives/</loc>
   </url><url>
-    <loc>http://localhost:50716/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>http://localhost:50716/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>
