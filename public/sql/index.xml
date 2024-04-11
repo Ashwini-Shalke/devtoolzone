@@ -49,9 +49,9 @@ BEGIN TRANSACTION; UPDATE Students SET Age = 16 WHERE Name = &amp;#39;Alice&amp;
     </item>
     <item>
       <title>test</title>
-      <link>http://localhost:1313/sql/chap5/</link>
+      <link>http://localhost:1313/sql/chapp5/</link>
       <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/sql/chap5/</guid>
+      <guid>http://localhost:1313/sql/chapp5/</guid>
       <description></description>
     </item>
     <item>
