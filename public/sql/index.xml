@@ -48,11 +48,12 @@ COMMIT: The COMMIT command is used to permanently save the changes made during t
 BEGIN TRANSACTION; UPDATE Students SET Age = 16 WHERE Name = &amp;#39;Alice&amp;#39;; COMMIT; In this example:</description>
     </item>
     <item>
-      <title>test</title>
+      <title>Window Functions in SQL</title>
       <link>http://localhost:1313/sql/chapp5/</link>
-      <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 10 Apr 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/sql/chapp5/</guid>
-      <description></description>
+      <description>Window functions are a type of function in SQL that allow you to perform calculations across a set of rows related to the current row, called a “window,” without collapsing the result set. They are used to perform aggregate calculations (like sum, average, count) and ranking operations (like row number, rank) within a specific partition or window of data.
+Syntax Types of Window Functions: There are a few common window functions you might encounter:</description>
     </item>
     <item>
       <title>SQL Clause: Group By, Having, IN and NOT IN</title>
@@ -72,11 +73,11 @@ SELECT Rating, COUNT(\*) AS NumOfGames FROM Games GROUP BY Rating; This query wi
 In SQL, aggregate functions are like magical candy counters that help you answer these questions by performing calculations on groups of data.</description>
     </item>
     <item>
-      <title>Aggregate Functions in SQL</title>
+      <title>User-Defined Function (UDF) in SQL</title>
       <link>http://localhost:1313/sql/chap8/</link>
-      <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/sql/chap8/</guid>
-      <description>DDL (Data Definition Language): DDL is used to define and manage the structure of database objects. Here are some common DDL commands:</description>
+      <description>Let’s say, you have a special calculator that can perform a specific calculation, like doubling a number or calculating the average of a set of numbers. You can use this calculator whenever you need to perform that calculation, without having to write out the steps each time. In SQL, a user-defined function is like that special calculator — it’s a custom function that you can create to perform a specific task or calculation.</description>
     </item>
   </channel>
 </rss>

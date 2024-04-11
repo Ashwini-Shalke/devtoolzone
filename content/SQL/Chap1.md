@@ -29,8 +29,11 @@ For instance, if you have a list of toys like this:
   
 
 **Using SQL, you can ask:**
+```html
 
 SELECT \* FROM Toys WHERE Type = 'Action Figure';
+
+```
 
   
 

@@ -20,9 +20,11 @@ TCL commands are COMMIT, ROLLBACK, and SAVEPOINT.
 Suppose we have a transaction that updates the age of a student in the database:
 
 ```html
+
 BEGIN TRANSACTION; 
 UPDATE Students SET Age = 16 WHERE Name = 'Alice'; 
 COMMIT;
+
 ```
 
 **In this example:**
@@ -42,10 +44,12 @@ COMMIT;
 Suppose we have started a transaction to update the age of a student but encounter an error:
 
 ```html
+
 BEGIN TRANSACTION; 
 UPDATE Students SET Age = 16 WHERE Name = 'Alice'; 
 -- Error occurs, transaction needs to be rolled back 
 ROLLBACK;
+
 ```
 
 **In this example:**
@@ -63,6 +67,7 @@ ROLLBACK;
 Suppose we want to update the age of multiple students but want to be able to roll back changes for each student individually:
 
 ```html
+
 BEGIN TRANSACTION; 
 UPDATE Students SET Age = 16 WHERE Name = 'Alice';
 SAVEPOINT sp1; 
@@ -70,6 +75,7 @@ UPDATE Students SET Age = 17 WHERE Name = 'Bob';
 -- Error occurs, need to roll back to the savepoint 
 ROLLBACK TO SAVEPOINT sp1; 
 COMMIT;
+
 ```
 
 **In this example:**

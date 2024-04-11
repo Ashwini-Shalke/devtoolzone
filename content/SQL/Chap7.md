@@ -21,7 +21,9 @@ Example: Let’s say you have a table called “Candies” that lists the number
 
 Count the total number of candies.
 ```html
+
 SELECT COUNT(Candies) AS TotalCandies FROM Candies;
+
 ```
 
 This query will count the total number of candies from all friends combined.
@@ -31,7 +33,9 @@ This query will count the total number of candies from all friends combined.
 Find the total number of candies.
 
 ```html 
+
 SELECT SUM(Candies) AS TotalCandies FROM Candies;
+
 ```
 
 This query will add up all the candies from all friends to give you the total number of candies.
@@ -41,7 +45,9 @@ This query will add up all the candies from all friends to give you the total nu
 Calculate the average number of candies per person.
 
 ```html 
+
 SELECT AVG(Candies) AS AverageCandies FROM Candies;
+
 ```
 
 
@@ -52,7 +58,9 @@ This query will calculate the average number of candies by dividing the total nu
 Find out who has the most candies.
 
 ```html 
+
 SELECT Person, MAX(Candies) AS MaxCandies FROM Candies;
+
 ```
 
 
@@ -63,7 +71,9 @@ This query will tell you which friend has the highest number of candies.
 Find out who has the fewest candies.
 
 ```html 
+
 SELECT Person, MIN(Candies) AS MinCandies FROM Candies;
+
 ```
 
 This query will tell you which friend has the lowest number of candies.

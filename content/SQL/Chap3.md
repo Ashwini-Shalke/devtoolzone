@@ -23,7 +23,9 @@ Now, using SQL queries, you can ask questions to find out specific information f
 The SELECT query is like asking your friend to show you all the snacks in the snack box.
 
 ```html
+
 SELECT \* FROM Snacks;
+
 ```
 
 This query tells SQL to show you all the snacks and their quantities from the table.
@@ -33,7 +35,9 @@ This query tells SQL to show you all the snacks and their quantities from the ta
 The WHERE clause is like telling your friend to find a specific snack for you in the snack box.
 
 ```html
+
 SELECT \* FROM Snacks WHERE Snack = 'Chips';
+
 ```
 
 This query tells SQL to show you the quantity of chips in the snack box.
@@ -43,7 +47,9 @@ This query tells SQL to show you the quantity of chips in the snack box.
 The INSERT query is like adding a new snack to your snack box.
 
 ```html
+
 INSERT INTO Snacks (Snack, Quantity) VALUES ('Chocolate', 4);
+
 ```
 
 This query tells SQL to add a new snack called “Chocolate” with a quantity of 4 to the snack box.
@@ -53,7 +59,9 @@ This query tells SQL to add a new snack called “Chocolate” with a quantity o
 The UPDATE query is like telling your friend to change the quantity of a snack in the snack box.
 
 ```html
+
 UPDATE Snacks SET Quantity = 6 WHERE Snack = 'Chips';
+
 ```
 
 This query tells SQL to update the quantity of chips to 6 in the snack box.
@@ -63,7 +71,9 @@ This query tells SQL to update the quantity of chips to 6 in the snack box.
 The DELETE query is like telling your friend to remove a snack from the snack box
 
 ```html
+
 DELETE FROM Snacks WHERE Snack = 'Cookies';
+
 ```
 
 This query tells SQL to remove the cookies from the snack box.

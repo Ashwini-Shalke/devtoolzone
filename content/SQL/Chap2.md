@@ -52,7 +52,7 @@ This command renames the “OldTableName” table to “NewTableName”.
 
 ![](https://miro.medium.com/v2/resize:fit:1400/1*SW0iCaA7IXPA_7tzdoSw4A.png)
 
-\===============================================================
+---
 
 ## DML (Data Manipulation Language):
 
@@ -80,6 +80,8 @@ DML is used to manage data within database objects. Here are some common DML com
 
 ![](https://miro.medium.com/v2/resize:fit:1400/1*f-oj-LQ4axCbg-QLbfxegA.png)
 
+---
+
 ## DCL (Data Control Language):
 
 DCL is used to control access to data within the database. Here’s a common DCL command:
@@ -93,6 +95,8 @@ DCL is used to control access to data within the database. Here’s a common DCL
 **REVOKE:** Used to revoke previously granted privileges from users or roles.
 
 ![](https://miro.medium.com/v2/resize:fit:1400/1*WjyzpBcAn7GoOCCS6zTU0Q.png)
+
+---
 
 ## TCL (Transaction Control Language):
 
@@ -110,6 +114,8 @@ TCL is used to manage transactions within the database. Here are common TCL comm
 
 **SAVEPOINT:** Used to set a point within the current transaction from which you can later roll back.
 
+
 ![](https://miro.medium.com/v2/resize:fit:1400/1*EMkGSbkRFp_cF41Ljk9Oxw.png)
 
-These commands are essential for managing and manipulating the structure and data within a database, controlling access to it, and ensuring transactional integrity.
+
+> _These commands are essential for managing and manipulating the structure and data within a database, controlling access to it, and ensuring transactional integrity._
