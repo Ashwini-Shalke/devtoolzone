@@ -48,4 +48,4 @@ This will execute the stored procedure `GetStudentInfo` with the student ID 12
 
 In simple terms, a stored procedure in SQL is like a recipe stored in the database that you can use to perform specific tasks, such as retrieving information or performing calculations, by simply calling its name and providing any necessary inputs. It helps you save time and effort by encapsulating complex operations into reusable chunks of code.
 
-> Stored procedures are sets of SQL statements that are stored and executed on the database server. They can accept parameters, perform operations, and return results, providing a way to encapsulate and reuse complex logic within the database.
+> _Stored procedures are sets of SQL statements that are stored and executed on the database server. They can accept parameters, perform operations, and return results, providing a way to encapsulate and reuse complex logic within the database._

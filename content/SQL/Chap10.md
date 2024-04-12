@@ -35,7 +35,7 @@ weight = 10
 
 _Imagine a stored procedure as a recipe book in a kitchen. Each recipe (procedure) contains a set of instructions to prepare a particular dish (task).Stored procedures are like a series of steps that you can follow to accomplish a specific task in the database.They can do a variety of things, like fetching data, updating records, or performing calculations.Once you create a stored procedure, you can call it whenever you need to perform that task, just like following a recipe to cook a meal._
 
-#### Functions:
+### Functions:
 
 **Return Value:**
 
@@ -58,6 +58,6 @@ _Imagine a stored procedure as a recipe book in a kitchen. Each recipe (procedur
 2.  Converting temperature from Celsius to Fahrenheit.
 3.  Finding the length of a string.
 
-_Let’s , think of functions as a magic machine that takes in some ingredients and gives you back a result.Functions are like mini-programs that take input, process it in some way, and then return a result.They are more focused on performing calculations or transformations on data, rather than executing a series of tasks like stored procedures.You can use functions within SQL queries to perform specific calculations or operations on data, just like using a tool to do a particular job._
+> _Let’s , think of functions as a magic machine that takes in some ingredients and gives you back a result.Functions are like mini-programs that take input, process it in some way, and then return a result.They are more focused on performing calculations or transformations on data, rather than executing a series of tasks like stored procedures.You can use functions within SQL queries to perform specific calculations or operations on data, just like using a tool to do a particular job._
 
-### In summary, functions are primarily used for computations and return a single value, while stored procedures are more versatile and can perform a variety of tasks, including data manipulation and transaction control. Depending on the requirements of your application, you may choose to use functions, stored procedures, or a combination of both to achieve your desired functionality.
+_In summary, functions are primarily used for computations and return a single value, while stored procedures are more versatile and can perform a variety of tasks, including data manipulation and transaction control. Depending on the requirements of your application, you may choose to use functions, stored procedures, or a combination of both to achieve your desired functionality.
