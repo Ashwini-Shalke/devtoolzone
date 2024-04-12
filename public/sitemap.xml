@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/sql/chap1/</loc>
+    <loc>https://learnerloft.com/sql/chap1/</loc>
     <lastmod>2024-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/sql/chap2/</loc>
+    <loc>https://learnerloft.com/sql/chap2/</loc>
     <lastmod>2024-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/sql/chap3/</loc>
+    <loc>https://learnerloft.com/sql/chap3/</loc>
     <lastmod>2024-04-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/sql/chap4/</loc>
+    <loc>https://learnerloft.com/sql/chap4/</loc>
     <lastmod>2024-04-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/sql/chapp5/</loc>
+    <loc>https://learnerloft.com/sql/chapp5/</loc>
     <lastmod>2024-04-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/sql/chap6/</loc>
+    <loc>https://learnerloft.com/sql/chap6/</loc>
     <lastmod>2024-04-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/sql/chap7/</loc>
+    <loc>https://learnerloft.com/sql/chap7/</loc>
     <lastmod>2024-04-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/sql/chap8/</loc>
+    <loc>https://learnerloft.com/sql/chap8/</loc>
     <lastmod>2024-04-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://learnerloft.com/</loc>
     <lastmod>2024-04-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/sql/</loc>
+    <loc>https://learnerloft.com/sql/</loc>
     <lastmod>2024-04-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/archives/</loc>
+    <loc>https://learnerloft.com/archives/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://learnerloft.com/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://learnerloft.com/tags/</loc>
   </url>
 </urlset>

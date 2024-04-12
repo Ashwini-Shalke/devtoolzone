@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>SQLs on Learner Loft</title>
-    <link>http://localhost:1313/sql/</link>
+    <link>https://learnerloft.com/sql/</link>
     <description>Recent content in SQLs on Learner Loft</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 11 Apr 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/sql/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://learnerloft.com/sql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What is SQL, Data and Database with examples</title>
-      <link>http://localhost:1313/sql/chap1/</link>
+      <link>https://learnerloft.com/sql/chap1/</link>
       <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/sql/chap1/</guid>
+      <guid>https://learnerloft.com/sql/chap1/</guid>
       <description>Imagine you have a big collection of toys scattered all over your room. You want to find your favorite toy, but searching through the mess by yourself might take a lot of time and effort. Here’s where your friend SQL comes in!
 SQL is like having a magic wand that helps you organize and find your toys quickly and easily. It stands for Structured Query Language, but you can just think of it as a special language that lets you talk to a smart toy organizer.</description>
     </item>
     <item>
       <title>SQL language — DDL, DML, DCL, and TCL</title>
-      <link>http://localhost:1313/sql/chap2/</link>
+      <link>https://learnerloft.com/sql/chap2/</link>
       <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/sql/chap2/</guid>
+      <guid>https://learnerloft.com/sql/chap2/</guid>
       <description>DDL (Data Definition Language): DDL is used to define and manage the structure of database objects. Here are some common DDL commands:
 CREATE: Used to create new database objects such as tables, views, indexes, etc.
 ALTER: Used to modify the structure of existing database objects, such as adding, modifying, or dropping columns.
@@ -30,9 +30,9 @@ This command adds a new column named “Email” to the “Students” table wit
     </item>
     <item>
       <title>Basic SQL Queries — SELECT, WHERE,UPDATE and DELETE</title>
-      <link>http://localhost:1313/sql/chap3/</link>
+      <link>https://learnerloft.com/sql/chap3/</link>
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/sql/chap3/</guid>
+      <guid>https://learnerloft.com/sql/chap3/</guid>
       <description>Think of SQL queries as requests you make to find specific snacks in your snack box. Just like asking your friend to find your favorite candy in the snack box, SQL queries help you find specific information from a database.
 Example:
 Let’s say you have a table that lists all your favorite snacks and their quantities in your snack box, like this:
@@ -40,43 +40,43 @@ Now, using SQL queries, you can ask questions to find out specific information f
     </item>
     <item>
       <title>For Beginners — TCL Commands in SQL with Example</title>
-      <link>http://localhost:1313/sql/chap4/</link>
+      <link>https://learnerloft.com/sql/chap4/</link>
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/sql/chap4/</guid>
+      <guid>https://learnerloft.com/sql/chap4/</guid>
       <description>TCL commands are COMMIT, ROLLBACK, and SAVEPOINT.
 COMMIT: The COMMIT command is used to permanently save the changes made during the current transaction. Once a COMMIT command is executed, all changes made within the transaction become permanent and are visible to other users. Example: Suppose we have a transaction that updates the age of a student in the database:
 BEGIN TRANSACTION; UPDATE Students SET Age = 16 WHERE Name = &amp;#39;Alice&amp;#39;; COMMIT; In this example:</description>
     </item>
     <item>
       <title>Window Functions in SQL</title>
-      <link>http://localhost:1313/sql/chapp5/</link>
+      <link>https://learnerloft.com/sql/chapp5/</link>
       <pubDate>Wed, 10 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/sql/chapp5/</guid>
+      <guid>https://learnerloft.com/sql/chapp5/</guid>
       <description>Window functions are a type of function in SQL that allow you to perform calculations across a set of rows related to the current row, called a “window,” without collapsing the result set. They are used to perform aggregate calculations (like sum, average, count) and ranking operations (like row number, rank) within a specific partition or window of data.
 Syntax Types of Window Functions: There are a few common window functions you might encounter:</description>
     </item>
     <item>
       <title>SQL Clause: Group By, Having, IN and NOT IN</title>
-      <link>http://localhost:1313/sql/chap6/</link>
+      <link>https://learnerloft.com/sql/chap6/</link>
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/sql/chap6/</guid>
+      <guid>https://learnerloft.com/sql/chap6/</guid>
       <description>Let’s say we have a table named “Games” with the following data:
 GROUP BY: Think of GROUP BY like organizing your games into groups based on their ratings. It&amp;rsquo;s like sorting them into piles of similar ratings.
 SELECT Rating, COUNT(\*) AS NumOfGames FROM Games GROUP BY Rating; This query will count the number of games for each rating group. For example, it will show how many games have a rating of 4.</description>
     </item>
     <item>
       <title>Aggregate Functions in SQL</title>
-      <link>http://localhost:1313/sql/chap7/</link>
+      <link>https://learnerloft.com/sql/chap7/</link>
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/sql/chap7/</guid>
+      <guid>https://learnerloft.com/sql/chap7/</guid>
       <description>Imagine you’re at a party with a bunch of friends, and there’s a big bowl of candies on the table. Now, you want to know some information about those candies, like how many candies are there in total, what’s the average number of candies each person has, or which friend has the most candies.
 In SQL, aggregate functions are like magical candy counters that help you answer these questions by performing calculations on groups of data.</description>
     </item>
     <item>
       <title>User-Defined Function (UDF) in SQL</title>
-      <link>http://localhost:1313/sql/chap8/</link>
+      <link>https://learnerloft.com/sql/chap8/</link>
       <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/sql/chap8/</guid>
+      <guid>https://learnerloft.com/sql/chap8/</guid>
       <description>Let’s say, you have a special calculator that can perform a specific calculation, like doubling a number or calculating the average of a set of numbers. You can use this calculator whenever you need to perform that calculation, without having to write out the steps each time. In SQL, a user-defined function is like that special calculator — it’s a custom function that you can create to perform a specific task or calculation.</description>
     </item>
   </channel>
