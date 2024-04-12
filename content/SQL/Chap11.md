@@ -16,14 +16,18 @@ Let’s say you have the following rankings:
 
 ![](https://cdn-images-1.medium.com/max/1600/1*bVRdYLZ3JfERGonncmaKzQ.png)Ranking Table
 
-#### **Using** `**CHOOSE**`**:**
+#### Using CHOOSE
 
 `CHOOSE` function returns the value from a list of values based on the specified index.
+
+```html
 
 SELECT CHOOSE(Rank, 'Gold Medal', 'Silver Medal', 'Bronze Medal', 
 'Participation Prize', 'Participation Prize') AS Prize FROM Rankings;
 
-Result:
+```
+
+**Result:**
 
 ![](https://cdn-images-1.medium.com/max/1600/1*PW14JZ2weh7WaP3_QH1ufA.png)
 
@@ -35,7 +39,7 @@ Result:
 *   If Rank is 3, it returns ‘Bronze Medal’.
 *   If Rank is 4 or 5, it returns ‘Participation Prize’.
 
-#### Using `IIF`:
+#### Using IIF:
 
 `IIF` function returns one of two values depending on whether the specified condition evaluates to true or false.
 
@@ -59,4 +63,3 @@ SELECT Rank, IIF(Rank = 1, 'Gold Medal', 'No Prize') AS Prize FROM Rankings;
 
 > These functions are handy when you need to make decisions or select values based on certain conditions in your SQL queries.
 
-###
