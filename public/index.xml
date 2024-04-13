@@ -94,9 +94,8 @@ In SQL, aggregate functions are like magical candy counters that help you answer
       <description>Imagine you’re organizing a gaming tournament, and you want to assign a different prize based on the rank players achieved.
 Let’s say you have the following rankings:
 Ranking Table
-Using **CHOOSE**: CHOOSE function returns the value from a list of values based on the specified index.
-SELECT CHOOSE(Rank, &amp;lsquo;Gold Medal&amp;rsquo;, &amp;lsquo;Silver Medal&amp;rsquo;, &amp;lsquo;Bronze Medal&amp;rsquo;, &amp;lsquo;Participation Prize&amp;rsquo;, &amp;lsquo;Participation Prize&amp;rsquo;) AS Prize FROM Rankings;
-Result:
+Using CHOOSE CHOOSE function returns the value from a list of values based on the specified index.
+SELECT CHOOSE(Rank, &amp;#39;Gold Medal&amp;#39;, &amp;#39;Silver Medal&amp;#39;, &amp;#39;Bronze Medal&amp;#39;, &amp;#39;Participation Prize&amp;#39;, &amp;#39;Participation Prize&amp;#39;) AS Prize FROM Rankings; Result:
 Explanation:
 The CHOOSE function takes the Rank as an index.</description>
     </item>
