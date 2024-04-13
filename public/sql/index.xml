@@ -6,7 +6,7 @@
     <description>Recent content in SQLs on Learner Loft</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 13 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://learnerloft.com/sql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What is SQL, Data and Database with examples</title>
@@ -135,6 +135,38 @@ Let’s say we have a table called “Students” with columns for StudentID, Na
       <description>What are Joins? Imagine you have two lists of friends — one list with their names and another list with their hobbies. Now, you want to find out which friend has which hobby. This is where joins come in handy!
 In databases, tables are like lists, and joins help us combine information from different tables based on a common piece of information, like a friend’s name or an ID.
 Let’s consider two tables: friends and hobbies.</description>
+    </item>
+    <item>
+      <title>For Beginners to Understand Triggers in SQL</title>
+      <link>https://learnerloft.com/sql/chap15/</link>
+      <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/sql/chap15/</guid>
+      <description>Lets assume !! you have a magic toy box that automatically does something whenever you put a specific type of toy inside it. Triggers in SQL are like these magical rules that automatically perform actions in the database when certain events happen.
+Example:
+Let’s say you have a database table called “Orders” that stores information about orders placed by customers:
+Trigger Example:
+Now, imagine you want to keep track of any large orders (orders with a total amount over $100) automatically.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://learnerloft.com/sql/chap16/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/sql/chap16/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://learnerloft.com/sql/chap17/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/sql/chap17/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://learnerloft.com/sql/chap18/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/sql/chap18/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>

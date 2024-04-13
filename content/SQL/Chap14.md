@@ -23,6 +23,8 @@ Let’s consider two tables: `friends` and `hobbies`.
 #### hobbies
 ![](https://cdn-images-1.medium.com/max/2400/1*oMbzlAs10el6uX6mKA5_yA.png)
 
+
+
 ### Types of Joins:
 
 **Inner Join:** This type of join combines rows from two tables based on a matching condition. Only the rows where the condition is true in both tables are included in the result.
@@ -36,8 +38,8 @@ INNER JOIN hobbies ON friends.id = hobbies.id;
 ```
 
 **Result**
-
 ![](https://cdn-images-1.medium.com/max/1600/1*vAXbUGmYrirxJeaG-YGLhw.png)
+
 
 
 **Left Join:** This type of join returns all rows from the left table and matching rows from the right table. If there’s no match in the right table, it returns NULL values.
@@ -51,8 +53,9 @@ LEFT JOIN hobbies ON friends.id = hobbies.id;
 ```
 
 **Result:**
-
 ![](https://cdn-images-1.medium.com/max/1600/1*cFpZYYIu7CNC9zCSbWgfHA.png)
+
+
 
 **Right Join:** This is similar to a left join, but it returns all rows from the right table and matching rows from the left table. If there’s no match in the left table, it returns NULL values.
 
@@ -66,8 +69,9 @@ RIGHT JOIN hobbies ON friends.id = hobbies.id;
 
 
 **Expected Result:**
-
 ![](https://cdn-images-1.medium.com/max/1600/1*K4Pz3wUGGZ1FKiMiAYIz4w.png)
+
+
 
 **Full Outer Join:** This type of join returns all rows when there’s a match in either the left or right table. If there’s no match, it returns NULL values for the missing side.
 
@@ -80,7 +84,6 @@ FULL OUTER JOIN hobbies ON friends.id = hobbies.id;
 ```
 
 **Expected Result:**
-
 ![](https://cdn-images-1.medium.com/max/1600/1*cmHJAfPtaUXh86c1Wiq0ng.png)
 
 These results show how different types of joins combine data from two tables based on a common identifier (in this case, the ID column). The output includes all or selected rows from both tables, depending on the type of join used.
