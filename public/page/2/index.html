@@ -129,17 +129,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Difference between Function and stored procedure in SQL
+    <h2 class="entry-hint-parent">CHOOSE and IIF — SQL
     </h2>
   </header>
   <div class="entry-content">
-    <p>Stored Procedures: Execution:
-Stored procedures may or may not return a value. They can execute a series of SQL statements or perform actions such as data manipulation or transaction management. Usage:
-Stored procedures are used to encapsulate a set of SQL statements for reuse and maintainability. They can be called from client applications or other stored procedures. Modifications:
-Stored procedures can include data manipulation operations, transaction control, conditional logic, and error handling....</p>
+    <p>Imagine you’re organizing a gaming tournament, and you want to assign a different prize based on the rank players achieved.
+Let’s say you have the following rankings:
+Ranking Table
+Using CHOOSE CHOOSE function returns the value from a list of values based on the specified index.
+SELECT CHOOSE(Rank, &#39;Gold Medal&#39;, &#39;Silver Medal&#39;, &#39;Bronze Medal&#39;, &#39;Participation Prize&#39;, &#39;Participation Prize&#39;) AS Prize FROM Rankings; Result:
+Explanation:
+The CHOOSE function takes the Rank as an index....</p>
   </div>
-  <footer class="entry-footer"><span title='2024-04-11 00:00:00 +0000 UTC'>April 11, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Ashwini Shalke</footer>
-  <a class="entry-link" aria-label="post link to Difference between Function and stored procedure in SQL" href="https://learnerloft.com/sql/chap10/"></a>
+  <footer class="entry-footer"><span title='2024-04-11 00:00:00 +0000 UTC'>April 11, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Ashwini Shalke</footer>
+  <a class="entry-link" aria-label="post link to CHOOSE and IIF — SQL" href="https://learnerloft.com/sql/chap11/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -151,11 +154,37 @@ Stored procedures can include data manipulation operations, transaction control,
     <p>There are several special operators that serve specific purposes beyond basic comparison and arithmetic operations.
 Some of these special operators include:
 LIKE Operator: The LIKE operator is used to search for a specified pattern in a column. It’s commonly used with wildcard characters such as % (matches any sequence of characters) and _ (matches any single character).
-Example: _SELECT * FROM Employees WHERE FirstName LIKE &#39;J%&#39;;_
-IN Operator: The IN operator is used to specify multiple values in a WHERE clause....</p>
+SELECT * FROM Employees WHERE FirstName LIKE &#39;J%&#39;; IN Operator: The IN operator is used to specify multiple values in a WHERE clause....</p>
   </div>
   <footer class="entry-footer"><span title='2024-04-11 00:00:00 +0000 UTC'>April 11, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Ashwini Shalke</footer>
   <a class="entry-link" aria-label="post link to Special operators in SQL" href="https://learnerloft.com/sql/chap12/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">For Beginners to Understand Constraints in Database
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Think of constraints in a database as rules that ensure data behaves properly, just like rules in a game. For instance, if you’re playing basketball, you can’t use your hands to touch the ball unless you’re dribbling or shooting. Similarly, constraints in a database ensure that data follows certain rules, like not allowing duplicate values in a column or making sure each student has a unique student ID.
+Let’s say we have a table called “Students” with columns for StudentID, Name, and Age....</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-04-11 00:00:00 +0000 UTC'>April 11, 2024</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Ashwini Shalke</footer>
+  <a class="entry-link" aria-label="post link to For Beginners to Understand Constraints in Database" href="https://learnerloft.com/sql/chap13/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Beginners Guide — Inner,Outer,left and right JOINS in SQL
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>What are Joins? Imagine you have two lists of friends — one list with their names and another list with their hobbies. Now, you want to find out which friend has which hobby. This is where joins come in handy!
+In databases, tables are like lists, and joins help us combine information from different tables based on a common piece of information, like a friend’s name or an ID.
+Let’s consider two tables: friends and hobbies....</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-04-11 00:00:00 +0000 UTC'>April 11, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Ashwini Shalke</footer>
+  <a class="entry-link" aria-label="post link to Beginners Guide — Inner,Outer,left and right JOINS in SQL" href="https://learnerloft.com/sql/chap14/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
