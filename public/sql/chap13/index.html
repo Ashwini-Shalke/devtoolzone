@@ -102,18 +102,8 @@ Let’s say we have a table called “Students” with columns for StudentID, Na
         </div>
         <ul id="menu">
             <li>
-                <a href="https://learnerloft.com/categories/" title="Categories">
-                    <span>Categories</span>
-                </a>
-            </li>
-            <li>
                 <a href="https://learnerloft.com/sql/" title="SQL">
                     <span>SQL</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://learnerloft.com/tags/" title="Tags">
-                    <span>Tags</span>
                 </a>
             </li>
             <li>
@@ -143,32 +133,35 @@ Let’s say we have a table called “Students” with columns for StudentID, Na
 <ol>
 <li><strong>Primary Key :</strong> This ensures that each student has a unique ID.</li>
 </ol>
-<p>CREATE TABLE Students (
-StudentID INT PRIMARY KEY, Name VARCHAR(50), Age INT );</p>
-<p><em>In this example, the PRIMARY KEY constraint on the StudentID column ensures that each student has a unique ID. Just like in a game, where each player has a unique jersey number.</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CREATE TABLE Students ( 
+</span></span><span style="display:flex;"><span>StudentID INT PRIMARY KEY, Name VARCHAR(50), Age INT );
+</span></span></code></pre></div><h5 id="_in-this-example-the-primary-key-constraint-on-the-studentid-column-ensures-that-each-student-has-a-unique-id-just-like-in-a-game-where-each-player-has-a-unique-jersey-number_"><em>In this example, the PRIMARY KEY constraint on the StudentID column ensures that each student has a unique ID. Just like in a game, where each player has a unique jersey number.</em><a hidden class="anchor" aria-hidden="true" href="#_in-this-example-the-primary-key-constraint-on-the-studentid-column-ensures-that-each-student-has-a-unique-id-just-like-in-a-game-where-each-player-has-a-unique-jersey-number_">#</a></h5>
 <p><strong>2. Unique Key :</strong> This ensures that no two students have the same name.</p>
-<p>CREATE TABLE Students (
-StudentID INT PRIMARY KEY, Name VARCHAR(50) UNIQUE, Age INT );</p>
-<p><em>In this example, the UNIQUE constraint on the Name column ensures that no two students can have the same name. It’s like making sure there are no two players on a team with the same name.</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CREATE TABLE Students ( 
+</span></span><span style="display:flex;"><span>StudentID INT PRIMARY KEY, Name VARCHAR(50) UNIQUE, Age INT );
+</span></span></code></pre></div><h5 id="_in-this-example-the-unique-constraint-on-the-name-column-ensures-that-no-two-students-can-have-the-same-name-its-like-making-sure-there-are-no-two-players-on-a-team-with-the-same-name_"><em>In this example, the UNIQUE constraint on the Name column ensures that no two students can have the same name. It’s like making sure there are no two players on a team with the same name.</em><a hidden class="anchor" aria-hidden="true" href="#_in-this-example-the-unique-constraint-on-the-name-column-ensures-that-no-two-students-can-have-the-same-name-its-like-making-sure-there-are-no-two-players-on-a-team-with-the-same-name_">#</a></h5>
 <p><strong>3. Check :</strong> This ensures that the age of each student is within a certain range, like between 10 and 18.</p>
-<p>CREATE TABLE Students (
-StudentID INT PRIMARY KEY, Name VARCHAR(50),
-Age INT CHECK (Age &gt;= 10 AND Age &lt;= 18) );</p>
-<p><em>In this example, the CHECK constraint on the Age column ensures that the age of each student is between 10 and 18. It’s similar to making sure that all players on a basketball team are within a certain age range.</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CREATE TABLE Students ( 
+</span></span><span style="display:flex;"><span>StudentID INT PRIMARY KEY, Name VARCHAR(50), 
+</span></span><span style="display:flex;"><span>Age INT CHECK (Age &gt;= 10 AND Age <span style="color:#960050;background-color:#1e0010">&lt;</span>= 18) );
+</span></span></code></pre></div><h5 id="_in-this-example-the-check-constraint-on-the-age-column-ensures-that-the-age-of-each-student-is-between-10-and-18-its-similar-to-making-sure-that-all-players-on-a-basketball-team-are-within-a-certain-age-range_"><em>In this example, the CHECK constraint on the Age column ensures that the age of each student is between 10 and 18. It’s similar to making sure that all players on a basketball team are within a certain age range.</em><a hidden class="anchor" aria-hidden="true" href="#_in-this-example-the-check-constraint-on-the-age-column-ensures-that-the-age-of-each-student-is-between-10-and-18-its-similar-to-making-sure-that-all-players-on-a-basketball-team-are-within-a-certain-age-range_">#</a></h5>
 <p><strong>4. NOT NULL :</strong> The NOT NULL constraint ensures that a column cannot contain NULL values, meaning it must always have a value.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>CREATE TABLE Students ( 
 </span></span><span style="display:flex;"><span>StudentID INT PRIMARY KEY, Name VARCHAR(50) NOT NULL, Age INTNOT NULL );
-</span></span></code></pre></div><p><em>In this example, both the Name and Age columns cannot contain NULL values. It’s like making sure that each player in a game has a jersey number and a position.</em></p>
+</span></span></code></pre></div><h5 id="_in-this-example-both-the-name-and-age-columns-cannot-contain-null-values-its-like-making-sure-that-each-player-in-a-game-has-a-jersey-number-and-a-position_"><em>In this example, both the Name and Age columns cannot contain NULL values. It’s like making sure that each player in a game has a jersey number and a position.</em><a hidden class="anchor" aria-hidden="true" href="#_in-this-example-both-the-name-and-age-columns-cannot-contain-null-values-its-like-making-sure-that-each-player-in-a-game-has-a-jersey-number-and-a-position_">#</a></h5>
 <p><strong>5. DEFAULT :</strong> The DEFAULT constraint specifies a default value for a column when no value is explicitly provided during an INSERT operation.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>CREATE TABLE Students ( 
 </span></span><span style="display:flex;"><span>StudentID INT PRIMARY KEY, Name VARCHAR(50), Age INT DEFAULT 18);
-</span></span></code></pre></div><p><em>In this example, if no age is provided for a student during insertion, the default value of 18 will be used. It’s similar to having a default setting in a game if a player doesn’t choose one.</em></p>
+</span></span></code></pre></div><h5 id="_in-this-example-if-no-age-is-provided-for-a-student-during-insertion-the-default-value-of-18-will-be-used-its-similar-to-having-a-default-setting-in-a-game-if-a-player-doesnt-choose-one_"><em>In this example, if no age is provided for a student during insertion, the default value of 18 will be used. It’s similar to having a default setting in a game if a player doesn’t choose one.</em><a hidden class="anchor" aria-hidden="true" href="#_in-this-example-if-no-age-is-provided-for-a-student-during-insertion-the-default-value-of-18-will-be-used-its-similar-to-having-a-default-setting-in-a-game-if-a-player-doesnt-choose-one_">#</a></h5>
 <p><strong>6. INDEX :</strong> The INDEX constraint is used to create an index on one or more columns of a table. An index improves the speed of data retrieval operations, such as SELECT queries, by providing faster access to the rows in the table.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>CREATE INDEX idx\_name ON Students (Name);
-</span></span></code></pre></div><p><em>In this example, an index named “idx_name” is created on the Name column of the Students table. It’s like creating an index in a book to quickly find a specific topic.</em></p>
+</span></span></code></pre></div><h5 id="_in-this-example-an-index-named-idx_name-is-created-on-the-name-column-of-the-students-table-its-like-creating-an-index-in-a-book-to-quickly-find-a-specific-topic_"><em>In this example, an index named “idx_name” is created on the Name column of the Students table. It’s like creating an index in a book to quickly find a specific topic.</em><a hidden class="anchor" aria-hidden="true" href="#_in-this-example-an-index-named-idx_name-is-created-on-the-name-column-of-the-students-table-its-like-creating-an-index-in-a-book-to-quickly-find-a-specific-topic_">#</a></h5>
 <p>Constraints help maintain data integrity and ensure that the database behaves as expected, just like rules in a game help maintain fairness and order.</p>
 
 

@@ -17,10 +17,11 @@ In databases, tables are like lists, and joins help us combine information from 
 ![](https://cdn-images-1.medium.com/max/1600/1*idKF1paMcs8YuAJKlNMjLA.jpeg)
 
 Let’s consider two tables: `friends` and `hobbies`.
+#### friends
+![](https://cdn-images-1.medium.com/max/2400/1*gihTTDef5i_xD2wj3jhb7w.png)
 
-![](https://cdn-images-1.medium.com/max/2400/1*gihTTDef5i_xD2wj3jhb7w.png)friends
-
-![](https://cdn-images-1.medium.com/max/2400/1*oMbzlAs10el6uX6mKA5_yA.png)hobbies
+#### hobbies
+![](https://cdn-images-1.medium.com/max/2400/1*oMbzlAs10el6uX6mKA5_yA.png)
 
 ### Types of Joins:
 
