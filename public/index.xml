@@ -6,7 +6,7 @@
     <description>Recent content on Learner Loft</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 13 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://learnerloft.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What is SQL, Data and Database with examples</title>
@@ -153,24 +153,6 @@ Now, imagine you want to keep track of any large orders (orders with a total amo
       <guid>https://learnerloft.com/sql/chap16/</guid>
       <description>Temporary tables are like a temporary workspace or desk that you set up when you need some extra space to work on a project. You can use this space to organize and manipulate data without affecting your main workspace (or database) permanently. Once you’re done with your task, you can clean up and remove the temporary workspace, and everything goes back to how it was before.
 Example: Suppose you’re working on a school project where you need to analyze data about students’ grades and attendance.</description>
-    </item>
-    <item>
-      <title>Views in SQL</title>
-      <link>https://learnerloft.com/sql/chap17/</link>
-      <pubDate>Sun, 14 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap17/</guid>
-      <description>Imagine you have a favourite playlist on your music app. Instead of going through all your songs every time you want to listen to your favorite tracks, you create a playlist that contains only the songs you love.
-A view in a database is like that playlist — it’s a saved query that contains only the data you’re interested in, making it easier and faster to access.
-Suppose we have a database with a table called “Students” that contains information about students, including their names and ages.</description>
-    </item>
-    <item>
-      <title>What is a Cursor in SQL ?</title>
-      <link>https://learnerloft.com/sql/chap18/</link>
-      <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap18/</guid>
-      <description>Think of a cursor in SQL like a pointer that allows you to navigate through a set of rows returned by a query, one row at a time. It’s like a virtual hand that can grab one row of data from a table, process it, and then move on to the next row.
-Types of Cursors: There are mainly two types of cursors in SQL:
-Implicit Cursors: These cursors are created by default when you execute a SQL query.</description>
     </item>
   </channel>
 </rss>

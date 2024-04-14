@@ -1,6 +1,6 @@
 +++
 title = 'What is a Cursor in SQL ?'
-date = 2024-04-13
+date = 2024-04-15
 draft = false
 author = "Ashwini Shalke"
 weight = 18

@@ -1,6 +1,6 @@
 +++
 title = 'Views in SQL'
-date = 2024-04-14
+date = 2024-04-15
 draft = false
 author = "Ashwini Shalke"
 weight = 17
