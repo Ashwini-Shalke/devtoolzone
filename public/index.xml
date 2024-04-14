@@ -116,7 +116,8 @@ The CHOOSE function takes the Rank as an index.</description>
       <guid>https://learnerloft.com/sql/chap12/</guid>
       <description>There are several special operators that serve specific purposes beyond basic comparison and arithmetic operations.
 Some of these special operators include:
-LIKE Operator: The LIKE operator is used to search for a specified pattern in a column. It&amp;rsquo;s commonly used with wildcard characters such as % (matches any sequence of characters) and _ (matches any single character).
+LIKE Operator:
+The LIKE operator is used to search for a specified pattern in a column. It&amp;rsquo;s commonly used with wildcard characters such as % (matches any sequence of characters) and _ (matches any single character).
 SELECT * FROM Employees WHERE FirstName LIKE &amp;#39;J%&amp;#39;; IN Operator: The IN operator is used to specify multiple values in a WHERE clause.</description>
     </item>
     <item>
