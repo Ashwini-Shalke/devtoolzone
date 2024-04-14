@@ -68,4 +68,4 @@ SELECT City FROM Customers UNION SELECT City FROM Suppliers;
 
   
 
-These special operators provide additional flexibility and functionality in SQL queries, allowing you to perform more complex operations and achieve specific requirements.
+> These special operators provide additional flexibility and functionality in SQL queries, allowing you to perform more complex operations and achieve specific requirements.

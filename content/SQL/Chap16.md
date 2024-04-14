@@ -57,4 +57,4 @@ SELECT StudentID, Subject, Grade FROM Grades WHERE Grade = 'A';
 
 This query inserts data into the global temporary table ##TempGrades from the Grades table for students who received an ‘A’ grade.
 
->Temporary tables provide a convenient way to work with data temporarily without affecting the main database structure. Just like setting up a temporary workspace for your project, you can use temporary tables to organise and manipulate data for specific tasks or analyses, and then clean up when you’re done.
+> Temporary tables provide a convenient way to work with data temporarily without affecting the main database structure. Just like setting up a temporary workspace for your project, you can use temporary tables to organise and manipulate data for specific tasks or analyses, and then clean up when you’re done.

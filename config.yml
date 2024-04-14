@@ -44,12 +44,16 @@ menu:
       name: SQL
       url: /sql/
       weight: 20
-    # - identifier: tags
-    #   name: Tags
-    #   url: /tags/
-    #   weight: 30
-    - identifier: archives
-      name: Archives
-      url: /archives/
-      weight: 40
+    - identifier: HTML
+      name: HTML
+      url: /html/
+      weight: 30
+    - identifier: Oracle APEX
+      name: Oracle APEX
+      url: /OracleApex/
+      weight: 30
+    # - identifier: archives
+    #   name: Archives
+    #   url: /archives/
+    #   weight: 40
    

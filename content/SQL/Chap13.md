@@ -88,4 +88,4 @@ CREATE INDEX idx\_name ON Students (Name);
 _In this example, an index named “idx\_name” is created on the Name column of the Students table. It’s like creating an index in a book to quickly find a specific topic._
 
 
-Constraints help maintain data integrity and ensure that the database behaves as expected, just like rules in a game help maintain fairness and order.
+> Constraints help maintain data integrity and ensure that the database behaves as expected, just like rules in a game help maintain fairness and order.

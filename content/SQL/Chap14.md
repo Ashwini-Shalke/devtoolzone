@@ -88,4 +88,4 @@ FULL OUTER JOIN hobbies ON friends.id = hobbies.id;
 
 These results show how different types of joins combine data from two tables based on a common identifier (in this case, the ID column). The output includes all or selected rows from both tables, depending on the type of join used.
 
-_So, joins help us combine information from different tables, allowing us to see relationships between data in a database._
+> So, joins help us combine information from different tables, allowing us to see relationships between data in a database._
