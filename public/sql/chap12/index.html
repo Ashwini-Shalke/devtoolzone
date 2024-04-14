@@ -132,22 +132,22 @@ SELECT * FROM Employees WHERE FirstName LIKE &#39;J%&#39;; IN Operator: The IN
 </p>
 <p>There are several special operators that serve specific purposes beyond basic comparison and arithmetic operations.</p>
 <p><strong>Some of these special operators include:</strong></p>
-<p><strong>LIKE Operator</strong>: The <code>LIKE</code> operator is used to search for a specified pattern in a column. It&rsquo;s commonly used with wildcard characters such as <code>%</code> (matches any sequence of characters) and <code>_</code> (matches any single character).</p>
+<p><!-- raw HTML omitted --><strong>LIKE Operator</strong>: The <code>LIKE</code> operator is used to search for a specified pattern in a column. It&rsquo;s commonly used with wildcard characters such as <code>%</code> (matches any sequence of characters) and <code>_</code> (matches any single character).</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>SELECT * FROM Employees WHERE FirstName LIKE &#39;J%&#39;;
-</span></span></code></pre></div><p><strong>IN Operator:</strong> The <code>IN</code> operator is used to specify multiple values in a WHERE clause. It checks if a value matches any value in a list.</p>
+</span></span></code></pre></div><p><!-- raw HTML omitted --> <strong>IN Operator:</strong> The <code>IN</code> operator is used to specify multiple values in a WHERE clause. It checks if a value matches any value in a list.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>SELECT * FROM Products WHERE Category IN (&#39;Electronics&#39;, &#39;Clothing&#39;, &#39;Books&#39;);
-</span></span></code></pre></div><p><strong>BETWEEN Operator:</strong> The <code>BETWEEN</code> operator is used to select values within a specified range. It&rsquo;s inclusive, meaning it includes both the start and end values.</p>
+</span></span></code></pre></div><p><!-- raw HTML omitted --> <strong>BETWEEN Operator:</strong> The <code>BETWEEN</code> operator is used to select values within a specified range. It&rsquo;s inclusive, meaning it includes both the start and end values.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>SELECT * FROM Sales WHERE SaleDate BETWEEN &#39;2023-01-01&#39; AND &#39;2023-12-31&#39;;
-</span></span></code></pre></div><p><strong>IS NULL Operator:</strong> The <code>IS NULL</code> operator is used to check if a column contains a NULL value.</p>
+</span></span></code></pre></div><p><!-- raw HTML omitted --> <strong>IS NULL Operator:</strong> The <code>IS NULL</code> operator is used to check if a column contains a NULL value.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>SELECT * FROM Customers WHERE Email IS NULL;
-</span></span></code></pre></div><p><strong>EXISTS Operator:</strong> The <code>EXISTS</code> operator is used to check if a subquery returns any rows. It returns true if the subquery returns one or more rows, otherwise false.</p>
+</span></span></code></pre></div><p><!-- raw HTML omitted --> <strong>EXISTS Operator:</strong> The <code>EXISTS</code> operator is used to check if a subquery returns any rows. It returns true if the subquery returns one or more rows, otherwise false.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>SELECT * FROM Orders WHERE EXISTS (SELECT * FROM OrderDetails WHERE Orders.OrderID = OrderDetails.OrderID);
-</span></span></code></pre></div><p><strong>UNION Operator:</strong> The <code>UNION</code> operator is used to combine the result sets of two or more SELECT statements. It removes duplicate rows by default.</p>
+</span></span></code></pre></div><p><!-- raw HTML omitted --> <strong>UNION Operator:</strong> The <code>UNION</code> operator is used to combine the result sets of two or more SELECT statements. It removes duplicate rows by default.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>SELECT City FROM Customers UNION SELECT City FROM Suppliers;
 </span></span></code></pre></div><p>These special operators provide additional flexibility and functionality in SQL queries, allowing you to perform more complex operations and achieve specific requirements.</p>
