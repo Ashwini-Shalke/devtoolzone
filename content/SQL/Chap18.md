@@ -11,21 +11,21 @@ weight = 18
 
 Think of a cursor in SQL like a pointer that allows you to navigate through a set of rows returned by a query, one row at a time. It’s like a virtual hand that can grab one row of data from a table, process it, and then move on to the next row.
 
-#### Types of Cursors:
+### Types of Cursors:
 
 There are mainly two types of cursors in SQL:
 
 1.  **Implicit Cursors:** These cursors are created by default when you execute a SQL query. They are easy to use but have limited functionality.
 2.  **Explicit Cursors:** These cursors are explicitly defined by the programmer using the `DECLARE CURSOR` statement. They offer more control and flexibility but require more coding.
 
-#### Sample Data:
+### Sample Data:
 
 Let’s say we have a simple table called `students` with columns `student_id`, `name`, and `age`. Here's some sample data:
 
 ![](https://cdn-images-1.medium.com/max/1600/1*rKIWV2_u8R2neU7GirRFKQ.png)students
 
 
-#### Query Example with Explicit Cursor:
+### Query Example with Explicit Cursor:
 
 Here’s an example of using an explicit cursor to fetch and process data from the `students` table:
 
@@ -74,6 +74,4 @@ Student ID: 2, Name: Bob, Age: 16
 Student ID: 3, Name: Charlie, Age: 14
 ```
 
-This process of fetching and processing one row at a time using a cursor allows for more complex and flexible data manipulation in SQL.
-
-However, it’s important to use cursors judiciously, as they can impact performance when dealing with large result sets.
+> This process of fetching and processing one row at a time using a cursor allows for more complex and flexible data manipulation in SQL. However, it’s important to use cursors judiciously, as they can impact performance when dealing with large result sets.

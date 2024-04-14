@@ -152,8 +152,7 @@ Now, imagine you want to keep track of any large orders (orders with a total amo
       <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/sql/chap16/</guid>
       <description>Temporary tables are like a temporary workspace or desk that you set up when you need some extra space to work on a project. You can use this space to organize and manipulate data without affecting your main workspace (or database) permanently. Once you’re done with your task, you can clean up and remove the temporary workspace, and everything goes back to how it was before.
-Example:
-Suppose you’re working on a school project where you need to analyze data about students’ grades and attendance.</description>
+Example: Suppose you’re working on a school project where you need to analyze data about students’ grades and attendance.</description>
     </item>
     <item>
       <title>Views in SQL</title>

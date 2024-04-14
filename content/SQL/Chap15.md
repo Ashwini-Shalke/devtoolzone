@@ -21,7 +21,7 @@ Let’s say you have a database table called “Orders” that stores informatio
 
 Now, imagine you want to keep track of any large orders (orders with a total amount over $100) automatically. You can create a trigger to do this.
 
-``html
+```html
 
 CREATE TRIGGER TrackLargeOrders 
 AFTER INSERT ON Orders 
@@ -34,6 +34,7 @@ BEGIN
 END;
 
 ```
+
 
 **Explanation:**
 
