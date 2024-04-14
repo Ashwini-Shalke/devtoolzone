@@ -61,7 +61,10 @@ SELECT \* FROM Orders WHERE EXISTS (SELECT \* FROM OrderDetails WHERE Orders.Ord
 **UNION Operator:** 
 The `UNION` operator is used to combine the result sets of two or more SELECT statements. It removes duplicate rows by default.
 
+
+```html
 SELECT City FROM Customers UNION SELECT City FROM Suppliers;
+```
 
   
 

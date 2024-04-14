@@ -1,6 +1,6 @@
 +++
 title = 'Views in SQL'
-date = 2024-04-13
+date = 2024-04-14
 draft = false
 author = "Ashwini Shalke"
 weight = 17
@@ -16,18 +16,19 @@ A view in a database is like that playlist — it’s a saved query that con
 Suppose we have a database with a table called “Students” that contains information about students, including their names and ages. Now, let’s say we want to create a view that shows only the names of students who are teenagers (aged 13 to 19).
 
 ```html
-
 CREATE VIEW TeenageStudents 
 AS SELECT Name FROM Students WHERE Age >= 13 ANDAge <= 19;
-
 ```
 
-##### _In this example, we’re creating a view called “TeenageStudents” that selects the names of students from the “Students” table where their age is between 13 and 19. It’s like creating a playlist of your favorite songs, but in this case, it’s a list of teenage students.
+_In this example, we’re creating a view called “TeenageStudents” that selects the names of students from the “Students” table where their age is between 13 and 19. It’s like creating a playlist of your favorite songs, but in this case, it’s a list of teenage students._
 
 Now, whenever we want to see the names of teenage students, we can simply query the view:
 
+```html
 SELECT \* FROM TeenageStudents;
+```
 
-##### _This query will return only the names of teenage students, making it easier for us to see who falls into that category without having to sift through the entire “Students” table.
+_This query will return only the names of teenage students, making it easier for us to see who falls into that category without having to sift through the entire “Students” table._
+
 
 > In simple terms, a view in a database is like a saved query that shows you only the data you’re interested in, similar to a playlist that contains only your favorite songs. It helps make accessing and analyzing data more convenient and efficient._

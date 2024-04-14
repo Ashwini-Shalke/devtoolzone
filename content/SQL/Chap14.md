@@ -1,6 +1,6 @@
 +++
 title = 'Beginners Guide — Inner,Outer,left and right JOINS in SQL'
-date = 2024-04-11
+date = 2024-04-13
 draft = false
 author = "Ashwini Shalke"
 weight = 14
@@ -40,7 +40,7 @@ INNER JOIN hobbies ON friends.id = hobbies.id;
 **Result**
 ![](https://cdn-images-1.medium.com/max/1600/1*vAXbUGmYrirxJeaG-YGLhw.png)
 
-
+---
 
 **Left Join:** This type of join returns all rows from the left table and matching rows from the right table. If there’s no match in the right table, it returns NULL values.
 
@@ -56,7 +56,7 @@ LEFT JOIN hobbies ON friends.id = hobbies.id;
 ![](https://cdn-images-1.medium.com/max/1600/1*cFpZYYIu7CNC9zCSbWgfHA.png)
 
 
-
+---
 **Right Join:** This is similar to a left join, but it returns all rows from the right table and matching rows from the left table. If there’s no match in the left table, it returns NULL values.
 
 ```html
@@ -72,7 +72,7 @@ RIGHT JOIN hobbies ON friends.id = hobbies.id;
 ![](https://cdn-images-1.medium.com/max/1600/1*K4Pz3wUGGZ1FKiMiAYIz4w.png)
 
 
-
+---
 **Full Outer Join:** This type of join returns all rows when there’s a match in either the left or right table. If there’s no match, it returns NULL values for the missing side.
 
 ```html

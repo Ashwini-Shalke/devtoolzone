@@ -34,9 +34,9 @@ SELECT StudentID, Subject, Grade FROM Grades WHERE StudentID = 1;
 
 ```
 
-##### _This query inserts data into the temporary table #TempGrades from the Grades table for a specific student.
+_This query inserts data into the temporary table #TempGrades from the Grades table for a specific student._
 
-
+---
 ### 2.  Global Temporary Tables:
 
 ```html
@@ -46,7 +46,7 @@ Grade VARCHAR(2) );
 
 ```
 
-##### _In this example, the double pound sign “##” before the table name indicates that it’s a _global temporary table_. You can use this table across different sessions or connections, and it’s automatically dropped when all sessions referencing it are closed.
+_In this example, the double pound sign “##” before the table name indicates that it’s a _global temporary table_. You can use this table across different sessions or connections, and it’s automatically dropped when all sessions referencing it are closed._
 
 ```html
 
@@ -55,6 +55,6 @@ SELECT StudentID, Subject, Grade FROM Grades WHERE Grade = 'A';
 
 ```
 
-##### _This query inserts data into the global temporary table ##TempGrades from the Grades table for students who received an ‘A’ grade.
+_This query inserts data into the global temporary table ##TempGrades from the Grades table for students who received an ‘A’ grade._
 
-Temporary tables provide a convenient way to work with data temporarily without affecting the main database structure. Just like setting up a temporary workspace for your project, you can use temporary tables to organise and manipulate data for specific tasks or analyses, and then clean up when you’re done.
+>Temporary tables provide a convenient way to work with data temporarily without affecting the main database structure. Just like setting up a temporary workspace for your project, you can use temporary tables to organise and manipulate data for specific tasks or analyses, and then clean up when you’re done.

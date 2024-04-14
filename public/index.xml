@@ -6,7 +6,7 @@
     <description>Recent content on Learner Loft</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://learnerloft.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What is SQL, Data and Database with examples</title>
@@ -121,7 +121,7 @@ SELECT \* FROM Employees WHERE FirstName LIKE &amp;#39;J%&amp;#39;; IN Operator:
     <item>
       <title>For Beginners to Understand Constraints in Database</title>
       <link>https://learnerloft.com/sql/chap13/</link>
-      <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/sql/chap13/</guid>
       <description>Think of constraints in a database as rules that ensure data behaves properly, just like rules in a game. For instance, if you’re playing basketball, you can’t use your hands to touch the ball unless you’re dribbling or shooting. Similarly, constraints in a database ensure that data follows certain rules, like not allowing duplicate values in a column or making sure each student has a unique student ID.
 Let’s say we have a table called “Students” with columns for StudentID, Name, and Age.</description>
@@ -129,7 +129,7 @@ Let’s say we have a table called “Students” with columns for StudentID, Na
     <item>
       <title>Beginners Guide — Inner,Outer,left and right JOINS in SQL</title>
       <link>https://learnerloft.com/sql/chap14/</link>
-      <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/sql/chap14/</guid>
       <description>What are Joins? Imagine you have two lists of friends — one list with their names and another list with their hobbies. Now, you want to find out which friend has which hobby. This is where joins come in handy!
 In databases, tables are like lists, and joins help us combine information from different tables based on a common piece of information, like a friend’s name or an ID.
@@ -158,7 +158,7 @@ Suppose you’re working on a school project where you need to analyze data abou
     <item>
       <title>Views in SQL</title>
       <link>https://learnerloft.com/sql/chap17/</link>
-      <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 14 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/sql/chap17/</guid>
       <description>Imagine you have a favourite playlist on your music app. Instead of going through all your songs every time you want to listen to your favorite tracks, you create a playlist that contains only the songs you love.
 A view in a database is like that playlist — it’s a saved query that contains only the data you’re interested in, making it easier and faster to access.

@@ -68,9 +68,11 @@ DEALLOCATE cursor\_students;
 **Result:**
 The result would be printed in the console, showing each student’s ID, name, and age:
 
+```html
 Student ID: 1, Name: Alice, Age: 15
 Student ID: 2, Name: Bob, Age: 16
 Student ID: 3, Name: Charlie, Age: 14
+```
 
 This process of fetching and processing one row at a time using a cursor allows for more complex and flexible data manipulation in SQL.
 
