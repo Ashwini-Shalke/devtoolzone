@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Apices on Learner Loft</title>
+    <link>https://learnerloft.com/apex/</link>
+    <description>Recent content in Apices on Learner Loft</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Apr 2024 11:54:32 +0530</lastBuildDate>
+    <atom:link href="https://learnerloft.com/apex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chap1</title>
+      <link>https://learnerloft.com/apex/chap1/</link>
+      <pubDate>Mon, 15 Apr 2024 11:54:32 +0530</pubDate>
+      <guid>https://learnerloft.com/apex/chap1/</guid>
+      <description>HTML forms serve as the gateway for user interaction on the web, enabling users to submit data, provide feedback, and engage with web applications seamlessly. From login pages to contact forms, HTML forms are integral to capturing user input and driving interactive web experiences. In this article, we’ll dive deep into the world of HTML forms, exploring their structure, elements, attributes, and examples to help you harness their full potential in your web development projects.</description>
+    </item>
+  </channel>
+</rss>
