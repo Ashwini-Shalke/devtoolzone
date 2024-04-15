@@ -1,6 +1,6 @@
 +++
 title = 'HTML : Formatting Text — Beginners'
-date = 2024-05-15
+date = 2024-04-15
 draft = false
 author = "Ashwini Shalke"
 weight = 2

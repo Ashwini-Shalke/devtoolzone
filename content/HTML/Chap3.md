@@ -1,6 +1,6 @@
 +++
 title = 'Mastering HTML Tables: A Comprehensive Guide with Examples'
-date = 2024-05-15
+date = 2024-04-15
 draft = false
 author = "Ashwini Shalke"
 weight = 3
