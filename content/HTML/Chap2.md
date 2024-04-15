@@ -81,6 +81,7 @@ The `<code>` tag is used to represent computer code within text.
 
 ![](https://cdn-images-1.medium.com/max/1600/1*4i0ngm5zyCs0kEsSLIKMyg.png)
 
+---
 
 ### 7\. Blockquote:
 
@@ -129,8 +130,9 @@ The `<pre>` tag is used to render text exactly as it appears in the HTML code,
 
 ![](https://cdn-images-1.medium.com/max/1600/1*CAlwQHrziV44WxqGbnZqkA.png)
 
+---
 
-### 11\. <ul>, <ol>, and <li>:
+### 11\. `<ul>, <ol>, and <li>`:
 
 These tags create unordered and ordered lists with list items.
 
@@ -149,4 +151,4 @@ These tags create unordered and ordered lists with list items.
 ![](https://cdn-images-1.medium.com/max/1600/1*VeNWKKa4p6V6S26Q7kLIwA.png)
 
 
-> By utilizing these HTML tags for text formatting, you can enhance the visual appeal and readability of your web content. Whether you need to emphasize certain words, quote external sources, or display code snippets, HTML provides a versatile set of tools to meet your formatting needs.
+By utilizing these HTML tags for text formatting, you can enhance the visual appeal and readability of your web content. Whether you need to emphasize certain words, quote external sources, or display code snippets, HTML provides a versatile set of tools to meet your formatting needs.

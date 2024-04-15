@@ -24,18 +24,18 @@ Structural HTML tags are essential for organizing and formatting content on a we
 
 Let’s explore some of the most commonly used structural HTML tags along with examples:
 
-1.  **DOCTYPE html:** This declaration specifies the HTML version being used, which is HTML5 in most modern web pages.
-2.  **html:** The html element serves as the root element of an HTML document, encapsulating the entire content of the page.
-3.  **head:** Inside the head element, you include meta-information about the document, such as the title, character set, CSS stylesheets, and JavaScript scripts.
-4.  **title:** The title element defines the title of the webpage, which appears in the browser’s title bar or tab.
-5.  **body:** The body element contains the main content of the webpage, including text, images, links, and other elements visible to users
-6.  **header:** The header element typically contains introductory content or navigational links at the top of the webpage.
-7.  **nav:** Inside the nav element, you include navigation links or menus for navigating the website.
-8.  **main:** The main element represents the main content of the webpage, excluding header, footer, and navigational elements.
-9.  **section:** The section element defines sections within a webpage, typically containing related content grouped together.
-10.  **article:** The article element represents self-contained content that can be independently distributed or reused, such as blog posts, news articles, or forum posts.
-11.  **aside:** The aside element contains content related to the main content but not necessarily crucial to the understanding of the page, such as sidebars, advertisements, or supplementary information
-12.  **footer:** The footer element contains footer information or copyright notices at the bottom of the webpage.
+1.  **`<!DOCTYPE html>`:** This declaration specifies the HTML version being used, which is HTML5 in most modern web pages.
+2.  **`<html>`:** The `<html>` element serves as the root element of an HTML document, encapsulating the entire content of the page.
+3.  **`<head>`:** Inside the `<head>` element, you include meta-information about the document, such as the title, character set, CSS stylesheets, and JavaScript scripts.
+4.  **`<title>`:** The `<title>` element defines the title of the webpage, which appears in the browser’s title bar or tab.
+5.  **`<body>`:** The `<body>` element contains the main content of the webpage, including text, images, links, and other elements visible to users
+6.  **`<header>`:** The `<header>` element typically contains introductory content or navigational links at the top of the webpage.
+7.  **`<nav>`:** Inside the `<nav>` element, you include navigation links or menus for navigating the website.
+8.  **`<main>`:** The `<main>` element represents the main content of the webpage, excluding header, footer, and navigational elements.
+9.  **`<section>`:** The `<section>` element defines sections within a webpage, typically containing related content grouped together.
+10.  **`<article>`:** The `<article>` element represents self-contained content that can be independently distributed or reused, such as blog posts, news articles, or forum posts.
+11.  **`<aside>`:** The `<aside>` element contains content related to the main content but not necessarily crucial to the understanding of the page, such as sidebars, advertisements, or supplementary information
+12.  **`<footer>`:** The `<footer>` element contains footer information or copyright notices at the bottom of the webpage.
 
 ### Example:
 
@@ -77,7 +77,7 @@ Let’s explore some of the most commonly used structural HTML tags along with e
 </html>
 ```
 
-The **header, nav, main, section, article, and footer** elements help maintain a clear hierarchy and improve accessibility and SEO.
+The `<header>`, `<nav>`, `<main>`, `<section>, `<article>`, and `<footer>` elements help maintain a clear hierarchy and improve accessibility and SEO.
 
 
 ![](https://cdn-images-1.medium.com/max/2400/1*a2pyQsWxHes7XoGKU-LQzQ.png)
