@@ -10,9 +10,9 @@
     <atom:link href="https://learnerloft.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction to Oracle APEX</title>
-      <link>https://learnerloft.com/oracleapex/chap1/</link>
+      <link>https://learnerloft.com/oracle/chap1/</link>
       <pubDate>Mon, 15 Apr 2024 12:45:16 +0530</pubDate>
-      <guid>https://learnerloft.com/oracleapex/chap1/</guid>
+      <guid>https://learnerloft.com/oracle/chap1/</guid>
       <description>Imagine you want to build a big, fancy Lego castle. Each piece you use costs you money, and every time you need to fix or change something, it takes more time and money.
 Now, instead of building it all by yourself, you have a team of builders. But coordinating all of them to work together smoothly can be really tricky. Sometimes they don’t understand each other well, which can lead to mistakes or delays.</description>
     </item>
@@ -21,7 +21,7 @@ Now, instead of building it all by yourself, you have a team of builders. But co
       <link>https://learnerloft.com/html/chap1/</link>
       <pubDate>Mon, 15 Apr 2024 12:35:14 +0530</pubDate>
       <guid>https://learnerloft.com/html/chap1/</guid>
-      <description>Understanding HTML: Structural Tags — Beginners HTML, or HyperText Markup Language, is the backbone of web development. It is the standard markup language for creating web pages and applications. In this article, we’ll delve into the fundamentals of HTML, including its introduction and basic tags, to help you kickstart your journey into web development.
+      <description>HTML, or HyperText Markup Language, is the backbone of web development. It is the standard markup language for creating web pages and applications. In this article, we’ll delve into the fundamentals of HTML, including its introduction and basic tags, to help you kickstart your journey into web development.
 Introduction to HTML: HTML is a markup language used to structure content on the web. It provides a set of elements or tags that define the structure of a web page.</description>
     </item>
     <item>

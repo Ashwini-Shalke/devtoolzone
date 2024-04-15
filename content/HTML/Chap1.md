@@ -7,7 +7,6 @@ weight = 1
 +++
 
 
-### Understanding HTML: Structural Tags — Beginners
 
 ![](https://cdn-images-1.medium.com/max/1600/1*cgj7j0bkyCplP9hpFG43Wg.png)
 
@@ -25,12 +24,12 @@ Structural HTML tags are essential for organizing and formatting content on a we
 
 Let’s explore some of the most commonly used structural HTML tags along with examples:
 
-1.  **<!DOCTYPE html>:** This declaration specifies the HTML version being used, which is HTML5 in most modern web pages.
-2.  **<html>:** The <html> element serves as the root element of an HTML document, encapsulating the entire content of the page.
-3.  **<head>:** Inside the <head> element, you include meta-information about the document, such as the title, character set, CSS stylesheets, and JavaScript scripts.
-4.  **<title>:** The <title> element defines the title of the webpage, which appears in the browser’s title bar or tab.
-5.  **<body>:** The <body> element contains the main content of the webpage, including text, images, links, and other elements visible to users
-6.  **<header>:** The <header> element typically contains introductory content or navigational links at the top of the webpage.
+1.<!DOCTYPE html>:This declaration specifies the HTML version being used, which is HTML5 in most modern web pages.
+2.<html>: The <html> element serves as the root element of an HTML document, encapsulating the entire content of the page.
+3.<head>:Inside the <head> element, you include meta-information about the document, such as the title, character set, CSS stylesheets, and JavaScript scripts.
+4.<title>: The <title> element defines the title of the webpage, which appears in the browser’s title bar or tab.
+5.<body>: The <body> element contains the main content of the webpage, including text, images, links, and other elements visible to users
+6.<header>:The <header> element typically contains introductory content or navigational links at the top of the webpage.
 7.  **<nav>:** Inside the <nav> element, you include navigation links or menus for navigating the website.
 8.  **<main>:** The <main> element represents the main content of the webpage, excluding header, footer, and navigational elements.
 9.  **<section>:** The <section> element defines sections within a webpage, typically containing related content grouped together.
