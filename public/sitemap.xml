@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://learnerloft.com/oracleapex/chap1/</loc>
+    <lastmod>2024-04-15T12:45:16+05:30</lastmod>
+  </url><url>
     <loc>https://learnerloft.com/html/chap1/</loc>
     <lastmod>2024-04-15T12:35:14+05:30</lastmod>
   </url><url>
@@ -59,11 +62,11 @@
     <loc>https://learnerloft.com/sql/chap18/</loc>
     <lastmod>2024-04-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://learnerloft.com/apex/</loc>
-    <lastmod>2024-04-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://learnerloft.com/</loc>
-    <lastmod>2024-04-16T00:00:00+00:00</lastmod>
+    <lastmod>2024-04-15T12:45:16+05:30</lastmod>
+  </url><url>
+    <loc>https://learnerloft.com/oracleapex/</loc>
+    <lastmod>2024-04-15T12:45:16+05:30</lastmod>
   </url><url>
     <loc>https://learnerloft.com/html/</loc>
     <lastmod>2024-04-15T12:35:14+05:30</lastmod>

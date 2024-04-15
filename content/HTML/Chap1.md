@@ -78,7 +78,7 @@ Let’s explore some of the most commonly used structural HTML tags along with e
 </html>
 ```
 
-The <header>, <nav>, <main>, <section>, <article>, and <footer> elements help maintain a clear hierarchy and improve accessibility and SEO.
+The **<header>, <nav>, <main>, <section>, <article>, and <footer>** elements help maintain a clear hierarchy and improve accessibility and SEO.
 
 ![](https://cdn-images-1.medium.com/max/2400/1*a2pyQsWxHes7XoGKU-LQzQ.png)HTML web page
 
