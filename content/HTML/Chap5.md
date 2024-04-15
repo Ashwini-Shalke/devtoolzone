@@ -3,7 +3,7 @@ title = 'HTML: Creating Links for Seamless Navigation'
 date = 2024-04-15
 draft = false
 author = "Ashwini Shalke"
-weight = 3
+weight = 5
 +++
 
 
@@ -32,19 +32,19 @@ The `<a>` element requires the `href` attribute, which specifies the URL or 
 <a href="https://www.example.com">Visit Example Website</a>
 ```
 
-#### Linking to an Email Address:
+#### _Linking to an Email Address:_
 
 ```html
 <a href="mailto:info@example.com">Contact Us</a>
 ```
 
-#### Linking to a Specific Section within a Web Page:
+#### _Linking to a Specific Section within a Web Page:_
 
 ```html
 <a href="#section\_id">Jump to Section</a>
 ```
 
-#### Linking to a File (e.g., PDF, Image):
+#### _Linking to a File (e.g., PDF, Image):_
 
 ```html
 <a href="document.pdf">Download PDF</a>
@@ -80,4 +80,4 @@ HTML allows developers to create links using images, providing a visually appeal
 
 Links are the backbone of web navigation, connecting web pages and resources to provide users with a seamless browsing experience._
 
-With HTML’s_ `_<a>_` _element, developers can create links effortlessly, enabling users to explore the vast expanse of the internet with just a click.
+With HTML’s_ `_<a>_` element, developers can create links effortlessly, enabling users to explore the vast expanse of the internet with just a click.
