@@ -26,4 +26,4 @@ Low-Code Development Platform: Imagine building a computer program is like build
 3.  **Easier Collaboration:** APEX makes it easier for different people to work together on building applications. It’s like giving everyone a common language to communicate in, so there are fewer misunderstandings and mistakes.
 4.  **Scalability:** APEX allows you to start small and grow your applications over time. So, if you start with a simple application, you can easily add more features later without having to rebuild everything from scratch.
 
-> In simpler terms, APEX is like a magic toolbox that helps you build computer programs faster, cheaper, and with fewer mistakes. It’s great for businesses because it saves them time and money, and it makes it easier for teams to work together to create amazing applications.
+In simpler terms, APEX is like a magic toolbox that helps you build computer programs faster, cheaper, and with fewer mistakes. It’s great for businesses because it saves them time and money, and it makes it easier for teams to work together to create amazing applications.

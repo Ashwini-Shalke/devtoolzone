@@ -16,5 +16,13 @@
       <description>Imagine you want to build a big, fancy Lego castle. Each piece you use costs you money, and every time you need to fix or change something, it takes more time and money.
 Now, instead of building it all by yourself, you have a team of builders. But coordinating all of them to work together smoothly can be really tricky. Sometimes they don’t understand each other well, which can lead to mistakes or delays.</description>
     </item>
+    <item>
+      <title>Understanding Oracle APEX Three-Tier Architecture: A Comprehensive Guide</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap2/</link>
+      <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap2/</guid>
+      <description>Understanding Oracle APEX Three-Tier Architecture: A Comprehensive Guide In the realm of web development, Oracle Application Express (APEX) stands out as a powerful tool for creating database-centric web applications. Its architecture, built on a three-tier model, provides a robust framework for developing, deploying, and managing applications efficiently.
+In this article, we’ll delve into the intricacies of Oracle APEX’s three-tier architecture, exploring each tier’s role and how they work together to deliver seamless web applications.</description>
+    </item>
   </channel>
 </rss>
