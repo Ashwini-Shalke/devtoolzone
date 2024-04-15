@@ -45,7 +45,7 @@ menu:
       weight: 20
     - identifier: Oracle APEX
       name: Oracle APEX
-      url: /OracleApex/
+      url: /Apex/
       weight: 30
     - identifier: archives
       name: Archives
