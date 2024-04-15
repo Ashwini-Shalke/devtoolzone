@@ -1,12 +1,11 @@
 +++
 title = 'HTML Forms: Building Interactive Web Experiences'
-date = 2024-04-15
+date = 2024-05-15
 draft = false
 author = "Ashwini Shalke"
 weight = 1
 +++
 
-### HTML Forms: Building Interactive Web Experiences
 
 ![](https://cdn-images-1.medium.com/max/1600/1*6V3Zx1-36pJEcMzAiilHwA.jpeg)
 

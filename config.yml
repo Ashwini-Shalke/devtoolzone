@@ -35,11 +35,6 @@ params:
 
 menu:
   main:
-   
-    # - identifier: categories
-    #   name: Categories
-    #   url: /categories/
-    #   weight: 10
     - identifier: SQL
       name: SQL
       url: /sql/
