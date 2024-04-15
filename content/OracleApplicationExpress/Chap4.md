@@ -31,5 +31,5 @@ Let’s continue with the **example** of the feedback form. Suppose the user fil
 
 For instance, if the user forgets to fill out a required field in the feedback form, the APEX engine detects this validation error and displays a helpful error message to the user, prompting them to correct their mistake before proceeding.
 
-In essence, running an APEX application involves a sophisticated interplay between page rendering and processing user actions. By seamlessly generating dynamic web pages and handling user interactions with finesse, the APEX engine empowers developers to create rich and responsive applications that delight users. So, the next time you launch your APEX application, remember the intricate processes unfolding behind the scenes, making it all possible.
+> In essence, running an APEX application involves a sophisticated interplay between page rendering and processing user actions. By seamlessly generating dynamic web pages and handling user interactions with finesse, the APEX engine empowers developers to create rich and responsive applications that delight users. So, the next time you launch your APEX application, remember the intricate processes unfolding behind the scenes, making it all possible.
 
