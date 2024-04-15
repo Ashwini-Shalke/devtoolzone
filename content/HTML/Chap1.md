@@ -79,6 +79,7 @@ Let’s explore some of the most commonly used structural HTML tags along with e
 
 The **header, nav, main, section, article, and footer** elements help maintain a clear hierarchy and improve accessibility and SEO.
 
-![](https://cdn-images-1.medium.com/max/2400/1*a2pyQsWxHes7XoGKU-LQzQ.png)HTML web page
+HTML web page
+![](https://cdn-images-1.medium.com/max/2400/1*a2pyQsWxHes7XoGKU-LQzQ.png)
 
 > HTML is the foundation of web development, and understanding its basic tags is essential for building web pages. With this knowledge, you can start creating your own web content and exploring more advanced HTML features to enhance your websites.

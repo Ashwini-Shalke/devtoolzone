@@ -1,12 +1,11 @@
 +++
 title = 'Introduction to Oracle APEX'
-date = 2024-04-15T13:08:56+05:30
+date = 2024-04-15
 draft = true
 author = "Ashwini Shalke"
 weight = 1
 +++
 
-### Introduction to Oracle APEX
 
 ![](https://cdn-images-1.medium.com/max/1600/1*picfByYAFGs949pAXL_Mgg.png)
 
