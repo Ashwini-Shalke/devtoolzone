@@ -54,6 +54,15 @@ Here are few examples :-
 This command adds a new column named “Email” to the “Students” table with a data type of VARCHAR(100).</description>
     </item>
     <item>
+      <title>Navigating Oracle APEX: A Tour of Key Development Components</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap3/</link>
+      <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap3/</guid>
+      <description>As you sign into your APEX workspace, you’re greeted with a number of development components, each serving a distinct purpose.
+Let’s take a guided tour through App Builder, SQL Workshop, Team Development, and Gallery, unraveling their functionalities along the way.
+App Builder: Crafting Stunning Applications App Builder serves as your gateway to creating and managing applications effortlessly. Here, you design, develop, and deploy applications that are both visually captivating and highly functional.</description>
+    </item>
+    <item>
       <title>Basic SQL Queries — SELECT, WHERE,UPDATE and DELETE</title>
       <link>https://learnerloft.com/sql/chap3/</link>
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
@@ -62,6 +71,15 @@ This command adds a new column named “Email” to the “Students” table wit
 Example:
 Let’s say you have a table that lists all your favorite snacks and their quantities in your snack box, like this:
 Now, using SQL queries, you can ask questions to find out specific information from this table.</description>
+    </item>
+    <item>
+      <title>Oracle APEX — Rendering and Processing Page</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap4/</link>
+      <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap4/</guid>
+      <description>Running an application in Oracle Application Express (APEX) might seem like a straightforward task, but behind the scenes, there’s a complex engine at work.
+To shed light on this process, let’s delve into the two crucial processes that power the execution of APEX applications.
+Page Rendering Imagine you’ve built a sleek and functional application using APEX, complete with interactive forms, dynamic reports, and engaging charts. When a user accesses your application, the APEX engine kicks into action.</description>
     </item>
     <item>
       <title>For Beginners — TCL Commands in SQL with Example</title>

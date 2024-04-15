@@ -25,5 +25,23 @@ Now, instead of building it all by yourself, you have a team of builders. But co
 In this article, we’ll delve into the intricacies of Oracle APEX’s three-tier architecture, exploring each tier’s role and how they work together to deliver seamless web applications.
 Presentation Tier: At the forefront of Oracle APEX’s architecture lies the presentation tier.</description>
     </item>
+    <item>
+      <title>Navigating Oracle APEX: A Tour of Key Development Components</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap3/</link>
+      <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap3/</guid>
+      <description>As you sign into your APEX workspace, you’re greeted with a number of development components, each serving a distinct purpose.
+Let’s take a guided tour through App Builder, SQL Workshop, Team Development, and Gallery, unraveling their functionalities along the way.
+App Builder: Crafting Stunning Applications App Builder serves as your gateway to creating and managing applications effortlessly. Here, you design, develop, and deploy applications that are both visually captivating and highly functional.</description>
+    </item>
+    <item>
+      <title>Oracle APEX — Rendering and Processing Page</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap4/</link>
+      <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap4/</guid>
+      <description>Running an application in Oracle Application Express (APEX) might seem like a straightforward task, but behind the scenes, there’s a complex engine at work.
+To shed light on this process, let’s delve into the two crucial processes that power the execution of APEX applications.
+Page Rendering Imagine you’ve built a sleek and functional application using APEX, complete with interactive forms, dynamic reports, and engaging charts. When a user accesses your application, the APEX engine kicks into action.</description>
+    </item>
   </channel>
 </rss>
