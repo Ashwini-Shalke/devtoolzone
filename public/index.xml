@@ -6,8 +6,16 @@
     <description>Recent content on Learner Loft</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Apr 2024 12:35:14 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 15 Apr 2024 13:08:56 +0530</lastBuildDate>
     <atom:link href="https://learnerloft.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction to Oracle APEX</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap1/</link>
+      <pubDate>Mon, 15 Apr 2024 13:08:56 +0530</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap1/</guid>
+      <description>Introduction to Oracle APEX Imagine you want to build a big, fancy Lego castle. Each piece you use costs you money, and every time you need to fix or change something, it takes more time and money.
+Now, instead of building it all by yourself, you have a team of builders. But coordinating all of them to work together smoothly can be really tricky. Sometimes they don’t understand each other well, which can lead to mistakes or delays.</description>
+    </item>
     <item>
       <title>Understanding HTML: Structural Tags — Beginners</title>
       <link>https://learnerloft.com/html/chap1/</link>
