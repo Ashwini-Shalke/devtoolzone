@@ -6,7 +6,6 @@ author = "Ashwini Shalke"
 weight = 6
 +++
 
-### Adding Images and Other Page Elements with HTML
 
 ![](https://cdn-images-1.medium.com/max/1600/1*m8ciA3hMOzRiWPzu2s2lcQ.png)
 
