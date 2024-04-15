@@ -1,7 +1,9 @@
 +++
-title = 'Chap1'
-date = 2024-04-15T11:54:32+05:30
-draft = true
+title = 'What is Stored Procedure in SQL'
+date = 2024-04-16
+draft = false
+author = "Ashwini Shalke"
+weight = 1
 +++
 
 ![](https://cdn-images-1.medium.com/max/1600/1*6V3Zx1-36pJEcMzAiilHwA.jpeg)

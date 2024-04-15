@@ -6,7 +6,7 @@
     <description>Recent content on Learner Loft</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Apr 2024 11:54:32 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 15 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://learnerloft.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What is SQL, Data and Database with examples</title>
@@ -171,13 +171,6 @@ Suppose we have a database with a table called “Students” that contains info
       <description>Think of a cursor in SQL like a pointer that allows you to navigate through a set of rows returned by a query, one row at a time. It’s like a virtual hand that can grab one row of data from a table, process it, and then move on to the next row.
 Types of Cursors: There are mainly two types of cursors in SQL:
 Implicit Cursors: These cursors are created by default when you execute a SQL query.</description>
-    </item>
-    <item>
-      <title>Chap1</title>
-      <link>https://learnerloft.com/apex/chap1/</link>
-      <pubDate>Mon, 15 Apr 2024 11:54:32 +0530</pubDate>
-      <guid>https://learnerloft.com/apex/chap1/</guid>
-      <description>HTML forms serve as the gateway for user interaction on the web, enabling users to submit data, provide feedback, and engage with web applications seamlessly. From login pages to contact forms, HTML forms are integral to capturing user input and driving interactive web experiences. In this article, we’ll dive deep into the world of HTML forms, exploring their structure, elements, attributes, and examples to help you harness their full potential in your web development projects.</description>
     </item>
   </channel>
 </rss>
