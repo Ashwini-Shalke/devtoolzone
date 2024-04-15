@@ -132,12 +132,6 @@ Page Rendering Imagine you’ve built a sleek and functional application using A
     <div class="breadcrumbs"><a href="https://learnerloft.com/">Home</a>&nbsp;»&nbsp;<a href="https://learnerloft.com/oracleapplicationexpress/">OracleApplicationExpresses</a></div>
     <h1 class="post-title entry-hint-parent">
       Oracle APEX — Rendering and Processing Page
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
     </h1>
     <div class="post-meta"><span title='2024-04-15 00:00:00 +0000 UTC'>April 15, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Ashwini Shalke
 
@@ -147,18 +141,16 @@ Page Rendering Imagine you’ve built a sleek and functional application using A
 <p><img loading="lazy" src="https://cdn-images-1.medium.com/max/2400/1*TIHS63jMmIk6zkn_uggTbQ.png" alt=""  />
 </p>
 <p>To shed light on this process, let’s delve into the two crucial processes that power the execution of APEX applications.</p>
-<h4 id="page-rendering">Page Rendering<a hidden class="anchor" aria-hidden="true" href="#page-rendering">#</a></h4>
+<h3 id="page-rendering">Page Rendering<a hidden class="anchor" aria-hidden="true" href="#page-rendering">#</a></h3>
 <p>Imagine you’ve built a sleek and functional application using APEX, complete with interactive forms, dynamic reports, and engaging charts. When a user accesses your application, the APEX engine kicks into action. The first step is page rendering, where the engine dynamically generates the HTML, CSS, and JavaScript code needed to display each page of your application.</p>
 <p><strong>For example:-</strong>
 let’s say your application has a page with a form for submitting user feedback. As the user navigates to this page, the APEX engine retrieves the necessary data from the database, constructs the HTML form elements, applies any custom styling defined in your application theme, and injects JavaScript for client-side validation or interactivity. The end result is a fully rendered page ready for user interaction.</p>
 <hr>
-<h4 id="processing-useractions">Processing User Actions<a hidden class="anchor" aria-hidden="true" href="#processing-useractions">#</a></h4>
+<h3 id="processing-useractions">Processing User Actions<a hidden class="anchor" aria-hidden="true" href="#processing-useractions">#</a></h3>
 <p>Once the page is rendered, the user can interact with the various elements such as buttons, links, or form fields. When the user submits a form or clicks a button to trigger an action, the APEX engine initiates the second crucial process: processing user actions.</p>
 <p>Let’s continue with the <strong>example</strong> of the feedback form. Suppose the user fills out the form and clicks the “Submit” button. Behind the scenes, the APEX engine intercepts this action and processes it accordingly. This involves validating the user input, executing any server-side processes defined for the page (such as inserting data into the database or sending an email), and handling any errors or exceptions that may arise.</p>
 <p>For instance, if the user forgets to fill out a required field in the feedback form, the APEX engine detects this validation error and displays a helpful error message to the user, prompting them to correct their mistake before proceeding.</p>
-<blockquote>
 <p>In essence, running an APEX application involves a sophisticated interplay between page rendering and processing user actions. By seamlessly generating dynamic web pages and handling user interactions with finesse, the APEX engine empowers developers to create rich and responsive applications that delight users. So, the next time you launch your APEX application, remember the intricate processes unfolding behind the scenes, making it all possible.</p>
-</blockquote>
 
 
   </div>
