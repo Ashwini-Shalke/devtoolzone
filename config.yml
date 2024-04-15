@@ -30,7 +30,7 @@ params:
 
   ShowShareButtons: true
 
-  ShowPostNavLinks: true
+  ShowPostNavLinks: false
 
 
 menu:
