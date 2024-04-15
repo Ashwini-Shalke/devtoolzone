@@ -90,6 +90,13 @@ Let’s say you have a table that lists all your favorite snacks and their quant
 Now, using SQL queries, you can ask questions to find out specific information from this table.</description>
     </item>
     <item>
+      <title>HTML Forms: Building Interactive Web Experiences</title>
+      <link>https://learnerloft.com/html/chap4/</link>
+      <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/html/chap4/</guid>
+      <description>HTML forms serve as the gateway for user interaction on the web, enabling users to submit data, provide feedback, and engage with web applications seamlessly. From login pages to contact forms, HTML forms are integral to capturing user input and driving interactive web experiences. In this article, we’ll dive deep into the world of HTML forms, exploring their structure, elements, attributes, and examples to help you harness their full potential in your web development projects.</description>
+    </item>
+    <item>
       <title>Oracle APEX — Rendering and Processing Page</title>
       <link>https://learnerloft.com/oracleapplicationexpress/chap4/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
