@@ -37,8 +37,9 @@ SQL is like having a magic wand that helps you organize and find your toys quick
       <link>https://learnerloft.com/oracleapplicationexpress/chap2/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/oracleapplicationexpress/chap2/</guid>
-      <description>Understanding Oracle APEX Three-Tier Architecture: A Comprehensive Guide In the realm of web development, Oracle Application Express (APEX) stands out as a powerful tool for creating database-centric web applications. Its architecture, built on a three-tier model, provides a robust framework for developing, deploying, and managing applications efficiently.
-In this article, we’ll delve into the intricacies of Oracle APEX’s three-tier architecture, exploring each tier’s role and how they work together to deliver seamless web applications.</description>
+      <description>In the realm of web development, Oracle Application Express (APEX) stands out as a powerful tool for creating database-centric web applications. Its architecture, built on a three-tier model, provides a robust framework for developing, deploying, and managing applications efficiently.
+In this article, we’ll delve into the intricacies of Oracle APEX’s three-tier architecture, exploring each tier’s role and how they work together to deliver seamless web applications.
+Presentation Tier: At the forefront of Oracle APEX’s architecture lies the presentation tier.</description>
     </item>
     <item>
       <title>SQL language — DDL, DML, DCL, and TCL</title>
