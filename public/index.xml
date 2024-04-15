@@ -131,6 +131,13 @@ Understanding Links in HTML: Links are essential components of web pages, allow
 Syntax Types of Window Functions: There are a few common window functions you might encounter:</description>
     </item>
     <item>
+      <title>Adding Images and Other Page Elements with HTML</title>
+      <link>https://learnerloft.com/html/chap6/</link>
+      <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/html/chap6/</guid>
+      <description>Adding Images and Other Page Elements with HTML In the realm of web design, visuals play a pivotal role in capturing users’ attention and enhancing the overall aesthetic appeal of a website. HTML, the backbone of web development, offers an array of tags and elements to seamlessly integrate images and other page elements into web pages. In this article, we’ll explore how HTML enables developers to elevate their web design by adding images and other essential page elements with practical examples.</description>
+    </item>
+    <item>
       <title>SQL Clause: Group By, Having, IN and NOT IN</title>
       <link>https://learnerloft.com/sql/chap6/</link>
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
@@ -138,6 +145,13 @@ Syntax Types of Window Functions: There are a few common window functions you mi
       <description>Let’s say we have a table named “Games” with the following data:
 GROUP BY: Think of GROUP BY like organizing your games into groups based on their ratings. It&amp;rsquo;s like sorting them into piles of similar ratings.
 SELECT Rating, COUNT(\*) AS NumOfGames FROM Games GROUP BY Rating; This query will count the number of games for each rating group. For example, it will show how many games have a rating of 4.</description>
+    </item>
+    <item>
+      <title>HTML Frames: Enhancing Web Layouts with Frame Elements</title>
+      <link>https://learnerloft.com/html/chap7/</link>
+      <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/html/chap7/</guid>
+      <description>HTML frames provide a powerful way to divide a web page into multiple sections, each with its own content. Despite their declining usage due to modern CSS techniques, frames remain a valuable tool for certain scenarios, such as creating sidebars or displaying content from different sources simultaneously. In this article, we’ll explore HTML frames, their syntax, attributes, and examples to help you understand and utilize them effectively in your web designs.</description>
     </item>
     <item>
       <title>Aggregate Functions in SQL</title>

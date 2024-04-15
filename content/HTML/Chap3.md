@@ -111,4 +111,4 @@ HTML tables allow for more complex structures by combining rows and columns usin
 ![](https://cdn-images-1.medium.com/max/1600/1*-GXikN8yi_f-s3VqBBgzFA.png)
 
 
-HTML tables are powerful tools for organizing and presenting data on web pages. By mastering their syntax, attributes, and capabilities, you can create visually appealing and structured layouts that enhance user experience and comprehension. Whether you’re displaying simple data or complex information, HTML tables provide the flexibility and control you need to convey your message effectively.
+> HTML tables are powerful tools for organizing and presenting data on web pages. By mastering their syntax, attributes, and capabilities, you can create visually appealing and structured layouts that enhance user experience and comprehension. Whether you’re displaying simple data or complex information, HTML tables provide the flexibility and control you need to convey your message effectively.

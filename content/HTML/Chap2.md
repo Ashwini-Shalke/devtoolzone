@@ -151,4 +151,4 @@ These tags create unordered and ordered lists with list items.
 ![](https://cdn-images-1.medium.com/max/1600/1*VeNWKKa4p6V6S26Q7kLIwA.png)
 
 
-By utilizing these HTML tags for text formatting, you can enhance the visual appeal and readability of your web content. Whether you need to emphasize certain words, quote external sources, or display code snippets, HTML provides a versatile set of tools to meet your formatting needs.
+> By utilizing these HTML tags for text formatting, you can enhance the visual appeal and readability of your web content. Whether you need to emphasize certain words, quote external sources, or display code snippets, HTML provides a versatile set of tools to meet your formatting needs.

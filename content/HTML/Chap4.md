@@ -50,7 +50,9 @@ Let’s create a simple contact form with fields for name, email, message, and a
 
 **Result:**
 
-![](https://cdn-images-1.medium.com/max/1600/1*1l0Z5uw51EuOfXUryFEeqQ.png)Form
+![](https://cdn-images-1.medium.com/max/1600/1*1l0Z5uw51EuOfXUryFEeqQ.png)
+
+---
 
 ### **Form Elements and Attributes:**
 
