@@ -6,9 +6,9 @@ author = "Ashwini Shalke"
 weight = 4
 +++
 
-###   
 
-Running an application in Oracle Application Express (APEX) might seem like a straightforward task, but behind the scenes, there’s a complex engine at work.
+
+Running an application in **Oracle Application Express (APEX)** might seem like a straightforward task, but behind the scenes, there’s a complex engine at work.
 
 ![](https://cdn-images-1.medium.com/max/2400/1*TIHS63jMmIk6zkn_uggTbQ.png)
 
@@ -20,6 +20,8 @@ Imagine you’ve built a sleek and functional application using APEX, complete w
 
 **For example:-**
 let’s say your application has a page with a form for submitting user feedback. As the user navigates to this page, the APEX engine retrieves the necessary data from the database, constructs the HTML form elements, applies any custom styling defined in your application theme, and injects JavaScript for client-side validation or interactivity. The end result is a fully rendered page ready for user interaction.
+
+---
 
 #### Processing User Actions
 
