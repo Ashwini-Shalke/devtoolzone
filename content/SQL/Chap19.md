@@ -1,19 +1,19 @@
 +++
-title = 'Understanding REF_CURSOR in SQL: Explained Simply with Examples'
-date = 2024-04-15
+title = 'Understanding REF_CURSOR in SQL'
+date = 2024-04-16
 draft = false
 author = "Ashwini Shalke"
-weight = 18
+weight = 19
 +++
 
 
 ![](https://cdn-images-1.medium.com/max/1600/1*u66i5hiSMOCEqgoudUQw4Q.png)
 
-Ever heard of something called REF\_CURSOR? Don’t worry if it sounds like gibberish right now. I’m here to break it down for you in the simplest way possible, so grab a snack and let’s dive in!
+Ever heard of something called **REF\_CURSOR** Don’t worry if it sounds like gibberish right now. I’m here to break it down for you in the simplest way possible, so grab a snack and let’s dive in!
 
-Imagine you’re at a library, and you ask the librarian to recommend some good books. Instead of giving you a list of book titles right away, the librarian hands you a special kind of card called a REF\_CURSOR. This card doesn’t contain the actual book titles; rather, it tells you where to find the books on the shelves.
+Imagine you’re at a library, and you ask the librarian to recommend some good books. Instead of giving you a list of book titles right away, the librarian hands you a special kind of card called a **REF\_CURSOR**. This card doesn’t contain the actual book titles; rather, it tells you where to find the books on the shelves.
 
-In SQL, a REF\_CURSOR works similarly. It’s like a placeholder that points to a result set (or a set of rows) in a database, but it doesn’t contain the actual data. Instead, it holds a reference to where the data can be found.
+In SQL, a **REF\_CURSOR** works similarly. It’s like a placeholder that points to a result set (or a set of rows) in a database, but it doesn’t contain the actual data. Instead, it holds a reference to where the data can be found.
 
 **Now, let’s break it down with an example:**
 
@@ -21,6 +21,7 @@ Suppose we have a database table called “books” with columns for book ID, ti
 
 **Here’s how we can use a REF\_CURSOR to achieve this:**
 
+```html
 CREATE OR REPLACE PROCEDURE get\_books\_by\_author(
     p\_author\_name IN VARCHAR2,
     p\_books\_cur OUT SYS\_REFCURSOR
@@ -31,8 +32,9 @@ BEGIN
     FROM books
     WHERE author = p\_author\_name;
 END;
+```
 
-**Let’s break it down:**
+
 
 *   We define a stored procedure called “get\_books\_by\_author” that takes an author name as input (p\_author\_name) and returns a REF\_CURSOR (p\_books\_cur) as output.
 *   Inside the procedure, we use the OPEN statement to associate the REF\_CURSOR with a SELECT query that fetches books written by the specified author.

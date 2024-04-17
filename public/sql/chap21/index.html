@@ -143,11 +143,11 @@ In programming, a pragma is a bit like those special notes. It’s a way for the
 <p>In PL/SQL, the most common type of pragma is the Compiler Directive. This type of pragma provides instructions to the PL/SQL compiler about how to process the code during compilation.</p>
 <h4 id="here-are-some-examples-of-compiler-directives-commonly-used-inplsql"><strong>Here are some examples of compiler directives commonly used in PL/SQL:</strong><a hidden class="anchor" aria-hidden="true" href="#here-are-some-examples-of-compiler-directives-commonly-used-inplsql">#</a></h4>
 <ol>
-<li><code>autonomous_transaction</code>: This pragma allows a PL/SQL block to execute SQL statements independently of the main transaction. It&rsquo;s useful for executing SQL statements that commit or rollback independently of the calling transaction.</li>
-<li><code>exception_init</code>: This pragma associates an exception with an Oracle error number. It&rsquo;s used to map a custom exception to a specific Oracle error code.</li>
-<li><code>inline</code>: This pragma instructs the compiler to attempt to inline the code of a function or a procedure at its call site. Inlining can improve performance by eliminating the overhead of calling a separate subprogram.</li>
-<li><code>restrict_references</code>: This pragma restricts the visibility of PL/SQL constructs to other program units. It&rsquo;s used to encapsulate and hide implementation details.</li>
-<li><code>serially_reusable</code>: This pragma specifies that a cursor is serially reusable, meaning it can be opened and closed multiple times within the same transaction without re-parsing the associated SQL statement.</li>
+<li><strong><code>autonomous_transaction</code></strong>: This pragma allows a PL/SQL block to execute SQL statements independently of the main transaction. It&rsquo;s useful for executing SQL statements that commit or rollback independently of the calling transaction.</li>
+<li><strong><code>exception_init</code></strong>: This pragma associates an exception with an Oracle error number. It&rsquo;s used to map a custom exception to a specific Oracle error code.</li>
+<li><strong><code>inline</code></strong>: This pragma instructs the compiler to attempt to inline the code of a function or a procedure at its call site. Inlining can improve performance by eliminating the overhead of calling a separate subprogram.</li>
+<li><strong><code>restrict_references</code></strong>: This pragma restricts the visibility of PL/SQL constructs to other program units. It&rsquo;s used to encapsulate and hide implementation details.</li>
+<li><strong><code>serially_reusable</code></strong>: This pragma specifies that a cursor is serially reusable, meaning it can be opened and closed multiple times within the same transaction without re-parsing the associated SQL statement.</li>
 </ol>
 <p>These pragmas, among others, help developers control the behaviour of the PL/SQL compiler and optimise the performance and functionality of their code.</p>
 <p>Here’s a PL/SQL program using the <strong><code>autonomous_transaction</code></strong> pragma to ensure that each table update operates independently of the main transaction:</p>
@@ -201,13 +201,13 @@ In programming, a pragma is a bit like those special notes. It’s a way for the
 </span></span><span style="display:flex;"><span>END;
 </span></span></code></pre></div><h4 id="explanation">Explanation:<a hidden class="anchor" aria-hidden="true" href="#explanation">#</a></h4>
 <ul>
-<li><code>autonomous_transaction</code>: This pragma allows the <code>update_employee_salary</code> and <code>update_department_budget</code>subprograms to execute SQL statements independently of the main transaction. This means that if an error occurs in one subprogram, it won&rsquo;t affect the other subprogram&rsquo;s changes, and vice versa.</li>
-<li><code>exception_init</code>: We use this pragma to associate a custom exception (<code>custom_error</code>) with an Oracle error number (<code>-20001</code>). This allows us to catch specific Oracle errors and handle them in a custom way.</li>
-<li><code>inline</code>: Although not explicitly used in this example, the <code>inline</code> pragma could be used to instruct the compiler to attempt to inline the code of subprograms like <code>update_employee_salary</code> and <code>update_department_budget</code> at their call sites, potentially improving performance.</li>
-<li><code>restrict_references</code>: This pragma isn&rsquo;t explicitly used in this example, but it could be used to restrict the visibility of certain PL/SQL constructs to other program units, helping to encapsulate and hide implementation details.</li>
-<li><code>serially_reusable</code>: This pragma specifies that the cursor used within the PL/SQL block is serially reusable, meaning it can be opened and closed multiple times within the same transaction without re-parsing the associated SQL statement. This can improve performance when reusing cursors.</li>
+<li><strong><code>autonomous_transaction</code></strong>: This pragma allows the <code>update_employee_salary</code> and <code>update_department_budget</code>subprograms to execute SQL statements independently of the main transaction. This means that if an error occurs in one subprogram, it won&rsquo;t affect the other subprogram&rsquo;s changes, and vice versa.</li>
+<li><strong><code>exception_init</code></strong>: We use this pragma to associate a custom exception (<code>custom_error</code>) with an Oracle error number (<code>-20001</code>). This allows us to catch specific Oracle errors and handle them in a custom way.</li>
+<li><strong><code>inline</code></strong>: Although not explicitly used in this example, the <code>inline</code> pragma could be used to instruct the compiler to attempt to inline the code of subprograms like <code>update_employee_salary</code> and <code>update_department_budget</code> at their call sites, potentially improving performance.</li>
+<li><strong><code>restrict_references</code></strong>: This pragma isn&rsquo;t explicitly used in this example, but it could be used to restrict the visibility of certain PL/SQL constructs to other program units, helping to encapsulate and hide implementation details.</li>
+<li><strong><code>serially_reusable</code></strong>: This pragma specifies that the cursor used within the PL/SQL block is serially reusable, meaning it can be opened and closed multiple times within the same transaction without re-parsing the associated SQL statement. This can improve performance when reusing cursors.</li>
 </ul>
-<p>When you run this PL/SQL program, it will update the employee and department tables independently, even if there’s an error in one of the updates. The use of the_ <code>_autonomous_transaction_</code> _pragma ensures that each table update operates as a separate transaction, maintaining data integrity.</p>
+<p>When you run this PL/SQL program, it will update the employee and department tables independently, even if there’s an error in one of the updates. The use of the <strong><code>_autonomous_transaction_pragma</code></strong> ensures that each table update operates as a separate transaction, maintaining data integrity.</p>
 
 
   </div>
@@ -216,10 +216,10 @@ In programming, a pragma is a bit like those special notes. It’s a way for the
     <ul class="post-tags">
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://learnerloft.com/sql/chap20/">
+  <a class="prev" href="https://learnerloft.com/sql/chap19/">
     <span class="title">« Prev</span>
     <br>
-    <span>Difference between REF CURSOR and CURSOR</span>
+    <span>Understanding REF_CURSOR in SQL</span>
   </a>
   <a class="next" href="https://learnerloft.com/sql/chap22/">
     <span class="title">Next »</span>

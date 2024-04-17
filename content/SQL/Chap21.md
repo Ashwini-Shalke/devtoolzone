@@ -18,11 +18,11 @@ In PL/SQL, the most common type of pragma is the Compiler Directive. This type o
 
 #### **Here are some examples of compiler directives commonly used in PL/SQL:**
 
-1.  `autonomous_transaction`: This pragma allows a PL/SQL block to execute SQL statements independently of the main transaction. It's useful for executing SQL statements that commit or rollback independently of the calling transaction.
-2.  `exception_init`: This pragma associates an exception with an Oracle error number. It's used to map a custom exception to a specific Oracle error code.
-3.  `inline`: This pragma instructs the compiler to attempt to inline the code of a function or a procedure at its call site. Inlining can improve performance by eliminating the overhead of calling a separate subprogram.
-4.  `restrict_references`: This pragma restricts the visibility of PL/SQL constructs to other program units. It's used to encapsulate and hide implementation details.
-5.  `serially_reusable`: This pragma specifies that a cursor is serially reusable, meaning it can be opened and closed multiple times within the same transaction without re-parsing the associated SQL statement.
+1.  **`autonomous_transaction`**: This pragma allows a PL/SQL block to execute SQL statements independently of the main transaction. It's useful for executing SQL statements that commit or rollback independently of the calling transaction.
+2.  **`exception_init`**: This pragma associates an exception with an Oracle error number. It's used to map a custom exception to a specific Oracle error code.
+3.  **`inline`**: This pragma instructs the compiler to attempt to inline the code of a function or a procedure at its call site. Inlining can improve performance by eliminating the overhead of calling a separate subprogram.
+4.  **`restrict_references`**: This pragma restricts the visibility of PL/SQL constructs to other program units. It's used to encapsulate and hide implementation details.
+5.  **`serially_reusable`**: This pragma specifies that a cursor is serially reusable, meaning it can be opened and closed multiple times within the same transaction without re-parsing the associated SQL statement.
 
 These pragmas, among others, help developers control the behaviour of the PL/SQL compiler and optimise the performance and functionality of their code.
 
@@ -81,10 +81,10 @@ END;
 
 #### Explanation:
 
-*   `autonomous_transaction`: This pragma allows the `update_employee_salary` and `update_department_budget`subprograms to execute SQL statements independently of the main transaction. This means that if an error occurs in one subprogram, it won't affect the other subprogram's changes, and vice versa.
-*   `exception_init`: We use this pragma to associate a custom exception (`custom_error`) with an Oracle error number (`-20001`). This allows us to catch specific Oracle errors and handle them in a custom way.
-*   `inline`: Although not explicitly used in this example, the `inline` pragma could be used to instruct the compiler to attempt to inline the code of subprograms like `update_employee_salary` and `update_department_budget` at their call sites, potentially improving performance.
-*   `restrict_references`: This pragma isn't explicitly used in this example, but it could be used to restrict the visibility of certain PL/SQL constructs to other program units, helping to encapsulate and hide implementation details.
-*   `serially_reusable`: This pragma specifies that the cursor used within the PL/SQL block is serially reusable, meaning it can be opened and closed multiple times within the same transaction without re-parsing the associated SQL statement. This can improve performance when reusing cursors.
+*   **`autonomous_transaction`**: This pragma allows the `update_employee_salary` and `update_department_budget`subprograms to execute SQL statements independently of the main transaction. This means that if an error occurs in one subprogram, it won't affect the other subprogram's changes, and vice versa.
+*   **`exception_init`**: We use this pragma to associate a custom exception (`custom_error`) with an Oracle error number (`-20001`). This allows us to catch specific Oracle errors and handle them in a custom way.
+*   **`inline`**: Although not explicitly used in this example, the `inline` pragma could be used to instruct the compiler to attempt to inline the code of subprograms like `update_employee_salary` and `update_department_budget` at their call sites, potentially improving performance.
+*   **`restrict_references`**: This pragma isn't explicitly used in this example, but it could be used to restrict the visibility of certain PL/SQL constructs to other program units, helping to encapsulate and hide implementation details.
+*   **`serially_reusable`**: This pragma specifies that the cursor used within the PL/SQL block is serially reusable, meaning it can be opened and closed multiple times within the same transaction without re-parsing the associated SQL statement. This can improve performance when reusing cursors.
 
-When you run this PL/SQL program, it will update the employee and department tables independently, even if there’s an error in one of the updates. The use of the_ `_autonomous_transaction_` _pragma ensures that each table update operates as a separate transaction, maintaining data integrity.
+When you run this PL/SQL program, it will update the employee and department tables independently, even if there’s an error in one of the updates. The use of the **`_autonomous_transaction_pragma`** ensures that each table update operates as a separate transaction, maintaining data integrity.
