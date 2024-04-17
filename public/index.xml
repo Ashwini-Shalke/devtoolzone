@@ -253,6 +253,14 @@ A view in a database is like that playlist — it’s a saved query that con
 Suppose we have a database with a table called “Students” that contains information about students, including their names and ages.</description>
     </item>
     <item>
+      <title>Understanding REF_CURSOR in SQL: Explained Simply with Examples</title>
+      <link>https://learnerloft.com/sql/chap19/</link>
+      <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/sql/chap19/</guid>
+      <description>Ever heard of something called REF_CURSOR? Don’t worry if it sounds like gibberish right now. I’m here to break it down for you in the simplest way possible, so grab a snack and let’s dive in!
+Imagine you’re at a library, and you ask the librarian to recommend some good books. Instead of giving you a list of book titles right away, the librarian hands you a special kind of card called a REF_CURSOR.</description>
+    </item>
+    <item>
       <title>What is a Cursor in SQL ?</title>
       <link>https://learnerloft.com/sql/chap18/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
