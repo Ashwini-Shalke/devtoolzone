@@ -6,7 +6,7 @@
     <description>Recent content in OracleApplicationExpresses on Learner Loft</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://learnerloft.com/oracleapplicationexpress/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction to Oracle APEX</title>
@@ -42,14 +42,6 @@ App Builder: Crafting Stunning Applications App Builder serves as your gateway t
       <description>Running an application in Oracle Application Express (APEX) might seem like a straightforward task, but behind the scenes, there’s a complex engine at work.
 To shed light on this process, let’s delve into the two crucial processes that power the execution of APEX applications.
 Page Rendering Imagine you’ve built a sleek and functional application using APEX, complete with interactive forms, dynamic reports, and engaging charts. When a user accesses your application, the APEX engine kicks into action.</description>
-    </item>
-    <item>
-      <title>Understanding APEX Application Processes</title>
-      <link>https://learnerloft.com/oracleapplicationexpress/chap5/</link>
-      <pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/oracleapplicationexpress/chap5/</guid>
-      <description>When you interact with an APEX application, the APEX engine orchestrates two key processes to make things happen smoothly: Show Page and Accept Page.
-Show Page Imagine this process as the stage where the magic unfolds. When you click a button or navigate to a certain page in your APEX application, the Show Page process springs into action. It’s responsible for presenting the requested page to you, the user.</description>
     </item>
   </channel>
 </rss>
