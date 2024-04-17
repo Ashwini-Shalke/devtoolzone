@@ -100,6 +100,7 @@ SELECT Name FROM Students WHERE Age > ALL (SELECT Age FROM Students);
 FORALL i IN 1..students.count SAVE EXCEPTIONS INSERT INTO Grades 
 VALUES(students(i).id, students(i).grade);
 ```
+---
 
 ### Varchar and Char
 

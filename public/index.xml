@@ -6,7 +6,7 @@
     <description>Recent content on Learner Loft</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 17 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://learnerloft.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction to Oracle APEX</title>
@@ -113,6 +113,14 @@ Page Rendering Imagine you’ve built a sleek and functional application using A
       <description>TCL commands are COMMIT, ROLLBACK, and SAVEPOINT.
 COMMIT: The COMMIT command is used to permanently save the changes made during the current transaction. Once a COMMIT command is executed, all changes made within the transaction become permanent and are visible to other users. Example: Suppose we have a transaction that updates the age of a student in the database:
 BEGIN TRANSACTION; UPDATE Students SET Age = 16 WHERE Name = &amp;#39;Alice&amp;#39;; COMMIT; In this example:</description>
+    </item>
+    <item>
+      <title>Understanding APEX Application Processes</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap5/</link>
+      <pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap5/</guid>
+      <description>When you interact with an APEX application, the APEX engine orchestrates two key processes to make things happen smoothly: Show Page and Accept Page.
+Show Page Imagine this process as the stage where the magic unfolds. When you click a button or navigate to a certain page in your APEX application, the Show Page process springs into action. It’s responsible for presenting the requested page to you, the user.</description>
     </item>
     <item>
       <title>HTML: Creating Links for Seamless Navigation</title>
