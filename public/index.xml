@@ -294,7 +294,7 @@ In programming, a pragma is a bit like those special notes. It’s a way for the
       <description>Imagine you’re playing a game where you need to catch a ball. Sometimes, you might not catch the ball perfectly, and it might fall to the ground. But instead of giving up, you learn from your mistake and try again. In SQL, exceptions are like errors that occur during a task, but instead of crashing the program, they give you a chance to handle the error and continue with your task.</description>
     </item>
     <item>
-      <title>Known the differences in SQL</title>
+      <title>The differences in SQL</title>
       <link>https://learnerloft.com/sql/chap23/</link>
       <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/sql/chap23/</guid>
