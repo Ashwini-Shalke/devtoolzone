@@ -3,7 +3,7 @@ title = 'Difference between REF CURSOR and CURSOR'
 date = 2024-04-16
 draft = false
 author = "Ashwini Shalke"
-weight = 19
+weight = 20
 +++
 
 
