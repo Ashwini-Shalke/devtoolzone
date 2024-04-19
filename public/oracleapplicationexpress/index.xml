@@ -6,7 +6,7 @@
     <description>Recent content in OracleApplicationExpresses on Learner Loft</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://learnerloft.com/oracleapplicationexpress/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction to Oracle APEX</title>
@@ -42,6 +42,15 @@ App Builder: Crafting Stunning Applications App Builder serves as your gateway t
       <description>Running an application in Oracle Application Express (APEX) might seem like a straightforward task, but behind the scenes, there’s a complex engine at work.
 To shed light on this process, let’s delve into the two crucial processes that power the execution of APEX applications.
 Page Rendering Imagine you’ve built a sleek and functional application using APEX, complete with interactive forms, dynamic reports, and engaging charts. When a user accesses your application, the APEX engine kicks into action.</description>
+    </item>
+    <item>
+      <title>Understanding Session ID, Session State, and Sessions</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap5/</link>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap5/</guid>
+      <description>In the dynamic world of web application development, managing user sessions efficiently is paramount for delivering a seamless and personalised user experience. Oracle Application Express (APEX), a popular low-code development platform, provides robust tools for managing sessions effectively.
+In this article, we’ll delve into the concepts of Session ID, Session State, and Sessions in APEX.
+Understanding Session ID: At the heart of session management lies the Session ID, a unique identifier assigned to each user’s session.</description>
     </item>
   </channel>
 </rss>
