@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Data on Learner Loft</title>
+    <link>https://learnerloft.com/tags/data/</link>
+    <description>Recent content in Data on Learner Loft</description>
+    <generator>Hugo -- 0.124.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 11 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://learnerloft.com/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is SQL, Data and Database with examples</title>
+      <link>https://learnerloft.com/sql/chap1/</link>
+      <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/sql/chap1/</guid>
+      <description>Imagine you have a big collection of toys scattered all over your room. You want to find your favorite toy, but searching through the mess by yourself might take a lot of time and effort. Here’s where your friend SQL comes in!
+SQL is like having a magic wand that helps you organize and find your toys quickly and easily. It stands for Structured Query Language, but you can just think of it as a special language that lets you talk to a smart toy organizer.</description>
+    </item>
+    <item>
+      <title>Basic SQL Queries — SELECT, WHERE,UPDATE and DELETE</title>
+      <link>https://learnerloft.com/sql/chap3/</link>
+      <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/sql/chap3/</guid>
+      <description>Think of SQL queries as requests you make to find specific snacks in your snack box. Just like asking your friend to find your favorite candy in the snack box, SQL queries help you find specific information from a database.
+Example:
+Let’s say you have a table that lists all your favorite snacks and their quantities in your snack box, like this:
+Now, using SQL queries, you can ask questions to find out specific information from this table.</description>
+    </item>
+    <item>
+      <title>User-Defined Function (UDF) in SQL</title>
+      <link>https://learnerloft.com/sql/chap8/</link>
+      <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/sql/chap8/</guid>
+      <description>Let’s say, you have a special calculator that can perform a specific calculation, like doubling a number or calculating the average of a set of numbers. You can use this calculator whenever you need to perform that calculation, without having to write out the steps each time. In SQL, a user-defined function is like that special calculator — it’s a custom function that you can create to perform a specific task or calculation.</description>
+    </item>
+  </channel>
+</rss>

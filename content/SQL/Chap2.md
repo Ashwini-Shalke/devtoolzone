@@ -4,6 +4,7 @@ date = 2024-04-05
 draft = false
 author = "Ashwini Shalke"
 weight = 2
+tags = ["SQL", "Database", "Beginners","DDL","DCL","DML"]
 +++
 
 ## DDL (Data Definition Language):

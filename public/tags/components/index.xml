@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Components on Learner Loft</title>
+    <link>https://learnerloft.com/tags/components/</link>
+    <description>Recent content in Components on Learner Loft</description>
+    <generator>Hugo -- 0.124.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://learnerloft.com/tags/components/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Navigating Oracle APEX: A Tour of Key Development Components</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap3/</link>
+      <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap3/</guid>
+      <description>As you sign into your APEX workspace, you’re greeted with a number of development components, each serving a distinct purpose.
+Let’s take a guided tour through App Builder, SQL Workshop, Team Development, and Gallery, unraveling their functionalities along the way.
+App Builder: Crafting Stunning Applications App Builder serves as your gateway to creating and managing applications effortlessly. Here, you design, develop, and deploy applications that are both visually captivating and highly functional.</description>
+    </item>
+  </channel>
+</rss>

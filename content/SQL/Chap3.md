@@ -4,6 +4,7 @@ date = 2024-04-08
 draft = false
 author = "Ashwini Shalke"
 weight = 3
+tags = ["SQL", "Database", "Beginners","Data"]
 +++
 
 Think of SQL queries as requests you make to find specific snacks in your snack box. Just like asking your friend to find your favorite candy in the snack box, SQL queries help you find specific information from a database.

@@ -6,13 +6,83 @@
     <description>Recent content in Tags on Learner Loft</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://learnerloft.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>APEX</title>
+      <link>https://learnerloft.com/tags/apex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/apex/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Beginners</title>
       <link>https://learnerloft.com/tags/beginners/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/tags/beginners/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Low-Code</title>
+      <link>https://learnerloft.com/tags/low-code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/low-code/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Oracle</title>
+      <link>https://learnerloft.com/tags/oracle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/oracle/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Session</title>
+      <link>https://learnerloft.com/tags/session/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/session/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Database</title>
+      <link>https://learnerloft.com/tags/database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/database/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Exception</title>
+      <link>https://learnerloft.com/tags/exception/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/exception/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>REF-Cursor</title>
+      <link>https://learnerloft.com/tags/ref-cursor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/ref-cursor/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SQL</title>
+      <link>https://learnerloft.com/tags/sql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/sql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Transaction</title>
+      <link>https://learnerloft.com/tags/transaction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/transaction/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Architecture</title>
+      <link>https://learnerloft.com/tags/architecture/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/architecture/</guid>
       <description></description>
     </item>
     <item>
@@ -23,6 +93,48 @@
       <description></description>
     </item>
     <item>
+      <title>Components</title>
+      <link>https://learnerloft.com/tags/components/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/components/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cursor</title>
+      <link>https://learnerloft.com/tags/cursor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/cursor/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Elements</title>
+      <link>https://learnerloft.com/tags/elements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/elements/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Formatting</title>
+      <link>https://learnerloft.com/tags/formatting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/formatting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Forms</title>
+      <link>https://learnerloft.com/tags/forms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/forms/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Frames</title>
+      <link>https://learnerloft.com/tags/frames/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/frames/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>HTML</title>
       <link>https://learnerloft.com/tags/html/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -30,10 +142,143 @@
       <description></description>
     </item>
     <item>
+      <title>Images</title>
+      <link>https://learnerloft.com/tags/images/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/images/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Links</title>
+      <link>https://learnerloft.com/tags/links/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/links/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tables</title>
+      <link>https://learnerloft.com/tags/tables/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/tables/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Tags</title>
       <link>https://learnerloft.com/tags/tags/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/tags/tags/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>View</title>
+      <link>https://learnerloft.com/tags/view/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/view/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Joins</title>
+      <link>https://learnerloft.com/tags/joins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/joins/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Keys</title>
+      <link>https://learnerloft.com/tags/keys/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/keys/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Trigger</title>
+      <link>https://learnerloft.com/tags/trigger/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/trigger/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data</title>
+      <link>https://learnerloft.com/tags/data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/data/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Operators</title>
+      <link>https://learnerloft.com/tags/operators/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/operators/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Procedure</title>
+      <link>https://learnerloft.com/tags/procedure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/procedure/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Stored-Procedure</title>
+      <link>https://learnerloft.com/tags/stored-procedure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/stored-procedure/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Functions</title>
+      <link>https://learnerloft.com/tags/functions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/functions/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Window</title>
+      <link>https://learnerloft.com/tags/window/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/window/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Aggregate</title>
+      <link>https://learnerloft.com/tags/aggregate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/aggregate/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Clause</title>
+      <link>https://learnerloft.com/tags/clause/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/clause/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TCL</title>
+      <link>https://learnerloft.com/tags/tcl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/tcl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DCL</title>
+      <link>https://learnerloft.com/tags/dcl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/dcl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DDL</title>
+      <link>https://learnerloft.com/tags/ddl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/ddl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DML</title>
+      <link>https://learnerloft.com/tags/dml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/tags/dml/</guid>
       <description></description>
     </item>
   </channel>

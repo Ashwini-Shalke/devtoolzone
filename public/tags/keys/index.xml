@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Keys on Learner Loft</title>
+    <link>https://learnerloft.com/tags/keys/</link>
+    <description>Recent content in Keys on Learner Loft</description>
+    <generator>Hugo -- 0.124.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 13 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://learnerloft.com/tags/keys/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>For Beginners to Understand Constraints in Database</title>
+      <link>https://learnerloft.com/sql/chap13/</link>
+      <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/sql/chap13/</guid>
+      <description>Think of constraints in a database as rules that ensure data behaves properly, just like rules in a game. For instance, if you’re playing basketball, you can’t use your hands to touch the ball unless you’re dribbling or shooting. Similarly, constraints in a database ensure that data follows certain rules, like not allowing duplicate values in a column or making sure each student has a unique student ID.
+Let’s say we have a table called “Students” with columns for StudentID, Name, and Age.</description>
+    </item>
+  </channel>
+</rss>

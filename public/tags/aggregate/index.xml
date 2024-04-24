@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Aggregate on Learner Loft</title>
+    <link>https://learnerloft.com/tags/aggregate/</link>
+    <description>Recent content in Aggregate on Learner Loft</description>
+    <generator>Hugo -- 0.124.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 08 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://learnerloft.com/tags/aggregate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aggregate Functions in SQL</title>
+      <link>https://learnerloft.com/sql/chap7/</link>
+      <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/sql/chap7/</guid>
+      <description>Imagine you’re at a party with a bunch of friends, and there’s a big bowl of candies on the table. Now, you want to know some information about those candies, like how many candies are there in total, what’s the average number of candies each person has, or which friend has the most candies.
+In SQL, aggregate functions are like magical candy counters that help you answer these questions by performing calculations on groups of data.</description>
+    </item>
+  </channel>
+</rss>

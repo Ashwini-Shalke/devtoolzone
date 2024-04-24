@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>TCL on Learner Loft</title>
+    <link>https://learnerloft.com/tags/tcl/</link>
+    <description>Recent content in TCL on Learner Loft</description>
+    <generator>Hugo -- 0.124.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 08 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://learnerloft.com/tags/tcl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>For Beginners — TCL Commands in SQL with Example</title>
+      <link>https://learnerloft.com/sql/chap4/</link>
+      <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/sql/chap4/</guid>
+      <description>TCL commands are COMMIT, ROLLBACK, and SAVEPOINT.
+COMMIT: The COMMIT command is used to permanently save the changes made during the current transaction. Once a COMMIT command is executed, all changes made within the transaction become permanent and are visible to other users. Example: Suppose we have a transaction that updates the age of a student in the database:
+BEGIN TRANSACTION; UPDATE Students SET Age = 16 WHERE Name = &amp;#39;Alice&amp;#39;; COMMIT; In this example:</description>
+    </item>
+  </channel>
+</rss>

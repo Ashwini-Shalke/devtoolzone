@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Cursor on Learner Loft</title>
+    <link>https://learnerloft.com/tags/cursor/</link>
+    <description>Recent content in Cursor on Learner Loft</description>
+    <generator>Hugo -- 0.124.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://learnerloft.com/tags/cursor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is a Cursor in SQL ?</title>
+      <link>https://learnerloft.com/sql/chap18/</link>
+      <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/sql/chap18/</guid>
+      <description>Think of a cursor in SQL like a pointer that allows you to navigate through a set of rows returned by a query, one row at a time. It’s like a virtual hand that can grab one row of data from a table, process it, and then move on to the next row.
+Types of Cursors: There are mainly two types of cursors in SQL:
+Implicit Cursors: These cursors are created by default when you execute a SQL query.</description>
+    </item>
+  </channel>
+</rss>

@@ -4,6 +4,7 @@ date = 2024-04-19
 draft = false
 author = "Ashwini Shalke"
 weight = 5
+tags = ["Oracle", "APEX", "Beginners","Low-Code","Session"]
 +++
 
 

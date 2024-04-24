@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>APEX on Learner Loft</title>
+    <link>https://learnerloft.com/tags/apex/</link>
+    <description>Recent content in APEX on Learner Loft</description>
+    <generator>Hugo -- 0.124.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 19 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://learnerloft.com/tags/apex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction to Oracle APEX</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap1/</link>
+      <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap1/</guid>
+      <description>Imagine you want to build a big, fancy Lego castle. Each piece you use costs you money, and every time you need to fix or change something, it takes more time and money.
+Now, instead of building it all by yourself, you have a team of builders. But coordinating all of them to work together smoothly can be really tricky. Sometimes they don’t understand each other well, which can lead to mistakes or delays.</description>
+    </item>
+    <item>
+      <title>Understanding Oracle APEX Three-Tier Architecture: A Comprehensive Guide</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap2/</link>
+      <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap2/</guid>
+      <description>In the realm of web development, Oracle Application Express (APEX) stands out as a powerful tool for creating database-centric web applications. Its architecture, built on a three-tier model, provides a robust framework for developing, deploying, and managing applications efficiently.
+In this article, we’ll delve into the intricacies of Oracle APEX’s three-tier architecture, exploring each tier’s role and how they work together to deliver seamless web applications.
+Presentation Tier: At the forefront of Oracle APEX’s architecture lies the presentation tier.</description>
+    </item>
+    <item>
+      <title>Navigating Oracle APEX: A Tour of Key Development Components</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap3/</link>
+      <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap3/</guid>
+      <description>As you sign into your APEX workspace, you’re greeted with a number of development components, each serving a distinct purpose.
+Let’s take a guided tour through App Builder, SQL Workshop, Team Development, and Gallery, unraveling their functionalities along the way.
+App Builder: Crafting Stunning Applications App Builder serves as your gateway to creating and managing applications effortlessly. Here, you design, develop, and deploy applications that are both visually captivating and highly functional.</description>
+    </item>
+    <item>
+      <title>Oracle APEX — Rendering and Processing Page</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap4/</link>
+      <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap4/</guid>
+      <description>Running an application in Oracle Application Express (APEX) might seem like a straightforward task, but behind the scenes, there’s a complex engine at work.
+To shed light on this process, let’s delve into the two crucial processes that power the execution of APEX applications.
+Page Rendering Imagine you’ve built a sleek and functional application using APEX, complete with interactive forms, dynamic reports, and engaging charts. When a user accesses your application, the APEX engine kicks into action.</description>
+    </item>
+    <item>
+      <title>Understanding Session ID, Session State, and Sessions</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap5/</link>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap5/</guid>
+      <description>In the dynamic world of web application development, managing user sessions efficiently is paramount for delivering a seamless and personalised user experience. Oracle Application Express (APEX), a popular low-code development platform, provides robust tools for managing sessions effectively.
+In this article, we’ll delve into the concepts of Session ID, Session State, and Sessions in APEX.
+Understanding Session ID: At the heart of session management lies the Session ID, a unique identifier assigned to each user’s session.</description>
+    </item>
+  </channel>
+</rss>

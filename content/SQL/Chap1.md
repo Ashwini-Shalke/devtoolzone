@@ -4,6 +4,7 @@ date = 2024-04-05
 draft = false
 author = "Ashwini Shalke"
 weight = 1
+tags = ["SQL", "Database", "Beginners","Data"]
 +++
 
 
