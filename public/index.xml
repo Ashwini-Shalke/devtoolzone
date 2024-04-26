@@ -6,7 +6,7 @@
     <description>Recent content on Learner Loft</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://learnerloft.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction to Oracle APEX</title>
@@ -113,6 +113,23 @@ Page Rendering Imagine you’ve built a sleek and functional application using A
       <description>TCL commands are COMMIT, ROLLBACK, and SAVEPOINT.
 COMMIT: The COMMIT command is used to permanently save the changes made during the current transaction. Once a COMMIT command is executed, all changes made within the transaction become permanent and are visible to other users. Example: Suppose we have a transaction that updates the age of a student in the database:
 BEGIN TRANSACTION; UPDATE Students SET Age = 16 WHERE Name = &amp;#39;Alice&amp;#39;; COMMIT; In this example:</description>
+    </item>
+    <item>
+      <title>Exploring the Three Types of Applications in Oracle APEX : — Sample Apps, Starter Apps, and Custom Apps</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap7/</link>
+      <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap7/</guid>
+      <description>Oracle Application Express (APEX) is a powerful tool for rapidly developing web applications on top of the Oracle Database. It provides developers with a range of features and functionalities to build robust applications efficiently.
+One of the key aspects of APEX development is understanding the different types of applications it offers: Sample Apps, Starter Apps, and Custom Apps.
+Let’s delve into each of these types to understand their purposes and benefits.</description>
+    </item>
+    <item>
+      <title>Progressive Web App in Oracle APEX</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap6/</link>
+      <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap6/</guid>
+      <description>Progressive Web Applications leverage modern web APIs giving users an experience that looks and feels like a native application. Your APEX applications can easily be defined as a PWA or Progressive Web Application to take advantage of advanced caching and improved performance. These applications can also be installed on your smartphone of choice with device-specific installation instructions.
+Install Progressive Web App: The “Install Progressive Web App” feature in Oracle APEX allows developers to leverage the capabilities of PWAs within their applications.</description>
     </item>
     <item>
       <title>Understanding Session ID, Session State, and Sessions</title>

@@ -21,11 +21,15 @@ At the heart of session management lies the Session ID, a unique identifier assi
 
 In APEX, the Session ID is automatically generated and managed by the APEX engine. It is typically stored as a cookie in the user’s browser or passed as a parameter in the URL. This ID acts as a key to unlock the user’s session, allowing seamless navigation and interaction within the application.
 
+---
+
 ### Exploring Session State:
 
 Session State refers to the collection of data and variables associated with a specific user’s session. It encompasses various elements such as page items, application items, and session-level attributes that retain user inputs, preferences, and context throughout their session.
 
 In simpler terms, imagine Session State as a virtual workspace where the application stores and retrieves user-specific information dynamically. For example, if a user enters their name in a form on one page, the Session State retains this information and makes it accessible across other pages within the application, ensuring continuity and consistency in the user experience.
+
+---
 
 ### Unveiling Sessions in APEX:
 
