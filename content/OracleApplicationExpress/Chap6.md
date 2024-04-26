@@ -3,7 +3,7 @@ title = 'Progressive Web App in Oracle APEX'
 date = 2024-04-26
 draft = false
 author = "Ashwini Shalke"
-weight = 5
+weight = 6
 tags = ["Oracle", "APEX", "Beginners","Low-Code"]
 +++
 

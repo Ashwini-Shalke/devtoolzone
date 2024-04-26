@@ -3,7 +3,7 @@ title = 'Exploring the Three Types of Applications in Oracle APEX : — Sample A
 date = 2024-04-26
 draft = false
 author = "Ashwini Shalke"
-weight = 5
+weight = 7
 tags = ["Oracle", "APEX", "Beginners","Low-Code"]
 +++
 
