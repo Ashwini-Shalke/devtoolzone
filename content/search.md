@@ -1,7 +1,5 @@
 ---
 title: "Search"
-placeholder: search for the blog ...
+placeholder: Search demo site with full text fuzzy search ...
 layout: "search"
-url: "/search/"
-summary: search
 ---

@@ -44,13 +44,13 @@ To shed light on this process, let’s delve into the two crucial processes that
 Page Rendering Imagine you’ve built a sleek and functional application using APEX, complete with interactive forms, dynamic reports, and engaging charts. When a user accesses your application, the APEX engine kicks into action.</description>
     </item>
     <item>
-      <title>Exploring the Three Types of Applications in Oracle APEX : — Sample Apps, Starter Apps, and Custom Apps</title>
-      <link>https://learnerloft.com/oracleapplicationexpress/chap7/</link>
-      <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/oracleapplicationexpress/chap7/</guid>
-      <description>Oracle Application Express (APEX) is a powerful tool for rapidly developing web applications on top of the Oracle Database. It provides developers with a range of features and functionalities to build robust applications efficiently.
-One of the key aspects of APEX development is understanding the different types of applications it offers: Sample Apps, Starter Apps, and Custom Apps.
-Let’s delve into each of these types to understand their purposes and benefits.</description>
+      <title>Understanding Session ID, Session State, and Sessions</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap5/</link>
+      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap5/</guid>
+      <description>In the dynamic world of web application development, managing user sessions efficiently is paramount for delivering a seamless and personalised user experience. Oracle Application Express (APEX), a popular low-code development platform, provides robust tools for managing sessions effectively.
+In this article, we’ll delve into the concepts of Session ID, Session State, and Sessions in APEX.
+Understanding Session ID: At the heart of session management lies the Session ID, a unique identifier assigned to each user’s session.</description>
     </item>
     <item>
       <title>Progressive Web App in Oracle APEX</title>
@@ -61,13 +61,13 @@ Let’s delve into each of these types to understand their purposes and benefits
 Install Progressive Web App: The “Install Progressive Web App” feature in Oracle APEX allows developers to leverage the capabilities of PWAs within their applications.</description>
     </item>
     <item>
-      <title>Understanding Session ID, Session State, and Sessions</title>
-      <link>https://learnerloft.com/oracleapplicationexpress/chap5/</link>
-      <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/oracleapplicationexpress/chap5/</guid>
-      <description>In the dynamic world of web application development, managing user sessions efficiently is paramount for delivering a seamless and personalised user experience. Oracle Application Express (APEX), a popular low-code development platform, provides robust tools for managing sessions effectively.
-In this article, we’ll delve into the concepts of Session ID, Session State, and Sessions in APEX.
-Understanding Session ID: At the heart of session management lies the Session ID, a unique identifier assigned to each user’s session.</description>
+      <title>Exploring the Three Types of Applications in Oracle APEX : — Sample Apps, Starter Apps, and Custom Apps</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap7/</link>
+      <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap7/</guid>
+      <description>Oracle Application Express (APEX) is a powerful tool for rapidly developing web applications on top of the Oracle Database. It provides developers with a range of features and functionalities to build robust applications efficiently.
+One of the key aspects of APEX development is understanding the different types of applications it offers: Sample Apps, Starter Apps, and Custom Apps.
+Let’s delve into each of these types to understand their purposes and benefits.</description>
     </item>
   </channel>
 </rss>

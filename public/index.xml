@@ -115,23 +115,6 @@ COMMIT: The COMMIT command is used to permanently save the changes made during t
 BEGIN TRANSACTION; UPDATE Students SET Age = 16 WHERE Name = &amp;#39;Alice&amp;#39;; COMMIT; In this example:</description>
     </item>
     <item>
-      <title>Exploring the Three Types of Applications in Oracle APEX : — Sample Apps, Starter Apps, and Custom Apps</title>
-      <link>https://learnerloft.com/oracleapplicationexpress/chap7/</link>
-      <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/oracleapplicationexpress/chap7/</guid>
-      <description>Oracle Application Express (APEX) is a powerful tool for rapidly developing web applications on top of the Oracle Database. It provides developers with a range of features and functionalities to build robust applications efficiently.
-One of the key aspects of APEX development is understanding the different types of applications it offers: Sample Apps, Starter Apps, and Custom Apps.
-Let’s delve into each of these types to understand their purposes and benefits.</description>
-    </item>
-    <item>
-      <title>Progressive Web App in Oracle APEX</title>
-      <link>https://learnerloft.com/oracleapplicationexpress/chap6/</link>
-      <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/oracleapplicationexpress/chap6/</guid>
-      <description>Progressive Web Applications leverage modern web APIs giving users an experience that looks and feels like a native application. Your APEX applications can easily be defined as a PWA or Progressive Web Application to take advantage of advanced caching and improved performance. These applications can also be installed on your smartphone of choice with device-specific installation instructions.
-Install Progressive Web App: The “Install Progressive Web App” feature in Oracle APEX allows developers to leverage the capabilities of PWAs within their applications.</description>
-    </item>
-    <item>
       <title>Understanding Session ID, Session State, and Sessions</title>
       <link>https://learnerloft.com/oracleapplicationexpress/chap5/</link>
       <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
@@ -157,6 +140,14 @@ Understanding Links in HTML: Links are essential components of web pages, allow
 Syntax Types of Window Functions: There are a few common window functions you might encounter:</description>
     </item>
     <item>
+      <title>Progressive Web App in Oracle APEX</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap6/</link>
+      <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap6/</guid>
+      <description>Progressive Web Applications leverage modern web APIs giving users an experience that looks and feels like a native application. Your APEX applications can easily be defined as a PWA or Progressive Web Application to take advantage of advanced caching and improved performance. These applications can also be installed on your smartphone of choice with device-specific installation instructions.
+Install Progressive Web App: The “Install Progressive Web App” feature in Oracle APEX allows developers to leverage the capabilities of PWAs within their applications.</description>
+    </item>
+    <item>
       <title>Adding Images and Other Page Elements with HTML</title>
       <link>https://learnerloft.com/html/chap6/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
@@ -171,6 +162,15 @@ Syntax Types of Window Functions: There are a few common window functions you mi
       <description>Let’s say we have a table named “Games” with the following data:
 GROUP BY: Think of GROUP BY like organizing your games into groups based on their ratings. It&amp;rsquo;s like sorting them into piles of similar ratings.
 SELECT Rating, COUNT(\*) AS NumOfGames FROM Games GROUP BY Rating; This query will count the number of games for each rating group. For example, it will show how many games have a rating of 4.</description>
+    </item>
+    <item>
+      <title>Exploring the Three Types of Applications in Oracle APEX : — Sample Apps, Starter Apps, and Custom Apps</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap7/</link>
+      <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap7/</guid>
+      <description>Oracle Application Express (APEX) is a powerful tool for rapidly developing web applications on top of the Oracle Database. It provides developers with a range of features and functionalities to build robust applications efficiently.
+One of the key aspects of APEX development is understanding the different types of applications it offers: Sample Apps, Starter Apps, and Custom Apps.
+Let’s delve into each of these types to understand their purposes and benefits.</description>
     </item>
     <item>
       <title>HTML Frames: Enhancing Web Layouts with Frame Elements</title>
