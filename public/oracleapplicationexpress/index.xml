@@ -6,7 +6,7 @@
     <description>Recent content in OracleApplicationExpresses on Learner Loft</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://learnerloft.com/oracleapplicationexpress/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction to Oracle APEX</title>
@@ -68,6 +68,15 @@ Install Progressive Web App: The “Install Progressive Web App” feature in O
       <description>Oracle Application Express (APEX) is a powerful tool for rapidly developing web applications on top of the Oracle Database. It provides developers with a range of features and functionalities to build robust applications efficiently.
 One of the key aspects of APEX development is understanding the different types of applications it offers: Sample Apps, Starter Apps, and Custom Apps.
 Let’s delve into each of these types to understand their purposes and benefits.</description>
+    </item>
+    <item>
+      <title>The Interactive Report, Interactive Grid, and Classic Report -Oracle APEX</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap8/</link>
+      <pubDate>Fri, 03 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap8/</guid>
+      <description>Oracle APEX offers various report types to display data effectively, catering to different user needs and preferences. Here’s an overview of the three main report types:- Interactive Report, Interactive Grid, and Classic Report:
+Interactive Report Interactive Reports are highly customisable and user-friendly. They offer features such as sorting, filtering, highlighting, and aggregation directly within the report itself, providing users with a dynamic and interactive experience.
+Key Features: Interactive Features: Users can sort, filter, and customise the display of data interactively without needing to reload the page.</description>
     </item>
   </channel>
 </rss>

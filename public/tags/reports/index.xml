@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Reports on Learner Loft</title>
+    <link>https://learnerloft.com/tags/reports/</link>
+    <description>Recent content in Reports on Learner Loft</description>
+    <generator>Hugo -- 0.124.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://learnerloft.com/tags/reports/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Interactive Report, Interactive Grid, and Classic Report -Oracle APEX</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap8/</link>
+      <pubDate>Fri, 03 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap8/</guid>
+      <description>Oracle APEX offers various report types to display data effectively, catering to different user needs and preferences. Here’s an overview of the three main report types:- Interactive Report, Interactive Grid, and Classic Report:
+Interactive Report Interactive Reports are highly customisable and user-friendly. They offer features such as sorting, filtering, highlighting, and aggregation directly within the report itself, providing users with a dynamic and interactive experience.
+Key Features: Interactive Features: Users can sort, filter, and customise the display of data interactively without needing to reload the page.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,9 +1,9 @@
 +++
 title = 'The Interactive Report, Interactive Grid, and Classic Report -Oracle APEX'
-date = 2024-05-26
+date = 2024-05-03
 draft = false
 author = "Ashwini Shalke"
-weight = 7
+weight = 8
 tags = ["Oracle", "APEX", "Beginners","Low-Code","Reports"]
 +++
 

@@ -6,7 +6,7 @@
     <description>Recent content on Learner Loft</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://learnerloft.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction to Oracle APEX</title>
@@ -186,6 +186,15 @@ Let’s delve into each of these types to understand their purposes and benefits
       <guid>https://learnerloft.com/sql/chap7/</guid>
       <description>Imagine you’re at a party with a bunch of friends, and there’s a big bowl of candies on the table. Now, you want to know some information about those candies, like how many candies are there in total, what’s the average number of candies each person has, or which friend has the most candies.
 In SQL, aggregate functions are like magical candy counters that help you answer these questions by performing calculations on groups of data.</description>
+    </item>
+    <item>
+      <title>The Interactive Report, Interactive Grid, and Classic Report -Oracle APEX</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap8/</link>
+      <pubDate>Fri, 03 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap8/</guid>
+      <description>Oracle APEX offers various report types to display data effectively, catering to different user needs and preferences. Here’s an overview of the three main report types:- Interactive Report, Interactive Grid, and Classic Report:
+Interactive Report Interactive Reports are highly customisable and user-friendly. They offer features such as sorting, filtering, highlighting, and aggregation directly within the report itself, providing users with a dynamic and interactive experience.
+Key Features: Interactive Features: Users can sort, filter, and customise the display of data interactively without needing to reload the page.</description>
     </item>
     <item>
       <title>User-Defined Function (UDF) in SQL</title>
