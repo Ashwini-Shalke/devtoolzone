@@ -6,9 +6,12 @@ theme: PaperMod
 params:
   homeInfoParams:
     Title: "Hello, Pals !!"
-    Content: Welcome to Learner Loft. Whether you're a code ninja or a curious newbie, we've got the goodies to make your tech dreams come true.
-            Get ready for a rollercoaster ride through articles, tutorials, and tools that'll make you say, "JSON, who's your daddy?" and "Word count? 
-            More like word WOW!" So strap in, grab your keyboard, and let's rock this tech party!
+    Content: "Welcome to Learner Loft, your ultimate destination for all things tech! 
+            Whether you're a seasoned developer, a budding programmer, or simply passionate about technology, 
+            Learner Loft is your one-stop-shop for the latest articles and insights on HTML, SQL, Oracle APEX, and more.
+            Our Mission:At Learner Loft, our mission is to empower tech enthusiasts with the knowledge and resources they need to stay informed, 
+            inspired, and ahead of the curve. We believe that technology has the power to transform lives and drive innovation, 
+            and we're committed to sharing our passion for tech with our community."
   # socialIcons:
   #   - name: facebook
   #     url: "https://facebook.com/"
