@@ -38,4 +38,4 @@ You should see your device as connected devices
 
 7\. Go back to Xcode and Hit the Run button.
 
-### 👏 Congratulations on your first wireless debugging.
+👏 Congratulations on your first wireless debugging.
