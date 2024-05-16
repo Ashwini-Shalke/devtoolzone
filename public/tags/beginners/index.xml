@@ -9,6 +9,16 @@
     <lastBuildDate>Thu, 16 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://learnerloft.com/tags/beginners/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Access specifier in Swift</title>
+      <link>https://learnerloft.com/swift/chap3/</link>
+      <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/swift/chap3/</guid>
+      <description>Control your code’s accessibility What is Access specifier? Access specifier is keyword which helps in Access control of code block. Access control restricts access to the parts of your code from code in other source files and modules.
+Encapsulation is one pillar of Object Oriented Programming and access specifiers helps in encapsulating.
+What is Encapsulation?
+Encapsulation is defined as the wrapping up of data under a single unit. It is the mechanism that binds together code and the data it manipulates.</description>
+    </item>
+    <item>
       <title>Generate timebase UUID in swift</title>
       <link>https://learnerloft.com/swift/chap2/</link>
       <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
