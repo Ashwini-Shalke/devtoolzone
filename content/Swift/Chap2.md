@@ -3,7 +3,7 @@ title = 'Generate timebase UUID in swift'
 date = 2024-05-16
 draft = false
 author = "Anil Kotur"
-weight = 1
+weight = 2
 tags = ["Swift", "Coding", "Beginners","Xcode"]
 +++
 
@@ -26,6 +26,8 @@ A UUID is a 16-octet (128-bit) number in with digit having hyphens in the form o
 
 ex: b99d95a0–20c5–11ea-a092–59756dff43fc
 
+---
+
 **Types of UUID**
 
 1.  Version 1 (date-time and MAC address)
@@ -41,6 +43,8 @@ Ok, let see what is the difference between these two
 
 *   Version 1: This generates a unique ID based on a network card MAC address and a timer. These IDs are easy to predict (given one, I might be able to guess another one) and can be traced back to your network card. It’s not recommended to create these.
 *   Version 4: These are generated from random (or pseudo-random) numbers. If you just need to generate a UUID, this is probably what you want.
+
+---
 
 ### **So let create UUID in swift**
 
@@ -59,6 +63,7 @@ let uuidToUse = UUID()
 
 Creating the version 1 type UUID is not straight forward, but version 1 are very helpful in sorting because they are time based. so the we can make C call to generate the version 1
 
+```html
 func generateVersionOneAkaTimeBasedUUID() -> String? {
 // figure out the sizes
 let uuidSize = MemoryLayout<uuid\_t>.size
@@ -77,6 +82,7 @@ uuidStringPointer.deallocate()
 assert(uuidString != nil, "uuid (V1 style) failed")
 return uuidString
 }
+```
 
 Thank you for Reading the article ☺️
 

@@ -3,7 +3,7 @@ title = 'Access specifier in Swift'
 date = 2024-05-16
 draft = false
 author = "Anil Kotur"
-weight = 1
+weight = 3
 tags = ["Swift", "Coding", "Beginners","Xcode"]
 +++
 

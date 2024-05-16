@@ -9,25 +9,6 @@
     <lastBuildDate>Thu, 16 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://learnerloft.com/tags/beginners/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Access specifier in Swift</title>
-      <link>https://learnerloft.com/swift/chap3/</link>
-      <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/swift/chap3/</guid>
-      <description>Control your code’s accessibility What is Access specifier? Access specifier is keyword which helps in Access control of code block. Access control restricts access to the parts of your code from code in other source files and modules.
-Encapsulation is one pillar of Object Oriented Programming and access specifiers helps in encapsulating.
-What is Encapsulation?
-Encapsulation is defined as the wrapping up of data under a single unit. It is the mechanism that binds together code and the data it manipulates.</description>
-    </item>
-    <item>
-      <title>Generate timebase UUID in swift</title>
-      <link>https://learnerloft.com/swift/chap2/</link>
-      <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/swift/chap2/</guid>
-      <description>Everything you need to know about UUID
-First of all what is UUID? In software development as soon as we encounter assigning/fetching piece of data uniquely first thing that pops up in mind is UUID(universally unique identifier). so this is how wikipedia defines it.
-A universally unique identifier (UUID) is an identifier standard used in software construction. A UUID is simply a 128-bit value. The meaning of each bit is defined by any of several variants.</description>
-    </item>
-    <item>
       <title>Wireless Debugging on Xcode 9</title>
       <link>https://learnerloft.com/swift/chap1/</link>
       <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
@@ -60,6 +41,15 @@ Introduction to HTML: HTML is a markup language used to structure content on th
 SQL is like having a magic wand that helps you organize and find your toys quickly and easily. It stands for Structured Query Language, but you can just think of it as a special language that lets you talk to a smart toy organizer.</description>
     </item>
     <item>
+      <title>Generate timebase UUID in swift</title>
+      <link>https://learnerloft.com/swift/chap2/</link>
+      <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/swift/chap2/</guid>
+      <description>Everything you need to know about UUID
+First of all what is UUID? In software development as soon as we encounter assigning/fetching piece of data uniquely first thing that pops up in mind is UUID(universally unique identifier). so this is how wikipedia defines it.
+A universally unique identifier (UUID) is an identifier standard used in software construction. A UUID is simply a 128-bit value. The meaning of each bit is defined by any of several variants.</description>
+    </item>
+    <item>
       <title>HTML : Formatting Text — Beginners</title>
       <link>https://learnerloft.com/html/chap2/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
@@ -90,6 +80,16 @@ Here are few examples :-
 This command adds a new column named “Email” to the “Students” table with a data type of VARCHAR(100).</description>
     </item>
     <item>
+      <title>Access specifier in Swift</title>
+      <link>https://learnerloft.com/swift/chap3/</link>
+      <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/swift/chap3/</guid>
+      <description>Control your code’s accessibility What is Access specifier? Access specifier is keyword which helps in Access control of code block. Access control restricts access to the parts of your code from code in other source files and modules.
+Encapsulation is one pillar of Object Oriented Programming and access specifiers helps in encapsulating.
+What is Encapsulation?
+Encapsulation is defined as the wrapping up of data under a single unit. It is the mechanism that binds together code and the data it manipulates.</description>
+    </item>
+    <item>
       <title>Mastering HTML Tables: A Comprehensive Guide with Examples</title>
       <link>https://learnerloft.com/html/chap3/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
@@ -115,6 +115,14 @@ App Builder: Crafting Stunning Applications App Builder serves as your gateway t
 Example:
 Let’s say you have a table that lists all your favorite snacks and their quantities in your snack box, like this:
 Now, using SQL queries, you can ask questions to find out specific information from this table.</description>
+    </item>
+    <item>
+      <title>Final in swift for Begineers</title>
+      <link>https://learnerloft.com/swift/chap4/</link>
+      <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/swift/chap4/</guid>
+      <description>According to Apple document You can prevent a method, property, or subscript from being overridden by marking it as final. Do this by writing the final modifier before the method, property, or subscript’s introducer keyword (such as final var, final func, final class func, and final subscript).
+Any attempt to override a final method, property, or subscript in a subclass is reported as a compile-time error. Methods, properties, or subscripts that you add to a class in an extension can also be marked as final within the extension’s definition.</description>
     </item>
     <item>
       <title>HTML Forms: Building Interactive Web Experiences</title>
