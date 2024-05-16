@@ -54,6 +54,10 @@ menu:
       name: Oracle APEX
       url: /OracleApplicationExpress/
       weight: 30
+    - identifier: Swift
+      name: Swift
+      url: /swift/
+      weight: 40
     # - identifier: search
     #   name: Search
     #   url: /search/
