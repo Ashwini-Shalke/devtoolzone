@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Coding on Learner Loft</title>
+    <link>https://learnerloft.com/tags/coding/</link>
+    <description>Recent content in Coding on Learner Loft</description>
+    <generator>Hugo -- 0.124.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 16 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://learnerloft.com/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wireless Debugging on Xcode 9</title>
+      <link>https://learnerloft.com/swift/chap1/</link>
+      <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/swift/chap1/</guid>
+      <description>Apple announced wireless debugging feature on Xcode 9 at WWDC 17.
+Apple say Cut the Cord Choose any of your iOS or tvOS devices on the local network to install, run, and debug your apps — without a USB cord plugged into your Mac. Simply click the ‘Connect via Network’ checkbox the first time you use a new iOS device, and that device will be available over the network from that point forward.</description>
+    </item>
+  </channel>
+</rss>
