@@ -88,9 +88,7 @@ println(newCeo.name) // "Tim"
 
 **ans:** **No,** As structs are value type they can’t be weak, strong or unowned
 
-### **Summary**
-
-classes are passed by reference whereas structs are passed by value.
+---
 
 ### Related Links
 

@@ -98,6 +98,6 @@ A() // ok
 import First
 A() // error: A is unavailable
 
-**Note:** Default access specifier in swift is **Internal,** Then how about **final** let’s read this [article](https://medium.com/@anilkotur/final-in-swift-625b534b2412).
+
 
 Thank you for reading 👏🏻. do like and share to make this reach more engineers.

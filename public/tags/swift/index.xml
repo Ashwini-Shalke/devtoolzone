@@ -53,7 +53,7 @@ What is the use of code snippet?</description>
     <item>
       <title>How to update the view height with animation programmatically</title>
       <link>https://learnerloft.com/swift/chap6/</link>
-      <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/swift/chap6/</guid>
       <description>Common problems of writing NSLayoutConstraint
 Hello swift programmers, in this article we will look at how to use NSLayoutConstraint to elegantly handle the resize of view using some animation. let’s take an example
@@ -98,6 +98,22 @@ for number in array { ///Check if value is even if number % 2 == 0 { ///number a
 Class Classes are reference types. It means that if you assign an instance of the class to a variable, it will hold only the reference to the instance and not the copy.
 class Person { var name: String init(name: String) { self.name = name } }
 var ceo = SomeClass(name: &amp;ldquo;steve&amp;rdquo;) var newCeo = ceo //ceo and newCeo now reference the same instance!</description>
+    </item>
+    <item>
+      <title>Demystifying Bitcode: Understanding What, Why, and How for iOS Engineers</title>
+      <link>https://learnerloft.com/swift/chap11/</link>
+      <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/swift/chap11/</guid>
+      <description>Introduction In the world of making iOS apps, there are lots of new things to learn. One of these things is Bitcode. If you’ve ever sent your app to the App Store, you might have heard about it. But what exactly is Bitcode, and why should iOS engineers care about it? In this blog post, we will break down what Bitcode is, its benefits, and how it fits into the way we make apps</description>
+    </item>
+    <item>
+      <title>Swift Dispatch 101: Understanding Static, Dynamic, and V Tables!</title>
+      <link>https://learnerloft.com/swift/chap12/</link>
+      <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/swift/chap12/</guid>
+      <description>Static Dispatch: Static dispatch refers to the process of determining which function or method to call at compile-time, based on the declared type of the variable or object. In simpler terms, it’s like deciding what action to take when you know exactly what type of thing you’re dealing with.
+For example, if you have a Swift function that adds two numbers:
+func add(\_ a: Int, \_ b: Int) -&amp;gt; Int { return a + b } And you call it like this:</description>
     </item>
   </channel>
 </rss>

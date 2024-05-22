@@ -1,6 +1,6 @@
 +++
 title = 'How to update the view height with animation programmatically'
-date = 2024-05-16
+date = 2024-05-22
 draft = false
 author = "Anilkumar Kotur"
 weight = 6
