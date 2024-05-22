@@ -89,6 +89,8 @@ heightConstraint = NSLayoutConstraint(item: textViewToUse,
 textViewToUse.addConstraint(heightConstraint!)
 ```
 
+---
+
 #### Step 5: Listen to keyboard notification
 
 As we are animating the \`UITextfield\` height based on keyboard appearance status
@@ -150,4 +152,3 @@ There you go. you have animated the height change of UITextfield based on the ke
 
 Download sample code from [https://github.com/Anilkumarkotur/App-note-screen-demo](https://github.com/Anilkumarkotur/App-note-screen-demo)
 
-### Thanks for reading 😊. For more good reads visit [www.swiftnil.com](http://www.swiftnil.com/)

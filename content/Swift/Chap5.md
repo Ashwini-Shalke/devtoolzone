@@ -1,9 +1,9 @@
 +++
 title = 'Xcode Tips - Create code snippet'
-date = 2024-05-16
+date = 2024-05-22
 draft = false
 author = "Anilkumar Kotur"
-weight = 2
+weight = 5
 tags = ["Swift", "Coding", "Beginners","Xcode"]
 +++
 
@@ -37,8 +37,7 @@ Just type the name/title of your code snippet
 
 ![](https://cdn-images-1.medium.com/max/1600/1*czSnOBjvXP361ktJRuLV7Q.gif)How to use the code snippet
 
-#### Note:
+### Note:
 
 Use shortcut **CMD + Shift + L** to access the snippet library.
 
-Thank you for reading 👏🏻. do like and share to make this reach more engineers.
