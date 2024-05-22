@@ -274,11 +274,32 @@ Key Features: Interactive Features: Users can sort, filter, and customise the d
       <description>Let’s say, you have a special calculator that can perform a specific calculation, like doubling a number or calculating the average of a set of numbers. You can use this calculator whenever you need to perform that calculation, without having to write out the steps each time. In SQL, a user-defined function is like that special calculator — it’s a custom function that you can create to perform a specific task or calculation.</description>
     </item>
     <item>
+      <title>Control Transfer Statements in swift- `continue, break, fallthrough in swift</title>
+      <link>https://learnerloft.com/swift/chap9/</link>
+      <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/swift/chap9/</guid>
+      <description>In this article, we will look at the continue, break, fallthrough keywords in swift
+Continue: A continue statement ends program execution of the current iteration of a loop statement and move to next iteration.
+Ex: Increment the values of odd number in the array
+func increment(array: [Int]) -&amp;gt; [Int] { var output: [Int] = []
+for number in array { ///Check if value is even if number % 2 == 0 { ///number append to output array and move to next iteration output.</description>
+    </item>
+    <item>
       <title>What is Stored Procedure in SQL</title>
       <link>https://learnerloft.com/sql/chap9/</link>
       <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/sql/chap9/</guid>
       <description>Imagine you’re baking a cake, and you have a recipe written down on a piece of paper. This recipe contains all the steps you need to follow to bake the cake, from mixing the ingredients to putting it in the oven. A stored procedure in SQL is like that recipe — it’s a set of instructions stored in the database that you can execute whenever you need to perform a specific task or set of tasks.</description>
+    </item>
+    <item>
+      <title>Class vs structure in Swift</title>
+      <link>https://learnerloft.com/swift/chap10/</link>
+      <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/swift/chap10/</guid>
+      <description>In this article, we will learn about classes and Structs, the Difference between classes and structs and common features.
+Class Classes are reference types. It means that if you assign an instance of the class to a variable, it will hold only the reference to the instance and not the copy.
+class Person { var name: String init(name: String) { self.name = name } }
+var ceo = SomeClass(name: &amp;ldquo;steve&amp;rdquo;) var newCeo = ceo //ceo and newCeo now reference the same instance!</description>
     </item>
     <item>
       <title>Difference between Function and stored procedure in SQL</title>

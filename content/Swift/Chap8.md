@@ -121,7 +121,6 @@ This tool is very useful in creating the color schemes [https://paletton.com/#u
 
 I hope this information is enough to choose the right color for your need. Thank you for reading. share this if find this usefull.
 
-Visit [**Swiftnil.com**](http://swiftnil.com/) such more awesome blogs
 
 ### Credits and Reference:
 
