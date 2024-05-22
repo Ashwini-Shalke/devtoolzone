@@ -7,11 +7,10 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Access specifier in Swift | Learner Loft</title>
 <meta name="keywords" content="Swift, Coding, Beginners, Xcode">
-<meta name="description" content="Control your code’s accessibility What is Access specifier? Access specifier is keyword which helps in Access control of code block. Access control restricts access to the parts of your code from code in other source files and modules.
+<meta name="description" content="What is Access specifier? Access specifier is keyword which helps in Access control of code block. Access control restricts access to the parts of your code from code in other source files and modules.
 Encapsulation is one pillar of Object Oriented Programming and access specifiers helps in encapsulating.
-What is Encapsulation?
-Encapsulation is defined as the wrapping up of data under a single unit. It is the mechanism that binds together code and the data it manipulates.">
-<meta name="author" content="Anil Kotur">
+What is Encapsulation?** Encapsulation is defined as the wrapping up of data under a single unit. It is the mechanism that binds together code and the data it manipulates.">
+<meta name="author" content="Anilkumar Kotur">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1623190812203974"
      crossorigin="anonymous"></script>
 <link rel="canonical" href="https://learnerloft.com/swift/chap3/">
@@ -139,7 +138,7 @@ Encapsulation is defined as the wrapping up of data under a single unit. It is t
     <h1 class="post-title entry-hint-parent">
       Access specifier in Swift
     </h1>
-    <div class="post-meta"><span title='2024-05-16 00:00:00 +0000 UTC'>May 16, 2024</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Anil Kotur
+    <div class="post-meta"><span title='2024-05-16 00:00:00 +0000 UTC'>May 16, 2024</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Anilkumar Kotur
 
 </div>
   </header> <div class="toc">
@@ -148,12 +147,11 @@ Encapsulation is defined as the wrapping up of data under a single unit. It is t
             <span class="details">Table of Contents</span>
         </summary>
 
-        <div class="inner"><ul><ul>
+        <div class="inner"><ul>
                 <li>
-                    <a href="#control-your-codes-accessibility" aria-label="Control your code’s accessibility">Control your code’s accessibility</a></li>
+                    <a href="#what-is-access-specifier" aria-label="What is Access specifier?">What is Access specifier?</a></li>
                 <li>
-                    <a href="#what-is-access-specifier" aria-label="What is Access specifier?">What is Access specifier?</a></li></ul>
-                    
+                    <a href="#what-is-encapsulation" aria-label="What is Encapsulation?**">What is Encapsulation?**</a></li>
                 <li>
                     <a href="#types-of-access-levels-inswift" aria-label="Types of Access levels in swift">Types of Access levels in swift</a><ul>
                         
@@ -173,16 +171,15 @@ Encapsulation is defined as the wrapping up of data under a single unit. It is t
     </details>
 </div>
 
-  <div class="post-content"><h4 id="control-your-codes-accessibility">Control your code’s accessibility<a hidden class="anchor" aria-hidden="true" href="#control-your-codes-accessibility">#</a></h4>
-<p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*IOd-VBlPMSnyHuq-k48KrA.png" alt=""  />
+  <div class="post-content"><p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*IOd-VBlPMSnyHuq-k48KrA.png" alt=""  />
 </p>
-<h4 id="what-is-access-specifier">What is Access specifier?<a hidden class="anchor" aria-hidden="true" href="#what-is-access-specifier">#</a></h4>
+<h3 id="what-is-access-specifier">What is Access specifier?<a hidden class="anchor" aria-hidden="true" href="#what-is-access-specifier">#</a></h3>
 <p>Access specifier is keyword which helps in <em>Access control of</em> code block. <em>Access control</em> restricts access to the parts of your code from code in other source files and modules.</p>
 <blockquote>
 <p>Encapsulation is one pillar of Object Oriented Programming and access specifiers helps in encapsulating.</p>
 </blockquote>
 <hr>
-<p><strong>What is Encapsulation?</strong></p>
+<h3 id="what-is-encapsulation">What is Encapsulation?**<a hidden class="anchor" aria-hidden="true" href="#what-is-encapsulation">#</a></h3>
 <p>Encapsulation is defined as the wrapping up of data under a single unit. It is the mechanism that binds together code and the data it manipulates.Other way to think about encapsulation is, it is a protective shield that prevents the data from being accessed by the code outside this shield.</p>
 <hr>
 <h3 id="types-of-access-levels-inswift">Types of Access levels in swift<a hidden class="anchor" aria-hidden="true" href="#types-of-access-levels-inswift">#</a></h3>
@@ -206,8 +203,6 @@ internal class C: A {} // ok
 //Second.framework – D.swift
 import First
 internal class D: B {} // error: B cannot be subclassed</p>
-<p><a href="http://buymeacoffee.com/anilsk"><strong>Anil Sk</strong></a></p>
-<p><a href="http://buymeacoffee.com/anilsk">_engineer blogger and a curious cat_buymeacoffee.com</a></p>
 <hr>
 <h4 id="2-private">2. Private:<a hidden class="anchor" aria-hidden="true" href="#2-private">#</a></h4>
 <p>Restricts the use of an entity to its enclosing declaration. You typically use <code>private</code> access to hide the implementation details of a specific piece of functionality when those details are used only within a single declaration.</p>

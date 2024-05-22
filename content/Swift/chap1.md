@@ -2,7 +2,7 @@
 title = 'Wireless Debugging on Xcode 9'
 date = 2024-05-16
 draft = false
-author = "Anil Kotur"
+author = "Anilkumar Kotur"
 weight = 1
 tags = ["Swift", "Coding", "Beginners","Xcode"]
 +++

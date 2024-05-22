@@ -2,15 +2,12 @@
 title = 'Generate timebase UUID in swift'
 date = 2024-05-16
 draft = false
-author = "Anil Kotur"
+author = "Anilkumar Kotur"
 weight = 2
 tags = ["Swift", "Coding", "Beginners","Xcode"]
 +++
 
   
-
-
-Everything you need to know about UUID
 
 ![](https://cdn-images-1.medium.com/max/1600/1*gGgdeiSnJ-auNuxb7eoaWw.png)
 

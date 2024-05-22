@@ -21,19 +21,26 @@ Apple say Cut the Cord Choose any of your iOS or tvOS devices on the local netw
       <link>https://learnerloft.com/swift/chap2/</link>
       <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/swift/chap2/</guid>
-      <description>Everything you need to know about UUID
-First of all what is UUID? In software development as soon as we encounter assigning/fetching piece of data uniquely first thing that pops up in mind is UUID(universally unique identifier). so this is how wikipedia defines it.
+      <description>First of all what is UUID? In software development as soon as we encounter assigning/fetching piece of data uniquely first thing that pops up in mind is UUID(universally unique identifier). so this is how wikipedia defines it.
 A universally unique identifier (UUID) is an identifier standard used in software construction. A UUID is simply a 128-bit value. The meaning of each bit is defined by any of several variants.</description>
+    </item>
+    <item>
+      <title>Xcode Tips - Create code snippet</title>
+      <link>https://learnerloft.com/swift/chap5/</link>
+      <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/swift/chap5/</guid>
+      <description>What is code snippet? A small piece of a code in the program is known as a code snippet.
+Wikipedia The snippet is a programming term for a small region of re-usable source code, machine code, or text. Ordinarily, these are formally defined operative units to incorporate into larger programming modules. Snippet management is a feature of some text editors, program source code editors, IDEs, and related software.
+What is the use of code snippet?</description>
     </item>
     <item>
       <title>Access specifier in Swift</title>
       <link>https://learnerloft.com/swift/chap3/</link>
       <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/swift/chap3/</guid>
-      <description>Control your code’s accessibility What is Access specifier? Access specifier is keyword which helps in Access control of code block. Access control restricts access to the parts of your code from code in other source files and modules.
+      <description>What is Access specifier? Access specifier is keyword which helps in Access control of code block. Access control restricts access to the parts of your code from code in other source files and modules.
 Encapsulation is one pillar of Object Oriented Programming and access specifiers helps in encapsulating.
-What is Encapsulation?
-Encapsulation is defined as the wrapping up of data under a single unit. It is the mechanism that binds together code and the data it manipulates.</description>
+What is Encapsulation?** Encapsulation is defined as the wrapping up of data under a single unit. It is the mechanism that binds together code and the data it manipulates.</description>
     </item>
     <item>
       <title>Final in swift for Begineers</title>
@@ -42,6 +49,15 @@ Encapsulation is defined as the wrapping up of data under a single unit. It is t
       <guid>https://learnerloft.com/swift/chap4/</guid>
       <description>According to Apple document You can prevent a method, property, or subscript from being overridden by marking it as final. Do this by writing the final modifier before the method, property, or subscript’s introducer keyword (such as final var, final func, final class func, and final subscript).
 Any attempt to override a final method, property, or subscript in a subclass is reported as a compile-time error. Methods, properties, or subscripts that you add to a class in an extension can also be marked as final within the extension’s definition.</description>
+    </item>
+    <item>
+      <title>How to update the view height with animation programmatically</title>
+      <link>https://learnerloft.com/swift/chap6/</link>
+      <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/swift/chap6/</guid>
+      <description>Common problems of writing NSLayoutConstraint
+Hello swift programmers, in this article we will look at how to use NSLayoutConstraint to elegantly handle the resize of view using some animation. let’s take an example
+In apple notes app if you notice as soon as the keyboard comes up the text fields height changes with sweet animation. which look good to eyes and gives thoughts to the brain how to they do it?</description>
     </item>
   </channel>
 </rss>

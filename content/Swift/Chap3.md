@@ -2,18 +2,17 @@
 title = 'Access specifier in Swift'
 date = 2024-05-16
 draft = false
-author = "Anil Kotur"
+author = "Anilkumar Kotur"
 weight = 3
 tags = ["Swift", "Coding", "Beginners","Xcode"]
 +++
 
 
 
-#### Control your code’s accessibility
 
 ![](https://cdn-images-1.medium.com/max/1600/1*IOd-VBlPMSnyHuq-k48KrA.png)
 
-#### What is Access specifier?
+### What is Access specifier?
 
 Access specifier is keyword which helps in _Access control of_ code block. _Access control_ restricts access to the parts of your code from code in other source files and modules.
 
@@ -21,7 +20,7 @@ Access specifier is keyword which helps in _Access control of_ code block. _A
 
 ---
 
-**What is Encapsulation?**
+### What is Encapsulation?**
 
 Encapsulation is defined as the wrapping up of data under a single unit. It is the mechanism that binds together code and the data it manipulates.Other way to think about encapsulation is, it is a protective shield that prevents the data from being accessed by the code outside this shield.
 
@@ -50,9 +49,7 @@ internal class C: A {} // ok
 import First
 internal class D: B {} // error: B cannot be subclassed
 
-[**Anil Sk**](http://buymeacoffee.com/anilsk)
 
-[_engineer blogger and a curious cat_buymeacoffee.com](http://buymeacoffee.com/anilsk)
 
 ---
 

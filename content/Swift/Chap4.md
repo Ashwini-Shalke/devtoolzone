@@ -2,7 +2,7 @@
 title = 'Final in swift for Begineers'
 date = 2024-05-16
 draft = false
-author = "Anil Kotur"
+author = "Anilkumar Kotur"
 weight = 4
 tags = ["Swift", "Coding", "Beginners","Xcode"]
 +++
