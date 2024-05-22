@@ -37,7 +37,5 @@ Just type the name/title of your code snippet
 
 ![](https://cdn-images-1.medium.com/max/1600/1*czSnOBjvXP361ktJRuLV7Q.gif)How to use the code snippet
 
-### Note:
-
-Use shortcut **CMD + Shift + L** to access the snippet library.
+Note: - Use shortcut **CMD + Shift + L** to access the snippet library.
 

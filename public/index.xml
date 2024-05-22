@@ -6,7 +6,7 @@
     <description>Recent content on Learner Loft</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://learnerloft.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wireless Debugging on Xcode 9</title>
@@ -47,15 +47,6 @@ SQL is like having a magic wand that helps you organize and find your toys quick
       <guid>https://learnerloft.com/swift/chap2/</guid>
       <description>First of all what is UUID? In software development as soon as we encounter assigning/fetching piece of data uniquely first thing that pops up in mind is UUID(universally unique identifier). so this is how wikipedia defines it.
 A universally unique identifier (UUID) is an identifier standard used in software construction. A UUID is simply a 128-bit value. The meaning of each bit is defined by any of several variants.</description>
-    </item>
-    <item>
-      <title>Xcode Tips - Create code snippet</title>
-      <link>https://learnerloft.com/swift/chap5/</link>
-      <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/swift/chap5/</guid>
-      <description>What is code snippet? A small piece of a code in the program is known as a code snippet.
-Wikipedia The snippet is a programming term for a small region of re-usable source code, machine code, or text. Ordinarily, these are formally defined operative units to incorporate into larger programming modules. Snippet management is a feature of some text editors, program source code editors, IDEs, and related software.
-What is the use of code snippet?</description>
     </item>
     <item>
       <title>HTML : Formatting Text — Beginners</title>
@@ -157,6 +148,15 @@ COMMIT: The COMMIT command is used to permanently save the changes made during t
 BEGIN TRANSACTION; UPDATE Students SET Age = 16 WHERE Name = &amp;#39;Alice&amp;#39;; COMMIT; In this example:</description>
     </item>
     <item>
+      <title>Xcode Tips - Create code snippet</title>
+      <link>https://learnerloft.com/swift/chap5/</link>
+      <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/swift/chap5/</guid>
+      <description>What is code snippet? A small piece of a code in the program is known as a code snippet.
+Wikipedia The snippet is a programming term for a small region of re-usable source code, machine code, or text. Ordinarily, these are formally defined operative units to incorporate into larger programming modules. Snippet management is a feature of some text editors, program source code editors, IDEs, and related software.
+What is the use of code snippet?</description>
+    </item>
+    <item>
       <title>Understanding Session ID, Session State, and Sessions</title>
       <link>https://learnerloft.com/oracleapplicationexpress/chap5/</link>
       <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
@@ -215,6 +215,15 @@ GROUP BY: Think of GROUP BY like organizing your games into groups based on th
 SELECT Rating, COUNT(\*) AS NumOfGames FROM Games GROUP BY Rating; This query will count the number of games for each rating group. For example, it will show how many games have a rating of 4.</description>
     </item>
     <item>
+      <title>How to install iOS 14 beta</title>
+      <link>https://learnerloft.com/swift/chap7/</link>
+      <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/swift/chap7/</guid>
+      <description>WWDC 2020 happened on Mon, 22 June 2020, as expected lot of new features announced and are available under the developer beta program. If you want to use them before the actual release follow these simple steps.
+Note: As these update are beta there is possiblity of issue like data loss and bugs. so before starting the installation back up your data.
+Step 1 Download iOS beta profile from https://developer.</description>
+    </item>
+    <item>
       <title>Exploring the Three Types of Applications in Oracle APEX : — Sample Apps, Starter Apps, and Custom Apps</title>
       <link>https://learnerloft.com/oracleapplicationexpress/chap7/</link>
       <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
@@ -237,6 +246,16 @@ Let’s delve into each of these types to understand their purposes and benefits
       <guid>https://learnerloft.com/sql/chap7/</guid>
       <description>Imagine you’re at a party with a bunch of friends, and there’s a big bowl of candies on the table. Now, you want to know some information about those candies, like how many candies are there in total, what’s the average number of candies each person has, or which friend has the most candies.
 In SQL, aggregate functions are like magical candy counters that help you answer these questions by performing calculations on groups of data.</description>
+    </item>
+    <item>
+      <title>Color theory</title>
+      <link>https://learnerloft.com/swift/chap8/</link>
+      <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/swift/chap8/</guid>
+      <description>How to choose the right color?
+What is Color theory? Practical guidance to create or choose the right colors for your needs. Yes, there are set of rule to create or choose colors and we will discover these rules in this article.
+What is color? To answer what is color, we will have to understand the components of it
+Hue: Name of the color is called hue. Saturation: Intensity of the hue is called saturation Value: Degree of lightness or darkness of the color Shade: Hue produced by adding black Tint: Hue produced by adding white Tone: Hue produced by adding grey Types of colors Color wheel is very useful in understanding the colors.</description>
     </item>
     <item>
       <title>The Interactive Report, Interactive Grid, and Classic Report -Oracle APEX</title>
