@@ -12,7 +12,7 @@
       <link>https://learnerloft.com/tools/jsonformatter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/tools/jsonformatter/</guid>
-      <description></description>
+      <description>&amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt; &amp;lt;textarea class=&amp;quot;large-area large-area--input&amp;quot; placeholder=&amp;quot;Enter your JSON here..&amp;quot;&amp;gt; {&amp;quot;name&amp;quot;: &amp;quot;Dom&amp;quot;} &amp;lt;/textarea&amp;gt; &amp;lt;div class=&amp;quot;controls&amp;quot;&amp;gt; &amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;controls__button controls__button--format&amp;quot;&amp;gt;Format&amp;lt;/button&amp;gt; &amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;controls__button controls__button--minify&amp;quot;&amp;gt;Minify&amp;lt;/button&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;textarea readonly class=&amp;quot;large-area large-area--output&amp;quot; placeholder=&amp;quot;Your JSON will appear here&amp;quot;&amp;gt;&amp;lt;/textarea&amp;gt; &amp;lt;/div&amp;gt; CSS .Title { display: flex; justify-content: center; align-items: flex-start; margin-top: 15px; /* Adjust as needed */ border-radius: 1px; border: none; outline: none; background: #009578; color: #ffffff; font-weight: bold; } .Title p { margin: 0; } .Title p span { font-family: Calibri; font-size: 72pt; } .</description>
     </item>
   </channel>
 </rss>
