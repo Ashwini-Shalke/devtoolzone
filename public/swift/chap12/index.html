@@ -311,6 +311,67 @@ func add(\_ a: Int, \_ b: Int) -&gt; Int { return a &#43; b } And you call it li
 </script>
   </div>
 </article>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swift Dispatch 101: Understanding Static, Dynamic, and V Tables!</title>
+    <link rel="stylesheet" href="/css/jsonFormatter.css">
+    <script src="/js/jsonFormatter.js" defer></script>
+</head>
+<body>
+    <p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*KTHOxAx9lGeatAK62ZARwA@2x.jpeg" alt=""  />
+</p>
+<h4 id="static-dispatch">Static Dispatch:</h4>
+<p>Static dispatch refers to the process of determining which function or method to call at compile-time, based on the declared type of the variable or object. In simpler terms, it’s like deciding what action to take when you know exactly what type of thing you’re dealing with.</p>
+<p>For example, if you have a Swift function that adds two numbers:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>func add(\_ a: Int, \_ b: Int) -&gt; Int {
+</span></span><span style="display:flex;"><span>  return a + b
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>And you call it like this:</p>
+<p>let result = add(5, 3)</p>
+<p>In this case, the Swift compiler knows at compile-time exactly which `add` function to call because the types of `a` and `b` are known (both are `Int`). This is static dispatch in action.</p>
+<hr>
+<h4 id="dynamic-dispatch">Dynamic Dispatch:</h4>
+<p>Dynamic dispatch, on the other hand, happens at runtime. It’s like deciding what action to take when you’re dealing with an object whose specific type isn’t known until the program is actually running. This is common when working with classes and inheritance.</p>
+<p>For example, if you have a hierarchy of classes:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>class Animal {
+</span></span><span style="display:flex;"><span>  func speak() {
+</span></span><span style="display:flex;"><span>    print(&#34;Animal makes a sound&#34;)
+</span></span><span style="display:flex;"><span>  }  
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>class Dog: Animal {
+</span></span><span style="display:flex;"><span>  override func speak() {
+</span></span><span style="display:flex;"><span>    print(&#34;Dog barks&#34;)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>class Cat: Animal {
+</span></span><span style="display:flex;"><span>  override func speak() {
+</span></span><span style="display:flex;"><span>    print(&#34;Cat meows&#34;)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>And you create instances of these classes:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>let someAnimal: Animal = Dog()
+</span></span><span style="display:flex;"><span>let anotherAnimal: Animal = Cat()
+</span></span></code></pre></div><p>Now, if you call `speak()` on these instances:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>someAnimal.speak() // Output: “Dog barks”
+</span></span><span style="display:flex;"><span>anotherAnimal.speak() // Output: &#34;Cat meows&#34;
+</span></span></code></pre></div><p>Even though the variables are of type `Animal`, the specific method that gets called is determined at runtime based on the actual type of the object. This is dynamic dispatch.</p>
+<hr>
+<h4 id="v-table-virtualtable">V Table (Virtual Table)</h4>
+<p>A v table is a behind-the-scenes mechanism that Swift (and many other object-oriented languages) uses to implement dynamic dispatch. It’s like a table of function pointers associated with a class or object. Each entry in the table points to the correct implementation of a method for a particular class.</p>
+<p>In the example above, when you called `someAnimal.speak()` with a `Dog` object, the v table for `Dog` was consulted to find the `speak` method that should be executed.</p>
+<blockquote>
+<p><em>In summary, static dispatch happens at compile-time when the compiler knows the types involved, while dynamic dispatch occurs at runtime when the specific types aren’t known until the program runs. The v table is a crucial part of making dynamic dispatch work efficiently. Understanding these concepts will help you write more flexible and polymorphic Swift code in your iOS projects.</em></p>
+</blockquote>
+
+</body>
+</html>
     </main>
     
 <footer class="footer">

@@ -322,6 +322,81 @@ Initializes a new UUID with RFC 4122 version 4 random bytes.</p>
 </script>
   </div>
 </article>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate timebase UUID in swift</title>
+    <link rel="stylesheet" href="/css/jsonFormatter.css">
+    <script src="/js/jsonFormatter.js" defer></script>
+</head>
+<body>
+    <p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*gGgdeiSnJ-auNuxb7eoaWw.png" alt=""  />
+</p>
+<h3 id="first-of-all-what-isuuid"><strong>First of all what is UUID?</strong></h3>
+<p>In software development as soon as we encounter assigning/fetching piece of data uniquely first thing that pops up in mind is UUID(<strong>universally unique identifier</strong>). so this is how wikipedia defines it.</p>
+<blockquote>
+<p>A universally unique identifier (UUID) is an identifier standard used in software construction. A UUID is simply a 128-bit value. The meaning of each bit is defined by any of several variants.</p>
+</blockquote>
+<p><strong>Still not clear?</strong></p>
+<p>A UUID is a 16-octet (128-bit) number in with digit having hyphens in the form of, 8–4–4–4–12, which can be both unique and random 😎</p>
+<p>ex: b99d95a0–20c5–11ea-a092–59756dff43fc</p>
+<hr>
+<p><strong>Types of UUID</strong></p>
+<ol>
+<li>Version 1 (date-time and MAC address)</li>
+<li>Version 2 (date-time and MAC address, DCE security version)</li>
+<li>Versions 3 and 5 (namespace name-based)</li>
+<li>Version 4 (random)</li>
+</ol>
+<p>For this article will only discuss about Version 1 and 4</p>
+<p>Ok, let see what is the difference between these two</p>
+<ul>
+<li>Version 1: This generates a unique ID based on a network card MAC address and a timer. These IDs are easy to predict (given one, I might be able to guess another one) and can be traced back to your network card. It’s not recommended to create these.</li>
+<li>Version 4: These are generated from random (or pseudo-random) numbers. If you just need to generate a UUID, this is probably what you want.</li>
+</ul>
+<hr>
+<h3 id="so-let-create-uuid-inswift"><strong>So let create UUID in swift</strong></h3>
+<ol>
+<li><strong>UUID Version 4</strong></li>
+</ol>
+<p>By default in Swift/iOS UUID’s is version version 4, here is the apple documentation</p>
+<p>A universally unique value that can be used to identify types, interfaces, and other items.
+Initializes a new UUID with RFC 4122 version 4 random bytes.</p>
+<p>so to create UUID version 4</p>
+<p>let uuidToUse = UUID()</p>
+<p>2. UUID Version 1</p>
+<p>Creating the version 1 type UUID is not straight forward, but version 1 are very helpful in sorting because they are time based. so the we can make C call to generate the version 1</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>func generateVersionOneAkaTimeBasedUUID() -&gt; String? {
+</span></span><span style="display:flex;"><span>// figure out the sizes
+</span></span><span style="display:flex;"><span>let uuidSize = MemoryLayout&lt;<span style="color:#f92672">uuid</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#a6e22e">_t</span>&gt;.size
+</span></span><span style="display:flex;"><span>let uuidStringSize = MemoryLayout&lt;<span style="color:#f92672">uuid</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#a6e22e">_string</span><span style="color:#960050;background-color:#1e0010">\</span><span style="color:#a6e22e">_t</span>&gt;.size
+</span></span><span style="display:flex;"><span>// get some ram
+</span></span><span style="display:flex;"><span>let uuidPointer = UnsafeMutablePointer&lt;<span style="color:#f92672">UInt8</span>&gt;.allocate(capacity: uuidSize)
+</span></span><span style="display:flex;"><span>let uuidStringPointer = UnsafeMutablePointer&lt;<span style="color:#f92672">Int8</span>&gt;.allocate(capacity: uuidStringSize)
+</span></span><span style="display:flex;"><span>// do the work in C
+</span></span><span style="display:flex;"><span>uuid\_generate\_time(uuidPointer)
+</span></span><span style="display:flex;"><span>uuid\_unparse(uuidPointer, uuidStringPointer)
+</span></span><span style="display:flex;"><span>// make a Swift string while we still have the C stuff
+</span></span><span style="display:flex;"><span>let uuidString = NSString(utf8String: uuidStringPointer) as String?
+</span></span><span style="display:flex;"><span>// avoid leaks
+</span></span><span style="display:flex;"><span>uuidPointer.deallocate()
+</span></span><span style="display:flex;"><span>uuidStringPointer.deallocate()
+</span></span><span style="display:flex;"><span>assert(uuidString != nil, &#34;uuid (V1 style) failed&#34;)
+</span></span><span style="display:flex;"><span>return uuidString
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Thank you for Reading the article ☺️</p>
+<p><strong>Reference</strong></p>
+<ol>
+<li>Stackoverflow- <a href="https://stackoverflow.com/questions/41232049/uuid-in-swift3-but-version-1-style-uuid">https://stackoverflow.com/questions/41232049/uuid-in-swift3-but-version-1-style-uuid</a></li>
+<li>More about UUID- <a href="https://www.sohamkamani.com/blog/2016/10/05/uuid1-vs-uuid4/">https://www.sohamkamani.com/blog/2016/10/05/uuid1-vs-uuid4/</a></li>
+</ol>
+
+</body>
+</html>
     </main>
     
 <footer class="footer">

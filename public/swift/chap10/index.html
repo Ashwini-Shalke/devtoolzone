@@ -338,6 +338,87 @@ println(newCeo.name) // &ldquo;Tim&rdquo;</p>
 </script>
   </div>
 </article>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class vs structure in Swift</title>
+    <link rel="stylesheet" href="/css/jsonFormatter.css">
+    <script src="/js/jsonFormatter.js" defer></script>
+</head>
+<body>
+    <p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*kpF4-dWmpx0Ug7c3Dt2_gw.jpeg" alt=""  />
+</p>
+<p>In this article, we will learn about classes and Structs, the Difference between classes and structs and common features.</p>
+<h3 id="class"><strong>Class</strong></h3>
+<p>Classes are reference types. It means that if you assign an instance of the class to a variable, it will hold only <strong>the reference</strong> to the instance and <strong>not the copy.</strong></p>
+<p>class Person {
+var name: String
+init(name: String) {
+self.name = name
+}
+}</p>
+<p>var ceo = SomeClass(name: &ldquo;steve&rdquo;)
+var newCeo = ceo
+//ceo and newCeo now reference the same instance!
+newCeo.name = &ldquo;Tim&rdquo;</p>
+<p>println(ceo.name) // &ldquo;Tim&rdquo;
+println(newCeo.name) // &ldquo;Tim&rdquo;</p>
+<hr>
+<h3 id="struct"><strong>Struct</strong></h3>
+<p>Structs are value types. It means that if you copy the instance of the structure to another variable, it&rsquo;s just copied to the variable.</p>
+<p>struct Person {
+var name: String
+init(name: String) {
+self.name = name
+}
+}</p>
+<p>var ceo = Person(name: &ldquo;Steve&rdquo;)
+var newCeo = ceo
+//ceo and newCeo are two structs with the same value!
+newCeo.name = &ldquo;Tim&rdquo;</p>
+<p>println(ceo.name) // &ldquo;Steve&rdquo;
+println(newCeo.name) // &ldquo;Tim&rdquo;</p>
+<hr>
+<h3 id="common-features-between-classes-andstructs">Common features between classes and structs</h3>
+<ul>
+<li>Define properties to store values</li>
+<li>Define methods to provide functionality</li>
+<li>Can be extended using the extensions (very powerful)</li>
+<li>Can conform to protocols (protocol orientation)</li>
+<li>Define initializers</li>
+<li>Define Subscripts to provide access to their variables</li>
+<li>They can work with generics to provide flexible and reusable types</li>
+</ul>
+<hr>
+<h3 id="difference-between-classes-andstructs">Difference between classes and structs</h3>
+<ul>
+<li>A class supports Type casting but struct doesn&rsquo;t.</li>
+<li>A class can have deinitializer as its a reference type but a struct doesn’t as it is a value type.</li>
+<li>A class supports Inheritance but a struct doesn’t.</li>
+<li>A class allows reference counting for multiple references but a struct doesn’t.</li>
+<li>Struct properties are stored on Stack and Class instances are stored on Heap memory</li>
+<li>Struct is thread safe or singleton at any point in time.</li>
+</ul>
+<hr>
+<h3 id="faq">FAQ</h3>
+<p><strong>Q1.</strong> Can structs have retain cycle? </p>
+<p><strong>ans: No,</strong> <a href="https://stackoverflow.com/questions/38457064/swift-structs-reference-count">more info</a></p>
+<p><strong>Q2.</strong> Can structs be weak? </p>
+<p><strong>ans:</strong> <strong>No,</strong> As structs are value type they can’t be weak, strong or unowned</p>
+<hr>
+<h3 id="related-links">Related Links</h3>
+<ul>
+<li><a href="https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html">https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html</a></li>
+<li><a href="https://learnappmaking.com/struct-vs-class-swift-how-to/">https://learnappmaking.com/struct-vs-class-swift-how-to/</a></li>
+<li><a href="https://stackoverflow.com/questions/24217586/structure-vs-class-in-swift-language/24217633">https://stackoverflow.com/questions/24217586/structure-vs-class-in-swift-language/24217633</a></li>
+</ul>
+
+</body>
+</html>
     </main>
     
 <footer class="footer">

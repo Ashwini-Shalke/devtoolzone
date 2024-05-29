@@ -344,6 +344,89 @@ A() // error: A is unavailable</p>
 </script>
   </div>
 </article>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access specifier in Swift</title>
+    <link rel="stylesheet" href="/css/jsonFormatter.css">
+    <script src="/js/jsonFormatter.js" defer></script>
+</head>
+<body>
+    <p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*IOd-VBlPMSnyHuq-k48KrA.png" alt=""  />
+</p>
+<h3 id="what-is-access-specifier">What is Access specifier?</h3>
+<p>Access specifier is keyword which helps in <em>Access control of</em> code block. <em>Access control</em> restricts access to the parts of your code from code in other source files and modules.</p>
+<blockquote>
+<p>Encapsulation is one pillar of Object Oriented Programming and access specifiers helps in encapsulating.</p>
+</blockquote>
+<hr>
+<h3 id="what-is-encapsulation">What is Encapsulation?**</h3>
+<p>Encapsulation is defined as the wrapping up of data under a single unit. It is the mechanism that binds together code and the data it manipulates.Other way to think about encapsulation is, it is a protective shield that prevents the data from being accessed by the code outside this shield.</p>
+<hr>
+<h3 id="types-of-access-levels-inswift">Types of Access levels in swift</h3>
+<h4 id="1-open--public">1. Open &amp; Public :</h4>
+<p>Enable an entity to be used outside the defining module (target/framework). You typically use <code>open</code> or <code>public</code>access when specifying the public interface to a framework.</p>
+<p>However, <code>**open**</code> <strong>access applies only to classes and class members</strong>, and it differs from <code>public</code>access as follows:</p>
+<ul>
+<li><code>open</code> classes and class members can be subclassed and overridden both within and outside the defining module (target/framework).</li>
+<li><code>public</code> classes and class members can only be subclassed and overridden within the defining module (target/framework).</li>
+</ul>
+<blockquote>
+<p>Like open access level, public access level enable an entity to be used outside the defining module (target). But open access level allows us to subclass it from another module where in public access level, we can only subclass or overridde it from within the module it is defined.</p>
+</blockquote>
+<p>//First.framework – A.swift
+open class A {}
+//First.framework – B.swift
+public class B: A {} // ok
+//Second.framework – C.swift
+import First
+internal class C: A {} // ok
+//Second.framework – D.swift
+import First
+internal class D: B {} // error: B cannot be subclassed</p>
+<hr>
+<h4 id="2-private">2. Private:</h4>
+<p>Restricts the use of an entity to its enclosing declaration. You typically use <code>private</code> access to hide the implementation details of a specific piece of functionality when those details are used only within a single declaration.</p>
+<p>// First.framework – A.swift
+internal struct A {
+private static let x: Int
+internal static func doSomethingWithX() {
+x // ok
+}
+}
+A.x // error: x is unavailable</p>
+<hr>
+<h4 id="3-fileprivate">3. FilePrivate:</h4>
+<p>Restricts the use of an entity to its defining source file. You typically use <code>fileprivate</code> access to hide the implementation details of a specific piece of functionality when those details are used within an entire file.</p>
+<p>// First.framework – A.swift
+internal struct A {
+fileprivate static let x: Int
+}
+A.x // ok
+// First.framework – B.swift
+A.x // error: x is not available</p>
+<hr>
+<h4 id="4-internal">4. Internal:</h4>
+<p>Enables an entity to be used within the defining module (target). You typically use <code>internal</code> access when defining an app’s or a framework’s internal structure.</p>
+<p>// First.framework – A.swift
+internal struct A {
+fileprivate static let x: Int
+}
+// First.framework – A.swift
+internal struct A {}
+// First.framework – B.swift
+A() // ok</p>
+<p>// Second.framework – C.swift
+import First
+A() // error: A is unavailable</p>
+<p>Thank you for reading 👏🏻. do like and share to make this reach more engineers.</p>
+
+</body>
+</html>
     </main>
     
 <footer class="footer">

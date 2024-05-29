@@ -317,6 +317,67 @@
 </script>
   </div>
 </article>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Images and Other Page Elements with HTML</title>
+    <link rel="stylesheet" href="/css/jsonFormatter.css">
+    <script src="/js/jsonFormatter.js" defer></script>
+</head>
+<body>
+    <p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*m8ciA3hMOzRiWPzu2s2lcQ.png" alt=""  />
+</p>
+<p>In the realm of web design, visuals play a pivotal role in capturing users’ attention and enhancing the overall aesthetic appeal of a website. HTML, the backbone of web development, offers an array of tags and elements to seamlessly integrate images and other page elements into web pages. In this article, we’ll explore how HTML enables developers to elevate their web design by adding images and other essential page elements with practical examples.</p>
+<h3 id="adding-images-withhtml">Adding Images with HTML:</h3>
+<p>Images are powerful assets that breathe life into web pages, conveying information, evoking emotions, and enhancing user engagement. HTML provides the <code>&lt;img&gt;</code> element to embed images into web pages, offering flexibility and control over image display and behavior.</p>
+<p><strong>Syntax:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;image\_url&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;image\_description&#34;</span>&gt;
+</span></span></code></pre></div><p>The <code>&lt;img&gt;</code> element requires two essential attributes:</p>
+<ul>
+<li><code>src</code>: Specifies the URL or path to the image file.</li>
+<li><code>alt</code>: Provides alternative text for screen readers and in case the image fails to load.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;example.jpg&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Example Image&#34;</span>&gt;
+</span></span></code></pre></div><h3 id="adding-other-page-elements">Adding Other Page Elements:</h3>
+<p>Beyond images, HTML facilitates the integration of various page elements to enrich content and improve user experience. Let’s explore some essential page elements and how to incorporate them using HTML.</p>
+<h4 id="videos">Videos:</h4>
+<p>HTML5 introduced native support for embedding videos directly into web pages using the <code>&lt;video&gt;</code> element. Developers can specify video sources and provide fallback content for browsers that do not support video playback.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">video</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;320&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;240&#34;</span> <span style="color:#a6e22e">controls</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">source</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;movie.mp4&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;video/mp4&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  Your browser does not support the video tag.
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">video</span>&gt;
+</span></span></code></pre></div><h4 id="audio-files">Audio Files:</h4>
+<p>Similarly, HTML5 enables the embedding of audio files using the <code>&lt;audio&gt;</code> element. Developers can specify audio sources and provide fallback content for browsers without audio playback support.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">audio</span> <span style="color:#a6e22e">controls</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">source</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;audio.mp3&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;audio/mpeg&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  Your browser does not support the audio tag.
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">audio</span>&gt;
+</span></span></code></pre></div><h4 id="embedded-content">Embedded Content:</h4>
+<p>HTML supports embedding third-party content such as maps, social media posts, and multimedia players using iframes. Developers can specify the source URL of the embedded content within the <code>&lt;iframe&gt;</code> element.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">iframe</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!...&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  Your browser does not support iframes.
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">iframe</span>&gt;
+</span></span></code></pre></div><h4 id="forms">Forms:</h4>
+<p>Forms are vital for gathering user input and enabling interactions on web pages. HTML provides a range of form elements such as text fields, checkboxes, radio buttons, and submit buttons to create interactive forms.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/submit-form&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span>&gt;Name:&lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span>&gt;&lt;<span style="color:#f92672">br</span>&gt;&lt;<span style="color:#f92672">br</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span>&gt;Email:&lt;/<span style="color:#f92672">label</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span>&gt;&lt;<span style="color:#f92672">br</span>&gt;&lt;<span style="color:#f92672">br</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Submit&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">form</span>&gt;
+</span></span></code></pre></div>
+</body>
+</html>
     </main>
     
 <footer class="footer">

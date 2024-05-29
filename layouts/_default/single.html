@@ -80,4 +80,20 @@
   </div>
 </article>
 
+<!-- layouts/_default/single.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="{{ "css/jsonFormatter.css" | relURL }}">
+    <script src="{{ "js/jsonFormatter.js" | relURL }}" defer></script>
+</head>
+<body>
+    {{ .Content }}
+</body>
+</html>
+
+
 {{- end }}{{/* end main */}}

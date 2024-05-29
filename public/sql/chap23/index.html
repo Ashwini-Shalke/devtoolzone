@@ -325,6 +325,67 @@ DELETE FROM Students WHERE Age &gt; 18; Merge and Insert: Merge: Merge performs
 </script>
   </div>
 </article>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The differences in SQL</title>
+    <link rel="stylesheet" href="/css/jsonFormatter.css">
+    <script src="/js/jsonFormatter.js" defer></script>
+</head>
+<body>
+    <p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*m5sIrT6qVE8gJkgmNRvSWw.png" alt=""  />
+</p>
+<h3 id="truncate-anddelete">Truncate and Delete:</h3>
+<p><strong>Truncate:</strong> Truncate is like clearing the entire table at once. It removes all the rows from a table but keeps the table structure intact. It’s faster than DELETE but doesn’t allow for conditions.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>TRUNCATE TABLE Students;
+</span></span></code></pre></div><p><strong>Delete:</strong> Delete removes specific rows from a table based on conditions. It’s slower than TRUNCATE but allows for specifying conditions.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>DELETE FROM Students WHERE Age &gt; 18;
+</span></span></code></pre></div><hr>
+<h3 id="merge-andinsert">Merge and Insert:</h3>
+<p><strong>Merge:</strong> Merge performs an INSERT, UPDATE, or DELETE operation based on the condition provided. It’s useful for synchronizing data between two tables.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>MERGE INTO TargetTable USING SourceTable ON (condition) 
+</span></span><span style="display:flex;"><span>WHEN MATCHED THEN UPDATE SET... WHEN NOT MATCHED THEN INSERT ...
+</span></span></code></pre></div><p><strong>Insert:</strong> Insert adds new rows of data into a table.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>INSERT INTO Students (Name, Age) VALUES (&#39;Alice&#39;, 15);
+</span></span></code></pre></div><hr>
+<h3 id="alter-andrename">Alter and Rename:</h3>
+<p><strong>Alter:</strong> Alter modifies the structure of a table, such as adding or dropping columns.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>ALTER TABLE Students ADD COLUMN GPA FLOAT;
+</span></span></code></pre></div><p><strong>Rename:</strong> Rename changes the name of a table.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>RENAME TABLE Students TO ClassMembers;
+</span></span></code></pre></div><hr>
+<h3 id="group-by-and-orderby">Group by and Order by:</h3>
+<p><strong>Group by:</strong> Group by groups rows that have the same values into summary rows, typically used with aggregate functions like COUNT, SUM, AVG.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>SELECT Department, AVG(Salary) FROM Employees GROUP BY Department;
+</span></span></code></pre></div><p><strong>Order by:</strong> Order by sorts the result set by one or more columns either ascending (default) or descending.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>SELECT Name, Age FROM Students ORDER BY Age DESC;
+</span></span></code></pre></div><hr>
+<h3 id="where-andhaving">Where and Having:</h3>
+<p>Where: Where filters rows based on specified conditions before grouping.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>SELECT Department, COUNT(\*) FROM Employees WHERE Salary &gt; 50000 GROUP BY Department;
+</span></span></code></pre></div><p>Having: Having filters group rows based on specified conditions after grouping.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>SELECT Department, AVG(Salary) FROM Employees GROUP BY Department HAVING AVG(Salary) &gt;50000;
+</span></span></code></pre></div><hr>
+<h3 id="all-andforall">All and Forall:</h3>
+<p><strong>All:</strong> All returns true if all of the subquery values meet the condition.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>SELECT Name FROM Students WHERE Age &gt; ALL (SELECT Age FROM Students);
+</span></span></code></pre></div><p><strong>Forall:</strong> Forall performs a specified action for all elements in a collection.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>FORALL i IN 1..students.count SAVE EXCEPTIONS INSERT INTO Grades 
+</span></span><span style="display:flex;"><span>VALUES(students(i).id, students(i).grade);
+</span></span></code></pre></div><hr>
+<h3 id="varchar-andchar">Varchar and Char</h3>
+<p><strong>Varchar:</strong> Varchar stores variable-length character data. It allocates storage only for the characters entered, making it more flexible but potentially less efficient for fixed-length data.</p>
+<p><strong>Char:</strong> Char stores fixed-length character data. It allocates the full storage space for each value, padding with spaces if necessary, ensuring consistent storage size.</p>
+<blockquote>
+<p>These explanations and examples should help you understand the differences between each concept in SQL!</p>
+</blockquote>
+
+</body>
+</html>
     </main>
     
 <footer class="footer">

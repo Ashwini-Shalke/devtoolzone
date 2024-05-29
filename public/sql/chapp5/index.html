@@ -309,6 +309,57 @@ Syntax Types of Window Functions: There are a few common window functions you mi
 </script>
   </div>
 </article>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Functions in SQL</title>
+    <link rel="stylesheet" href="/css/jsonFormatter.css">
+    <script src="/js/jsonFormatter.js" defer></script>
+</head>
+<body>
+    <p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*x-ZWz0wStOYljKcElhLAzg.jpeg" alt=""  />
+</p>
+<p>Window functions are a type of function in SQL that allow you to perform calculations across a set of rows related to the current row, called a “window,” without collapsing the result set. They are used to perform aggregate calculations (like sum, average, count) and ranking operations (like row number, rank) within a specific partition or window of data.</p>
+<h2 id="syntax-types-of-window-functions">Syntax Types of Window Functions:</h2>
+<p><strong>There are a few common window functions you might encounter:</strong></p>
+<ol>
+<li><strong>Aggregate Functions:</strong> These functions perform calculations across a set of rows and return a single value for each row. Examples: <code>SUM()</code>, <code>AVG()</code>, <code>COUNT()</code></li>
+<li><strong>Ranking Functions:</strong> These functions assign a rank to each row based on the specified criteria. Examples: <code>ROW_NUMBER()</code>, <code>RANK()</code>, <code>DENSE_RANK()</code></li>
+<li><strong>Analytic Functions:</strong> These functions compute an aggregate value based on a group of rows and return multiple rows for each input row. Examples: <code>LAG()</code>, <code>LEAD()</code>, <code>FIRST_VALUE()</code>, <code>LAST_VALUE()</code></li>
+</ol>
+<hr>
+<p>Let’s say we have a simple table called <code>student_scores</code> with columns <code>student_id</code>, <code>subject</code>, and <code>score</code>. Here&rsquo;s some sample data:</p>
+<p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*OM7cYE2E4Ngnek2NoraD5w.png" alt=""  />
+</p>
+<p><strong>Example:</strong> Now, let’s say we want to find the average score for each subject, the rank of each student and also to find the next highest score within their subject. We can use window functions to achieve this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SELECT 
+</span></span><span style="display:flex;"><span>    student\_id,
+</span></span><span style="display:flex;"><span>    subject,
+</span></span><span style="display:flex;"><span>    score,
+</span></span><span style="display:flex;"><span>    AVG(score) OVER (PARTITION BY subject) AS avg\_score,
+</span></span><span style="display:flex;"><span>    RANK() OVER (PARTITION BY subject ORDER BY score DESC) AS rank\_within\_subject,
+</span></span><span style="display:flex;"><span>    LEAD(score) OVER (PARTITION BY subject ORDER BY score DESC) AS next\_highest\_score
+</span></span><span style="display:flex;"><span>FROM 
+</span></span><span style="display:flex;"><span>    student\_scores;
+</span></span></code></pre></div><ul>
+<li>The <code>AVG(score) OVER (PARTITION BY subject)</code> calculates the average score for each subject. This means it calculates the average of all scores for each subject.</li>
+<li>The <code>RANK() OVER (PARTITION BY subject ORDER BY score DESC)</code> assigns a rank to each student within their subject, based on their score. The <code>ORDER BY score DESC</code> part orders the scores in descending order, so the highest score gets the lowest rank.</li>
+<li>The <code>LEAD(score) OVER (PARTITION BY subject ORDER BY score DESC)</code> function calculates the next highest score for each student within their subject. The <code>ORDER BY score DESC</code> orders the scores in descending order, so the next highest score will be the score of the next row.</li>
+</ul>
+<p><strong>Result :</strong></p>
+<p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*oHNQbb0XzQVPlydgUifSRQ.png" alt=""  />
+</p>
+<blockquote>
+<p><em>This result shows each student’s score, the average score for each subject, and their rank within each subject.</em></p>
+</blockquote>
+
+</body>
+</html>
     </main>
     
 <footer class="footer">

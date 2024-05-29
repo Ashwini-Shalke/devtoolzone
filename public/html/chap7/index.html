@@ -310,6 +310,64 @@
 </script>
   </div>
 </article>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Frames: Enhancing Web Layouts with Frame Elements</title>
+    <link rel="stylesheet" href="/css/jsonFormatter.css">
+    <script src="/js/jsonFormatter.js" defer></script>
+</head>
+<body>
+    <p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*ac-S2q4F8ZkKJMKT6L79CQ.jpeg" alt=""  />
+</p>
+<p>HTML frames provide a powerful way to divide a web page into multiple sections, each with its own content. Despite their declining usage due to modern CSS techniques, frames remain a valuable tool for certain scenarios, such as creating sidebars or displaying content from different sources simultaneously. In this article, we’ll explore HTML frames, their syntax, attributes, and examples to help you understand and utilize them effectively in your web designs.</p>
+<h3 id="understanding-htmlframes">Understanding HTML Frames:</h3>
+<p>HTML frames allow developers to divide the browser window into multiple frames, each containing a separate HTML document. Frames are defined using the <code>&lt;frameset&gt;</code> element, which specifies the layout and size of each frame, and the <code>&lt;frame&gt;</code> element, which defines the content to be displayed within each frame.</p>
+<p><strong>Syntax:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">frameset</span> <span style="color:#a6e22e">cols</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;\*,\*,\*&#34;</span> <span style="color:#a6e22e">rows</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;\*,\*&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">frame</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;frame1.html&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">frame</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;frame2.html&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">frame</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;frame3.html&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">frameset</span>&gt;
+</span></span></code></pre></div><p>In this example, we have a frameset divided into <em><strong>three columns</strong></em>, each containing a frame displaying content from different HTML files.</p>
+<p><strong>Example:</strong></p>
+<p>Let’s create a simple web page with a top frame for navigation and a main frame for content display:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">title</span>&gt;HTML Frames Example&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">frameset</span> <span style="color:#a6e22e">rows</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;20%, 80%&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">frame</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navigation.html&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navigation&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">frame</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;content.html&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;content&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">frameset</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><p>In this example, the frameset is divided into two rows: the top row contains the navigation frame, and the bottom row contains the content frame.</p>
+<h4 id="attributes">Attributes:</h4>
+<p>HTML frames support various attributes to customize their behavior and appearance:</p>
+<ol>
+<li>src: Specifies the URL of the HTML document to be displayed within the frame.</li>
+<li>name: Assigns a name to the frame, allowing other elements to target it for navigation or content loading.</li>
+<li>cols/rows: Defines the layout of frames within the frameset, specifying the size and arrangement of columns or rows.</li>
+</ol>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">frameset</span> <span style="color:#a6e22e">cols</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;25%, 75%&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">frame</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sidebar.html&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sidebar&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">frame</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;main.html&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;main&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">frameset</span>&gt;
+</span></span></code></pre></div><p>In this example, the frameset is divided into two columns, with the first frame occupying 25% of the width and the second frame occupying 75%.</p>
+<h4 id="combining-frames-with-other-elements">Combining Frames with Other Elements:</h4>
+<p>Frames can be combined with other HTML elements to create complex layouts. For example, frames can be used alongside CSS for styling and positioning, or with JavaScript for dynamic content loading and interaction.</p>
+<blockquote>
+<p>By understanding the syntax, attributes, and capabilities of HTML frames, you can leverage them effectively to enhance the layout and functionality of your web designs.</p>
+</blockquote>
+
+</body>
+</html>
     </main>
     
 <footer class="footer">

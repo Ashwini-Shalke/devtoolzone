@@ -303,6 +303,48 @@ Example: Suppose you’re working on a school project where you need to analyze 
 </script>
   </div>
 </article>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL — Temporary Tables</title>
+    <link rel="stylesheet" href="/css/jsonFormatter.css">
+    <script src="/js/jsonFormatter.js" defer></script>
+</head>
+<body>
+    <p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*iSgVume5k5pPTkDsAL9NQg.jpeg" alt=""  />
+</p>
+<p>Temporary tables are like a temporary workspace or desk that you set up when you need some extra space to work on a project. You can use this space to organize and manipulate data without affecting your main workspace (or database) permanently. Once you’re done with your task, you can clean up and remove the temporary workspace, and everything goes back to how it was before.</p>
+<h3 id="example"><strong>Example:</strong></h3>
+<p>Suppose you’re working on a school project where you need to analyze data about students’ grades and attendance. You don’t want to mess up your main desk (or database) with all your messy calculations and temporary data, so you set up a temporary workspace (or temporary table) to work on your project.</p>
+<h3 id="1--local-temporary-tables">1.  Local Temporary Tables:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CREATE TABLE #TempGrades ( StudentID INT, Subject VARCHAR(50), 
+</span></span><span style="display:flex;"><span>Grade VARCHAR(2) );
+</span></span></code></pre></div><p>In this example, the pound sign “#” before the table name indicates that it’s a <em>local temporary table</em>. You can use this table within the current session or connection, and it’s automatically dropped (deleted) when the session ends.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>INSERT INTO #TempGrades (StudentID, Subject, Grade) 
+</span></span><span style="display:flex;"><span>SELECT StudentID, Subject, Grade FROM Grades WHERE StudentID = 1;
+</span></span></code></pre></div><p>This query inserts data into the temporary table #TempGrades from the Grades table for a specific student.</p>
+<hr>
+<h3 id="2--global-temporary-tables">2.  Global Temporary Tables:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CREATE TABLE ##TempGrades ( StudentID INT, Subject VARCHAR(50), 
+</span></span><span style="display:flex;"><span>Grade VARCHAR(2) );
+</span></span></code></pre></div><p>In this example, the double pound sign “##” before the table name indicates that it’s a <em>global temporary table</em>. You can use this table across different sessions or connections, and it’s automatically dropped when all sessions referencing it are closed.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>INSERT INTO ##TempGrades (StudentID, Subject, Grade) 
+</span></span><span style="display:flex;"><span>SELECT StudentID, Subject, Grade FROM Grades WHERE Grade = &#39;A&#39;;
+</span></span></code></pre></div><p>This query inserts data into the global temporary table ##TempGrades from the Grades table for students who received an ‘A’ grade.</p>
+<blockquote>
+<p>Temporary tables provide a convenient way to work with data temporarily without affecting the main database structure. Just like setting up a temporary workspace for your project, you can use temporary tables to organise and manipulate data for specific tasks or analyses, and then clean up when you’re done.</p>
+</blockquote>
+
+</body>
+</html>
     </main>
     
 <footer class="footer">

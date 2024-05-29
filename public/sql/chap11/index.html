@@ -324,6 +324,67 @@ Ranking Table</p>
 </script>
   </div>
 </article>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHOOSE and IIF — SQL</title>
+    <link rel="stylesheet" href="/css/jsonFormatter.css">
+    <script src="/js/jsonFormatter.js" defer></script>
+</head>
+<body>
+    <p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*aXjqVR057ThEvlN94KeTyQ.jpeg" alt=""  />
+</p>
+<p>Imagine you’re organizing a gaming tournament, and you want to assign a different prize based on the rank players achieved.</p>
+<p>Let’s say you have the following rankings:</p>
+<p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*bVRdYLZ3JfERGonncmaKzQ.png" alt=""  />
+Ranking Table</p>
+<h4 id="using-choose">Using CHOOSE</h4>
+<p><code>CHOOSE</code> function returns the value from a list of values based on the specified index.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SELECT CHOOSE(Rank, &#39;Gold Medal&#39;, &#39;Silver Medal&#39;, &#39;Bronze Medal&#39;, 
+</span></span><span style="display:flex;"><span>&#39;Participation Prize&#39;, &#39;Participation Prize&#39;) AS Prize FROM Rankings;
+</span></span></code></pre></div><p><strong>Result:</strong></p>
+<p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*PW14JZ2weh7WaP3_QH1ufA.png" alt=""  />
+</p>
+<p><strong>Explanation:</strong></p>
+<ul>
+<li>The <code>CHOOSE</code> function takes the Rank as an index.</li>
+<li>If Rank is 1, it returns ‘Gold Medal’.</li>
+<li>If Rank is 2, it returns ‘Silver Medal’.</li>
+<li>If Rank is 3, it returns ‘Bronze Medal’.</li>
+<li>If Rank is 4 or 5, it returns ‘Participation Prize’.</li>
+</ul>
+<h4 id="usingiif">Using IIF:</h4>
+<p><code>IIF</code> function returns one of two values depending on whether the specified condition evaluates to true or false.</p>
+<p>SELECT Rank, IIF(Rank = 1, &lsquo;Gold Medal&rsquo;, &lsquo;No Prize&rsquo;) AS Prize FROM Rankings;</p>
+<p><strong>Result:</strong></p>
+<p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*2V6UhIr5Tl-4bDo5MnmWUw.png" alt=""  />
+</p>
+<p><strong>Explanation:</strong></p>
+<ul>
+<li>The <code>IIF</code> function checks if the Rank is 1.</li>
+<li>If true, it returns ‘Gold Medal’.</li>
+<li>If false, it returns ‘No Prize’.</li>
+</ul>
+<blockquote>
+<p>In simple terms:</p>
+</blockquote>
+<blockquote>
+<p><code>CHOOSE</code> function selects a value based on the index provided.</p>
+</blockquote>
+<blockquote>
+<p><code>IIF</code> function returns one value if a condition is true, otherwise returns another value.</p>
+</blockquote>
+<blockquote>
+<p>These functions are handy when you need to make decisions or select values based on certain conditions in your SQL queries.</p>
+</blockquote>
+
+</body>
+</html>
     </main>
     
 <footer class="footer">

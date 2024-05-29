@@ -307,6 +307,69 @@ Imagine you’re at a library, and you ask the librarian to recommend some good 
 </script>
   </div>
 </article>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding REF_CURSOR in SQL</title>
+    <link rel="stylesheet" href="/css/jsonFormatter.css">
+    <script src="/js/jsonFormatter.js" defer></script>
+</head>
+<body>
+    <p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*u66i5hiSMOCEqgoudUQw4Q.png" alt=""  />
+</p>
+<p>Ever heard of something called <strong>REF_CURSOR</strong> Don’t worry if it sounds like gibberish right now. I’m here to break it down for you in the simplest way possible, so grab a snack and let’s dive in!</p>
+<p>Imagine you’re at a library, and you ask the librarian to recommend some good books. Instead of giving you a list of book titles right away, the librarian hands you a special kind of card called a <strong>REF_CURSOR</strong>. This card doesn’t contain the actual book titles; rather, it tells you where to find the books on the shelves.</p>
+<p>In SQL, a <strong>REF_CURSOR</strong> works similarly. It’s like a placeholder that points to a result set (or a set of rows) in a database, but it doesn’t contain the actual data. Instead, it holds a reference to where the data can be found.</p>
+<p><strong>Now, let’s break it down with an example:</strong></p>
+<p>Suppose we have a database table called “books” with columns for book ID, title, author, and genre. We want to create a stored procedure that returns a list of books written by a specific author.</p>
+<p><strong>Here’s how we can use a REF_CURSOR to achieve this:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>CREATE OR REPLACE PROCEDURE get\_books\_by\_author(
+</span></span><span style="display:flex;"><span>    p\_author\_name IN VARCHAR2,
+</span></span><span style="display:flex;"><span>    p\_books\_cur OUT SYS\_REFCURSOR
+</span></span><span style="display:flex;"><span>) AS
+</span></span><span style="display:flex;"><span>BEGIN
+</span></span><span style="display:flex;"><span>    OPEN p\_books\_cur FOR
+</span></span><span style="display:flex;"><span>    SELECT title, author, genre
+</span></span><span style="display:flex;"><span>    FROM books
+</span></span><span style="display:flex;"><span>    WHERE author = p\_author\_name;
+</span></span><span style="display:flex;"><span>END;
+</span></span></code></pre></div><ul>
+<li>We define a stored procedure called “get_books_by_author” that takes an author name as input (p_author_name) and returns a REF_CURSOR (p_books_cur) as output.</li>
+<li>Inside the procedure, we use the OPEN statement to associate the REF_CURSOR with a SELECT query that fetches books written by the specified author.</li>
+<li>The result set returned by the SELECT query is stored in the REF_CURSOR, ready to be fetched by the caller.</li>
+</ul>
+<p><strong>Now, let’s see how we can use this stored procedure in a SQL script:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>DECLARE
+</span></span><span style="display:flex;"><span>    books\_cursor SYS\_REFCURSOR;
+</span></span><span style="display:flex;"><span>    book\_title books.title%TYPE;
+</span></span><span style="display:flex;"><span>    book\_author books.author%TYPE;
+</span></span><span style="display:flex;"><span>    book\_genre books.genre%TYPE;
+</span></span><span style="display:flex;"><span>BEGIN
+</span></span><span style="display:flex;"><span>    get\_books\_by\_author(&#39;J.K. Rowling&#39;, books\_cursor);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    LOOP
+</span></span><span style="display:flex;"><span>        FETCH books\_cursor INTO book\_title, book\_author, book\_genre;
+</span></span><span style="display:flex;"><span>        EXIT WHEN books\_cursor%NOTFOUND;
+</span></span><span style="display:flex;"><span>        -- Do something with the fetched data (e.g., print it)
+</span></span><span style="display:flex;"><span>        DBMS\_OUTPUT.PUT\_LINE(&#39;Title: &#39; || book\_title || &#39;, Author: &#39; || book\_author || &#39;, Genre: &#39; || book\_genre);
+</span></span><span style="display:flex;"><span>    END LOOP;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    CLOSE books\_cursor;
+</span></span><span style="display:flex;"><span>END;
+</span></span></code></pre></div><p><strong>In this script:</strong></p>
+<ul>
+<li>We declare a REF_CURSOR variable called “books_cursor” along with variables to hold book details.</li>
+<li>We call the “get_books_by_author” procedure, passing ‘J.K. Rowling’ as the author name and receiving the result set in the “books_cursor” variable.</li>
+<li>We then fetch each row from the result set using a loop and print the book details.</li>
+</ul>
+<p>So, in simple terms, a REF_CURSOR is like a magic wand that points to a list of data, allowing you to fetch and work with that data in your SQL code.</p>
+
+</body>
+</html>
     </main>
     
 <footer class="footer">
