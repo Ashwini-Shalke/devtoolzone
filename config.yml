@@ -62,11 +62,11 @@ menu:
     #   name: Search
     #   url: /search/
     #   weight: 40
-    - identifier: Tools
-      name: Tools
-      url: /tools/
-      weight: 50
-    - identifier: archives
+    # - identifier: Tools
+    #  name: Tools
+    #  url: /tools/
+    # weight: 50
+    #- identifier: archives
       name: Archives
       url: /archives/
       weight: 60
