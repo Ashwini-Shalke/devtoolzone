@@ -1,9 +1,9 @@
 +++
 title = 'What is Page Zero / Global Page in Oracle APEX?'
-date = 2024-05-03
+date = 2024-08-01
 draft = false
 author = "Ashwini Shalke"
-weight = 8
+weight = 9
 tags = ["Oracle", "APEX", "Beginners","Low-Code","Global/Zero Page"]
 +++
 

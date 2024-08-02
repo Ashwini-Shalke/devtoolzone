@@ -92,11 +92,11 @@
     <loc>https://learnerloft.com/oracleapplicationexpress/chap8/</loc>
     <lastmod>2024-05-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://learnerloft.com/oracleapplicationexpress/chap9/</loc>
-    <lastmod>2024-05-03T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://learnerloft.com/sql/chap8/</loc>
     <lastmod>2024-04-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://learnerloft.com/oracleapplicationexpress/chap9/</loc>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://learnerloft.com/swift/chap9/</loc>
     <lastmod>2024-05-22T00:00:00+00:00</lastmod>
@@ -155,13 +155,31 @@
     <loc>https://learnerloft.com/sql/chap23/</loc>
     <lastmod>2024-04-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://learnerloft.com/tags/beginners/</loc>
-    <lastmod>2024-05-22T00:00:00+00:00</lastmod>
+    <loc>https://learnerloft.com/tags/apex/</loc>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://learnerloft.com/tags/coding/</loc>
-    <lastmod>2024-05-22T00:00:00+00:00</lastmod>
+    <loc>https://learnerloft.com/tags/beginners/</loc>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://learnerloft.com/tags/global/zero-page/</loc>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://learnerloft.com/</loc>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://learnerloft.com/tags/low-code/</loc>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://learnerloft.com/tags/oracle/</loc>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://learnerloft.com/oracleapplicationexpress/</loc>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://learnerloft.com/tags/</loc>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://learnerloft.com/tags/coding/</loc>
     <lastmod>2024-05-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://learnerloft.com/tags/swift/</loc>
@@ -170,26 +188,8 @@
     <loc>https://learnerloft.com/swift/</loc>
     <lastmod>2024-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://learnerloft.com/tags/</loc>
-    <lastmod>2024-05-22T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://learnerloft.com/tags/xcode/</loc>
     <lastmod>2024-05-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://learnerloft.com/tags/apex/</loc>
-    <lastmod>2024-05-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://learnerloft.com/tags/global/zero-page/</loc>
-    <lastmod>2024-05-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://learnerloft.com/tags/low-code/</loc>
-    <lastmod>2024-05-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://learnerloft.com/tags/oracle/</loc>
-    <lastmod>2024-05-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://learnerloft.com/oracleapplicationexpress/</loc>
-    <lastmod>2024-05-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://learnerloft.com/tags/reports/</loc>
     <lastmod>2024-05-03T00:00:00+00:00</lastmod>

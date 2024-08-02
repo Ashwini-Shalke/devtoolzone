@@ -6,7 +6,7 @@
     <description>Recent content in OracleApplicationExpresses on Learner Loft</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Aug 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://learnerloft.com/oracleapplicationexpress/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction to Oracle APEX</title>
@@ -81,7 +81,7 @@ Key Features: Interactive Features: Users can sort, filter, and customise the d
     <item>
       <title>What is Page Zero / Global Page in Oracle APEX?</title>
       <link>https://learnerloft.com/oracleapplicationexpress/chap9/</link>
-      <pubDate>Fri, 03 May 2024 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/oracleapplicationexpress/chap9/</guid>
       <description>Oracle Application Express (APEX) includes a powerful feature called the Global Page, often referred to as Page Zero. This feature functions as a master page within your application, ensuring that certain elements are consistently rendered across multiple pages without the need for repetitive coding.
 Here’s an in-depth look at what the Global Page is and how it can be effectively used.
