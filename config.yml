@@ -58,16 +58,8 @@ menu:
       name: Swift
       url: /swift/
       weight: 40
-    # - identifier: search
-    #   name: Search
-    #   url: /search/
-    #   weight: 40
-    # - identifier: Tools
-    #  name: Tools
-    #  url: /tools/
-    # weight: 50
-    #- identifier: archives
+    - identifier: archives
       name: Archives
       url: /archives/
-      weight: 60
+      weight: 50
    
