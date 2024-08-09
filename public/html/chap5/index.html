@@ -319,40 +319,9 @@ Understanding Links in HTML: Links are essential components of web pages, allow
     <link rel="stylesheet" href="/css/jsonFormatter.css">
     <script src="/js/jsonFormatter.js" defer></script>
 </head>
-<body>
-    <p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*9d0uurTJZGBZTM7KzaQzug.jpeg" alt=""  />
-</p>
-<p>HTML, the cornerstone of web development, empowers developers to create hyperlinks, or simply links, that connect web pages together, enabling seamless navigation across the vast landscape of the internet. In this article, we’ll uncover the art of creating links in HTML, exploring various techniques and examples to enhance user experience and connectivity.</p>
-<h3 id="understanding-links-inhtml">Understanding Links in HTML:</h3>
-<p>Links are essential components of web pages, allowing users to navigate between different pages or resources with a simple click. HTML provides the <!-- raw HTML omitted --> (anchor) element to create links, enabling developers to define the destination URL and customize link behavior.</p>
-<h4 id="creating-basiclinks">Creating Basic Links:</h4>
-<p>Let’s start by exploring the fundamental syntax for creating links in HTML:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;destination\_url&#34;</span>&gt;Link Text&lt;/<span style="color:#f92672">a</span>&gt;
-</span></span></code></pre></div><p>The <code>&lt;a&gt;</code> element requires the <code>href</code> attribute, which specifies the URL or destination of the link. The link text enclosed within the <code>&lt;a&gt;</code> tags is displayed to users, prompting them to click.</p>
-<p><strong>Examples:</strong></p>
-<h4 id="_linking-to-another-webpage_"><em>Linking to Another Web Page:</em></h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://www.example.com&#34;</span>&gt;Visit Example Website&lt;/<span style="color:#f92672">a</span>&gt;
-</span></span></code></pre></div><h4 id="_linking-to-an-emailaddress_"><em>Linking to an Email Address:</em></h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mailto:info@example.com&#34;</span>&gt;Contact Us&lt;/<span style="color:#f92672">a</span>&gt;
-</span></span></code></pre></div><h4 id="_linking-to-a-specific-section-within-a-webpage_"><em>Linking to a Specific Section within a Web Page:</em></h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#section\_id&#34;</span>&gt;Jump to Section&lt;/<span style="color:#f92672">a</span>&gt;
-</span></span></code></pre></div><h4 id="_linking-to-a-file-eg-pdfimage_"><em>Linking to a File (e.g., PDF, Image):</em></h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;document.pdf&#34;</span>&gt;Download PDF&lt;/<span style="color:#f92672">a</span>&gt;
-</span></span></code></pre></div><h3 id="adding-additional-attributes">Adding Additional Attributes:</h3>
-<p>HTML provides additional attributes to customize link behavior and appearance, enhancing accessibility and user experience.</p>
-<h4 id="target-attribute">Target Attribute:</h4>
-<p>The <code>target</code> attribute specifies where to open the linked document. Common values include <code>_blank</code> to open in a new tab and <code>_self</code> to open in the same tab.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://www.example.com&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;\_blank&#34;</span>&gt;Open in New Tab&lt;/<span style="color:#f92672">a</span>&gt;
-</span></span></code></pre></div><h4 id="title-attribute">Title Attribute:</h4>
-<p>The <code>title</code> attribute provides additional information about the link, which is displayed as a tooltip when users hover over the link.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://www.example.com&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Visit Example Website&#34;</span>&gt;Example&lt;/<span style="color:#f92672">a</span>&gt;
-</span></span></code></pre></div><h4 id="creating-links-withimages">Creating Links with Images:</h4>
-<p>HTML allows developers to create links using images, providing a visually appealing alternative to text links.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://www.example.com&#34;</span>&gt; &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;image.jpg&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Image Description&#34;</span>&gt; &lt;/<span style="color:#f92672">a</span>&gt;
-</span></span></code></pre></div><p>Links are the backbone of web navigation, connecting web pages and resources to provide users with a seamless browsing experience._</p>
-<p>With HTML’s_ <code>_&lt;a&gt;_</code> element, developers can create links effortlessly, enabling users to explore the vast expanse of the internet with just a click.</p>
 
-</body>
+
+
 </html>
     </main>
     

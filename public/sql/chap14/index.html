@@ -339,61 +339,9 @@ Let’s consider two tables: friends and hobbies.">
     <link rel="stylesheet" href="/css/jsonFormatter.css">
     <script src="/js/jsonFormatter.js" defer></script>
 </head>
-<body>
-    <h3 id="what-arejoins">What are Joins?</h3>
-<p>Imagine you have two lists of friends — one list with their names and another list with their hobbies. Now, you want to find out which friend has which hobby. This is where joins come in handy!</p>
-<p>In databases, tables are like lists, and joins help us combine information from different tables based on a common piece of information, like a friend’s name or an ID.</p>
-<p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*idKF1paMcs8YuAJKlNMjLA.jpeg" alt=""  />
-</p>
-<p>Let’s consider two tables: <code>friends</code> and <code>hobbies</code>.</p>
-<h4 id="friends">friends</h4>
-<p><img loading="lazy" src="https://cdn-images-1.medium.com/max/2400/1*gihTTDef5i_xD2wj3jhb7w.png" alt=""  />
-</p>
-<h4 id="hobbies">hobbies</h4>
-<p><img loading="lazy" src="https://cdn-images-1.medium.com/max/2400/1*oMbzlAs10el6uX6mKA5_yA.png" alt=""  />
-</p>
-<h3 id="types-ofjoins">Types of Joins:</h3>
-<p><strong>Inner Join:</strong> This type of join combines rows from two tables based on a matching condition. Only the rows where the condition is true in both tables are included in the result.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>SELECT friends.name, hobbies.hobby
-</span></span><span style="display:flex;"><span>FROM friends
-</span></span><span style="display:flex;"><span>INNER JOIN hobbies ON friends.id = hobbies.id;
-</span></span></code></pre></div><p><strong>Result</strong>
-<img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*vAXbUGmYrirxJeaG-YGLhw.png" alt=""  />
-</p>
-<hr>
-<p><strong>Left Join:</strong> This type of join returns all rows from the left table and matching rows from the right table. If there’s no match in the right table, it returns NULL values.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>SELECT friends.name, hobbies.hobby
-</span></span><span style="display:flex;"><span>FROM friends
-</span></span><span style="display:flex;"><span>LEFT JOIN hobbies ON friends.id = hobbies.id;
-</span></span></code></pre></div><p><strong>Result:</strong>
-<img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*cFpZYYIu7CNC9zCSbWgfHA.png" alt=""  />
-</p>
-<hr>
-<p><strong>Right Join:</strong> This is similar to a left join, but it returns all rows from the right table and matching rows from the left table. If there’s no match in the left table, it returns NULL values.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>SELECT friends.name, hobbies.hobby
-</span></span><span style="display:flex;"><span>FROM friends
-</span></span><span style="display:flex;"><span>RIGHT JOIN hobbies ON friends.id = hobbies.id;
-</span></span></code></pre></div><p><strong>Expected Result:</strong>
-<img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*K4Pz3wUGGZ1FKiMiAYIz4w.png" alt=""  />
-</p>
-<hr>
-<p><strong>Full Outer Join:</strong> This type of join returns all rows when there’s a match in either the left or right table. If there’s no match, it returns NULL values for the missing side.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>SELECT friends.name, hobbies.hobby
-</span></span><span style="display:flex;"><span>FROM friends
-</span></span><span style="display:flex;"><span>FULL OUTER JOIN hobbies ON friends.id = hobbies.id;
-</span></span></code></pre></div><p><strong>Expected Result:</strong>
-<img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*cmHJAfPtaUXh86c1Wiq0ng.png" alt=""  />
-</p>
-<p>These results show how different types of joins combine data from two tables based on a common identifier (in this case, the ID column). The output includes all or selected rows from both tables, depending on the type of join used.</p>
-<blockquote>
-<p>So, joins help us combine information from different tables, allowing us to see relationships between data in a database._</p>
-</blockquote>
 
-</body>
+
+
 </html>
     </main>
     

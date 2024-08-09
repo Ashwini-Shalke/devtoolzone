@@ -335,74 +335,9 @@ Introduction to HTML: HTML is a markup language used to structure content on th
     <link rel="stylesheet" href="/css/jsonFormatter.css">
     <script src="/js/jsonFormatter.js" defer></script>
 </head>
-<body>
-    <p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*cgj7j0bkyCplP9hpFG43Wg.png" alt=""  />
-</p>
-<p>HTML, or HyperText Markup Language, is the backbone of web development. It is the standard markup language for creating web pages and applications. In this article, we’ll delve into the fundamentals of HTML, including its introduction and basic tags, to help you kickstart your journey into web development.</p>
-<h3 id="introduction-tohtml">Introduction to HTML:</h3>
-<p>HTML is a markup language used to structure content on the web. It provides a set of elements or tags that define the structure of a web page. Each HTML tag serves a specific purpose, such as defining headings, paragraphs, images, links, and more.</p>
-<p>At its core, HTML consists of a series of elements, enclosed within angle brackets (&lt; &gt;), which are interpreted by web browsers to render content on a webpage. These elements can be nested within each other to create complex layouts and structures.</p>
-<h3 id="structural-htmltags">Structural HTML Tags:</h3>
-<p>Structural HTML tags are essential for organizing and formatting content on a webpage. They provide a hierarchical structure that helps browsers understand the relationship between different parts of the content.</p>
-<p>Let’s explore some of the most commonly used structural HTML tags along with examples:</p>
-<ol>
-<li><strong><code>&lt;!DOCTYPE html&gt;</code>:</strong> This declaration specifies the HTML version being used, which is HTML5 in most modern web pages.</li>
-<li><strong><code>&lt;html&gt;</code>:</strong> The <code>&lt;html&gt;</code> element serves as the root element of an HTML document, encapsulating the entire content of the page.</li>
-<li><strong><code>&lt;head&gt;</code>:</strong> Inside the <code>&lt;head&gt;</code> element, you include meta-information about the document, such as the title, character set, CSS stylesheets, and JavaScript scripts.</li>
-<li><strong><code>&lt;title&gt;</code>:</strong> The <code>&lt;title&gt;</code> element defines the title of the webpage, which appears in the browser’s title bar or tab.</li>
-<li><strong><code>&lt;body&gt;</code>:</strong> The <code>&lt;body&gt;</code> element contains the main content of the webpage, including text, images, links, and other elements visible to users</li>
-<li><strong><code>&lt;header&gt;</code>:</strong> The <code>&lt;header&gt;</code> element typically contains introductory content or navigational links at the top of the webpage.</li>
-<li><strong><code>&lt;nav&gt;</code>:</strong> Inside the <code>&lt;nav&gt;</code> element, you include navigation links or menus for navigating the website.</li>
-<li><strong><code>&lt;main&gt;</code>:</strong> The <code>&lt;main&gt;</code> element represents the main content of the webpage, excluding header, footer, and navigational elements.</li>
-<li><strong><code>&lt;section&gt;</code>:</strong> The <code>&lt;section&gt;</code> element defines sections within a webpage, typically containing related content grouped together.</li>
-<li><strong><code>&lt;article&gt;</code>:</strong> The <code>&lt;article&gt;</code> element represents self-contained content that can be independently distributed or reused, such as blog posts, news articles, or forum posts.</li>
-<li><strong><code>&lt;aside&gt;</code>:</strong> The <code>&lt;aside&gt;</code> element contains content related to the main content but not necessarily crucial to the understanding of the page, such as sidebars, advertisements, or supplementary information</li>
-<li><strong><code>&lt;footer&gt;</code>:</strong> The <code>&lt;footer&gt;</code> element contains footer information or copyright notices at the bottom of the webpage.</li>
-</ol>
-<h3 id="example">Example:</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">title</span>&gt;Sample Web Page&lt;/<span style="color:#f92672">title</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">header</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">h1</span>&gt;Welcome to Our Website&lt;/<span style="color:#f92672">h1</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">nav</span>&gt;
-</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">ul</span>&gt;
-</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#home&#34;</span>&gt;Home&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
-</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#about&#34;</span>&gt;About&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
-</span></span><span style="display:flex;"><span>                &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#contact&#34;</span>&gt;Contact&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
-</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#f92672">ul</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">nav</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">header</span>&gt;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">main</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">section</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;about&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">h2</span>&gt;About Us&lt;/<span style="color:#f92672">h2</span>&gt;
-</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">p</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet ac urna non ultricies.&lt;/<span style="color:#f92672">p</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">section</span>&gt;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">article</span>&gt;
-</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">h2</span>&gt;Blog Post Title&lt;/<span style="color:#f92672">h2</span>&gt;
-</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">p</span>&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet ac urna non ultricies.&lt;/<span style="color:#f92672">p</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">article</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">main</span>&gt;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">footer</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">p</span>&gt;&amp;copy; 2024 Sample Website. All rights reserved.&lt;/<span style="color:#f92672">p</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">footer</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
-</span></span></code></pre></div><p>The <strong><code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code></strong> elements help maintain a clear hierarchy and improve accessibility and SEO.</p>
-<p><img loading="lazy" src="https://cdn-images-1.medium.com/max/2400/1*a2pyQsWxHes7XoGKU-LQzQ.png" alt=""  />
-</p>
-<blockquote>
-<p>HTML is the foundation of web development, and understanding its basic tags is essential for building web pages. With this knowledge, you can start creating your own web content and exploring more advanced HTML features to enhance your websites.</p>
-</blockquote>
 
-</body>
+
+
 </html>
     </main>
     

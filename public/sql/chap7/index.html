@@ -325,43 +325,9 @@ Candies</p>
     <link rel="stylesheet" href="/css/jsonFormatter.css">
     <script src="/js/jsonFormatter.js" defer></script>
 </head>
-<body>
-    <p>Imagine you’re at a party with a bunch of friends, and there’s a big bowl of candies on the table. Now, you want to know some information about those candies, like how many candies are there in total, what’s the average number of candies each person has, or which friend has the most candies.</p>
-<p>In SQL, aggregate functions are like magical candy counters that help you answer these questions by performing calculations on groups of data.</p>
-<p>Example: Let’s say you have a table called “Candies” that lists the number of candies each person has:</p>
-<p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*f3ia0fh0UHQRtBObfB2Khw.png" alt=""  />
-Candies</p>
-<h2 id="aggregate-function-examples">Aggregate Function Examples:</h2>
-<h3 id="count">COUNT():</h3>
-<p>Count the total number of candies.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>SELECT COUNT(Candies) AS TotalCandies FROM Candies;
-</span></span></code></pre></div><p>This query will count the total number of candies from all friends combined.</p>
-<h3 id="sum">SUM():</h3>
-<p>Find the total number of candies.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>SELECT SUM(Candies) AS TotalCandies FROM Candies;
-</span></span></code></pre></div><p>This query will add up all the candies from all friends to give you the total number of candies.</p>
-<h3 id="avg">AVG():</h3>
-<p>Calculate the average number of candies per person.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>SELECT AVG(Candies) AS AverageCandies FROM Candies;
-</span></span></code></pre></div><p>This query will calculate the average number of candies by dividing the total number of candies by the number of friends.</p>
-<h3 id="max">MAX():</h3>
-<p>Find out who has the most candies.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>SELECT Person, MAX(Candies) AS MaxCandies FROM Candies;
-</span></span></code></pre></div><p>This query will tell you which friend has the highest number of candies.</p>
-<h3 id="min">MIN():</h3>
-<p>Find out who has the fewest candies.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>SELECT Person, MIN(Candies) AS MinCandies FROM Candies;
-</span></span></code></pre></div><p>This query will tell you which friend has the lowest number of candies.</p>
-<blockquote>
-<p><em>So, in simple terms, aggregate functions in SQL are like magical tools that help you perform calculations on groups of data. Just like counting candies at a party, you can use these functions to count, sum, average, find the maximum, or minimum values in a dataset.</em></p>
-</blockquote>
 
-</body>
+
+
 </html>
     </main>
     

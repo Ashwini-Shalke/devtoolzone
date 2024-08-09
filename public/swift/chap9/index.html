@@ -338,78 +338,9 @@ swiftnil.com: Fallthrough statement</p>
     <link rel="stylesheet" href="/css/jsonFormatter.css">
     <script src="/js/jsonFormatter.js" defer></script>
 </head>
-<body>
-    <p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*aIq8XC4Su_DubJUA8b-npg.jpeg" alt=""  />
-</p>
-<p>In this article, we will look at the <code>continue, break, fallthrough</code> keywords in swift</p>
-<blockquote>
-<p><strong>Continue:</strong> A continue statement ends program execution of the current iteration of a loop statement and move to next iteration.</p>
-</blockquote>
-<p>Ex: Increment the values of odd number in the array</p>
-<p>func increment(array: [Int]) -&gt; [Int] {
-var output: [Int] = []</p>
-<pre><code>for number in array {
-///Check if value is even
-    if number % 2 == 0 { 
-    ///number append to output array and move to next iteration      
-       output.append(number)
-       continue
-    }
-   ///This statement is skipped for even number 
-   output.append(number + 1)
-}
-return output
-</code></pre>
-<p>}</p>
-<p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*3rz0jUFaSbyAdraGPMDNUg.png" alt=""  />
-swiftnil.com: Continue statement</p>
-<h2 id="output-2-2-4-4-6-6-8-8">-&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
-Input: increment(array: [1,2,3,4,5,6,7,8])
-Output: [2, 2, 4, 4, 6, 6, 8, 8]</h2>
-<hr>
-<blockquote>
-<p><strong>Break:</strong> The Break statement exit the execution of an entire control flow immediately.</p>
-</blockquote>
-<p>Ex: Increment the values the array until value is `n`</p>
-<p>func increment(array: [Int], until: Int) -&gt; [Int] {
-var output: [Int] = []</p>
-<p>for number in array {
-if number == until {
-break
-}
-output.append(number + 1)
-}
-return output
-}</p>
-<p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*5Zjo4fnFRRDy7mvhQmCYGQ.png" alt=""  />
-swiftnil.com: Break statement</p>
-<h2 id="output-2-3-4-5">-&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
-Input: increment(array: [1,2,3,4,5,6,7,8], until: 5)
-Output: [2, 3, 4, 5]</h2>
-<hr>
-<blockquote>
-<p><strong>Fallthrough:</strong> In Swift, switch statements exist the execution as soon as case is matched so, fallthrough is used to continue to next case even after the case is matched</p>
-</blockquote>
-<p>var index = 10</p>
-<p>switch index {
-case 100 :
-print( &ldquo;Value of index is 100&rdquo;)
-fallthrough
-case 10,15 :
-print( &ldquo;Value of index is either 10 or 15&rdquo;)
-fallthrough
-case 5 :
-print( &ldquo;Value of index is 5&rdquo;)
-default :
-print( &ldquo;default case&rdquo;)
-}</p>
-<p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*LCfO4t4uNXz73p8w017hhQ.png" alt=""  />
-swiftnil.com: Fallthrough statement</p>
-<hr>
-<h4 id="reference"><strong>Reference</strong></h4>
-<p><a href="https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html">https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html</a></p>
 
-</body>
+
+
 </html>
     </main>
     

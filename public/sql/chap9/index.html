@@ -292,37 +292,9 @@
     <link rel="stylesheet" href="/css/jsonFormatter.css">
     <script src="/js/jsonFormatter.js" defer></script>
 </head>
-<body>
-    <p>Imagine you’re baking a cake, and you have a recipe written down on a piece of paper. This recipe contains all the steps you need to follow to bake the cake, from mixing the ingredients to putting it in the oven. A stored procedure in SQL is like that recipe — it’s a set of instructions stored in the database that you can execute whenever you need to perform a specific task or set of tasks.</p>
-<p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*6HnQ_xUXLlBGbTCCthprRw.jpeg" alt=""  />
-</p>
-<p><strong>Example:</strong></p>
-<p>Let’s say you want to create a stored procedure for retrieving information about students from a database. The stored procedure will accept the student’s ID as input and return their name and grade.</p>
-<p><strong>Here’s how you can create this stored procedure:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>CREATE PROCEDURE GetStudentInfo @StudentID INT AS 
-</span></span><span style="display:flex;"><span>BEGIN 
-</span></span><span style="display:flex;"><span>  SELECT Name, Grade FROM Students WHERE StudentID = @StudentID; 
-</span></span><span style="display:flex;"><span>END;
-</span></span></code></pre></div><p><strong>Explanation:</strong></p>
-<ul>
-<li><code>CREATE PROCEDURE</code>: This is the SQL statement used to create a new stored procedure.</li>
-<li><code>GetStudentInfo</code>: This is the name of the stored procedure.</li>
-<li><code>@StudentID INT</code>: This is the input parameter of the stored procedure, specifying the data type (INT) and name (@StudentID) of the parameter.</li>
-<li><code>AS</code>: This keyword indicates the beginning of the stored procedure&rsquo;s body.</li>
-<li><code>SELECT Name, Grade FROM Students WHERE StudentID = @StudentID;</code>: This is the SQL query inside the stored procedure. It selects the name and grade of the student with the specified StudentID.</li>
-</ul>
-<p>Once you’ve created the stored procedure, you can execute it whenever you need to retrieve information about a student by calling its name and passing the student’s ID as an argument:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>EXEC GetStudentInfo @StudentID = 123;
-</span></span></code></pre></div><p>This will execute the stored procedure <code>GetStudentInfo</code> with the student ID 123 as input, and it will return the name and grade of the student with that ID.</p>
-<p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*xwT1uKYDfTgjvRDqlRPcIw.png" alt=""  />
-</p>
-<p>In simple terms, a stored procedure in SQL is like a recipe stored in the database that you can use to perform specific tasks, such as retrieving information or performing calculations, by simply calling its name and providing any necessary inputs. It helps you save time and effort by encapsulating complex operations into reusable chunks of code.</p>
-<blockquote>
-<p><em>Stored procedures are sets of SQL statements that are stored and executed on the database server. They can accept parameters, perform operations, and return results, providing a way to encapsulate and reuse complex logic within the database.</em></p>
-</blockquote>
 
-</body>
+
+
 </html>
     </main>
     

@@ -361,80 +361,9 @@ This command adds a new column named “Email” to the “Students” table wit
     <link rel="stylesheet" href="/css/jsonFormatter.css">
     <script src="/js/jsonFormatter.js" defer></script>
 </head>
-<body>
-    <h2 id="ddl-data-definition-language">DDL (Data Definition Language):</h2>
-<p>DDL is used to define and manage the structure of database objects. Here are some common DDL commands:</p>
-<p><strong>CREATE</strong>: Used to create new database objects such as tables, views, indexes, etc.</p>
-<p><img loading="lazy" src="https://miro.medium.com/v2/resize:fit:1400/1*Mf9vT1po8ze3gWy8_zHVdw.png" alt=""  />
-</p>
-<p><strong>ALTER:</strong> Used to modify the structure of existing database objects, such as adding, modifying, or dropping columns.</p>
-<p><strong>Here are few examples :-</strong></p>
-<p>1.Adding a new column:</p>
-<p><img loading="lazy" src="https://miro.medium.com/v2/resize:fit:1400/1*_St1Rak7m7KLCe4icjAkAg.png" alt=""  />
-</p>
-<p>This command adds a new column named “Email” to the “Students” table with a data type of VARCHAR(100).</p>
-<p>2. Modifying a column’s data type:</p>
-<p><img loading="lazy" src="https://miro.medium.com/v2/resize:fit:1400/1*pwv2wfs-Ac9M3l1d3NisrQ.png" alt=""  />
-</p>
-<p>This command modifies the data type of the “Age” column in the “Students” table to INT and specifies that it cannot contain NULL values.</p>
-<p>3. Dropping a column:</p>
-<p><img loading="lazy" src="https://miro.medium.com/v2/resize:fit:1400/1*rlVAOnh6HCNZviy6uofBbg.png" alt=""  />
-</p>
-<p>This command removes the “Email” column from the “Students” table.</p>
-<p>4. Renaming a table:</p>
-<p><img loading="lazy" src="https://miro.medium.com/v2/resize:fit:1400/1*wQNJddQxy2ig_eNlMgflnA.png" alt=""  />
-</p>
-<p>This command renames the “OldTableName” table to “NewTableName”.</p>
-<p><strong>DROP:</strong> Used to delete existing database objects like tables, views, indexes, etc.</p>
-<p><img loading="lazy" src="https://miro.medium.com/v2/resize:fit:1400/1*Kcx2oN6JauFZJiyxQWE5HA.png" alt=""  />
-</p>
-<p><strong>TRUNCATE:</strong> Used to remove all records from a table, but the table itself remains intact.</p>
-<p><img loading="lazy" src="https://miro.medium.com/v2/resize:fit:1400/1*SW0iCaA7IXPA_7tzdoSw4A.png" alt=""  />
-</p>
-<hr>
-<h2 id="dml-data-manipulation-language">DML (Data Manipulation Language):</h2>
-<p>DML is used to manage data within database objects. Here are some common DML commands:</p>
-<p><strong>INSERT:</strong> Used to add new records (rows) into a table</p>
-<p><img loading="lazy" src="https://miro.medium.com/v2/resize:fit:1400/1*0Vz9rvChheOS2o147QVoWQ.png" alt=""  />
-</p>
-<p><strong>Inserting Multiple Rows at Once:</strong> You can insert multiple rows into a table using a single INSERT statement by providing multiple sets of values.</p>
-<p><img loading="lazy" src="https://miro.medium.com/v2/resize:fit:1400/1*jfGgIHJXz_dW6ZPvDJDQ0Q.png" alt=""  />
-</p>
-<p><strong>UPDATE:</strong> Used to modify existing records in a table.</p>
-<p><img loading="lazy" src="https://miro.medium.com/v2/resize:fit:1400/1*1YmpmEBKgO8l-Q0zjqqxDQ.png" alt=""  />
-</p>
-<p><strong>DELETE:</strong> Used to remove records from a table.</p>
-<p><img loading="lazy" src="https://miro.medium.com/v2/resize:fit:1400/1*WLH6m70fMbbTHsaXqTKvzQ.png" alt=""  />
-</p>
-<p><strong>SELECT:</strong> Used to retrieve data from one or more tables.</p>
-<p><img loading="lazy" src="https://miro.medium.com/v2/resize:fit:1400/1*f-oj-LQ4axCbg-QLbfxegA.png" alt=""  />
-</p>
-<hr>
-<h2 id="dcl-data-control-language">DCL (Data Control Language):</h2>
-<p>DCL is used to control access to data within the database. Here’s a common DCL command:</p>
-<p><strong>GRANT:</strong> Used to grant specific privileges to users or roles.</p>
-<p><img loading="lazy" src="https://miro.medium.com/v2/resize:fit:1400/1*UG0tvR8Yx7Bt2ngqyn7mdQ.png" alt=""  />
-</p>
-<p><strong>REVOKE:</strong> Used to revoke previously granted privileges from users or roles.</p>
-<p><img loading="lazy" src="https://miro.medium.com/v2/resize:fit:1400/1*WjyzpBcAn7GoOCCS6zTU0Q.png" alt=""  />
-</p>
-<hr>
-<h2 id="tcl-transaction-control-language">TCL (Transaction Control Language):</h2>
-<p>TCL is used to manage transactions within the database. Here are common TCL commands:</p>
-<p><strong>COMMIT:</strong> Used to permanently save changes made during the current transaction.</p>
-<p><img loading="lazy" src="https://miro.medium.com/v2/resize:fit:1400/1*xSzFsov45nmDzrjJFI5utw.png" alt=""  />
-</p>
-<p><strong>ROLLBACK:</strong> Used to discard changes made during the current transaction and restore the database to its state before the transaction began.</p>
-<p><img loading="lazy" src="https://miro.medium.com/v2/resize:fit:1400/1*UHA3a-xXUKEXUBnwYhB8Rw.png" alt=""  />
-</p>
-<p><strong>SAVEPOINT:</strong> Used to set a point within the current transaction from which you can later roll back.</p>
-<p><img loading="lazy" src="https://miro.medium.com/v2/resize:fit:1400/1*EMkGSbkRFp_cF41Ljk9Oxw.png" alt=""  />
-</p>
-<blockquote>
-<p><em>These commands are essential for managing and manipulating the structure and data within a database, controlling access to it, and ensuring transactional integrity.</em></p>
-</blockquote>
 
-</body>
+
+
 </html>
     </main>
     

@@ -290,35 +290,9 @@
     <link rel="stylesheet" href="/css/jsonFormatter.css">
     <script src="/js/jsonFormatter.js" defer></script>
 </head>
-<body>
-    <p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*M3ZIXWDkyh9MM2ZYIfML0Q.png" alt=""  />
-</p>
-<p>Imagine you’re playing a game where you need to catch a ball. Sometimes, you might not catch the ball perfectly, and it might fall to the ground. But instead of giving up, you learn from your mistake and try again. In SQL, exceptions are like errors that occur during a task, but instead of crashing the program, they give you a chance to handle the error and continue with your task.</p>
-<p>Let’s consider a scenario where we want to insert a record into a table, but if the record already exists, we want to handle that exception gracefully rather than letting it cause an error.</p>
-<p><strong>Here’s a simple example:</strong></p>
-<p>Suppose we have a table called <code>Students</code> with columns <code>StudentID</code> and <code>Name</code>, and we want to insert a new student into this table. However, if a student with the same ID already exists, we want to print a message instead of causing an error.</p>
-<p><strong>Here’s how we can achieve this using exception handling:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>BEGIN TRY
-</span></span><span style="display:flex;"><span>    -- Try inserting a new student into the Students table
-</span></span><span style="display:flex;"><span>    INSERT INTO Students (StudentID, Name)
-</span></span><span style="display:flex;"><span>    VALUES (101, &#39;Alice&#39;);
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    PRINT &#39;New student inserted successfully!&#39;;
-</span></span><span style="display:flex;"><span>END TRY
-</span></span><span style="display:flex;"><span>BEGIN CATCH
-</span></span><span style="display:flex;"><span>    -- Handle the exception gracefully
-</span></span><span style="display:flex;"><span>    PRINT &#39;An error occurred: The student already exists.&#39;;
-</span></span><span style="display:flex;"><span>END CATCH
-</span></span></code></pre></div><p><strong>In this example:</strong></p>
-<ul>
-<li>We’re attempting to insert a new student with <code>StudentID</code> 101 and name &lsquo;Alice&rsquo; into the <code>Students</code> table.</li>
-<li>If a student with the same ID already exists in the table, an exception will be thrown.</li>
-<li>We use a <code>BEGIN TRY</code> block to attempt the insertion, and a <code>BEGIN CATCH</code> block to catch any exceptions that occur.</li>
-<li>If an exception occurs (i.e., if the student already exists), we print a message saying “An error occurred: The student already exists.” instead of letting the exception cause an error.</li>
-</ul>
-<p>This way, we handle the exception gracefully and provide feedback to the user instead of letting it disrupt the flow of the program.</p>
 
-</body>
+
+
 </html>
     </main>
     

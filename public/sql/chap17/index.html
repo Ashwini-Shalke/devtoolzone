@@ -281,24 +281,9 @@ we have a database with a table called “Students” that contains information 
     <link rel="stylesheet" href="/css/jsonFormatter.css">
     <script src="/js/jsonFormatter.js" defer></script>
 </head>
-<body>
-    <p><img loading="lazy" src="https://cdn-images-1.medium.com/max/2400/1*OE_zkDzyO_E0penaJO3esw.png" alt=""  />
-</p>
-<p>Imagine you have a favourite playlist on your music app. Instead of going through all your songs every time you want to listen to your favorite tracks, you create a playlist that contains only the songs you love.</p>
-<p>A view in a database is like that playlist — it’s a saved query that contains only the data you’re interested in, making it easier and faster to access.</p>
-<p><strong>Suppose</strong>
-we have a database with a table called “Students” that contains information about students, including their names and ages. Now, let’s say we want to create a view that shows only the names of students who are teenagers (aged 13 to 19).</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>CREATE VIEW TeenageStudents 
-</span></span><span style="display:flex;"><span>AS SELECT Name FROM Students WHERE Age &gt;= 13 ANDAge <span style="color:#960050;background-color:#1e0010">&lt;</span>= 19;
-</span></span></code></pre></div><p><strong>In this example,</strong> we’re creating a view called “TeenageStudents” that selects the names of students from the “Students” table where their age is between 13 and 19. It’s like creating a playlist of your favorite songs, but in this case, it’s a list of teenage students.</p>
-<p>Now, whenever we want to see the names of teenage students, we can simply query the view:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>SELECT \* FROM TeenageStudents;
-</span></span></code></pre></div><p>This query will return only the names of teenage students, making it easier for us to see who falls into that category without having to sift through the entire <strong>“Students”</strong> table.</p>
-<blockquote>
-<p>In simple terms, a view in a database is like a saved query that shows you only the data you’re interested in, similar to a playlist that contains only your favorite songs. It helps make accessing and analyzing data more convenient and efficient.</p>
-</blockquote>
 
-</body>
+
+
 </html>
     </main>
     

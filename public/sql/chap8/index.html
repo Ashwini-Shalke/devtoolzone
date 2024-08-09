@@ -296,41 +296,9 @@
     <link rel="stylesheet" href="/css/jsonFormatter.css">
     <script src="/js/jsonFormatter.js" defer></script>
 </head>
-<body>
-    <p>Let’s say, you have a special calculator that can perform a specific calculation, like doubling a number or calculating the average of a set of numbers. You can use this calculator whenever you need to perform that calculation, without having to write out the steps each time. In SQL, a user-defined function is like that special calculator — it’s a custom function that you can create to perform a specific task or calculation.</p>
-<p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*T-FFvIjPfDPFjyl9IJ0aJw.jpeg" alt=""  />
-</p>
-<p><strong>Example:</strong></p>
-<p>Now , Let’s say you want to create a user-defined function in SQL that calculates the total score of a student based on their individual test scores.</p>
-<p><strong>Here’s how you can define the UDF:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>CREATE FUNCTION CalculateTotalScore (@Test1 INT, @Test2 INT, @Test3 INT) 
-</span></span><span style="display:flex;"><span>RETURNS INT AS
-</span></span><span style="display:flex;"><span>BEGIN 
-</span></span><span style="display:flex;"><span>  DECLARE @TotalScore INT; 
-</span></span><span style="display:flex;"><span>  SET @TotalScore = @Test1 + @Test2 + @Test3; 
-</span></span><span style="display:flex;"><span>RETURN @TotalScore; 
-</span></span><span style="display:flex;"><span>END;
-</span></span></code></pre></div><p><strong>Explanation:</strong></p>
-<ul>
-<li><code>CREATE FUNCTION</code>: This SQL statement is used to create a new user-defined function.</li>
-<li><code>CalculateTotalScore</code>: This is the name of the user-defined function.</li>
-<li><code>@Test1 INT, @Test2 INT, @Test3 INT</code>: These are the input parameters of the function, representing the scores of three tests.</li>
-<li><code>RETURNS INT</code>: This specifies the data type (INT) that the function will return.</li>
-<li><code>AS</code>: This keyword indicates the beginning of the function&rsquo;s body.</li>
-<li><code>DECLARE @TotalScore INT;</code>: This line declares a variable <code>@TotalScore</code> of type INT to store the total score.</li>
-<li><code>SET @TotalScore = @Test1 + @Test2 + @Test3;</code>: This line calculates the total score by adding the scores of the three tests.</li>
-<li><code>RETURN @TotalScore;</code>: This line returns the calculated total score.</li>
-</ul>
-<p>Once you’ve created the user-defined function, you can use it in SQL queries just like any built-in function.</p>
-<p><strong>For example:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>SELECT Name, Test1, Test2, Test3, dbo.CalculateTotalScore(Test1, Test2, Test3)
-</span></span><span style="display:flex;"><span> AS TotalScore FROM Students;
-</span></span></code></pre></div><p>This query selects the names and individual test scores of students from a table called <code>Students</code>, and calculates the total score using the <code>CalculateTotalScore</code> function.</p>
-<p>In simple terms, a user-defined function in SQL is like a custom tool that performs a specific task or calculation for you. You can create these functions to simplify your SQL queries and make them more reusable and easier to manage.</p>
 
-</body>
+
+
 </html>
     </main>
     

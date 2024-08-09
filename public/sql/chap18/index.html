@@ -340,64 +340,9 @@ The result would be printed in the console, showing each student’s ID, name, a
     <link rel="stylesheet" href="/css/jsonFormatter.css">
     <script src="/js/jsonFormatter.js" defer></script>
 </head>
-<body>
-    <p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*9-ijUDukA8XFpPf9ZC8bWw.jpeg" alt=""  />
-</p>
-<p>Think of a cursor in SQL like a pointer that allows you to navigate through a set of rows returned by a query, one row at a time. It’s like a virtual hand that can grab one row of data from a table, process it, and then move on to the next row.</p>
-<h3 id="types-ofcursors">Types of Cursors:</h3>
-<p>There are mainly two types of cursors in SQL:</p>
-<ol>
-<li><strong>Implicit Cursors:</strong> These cursors are created by default when you execute a SQL query. They are easy to use but have limited functionality.</li>
-<li><strong>Explicit Cursors:</strong> These cursors are explicitly defined by the programmer using the <code>DECLARE CURSOR</code> statement. They offer more control and flexibility but require more coding.</li>
-</ol>
-<h3 id="sample-data">Sample Data:</h3>
-<p>Let’s say we have a simple table called <code>students</code> with columns <code>student_id</code>, <code>name</code>, and <code>age</code>. Here&rsquo;s some sample data:</p>
-<p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*rKIWV2_u8R2neU7GirRFKQ.png" alt=""  />
-students</p>
-<h3 id="query-example-with-explicitcursor">Query Example with Explicit Cursor:</h3>
-<p>Here’s an example of using an explicit cursor to fetch and process data from the <code>students</code> table:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>DECLARE cursor\_students CURSOR FOR
-</span></span><span style="display:flex;"><span>    SELECT student\_id, name, age
-</span></span><span style="display:flex;"><span>    FROM students;
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>OPEN cursor\_students;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>FETCH NEXT FROM cursor\_students INTO @student\_id, @name, @age;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>WHILE @@FETCH\_STATUS = 0
-</span></span><span style="display:flex;"><span>BEGIN
-</span></span><span style="display:flex;"><span>    -- Process the current row
-</span></span><span style="display:flex;"><span>    PRINT &#39;Student ID: &#39; + CAST(@student\_id AS VARCHAR) + &#39;, Name: &#39; + @name + &#39;, Age: &#39; + CAST(@age AS VARCHAR);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    FETCH NEXT FROM cursor\_students INTO @student\_id, @name, @age;
-</span></span><span style="display:flex;"><span>END;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>CLOSE cursor\_students;
-</span></span><span style="display:flex;"><span>DEALLOCATE cursor\_students;
-</span></span></code></pre></div><h3 id="result-explanation">Result Explanation:</h3>
-<ul>
-<li>In this example, we first declare a cursor named <code>cursor_students</code> for selecting data from the <code>students</code> table.</li>
-<li>We then open the cursor to start fetching rows from the result set.</li>
-<li>The <code>FETCH</code> statement is used to retrieve rows one at a time from a cursor result set. It fetches the next row from the cursor&rsquo;s result set.There are different types of fetch operations, such as <code>FETCH NEXT</code>, <code>FETCH PRIOR</code>, <code>FETCH FIRST</code>, <code>FETCH LAST</code>, etc., which specify the direction of fetching and the number of rows to fetch.</li>
-<li><code>NEXT</code> is a keyword used in the <code>FETCH</code> statement to specify that we want to retrieve the next row from the cursor&rsquo;s result set.In the context of the query, <code>FETCH NEXT</code> retrieves the next row from the cursor&rsquo;s result set.</li>
-<li>Using a loop, we fetch each row one by one and process it. Inside the loop, we can perform any operations or calculations on the fetched data.</li>
-<li>The loop continues until there are no more rows to fetch (<code>@@FETCH_STATUS = 0</code>).</li>
-<li><code>CAST</code> is a SQL function used to convert a value from one data type to another. It allows you to explicitly specify the data type conversion.</li>
-<li>For example, <code>CAST(@student_id AS VARCHAR)</code> converts the <code>@student_id</code> variable (presumably an integer) to a string (VARCHAR) data type.</li>
-<li>Finally, we close and deallocate the cursor to release its resources.</li>
-</ul>
-<p><strong>Result:</strong>
-The result would be printed in the console, showing each student’s ID, name, and age:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>Student ID: 1, Name: Alice, Age: 15
-</span></span><span style="display:flex;"><span>Student ID: 2, Name: Bob, Age: 16
-</span></span><span style="display:flex;"><span>Student ID: 3, Name: Charlie, Age: 14
-</span></span></code></pre></div><blockquote>
-<p>This process of fetching and processing one row at a time using a cursor allows for more complex and flexible data manipulation in SQL. However, it’s important to use cursors judiciously, as they can impact performance when dealing with large result sets.</p>
-</blockquote>
 
-</body>
+
+
 </html>
     </main>
     

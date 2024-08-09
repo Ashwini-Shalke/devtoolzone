@@ -316,57 +316,9 @@ Any attempt to override a final method, property, or subscript in a subclass is 
     <link rel="stylesheet" href="/css/jsonFormatter.css">
     <script src="/js/jsonFormatter.js" defer></script>
 </head>
-<body>
-    <p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*tg5BW1BMxD8uoGWT20ywiw.png" alt=""  />
-</p>
-<h3 id="according-to-appledocument">According to Apple document</h3>
-<blockquote>
-<p>You can prevent a method, property, or subscript from being overridden by marking it as final. Do this by writing the final modifier before the method, property, or subscript’s introducer keyword (such as final var, final func, final class func, and final subscript).</p>
-</blockquote>
-<blockquote>
-<p>Any attempt to override a final method, property, or subscript in a subclass is reported as a compile-time error. Methods, properties, or subscripts that you add to a class in an extension can also be marked as final within the extension’s definition.You can mark an entire class as final by writing the final modifier before the class keyword in its class definition (final class). Any attempt to subclass a final class is reported as a compile-time error.</p>
-</blockquote>
-<hr>
-<h3 id="when-to-usefinal">When to use final?</h3>
-<ol>
-<li>To prevent the class in your Framework that can be abused or misused when subclassed.</li>
-<li>Can mark methods, properties, and even subscripts of non-final classes.</li>
-<li>To tell Swift compiler that, method should be called directly (static dispatch) rather than looking up a function from a method table (dynamic dispatch). This reduces function call overhead and gives you extra performance</li>
-</ol>
-<p><strong>Example:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>open class Book {
-</span></span><span style="display:flex;"><span>} // Anyone can see, anything can subclass 
-</span></span><span style="display:flex;"><span>public class Open {
-</span></span><span style="display:flex;"><span>} // Anyone can see, internal can subclass
-</span></span><span style="display:flex;"><span>internal class Internal {
-</span></span><span style="display:flex;"><span>} // Internal can see, internal can subclasspublic.
-</span></span><span style="display:flex;"><span>final class Final {
-</span></span><span style="display:flex;"><span>} // Anyone can see, nothing can subclass
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>&gt; In your project/module:
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>class SubOpen: Open {
-</span></span><span style="display:flex;"><span>} // OK
-</span></span><span style="display:flex;"><span>class SubNormal: Normal {
-</span></span><span style="display:flex;"><span>} // OK
-</span></span><span style="display:flex;"><span>class SubInternal: Internal {
-</span></span><span style="display:flex;"><span>} // OK
-</span></span><span style="display:flex;"><span>class SubFinal: Final {
-</span></span><span style="display:flex;"><span>} // Error: Can’t subclass
-</span></span></code></pre></div><blockquote>
-<p>In some other project/module:</p>
-</blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>class SubOpen: Open {
-</span></span><span style="display:flex;"><span>} // OK
-</span></span><span style="display:flex;"><span>class SubNormal: Normal {
-</span></span><span style="display:flex;"><span>} // Error: Can’t subclass
-</span></span><span style="display:flex;"><span>class SubInternal: Internal {
-</span></span><span style="display:flex;"><span>} // Error: \`Internal\` type not found
-</span></span><span style="display:flex;"><span>class SubFinal: Final {
-</span></span><span style="display:flex;"><span>} // Error: Can’t subclass
-</span></span></code></pre></div><p>Thank you for reading 👏🏻. do like and share to make this reach more engineers.</p>
 
-</body>
+
+
 </html>
     </main>
     
