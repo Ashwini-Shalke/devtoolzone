@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>DML on Learner Loft</title>
-    <link>https://learnerloft.com/tags/dml/</link>
+    <link>http://localhost:1313/tags/dml/</link>
     <description>Recent content in DML on Learner Loft</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 05 Apr 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://learnerloft.com/tags/dml/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/dml/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SQL language — DDL, DML, DCL, and TCL</title>
-      <link>https://learnerloft.com/sql/chap2/</link>
+      <link>http://localhost:1313/sql/chap2/</link>
       <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap2/</guid>
+      <guid>http://localhost:1313/sql/chap2/</guid>
       <description>DDL (Data Definition Language): DDL is used to define and manage the structure of database objects. Here are some common DDL commands:
 CREATE: Used to create new database objects such as tables, views, indexes, etc.
 ALTER: Used to modify the structure of existing database objects, such as adding, modifying, or dropping columns.

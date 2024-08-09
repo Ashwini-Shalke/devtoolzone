@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>SQLs on Learner Loft</title>
-    <link>https://learnerloft.com/sql/</link>
+    <link>http://localhost:1313/sql/</link>
     <description>Recent content in SQLs on Learner Loft</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 16 Apr 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://learnerloft.com/sql/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/sql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What is SQL, Data and Database with examples</title>
-      <link>https://learnerloft.com/sql/chap1/</link>
+      <link>http://localhost:1313/sql/chap1/</link>
       <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap1/</guid>
+      <guid>http://localhost:1313/sql/chap1/</guid>
       <description>Imagine you have a big collection of toys scattered all over your room. You want to find your favorite toy, but searching through the mess by yourself might take a lot of time and effort. Here’s where your friend SQL comes in!
 SQL is like having a magic wand that helps you organize and find your toys quickly and easily. It stands for Structured Query Language, but you can just think of it as a special language that lets you talk to a smart toy organizer.</description>
     </item>
     <item>
       <title>SQL language — DDL, DML, DCL, and TCL</title>
-      <link>https://learnerloft.com/sql/chap2/</link>
+      <link>http://localhost:1313/sql/chap2/</link>
       <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap2/</guid>
+      <guid>http://localhost:1313/sql/chap2/</guid>
       <description>DDL (Data Definition Language): DDL is used to define and manage the structure of database objects. Here are some common DDL commands:
 CREATE: Used to create new database objects such as tables, views, indexes, etc.
 ALTER: Used to modify the structure of existing database objects, such as adding, modifying, or dropping columns.
@@ -30,9 +30,9 @@ This command adds a new column named “Email” to the “Students” table wit
     </item>
     <item>
       <title>Basic SQL Queries — SELECT, WHERE,UPDATE and DELETE</title>
-      <link>https://learnerloft.com/sql/chap3/</link>
+      <link>http://localhost:1313/sql/chap3/</link>
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap3/</guid>
+      <guid>http://localhost:1313/sql/chap3/</guid>
       <description>Think of SQL queries as requests you make to find specific snacks in your snack box. Just like asking your friend to find your favorite candy in the snack box, SQL queries help you find specific information from a database.
 Example:
 Let’s say you have a table that lists all your favorite snacks and their quantities in your snack box, like this:
@@ -40,57 +40,57 @@ Now, using SQL queries, you can ask questions to find out specific information f
     </item>
     <item>
       <title>For Beginners — TCL Commands in SQL with Example</title>
-      <link>https://learnerloft.com/sql/chap4/</link>
+      <link>http://localhost:1313/sql/chap4/</link>
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap4/</guid>
+      <guid>http://localhost:1313/sql/chap4/</guid>
       <description>TCL commands are COMMIT, ROLLBACK, and SAVEPOINT.
 COMMIT: The COMMIT command is used to permanently save the changes made during the current transaction. Once a COMMIT command is executed, all changes made within the transaction become permanent and are visible to other users. Example: Suppose we have a transaction that updates the age of a student in the database:
 BEGIN TRANSACTION; UPDATE Students SET Age = 16 WHERE Name = &amp;#39;Alice&amp;#39;; COMMIT; In this example:</description>
     </item>
     <item>
       <title>Window Functions in SQL</title>
-      <link>https://learnerloft.com/sql/chapp5/</link>
+      <link>http://localhost:1313/sql/chapp5/</link>
       <pubDate>Wed, 10 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chapp5/</guid>
+      <guid>http://localhost:1313/sql/chapp5/</guid>
       <description>Window functions are a type of function in SQL that allow you to perform calculations across a set of rows related to the current row, called a “window,” without collapsing the result set. They are used to perform aggregate calculations (like sum, average, count) and ranking operations (like row number, rank) within a specific partition or window of data.
 Syntax Types of Window Functions: There are a few common window functions you might encounter:</description>
     </item>
     <item>
       <title>SQL Clause: Group By, Having, IN and NOT IN</title>
-      <link>https://learnerloft.com/sql/chap6/</link>
+      <link>http://localhost:1313/sql/chap6/</link>
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap6/</guid>
+      <guid>http://localhost:1313/sql/chap6/</guid>
       <description>Let’s say we have a table named “Games” with the following data:
 GROUP BY: Think of GROUP BY like organizing your games into groups based on their ratings. It&amp;rsquo;s like sorting them into piles of similar ratings.
 SELECT Rating, COUNT(\*) AS NumOfGames FROM Games GROUP BY Rating; This query will count the number of games for each rating group. For example, it will show how many games have a rating of 4.</description>
     </item>
     <item>
       <title>Aggregate Functions in SQL</title>
-      <link>https://learnerloft.com/sql/chap7/</link>
+      <link>http://localhost:1313/sql/chap7/</link>
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap7/</guid>
+      <guid>http://localhost:1313/sql/chap7/</guid>
       <description>Imagine you’re at a party with a bunch of friends, and there’s a big bowl of candies on the table. Now, you want to know some information about those candies, like how many candies are there in total, what’s the average number of candies each person has, or which friend has the most candies.
 In SQL, aggregate functions are like magical candy counters that help you answer these questions by performing calculations on groups of data.</description>
     </item>
     <item>
       <title>User-Defined Function (UDF) in SQL</title>
-      <link>https://learnerloft.com/sql/chap8/</link>
+      <link>http://localhost:1313/sql/chap8/</link>
       <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap8/</guid>
+      <guid>http://localhost:1313/sql/chap8/</guid>
       <description>Let’s say, you have a special calculator that can perform a specific calculation, like doubling a number or calculating the average of a set of numbers. You can use this calculator whenever you need to perform that calculation, without having to write out the steps each time. In SQL, a user-defined function is like that special calculator — it’s a custom function that you can create to perform a specific task or calculation.</description>
     </item>
     <item>
       <title>What is Stored Procedure in SQL</title>
-      <link>https://learnerloft.com/sql/chap9/</link>
+      <link>http://localhost:1313/sql/chap9/</link>
       <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap9/</guid>
+      <guid>http://localhost:1313/sql/chap9/</guid>
       <description>Imagine you’re baking a cake, and you have a recipe written down on a piece of paper. This recipe contains all the steps you need to follow to bake the cake, from mixing the ingredients to putting it in the oven. A stored procedure in SQL is like that recipe — it’s a set of instructions stored in the database that you can execute whenever you need to perform a specific task or set of tasks.</description>
     </item>
     <item>
       <title>Difference between Function and stored procedure in SQL</title>
-      <link>https://learnerloft.com/sql/chap10/</link>
+      <link>http://localhost:1313/sql/chap10/</link>
       <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap10/</guid>
+      <guid>http://localhost:1313/sql/chap10/</guid>
       <description>Stored Procedures: Execution:
 Stored procedures may or may not return a value. They can execute a series of SQL statements or perform actions such as data manipulation or transaction management. Usage:
 Stored procedures are used to encapsulate a set of SQL statements for reuse and maintainability. They can be called from client applications or other stored procedures. Modifications:
@@ -98,9 +98,9 @@ Stored procedures can include data manipulation operations, transaction control,
     </item>
     <item>
       <title>CHOOSE and IIF — SQL</title>
-      <link>https://learnerloft.com/sql/chap11/</link>
+      <link>http://localhost:1313/sql/chap11/</link>
       <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap11/</guid>
+      <guid>http://localhost:1313/sql/chap11/</guid>
       <description>Imagine you’re organizing a gaming tournament, and you want to assign a different prize based on the rank players achieved.
 Let’s say you have the following rankings:
 Ranking Table
@@ -111,35 +111,35 @@ The CHOOSE function takes the Rank as an index.</description>
     </item>
     <item>
       <title>Special operators in SQL</title>
-      <link>https://learnerloft.com/sql/chap12/</link>
+      <link>http://localhost:1313/sql/chap12/</link>
       <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap12/</guid>
+      <guid>http://localhost:1313/sql/chap12/</guid>
       <description>There are several special operators that serve specific purposes beyond basic comparison and arithmetic operations.
 Some of these special operators include: LIKE Operator: The LIKE operator is used to search for a specified pattern in a column. It&amp;rsquo;s commonly used with wildcard characters such as % (matches any sequence of characters) and _ (matches any single character).
 SELECT \* FROM Employees WHERE FirstName LIKE &amp;#39;J%&amp;#39;; IN Operator: The IN operator is used to specify multiple values in a WHERE clause.</description>
     </item>
     <item>
       <title>For Beginners to Understand Constraints in Database</title>
-      <link>https://learnerloft.com/sql/chap13/</link>
+      <link>http://localhost:1313/sql/chap13/</link>
       <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap13/</guid>
+      <guid>http://localhost:1313/sql/chap13/</guid>
       <description>Think of constraints in a database as rules that ensure data behaves properly, just like rules in a game. For instance, if you’re playing basketball, you can’t use your hands to touch the ball unless you’re dribbling or shooting. Similarly, constraints in a database ensure that data follows certain rules, like not allowing duplicate values in a column or making sure each student has a unique student ID.
 Let’s say we have a table called “Students” with columns for StudentID, Name, and Age.</description>
     </item>
     <item>
       <title>Beginners Guide — Inner,Outer,left and right JOINS in SQL</title>
-      <link>https://learnerloft.com/sql/chap14/</link>
+      <link>http://localhost:1313/sql/chap14/</link>
       <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap14/</guid>
+      <guid>http://localhost:1313/sql/chap14/</guid>
       <description>What are Joins? Imagine you have two lists of friends — one list with their names and another list with their hobbies. Now, you want to find out which friend has which hobby. This is where joins come in handy!
 In databases, tables are like lists, and joins help us combine information from different tables based on a common piece of information, like a friend’s name or an ID.
 Let’s consider two tables: friends and hobbies.</description>
     </item>
     <item>
       <title>For Beginners to Understand Triggers in SQL</title>
-      <link>https://learnerloft.com/sql/chap15/</link>
+      <link>http://localhost:1313/sql/chap15/</link>
       <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap15/</guid>
+      <guid>http://localhost:1313/sql/chap15/</guid>
       <description>Lets assume !! you have a magic toy box that automatically does something whenever you put a specific type of toy inside it. Triggers in SQL are like these magical rules that automatically perform actions in the database when certain events happen.
 Example:
 Let’s say you have a database table called “Orders” that stores information about orders placed by customers:
@@ -148,67 +148,67 @@ Now, imagine you want to keep track of any large orders (orders with a total amo
     </item>
     <item>
       <title>SQL — Temporary Tables</title>
-      <link>https://learnerloft.com/sql/chap16/</link>
+      <link>http://localhost:1313/sql/chap16/</link>
       <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap16/</guid>
+      <guid>http://localhost:1313/sql/chap16/</guid>
       <description>Temporary tables are like a temporary workspace or desk that you set up when you need some extra space to work on a project. You can use this space to organize and manipulate data without affecting your main workspace (or database) permanently. Once you’re done with your task, you can clean up and remove the temporary workspace, and everything goes back to how it was before.
 Example: Suppose you’re working on a school project where you need to analyze data about students’ grades and attendance.</description>
     </item>
     <item>
       <title>Views in SQL</title>
-      <link>https://learnerloft.com/sql/chap17/</link>
+      <link>http://localhost:1313/sql/chap17/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap17/</guid>
+      <guid>http://localhost:1313/sql/chap17/</guid>
       <description>Imagine you have a favourite playlist on your music app. Instead of going through all your songs every time you want to listen to your favorite tracks, you create a playlist that contains only the songs you love.
 A view in a database is like that playlist — it’s a saved query that contains only the data you’re interested in, making it easier and faster to access.
 Suppose we have a database with a table called “Students” that contains information about students, including their names and ages.</description>
     </item>
     <item>
       <title>What is a Cursor in SQL ?</title>
-      <link>https://learnerloft.com/sql/chap18/</link>
+      <link>http://localhost:1313/sql/chap18/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap18/</guid>
+      <guid>http://localhost:1313/sql/chap18/</guid>
       <description>Think of a cursor in SQL like a pointer that allows you to navigate through a set of rows returned by a query, one row at a time. It’s like a virtual hand that can grab one row of data from a table, process it, and then move on to the next row.
 Types of Cursors: There are mainly two types of cursors in SQL:
 Implicit Cursors: These cursors are created by default when you execute a SQL query.</description>
     </item>
     <item>
       <title>Understanding REF_CURSOR in SQL</title>
-      <link>https://learnerloft.com/sql/chap19/</link>
+      <link>http://localhost:1313/sql/chap19/</link>
       <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap19/</guid>
+      <guid>http://localhost:1313/sql/chap19/</guid>
       <description>Ever heard of something called REF_CURSOR Don’t worry if it sounds like gibberish right now. I’m here to break it down for you in the simplest way possible, so grab a snack and let’s dive in!
 Imagine you’re at a library, and you ask the librarian to recommend some good books. Instead of giving you a list of book titles right away, the librarian hands you a special kind of card called a REF_CURSOR.</description>
     </item>
     <item>
       <title>Difference between REF CURSOR and CURSOR</title>
-      <link>https://learnerloft.com/sql/chap20/</link>
+      <link>http://localhost:1313/sql/chap20/</link>
       <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap20/</guid>
+      <guid>http://localhost:1313/sql/chap20/</guid>
       <description>To know the difference between ref cursor and cursor , first you should know what is cursor and ref_cursor.
 REF_CURSOR: Dynamic Result Sets: REF_CURSOR, or reference cursor, is a data type that represents a cursor variable. It allows for dynamic result sets to be returned from stored procedures or functions in Oracle.
 Data Pointing: REF_CURSOR does not hold actual data but acts as a reference to the result set generated by a query.</description>
     </item>
     <item>
       <title>PRAGMA in PL/SQL</title>
-      <link>https://learnerloft.com/sql/chap21/</link>
+      <link>http://localhost:1313/sql/chap21/</link>
       <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap21/</guid>
+      <guid>http://localhost:1313/sql/chap21/</guid>
       <description>Imagine you’re writing a story in your notebook, and sometimes you want to add special notes to yourself or your friend about how to read the story. You might write something like “Don’t worry about the spelling mistakes” or “Read this part very carefully.”
 In programming, a pragma is a bit like those special notes. It’s a way for the computer to understand special instructions or hints about how to handle your code.</description>
     </item>
     <item>
       <title>For Beginners EXCEPTION in SQL</title>
-      <link>https://learnerloft.com/sql/chap22/</link>
+      <link>http://localhost:1313/sql/chap22/</link>
       <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap22/</guid>
+      <guid>http://localhost:1313/sql/chap22/</guid>
       <description>Imagine you’re playing a game where you need to catch a ball. Sometimes, you might not catch the ball perfectly, and it might fall to the ground. But instead of giving up, you learn from your mistake and try again. In SQL, exceptions are like errors that occur during a task, but instead of crashing the program, they give you a chance to handle the error and continue with your task.</description>
     </item>
     <item>
       <title>The differences in SQL</title>
-      <link>https://learnerloft.com/sql/chap23/</link>
+      <link>http://localhost:1313/sql/chap23/</link>
       <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap23/</guid>
+      <guid>http://localhost:1313/sql/chap23/</guid>
       <description>Truncate and Delete: Truncate: Truncate is like clearing the entire table at once. It removes all the rows from a table but keeps the table structure intact. It’s faster than DELETE but doesn’t allow for conditions.
 TRUNCATE TABLE Students; Delete: Delete removes specific rows from a table based on conditions. It’s slower than TRUNCATE but allows for specifying conditions.
 DELETE FROM Students WHERE Age &amp;gt; 18; Merge and Insert: Merge: Merge performs an INSERT, UPDATE, or DELETE operation based on the condition provided.</description>

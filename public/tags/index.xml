@@ -2,318 +2,318 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Learner Loft</title>
-    <link>https://learnerloft.com/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Learner Loft</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 01 Aug 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://learnerloft.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>APEX</title>
-      <link>https://learnerloft.com/tags/apex/</link>
+      <link>http://localhost:1313/tags/apex/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/apex/</guid>
+      <guid>http://localhost:1313/tags/apex/</guid>
       <description></description>
     </item>
     <item>
       <title>Beginners</title>
-      <link>https://learnerloft.com/tags/beginners/</link>
+      <link>http://localhost:1313/tags/beginners/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/beginners/</guid>
+      <guid>http://localhost:1313/tags/beginners/</guid>
       <description></description>
     </item>
     <item>
       <title>Global/Zero Page</title>
-      <link>https://learnerloft.com/tags/global/zero-page/</link>
+      <link>http://localhost:1313/tags/global/zero-page/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/global/zero-page/</guid>
+      <guid>http://localhost:1313/tags/global/zero-page/</guid>
       <description></description>
     </item>
     <item>
       <title>Low-Code</title>
-      <link>https://learnerloft.com/tags/low-code/</link>
+      <link>http://localhost:1313/tags/low-code/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/low-code/</guid>
+      <guid>http://localhost:1313/tags/low-code/</guid>
       <description></description>
     </item>
     <item>
       <title>Oracle</title>
-      <link>https://learnerloft.com/tags/oracle/</link>
+      <link>http://localhost:1313/tags/oracle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/oracle/</guid>
+      <guid>http://localhost:1313/tags/oracle/</guid>
       <description></description>
     </item>
     <item>
       <title>Coding</title>
-      <link>https://learnerloft.com/tags/coding/</link>
+      <link>http://localhost:1313/tags/coding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/coding/</guid>
+      <guid>http://localhost:1313/tags/coding/</guid>
       <description></description>
     </item>
     <item>
       <title>Swift</title>
-      <link>https://learnerloft.com/tags/swift/</link>
+      <link>http://localhost:1313/tags/swift/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/swift/</guid>
+      <guid>http://localhost:1313/tags/swift/</guid>
       <description></description>
     </item>
     <item>
       <title>Xcode</title>
-      <link>https://learnerloft.com/tags/xcode/</link>
+      <link>http://localhost:1313/tags/xcode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/xcode/</guid>
+      <guid>http://localhost:1313/tags/xcode/</guid>
       <description></description>
     </item>
     <item>
       <title>Reports</title>
-      <link>https://learnerloft.com/tags/reports/</link>
+      <link>http://localhost:1313/tags/reports/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/reports/</guid>
+      <guid>http://localhost:1313/tags/reports/</guid>
       <description></description>
     </item>
     <item>
       <title>Session</title>
-      <link>https://learnerloft.com/tags/session/</link>
+      <link>http://localhost:1313/tags/session/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/session/</guid>
+      <guid>http://localhost:1313/tags/session/</guid>
       <description></description>
     </item>
     <item>
       <title>Database</title>
-      <link>https://learnerloft.com/tags/database/</link>
+      <link>http://localhost:1313/tags/database/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/database/</guid>
+      <guid>http://localhost:1313/tags/database/</guid>
       <description></description>
     </item>
     <item>
       <title>Exception</title>
-      <link>https://learnerloft.com/tags/exception/</link>
+      <link>http://localhost:1313/tags/exception/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/exception/</guid>
+      <guid>http://localhost:1313/tags/exception/</guid>
       <description></description>
     </item>
     <item>
       <title>REF-Cursor</title>
-      <link>https://learnerloft.com/tags/ref-cursor/</link>
+      <link>http://localhost:1313/tags/ref-cursor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/ref-cursor/</guid>
+      <guid>http://localhost:1313/tags/ref-cursor/</guid>
       <description></description>
     </item>
     <item>
       <title>SQL</title>
-      <link>https://learnerloft.com/tags/sql/</link>
+      <link>http://localhost:1313/tags/sql/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/sql/</guid>
+      <guid>http://localhost:1313/tags/sql/</guid>
       <description></description>
     </item>
     <item>
       <title>Transaction</title>
-      <link>https://learnerloft.com/tags/transaction/</link>
+      <link>http://localhost:1313/tags/transaction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/transaction/</guid>
+      <guid>http://localhost:1313/tags/transaction/</guid>
       <description></description>
     </item>
     <item>
       <title>Architecture</title>
-      <link>https://learnerloft.com/tags/architecture/</link>
+      <link>http://localhost:1313/tags/architecture/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/architecture/</guid>
+      <guid>http://localhost:1313/tags/architecture/</guid>
       <description></description>
     </item>
     <item>
       <title>Code</title>
-      <link>https://learnerloft.com/tags/code/</link>
+      <link>http://localhost:1313/tags/code/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/code/</guid>
+      <guid>http://localhost:1313/tags/code/</guid>
       <description></description>
     </item>
     <item>
       <title>Components</title>
-      <link>https://learnerloft.com/tags/components/</link>
+      <link>http://localhost:1313/tags/components/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/components/</guid>
+      <guid>http://localhost:1313/tags/components/</guid>
       <description></description>
     </item>
     <item>
       <title>Cursor</title>
-      <link>https://learnerloft.com/tags/cursor/</link>
+      <link>http://localhost:1313/tags/cursor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/cursor/</guid>
+      <guid>http://localhost:1313/tags/cursor/</guid>
       <description></description>
     </item>
     <item>
       <title>Elements</title>
-      <link>https://learnerloft.com/tags/elements/</link>
+      <link>http://localhost:1313/tags/elements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/elements/</guid>
+      <guid>http://localhost:1313/tags/elements/</guid>
       <description></description>
     </item>
     <item>
       <title>Formatting</title>
-      <link>https://learnerloft.com/tags/formatting/</link>
+      <link>http://localhost:1313/tags/formatting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/formatting/</guid>
+      <guid>http://localhost:1313/tags/formatting/</guid>
       <description></description>
     </item>
     <item>
       <title>Forms</title>
-      <link>https://learnerloft.com/tags/forms/</link>
+      <link>http://localhost:1313/tags/forms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/forms/</guid>
+      <guid>http://localhost:1313/tags/forms/</guid>
       <description></description>
     </item>
     <item>
       <title>Frames</title>
-      <link>https://learnerloft.com/tags/frames/</link>
+      <link>http://localhost:1313/tags/frames/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/frames/</guid>
+      <guid>http://localhost:1313/tags/frames/</guid>
       <description></description>
     </item>
     <item>
       <title>HTML</title>
-      <link>https://learnerloft.com/tags/html/</link>
+      <link>http://localhost:1313/tags/html/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/html/</guid>
+      <guid>http://localhost:1313/tags/html/</guid>
       <description></description>
     </item>
     <item>
       <title>Images</title>
-      <link>https://learnerloft.com/tags/images/</link>
+      <link>http://localhost:1313/tags/images/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/images/</guid>
+      <guid>http://localhost:1313/tags/images/</guid>
       <description></description>
     </item>
     <item>
       <title>Links</title>
-      <link>https://learnerloft.com/tags/links/</link>
+      <link>http://localhost:1313/tags/links/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/links/</guid>
+      <guid>http://localhost:1313/tags/links/</guid>
       <description></description>
     </item>
     <item>
       <title>Tables</title>
-      <link>https://learnerloft.com/tags/tables/</link>
+      <link>http://localhost:1313/tags/tables/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/tables/</guid>
+      <guid>http://localhost:1313/tags/tables/</guid>
       <description></description>
     </item>
     <item>
       <title>Tags</title>
-      <link>https://learnerloft.com/tags/tags/</link>
+      <link>http://localhost:1313/tags/tags/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/tags/</guid>
+      <guid>http://localhost:1313/tags/tags/</guid>
       <description></description>
     </item>
     <item>
       <title>View</title>
-      <link>https://learnerloft.com/tags/view/</link>
+      <link>http://localhost:1313/tags/view/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/view/</guid>
+      <guid>http://localhost:1313/tags/view/</guid>
       <description></description>
     </item>
     <item>
       <title>Joins</title>
-      <link>https://learnerloft.com/tags/joins/</link>
+      <link>http://localhost:1313/tags/joins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/joins/</guid>
+      <guid>http://localhost:1313/tags/joins/</guid>
       <description></description>
     </item>
     <item>
       <title>Keys</title>
-      <link>https://learnerloft.com/tags/keys/</link>
+      <link>http://localhost:1313/tags/keys/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/keys/</guid>
+      <guid>http://localhost:1313/tags/keys/</guid>
       <description></description>
     </item>
     <item>
       <title>Trigger</title>
-      <link>https://learnerloft.com/tags/trigger/</link>
+      <link>http://localhost:1313/tags/trigger/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/trigger/</guid>
+      <guid>http://localhost:1313/tags/trigger/</guid>
       <description></description>
     </item>
     <item>
       <title>Data</title>
-      <link>https://learnerloft.com/tags/data/</link>
+      <link>http://localhost:1313/tags/data/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/data/</guid>
+      <guid>http://localhost:1313/tags/data/</guid>
       <description></description>
     </item>
     <item>
       <title>Operators</title>
-      <link>https://learnerloft.com/tags/operators/</link>
+      <link>http://localhost:1313/tags/operators/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/operators/</guid>
+      <guid>http://localhost:1313/tags/operators/</guid>
       <description></description>
     </item>
     <item>
       <title>Procedure</title>
-      <link>https://learnerloft.com/tags/procedure/</link>
+      <link>http://localhost:1313/tags/procedure/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/procedure/</guid>
+      <guid>http://localhost:1313/tags/procedure/</guid>
       <description></description>
     </item>
     <item>
       <title>Stored-Procedure</title>
-      <link>https://learnerloft.com/tags/stored-procedure/</link>
+      <link>http://localhost:1313/tags/stored-procedure/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/stored-procedure/</guid>
+      <guid>http://localhost:1313/tags/stored-procedure/</guid>
       <description></description>
     </item>
     <item>
       <title>Functions</title>
-      <link>https://learnerloft.com/tags/functions/</link>
+      <link>http://localhost:1313/tags/functions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/functions/</guid>
+      <guid>http://localhost:1313/tags/functions/</guid>
       <description></description>
     </item>
     <item>
       <title>Window</title>
-      <link>https://learnerloft.com/tags/window/</link>
+      <link>http://localhost:1313/tags/window/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/window/</guid>
+      <guid>http://localhost:1313/tags/window/</guid>
       <description></description>
     </item>
     <item>
       <title>Aggregate</title>
-      <link>https://learnerloft.com/tags/aggregate/</link>
+      <link>http://localhost:1313/tags/aggregate/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/aggregate/</guid>
+      <guid>http://localhost:1313/tags/aggregate/</guid>
       <description></description>
     </item>
     <item>
       <title>Clause</title>
-      <link>https://learnerloft.com/tags/clause/</link>
+      <link>http://localhost:1313/tags/clause/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/clause/</guid>
+      <guid>http://localhost:1313/tags/clause/</guid>
       <description></description>
     </item>
     <item>
       <title>TCL</title>
-      <link>https://learnerloft.com/tags/tcl/</link>
+      <link>http://localhost:1313/tags/tcl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/tcl/</guid>
+      <guid>http://localhost:1313/tags/tcl/</guid>
       <description></description>
     </item>
     <item>
       <title>DCL</title>
-      <link>https://learnerloft.com/tags/dcl/</link>
+      <link>http://localhost:1313/tags/dcl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/dcl/</guid>
+      <guid>http://localhost:1313/tags/dcl/</guid>
       <description></description>
     </item>
     <item>
       <title>DDL</title>
-      <link>https://learnerloft.com/tags/ddl/</link>
+      <link>http://localhost:1313/tags/ddl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/ddl/</guid>
+      <guid>http://localhost:1313/tags/ddl/</guid>
       <description></description>
     </item>
     <item>
       <title>DML</title>
-      <link>https://learnerloft.com/tags/dml/</link>
+      <link>http://localhost:1313/tags/dml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/tags/dml/</guid>
+      <guid>http://localhost:1313/tags/dml/</guid>
       <description></description>
     </item>
   </channel>

@@ -2,75 +2,75 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Learner Loft</title>
-    <link>https://learnerloft.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Learner Loft</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 01 Aug 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://learnerloft.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wireless Debugging on Xcode 9</title>
-      <link>https://learnerloft.com/swift/chap1/</link>
+      <link>http://localhost:1313/swift/chap1/</link>
       <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/swift/chap1/</guid>
+      <guid>http://localhost:1313/swift/chap1/</guid>
       <description>Apple announced wireless debugging feature on Xcode 9 at WWDC 17.
 Apple say Cut the Cord Choose any of your iOS or tvOS devices on the local network to install, run, and debug your apps — without a USB cord plugged into your Mac. Simply click the ‘Connect via Network’ checkbox the first time you use a new iOS device, and that device will be available over the network from that point forward.</description>
     </item>
     <item>
       <title>Introduction to Oracle APEX</title>
-      <link>https://learnerloft.com/oracleapplicationexpress/chap1/</link>
+      <link>http://localhost:1313/oracleapplicationexpress/chap1/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/oracleapplicationexpress/chap1/</guid>
+      <guid>http://localhost:1313/oracleapplicationexpress/chap1/</guid>
       <description>Imagine you want to build a big, fancy Lego castle. Each piece you use costs you money, and every time you need to fix or change something, it takes more time and money.
 Now, instead of building it all by yourself, you have a team of builders. But coordinating all of them to work together smoothly can be really tricky. Sometimes they don’t understand each other well, which can lead to mistakes or delays.</description>
     </item>
     <item>
       <title>Understanding HTML: Structural Tags — Beginners</title>
-      <link>https://learnerloft.com/html/chap1/</link>
+      <link>http://localhost:1313/html/chap1/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/html/chap1/</guid>
+      <guid>http://localhost:1313/html/chap1/</guid>
       <description>HTML, or HyperText Markup Language, is the backbone of web development. It is the standard markup language for creating web pages and applications. In this article, we’ll delve into the fundamentals of HTML, including its introduction and basic tags, to help you kickstart your journey into web development.
 Introduction to HTML: HTML is a markup language used to structure content on the web. It provides a set of elements or tags that define the structure of a web page.</description>
     </item>
     <item>
       <title>What is SQL, Data and Database with examples</title>
-      <link>https://learnerloft.com/sql/chap1/</link>
+      <link>http://localhost:1313/sql/chap1/</link>
       <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap1/</guid>
+      <guid>http://localhost:1313/sql/chap1/</guid>
       <description>Imagine you have a big collection of toys scattered all over your room. You want to find your favorite toy, but searching through the mess by yourself might take a lot of time and effort. Here’s where your friend SQL comes in!
 SQL is like having a magic wand that helps you organize and find your toys quickly and easily. It stands for Structured Query Language, but you can just think of it as a special language that lets you talk to a smart toy organizer.</description>
     </item>
     <item>
       <title>Generate timebase UUID in swift</title>
-      <link>https://learnerloft.com/swift/chap2/</link>
+      <link>http://localhost:1313/swift/chap2/</link>
       <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/swift/chap2/</guid>
+      <guid>http://localhost:1313/swift/chap2/</guid>
       <description>First of all what is UUID? In software development as soon as we encounter assigning/fetching piece of data uniquely first thing that pops up in mind is UUID(universally unique identifier). so this is how wikipedia defines it.
 A universally unique identifier (UUID) is an identifier standard used in software construction. A UUID is simply a 128-bit value. The meaning of each bit is defined by any of several variants.</description>
     </item>
     <item>
       <title>HTML : Formatting Text — Beginners</title>
-      <link>https://learnerloft.com/html/chap2/</link>
+      <link>http://localhost:1313/html/chap2/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/html/chap2/</guid>
+      <guid>http://localhost:1313/html/chap2/</guid>
       <description>HTML, the cornerstone of web development, not only structures content but also allows for the formatting of text. In this article, we’ll explore various HTML tags used for text formatting along with practical examples to demonstrate their usage.
 1. Bold Text: The &amp;lt;strong&amp;gt; tag is used to represent text with strong importance, typically rendered as bold by browsers.
 &amp;lt;p&amp;gt;This is &amp;lt;strong&amp;gt;bold&amp;lt;/strong&amp;gt; text.&amp;lt;/p&amp;gt; 2. Italic Text: The &amp;lt;em&amp;gt; tag is used to emphasize text, typically rendered as italic by browsers.</description>
     </item>
     <item>
       <title>Understanding Oracle APEX Three-Tier Architecture: A Comprehensive Guide</title>
-      <link>https://learnerloft.com/oracleapplicationexpress/chap2/</link>
+      <link>http://localhost:1313/oracleapplicationexpress/chap2/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/oracleapplicationexpress/chap2/</guid>
+      <guid>http://localhost:1313/oracleapplicationexpress/chap2/</guid>
       <description>In the realm of web development, Oracle Application Express (APEX) stands out as a powerful tool for creating database-centric web applications. Its architecture, built on a three-tier model, provides a robust framework for developing, deploying, and managing applications efficiently.
 In this article, we’ll delve into the intricacies of Oracle APEX’s three-tier architecture, exploring each tier’s role and how they work together to deliver seamless web applications.
 Presentation Tier: At the forefront of Oracle APEX’s architecture lies the presentation tier.</description>
     </item>
     <item>
       <title>SQL language — DDL, DML, DCL, and TCL</title>
-      <link>https://learnerloft.com/sql/chap2/</link>
+      <link>http://localhost:1313/sql/chap2/</link>
       <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap2/</guid>
+      <guid>http://localhost:1313/sql/chap2/</guid>
       <description>DDL (Data Definition Language): DDL is used to define and manage the structure of database objects. Here are some common DDL commands:
 CREATE: Used to create new database objects such as tables, views, indexes, etc.
 ALTER: Used to modify the structure of existing database objects, such as adding, modifying, or dropping columns.
@@ -80,35 +80,35 @@ This command adds a new column named “Email” to the “Students” table wit
     </item>
     <item>
       <title>Access specifier in Swift</title>
-      <link>https://learnerloft.com/swift/chap3/</link>
+      <link>http://localhost:1313/swift/chap3/</link>
       <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/swift/chap3/</guid>
+      <guid>http://localhost:1313/swift/chap3/</guid>
       <description>What is Access specifier? Access specifier is keyword which helps in Access control of code block. Access control restricts access to the parts of your code from code in other source files and modules.
 Encapsulation is one pillar of Object Oriented Programming and access specifiers helps in encapsulating.
 What is Encapsulation?** Encapsulation is defined as the wrapping up of data under a single unit. It is the mechanism that binds together code and the data it manipulates.</description>
     </item>
     <item>
       <title>Mastering HTML Tables: A Comprehensive Guide with Examples</title>
-      <link>https://learnerloft.com/html/chap3/</link>
+      <link>http://localhost:1313/html/chap3/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/html/chap3/</guid>
+      <guid>http://localhost:1313/html/chap3/</guid>
       <description>HTML tables have been a fundamental part of web design since the early days of the internet. They provide a structured way to display data in rows and columns, making it easier for users to interpret and analyze information. In this article, we’ll delve into the world of HTML tables, exploring their syntax, attributes, and examples to help you master this essential web design tool.
 Understanding HTML Tables: HTML tables consist of rows and columns, organized within the &amp;lt;table&amp;gt; element.</description>
     </item>
     <item>
       <title>Navigating Oracle APEX: A Tour of Key Development Components</title>
-      <link>https://learnerloft.com/oracleapplicationexpress/chap3/</link>
+      <link>http://localhost:1313/oracleapplicationexpress/chap3/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/oracleapplicationexpress/chap3/</guid>
+      <guid>http://localhost:1313/oracleapplicationexpress/chap3/</guid>
       <description>As you sign into your APEX workspace, you’re greeted with a number of development components, each serving a distinct purpose.
 Let’s take a guided tour through App Builder, SQL Workshop, Team Development, and Gallery, unraveling their functionalities along the way.
 App Builder: Crafting Stunning Applications App Builder serves as your gateway to creating and managing applications effortlessly. Here, you design, develop, and deploy applications that are both visually captivating and highly functional.</description>
     </item>
     <item>
       <title>Basic SQL Queries — SELECT, WHERE,UPDATE and DELETE</title>
-      <link>https://learnerloft.com/sql/chap3/</link>
+      <link>http://localhost:1313/sql/chap3/</link>
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap3/</guid>
+      <guid>http://localhost:1313/sql/chap3/</guid>
       <description>Think of SQL queries as requests you make to find specific snacks in your snack box. Just like asking your friend to find your favorite candy in the snack box, SQL queries help you find specific information from a database.
 Example:
 Let’s say you have a table that lists all your favorite snacks and their quantities in your snack box, like this:
@@ -116,142 +116,142 @@ Now, using SQL queries, you can ask questions to find out specific information f
     </item>
     <item>
       <title>Final in swift for Begineers</title>
-      <link>https://learnerloft.com/swift/chap4/</link>
+      <link>http://localhost:1313/swift/chap4/</link>
       <pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/swift/chap4/</guid>
+      <guid>http://localhost:1313/swift/chap4/</guid>
       <description>According to Apple document You can prevent a method, property, or subscript from being overridden by marking it as final. Do this by writing the final modifier before the method, property, or subscript’s introducer keyword (such as final var, final func, final class func, and final subscript).
 Any attempt to override a final method, property, or subscript in a subclass is reported as a compile-time error. Methods, properties, or subscripts that you add to a class in an extension can also be marked as final within the extension’s definition.</description>
     </item>
     <item>
       <title>HTML Forms: Building Interactive Web Experiences</title>
-      <link>https://learnerloft.com/html/chap4/</link>
+      <link>http://localhost:1313/html/chap4/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/html/chap4/</guid>
+      <guid>http://localhost:1313/html/chap4/</guid>
       <description>HTML forms serve as the gateway for user interaction on the web, enabling users to submit data, provide feedback, and engage with web applications seamlessly. From login pages to contact forms, HTML forms are integral to capturing user input and driving interactive web experiences. In this article, we’ll dive deep into the world of HTML forms, exploring their structure, elements, attributes, and examples to help you harness their full potential in your web development projects.</description>
     </item>
     <item>
       <title>Oracle APEX — Rendering and Processing Page</title>
-      <link>https://learnerloft.com/oracleapplicationexpress/chap4/</link>
+      <link>http://localhost:1313/oracleapplicationexpress/chap4/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/oracleapplicationexpress/chap4/</guid>
+      <guid>http://localhost:1313/oracleapplicationexpress/chap4/</guid>
       <description>Running an application in Oracle Application Express (APEX) might seem like a straightforward task, but behind the scenes, there’s a complex engine at work.
 To shed light on this process, let’s delve into the two crucial processes that power the execution of APEX applications.
 Page Rendering Imagine you’ve built a sleek and functional application using APEX, complete with interactive forms, dynamic reports, and engaging charts. When a user accesses your application, the APEX engine kicks into action.</description>
     </item>
     <item>
       <title>For Beginners — TCL Commands in SQL with Example</title>
-      <link>https://learnerloft.com/sql/chap4/</link>
+      <link>http://localhost:1313/sql/chap4/</link>
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap4/</guid>
+      <guid>http://localhost:1313/sql/chap4/</guid>
       <description>TCL commands are COMMIT, ROLLBACK, and SAVEPOINT.
 COMMIT: The COMMIT command is used to permanently save the changes made during the current transaction. Once a COMMIT command is executed, all changes made within the transaction become permanent and are visible to other users. Example: Suppose we have a transaction that updates the age of a student in the database:
 BEGIN TRANSACTION; UPDATE Students SET Age = 16 WHERE Name = &amp;#39;Alice&amp;#39;; COMMIT; In this example:</description>
     </item>
     <item>
       <title>Xcode Tips - Create code snippet</title>
-      <link>https://learnerloft.com/swift/chap5/</link>
+      <link>http://localhost:1313/swift/chap5/</link>
       <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/swift/chap5/</guid>
+      <guid>http://localhost:1313/swift/chap5/</guid>
       <description>What is code snippet? A small piece of a code in the program is known as a code snippet.
 Wikipedia The snippet is a programming term for a small region of re-usable source code, machine code, or text. Ordinarily, these are formally defined operative units to incorporate into larger programming modules. Snippet management is a feature of some text editors, program source code editors, IDEs, and related software.
 What is the use of code snippet?</description>
     </item>
     <item>
       <title>Understanding Session ID, Session State, and Sessions</title>
-      <link>https://learnerloft.com/oracleapplicationexpress/chap5/</link>
+      <link>http://localhost:1313/oracleapplicationexpress/chap5/</link>
       <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/oracleapplicationexpress/chap5/</guid>
+      <guid>http://localhost:1313/oracleapplicationexpress/chap5/</guid>
       <description>In the dynamic world of web application development, managing user sessions efficiently is paramount for delivering a seamless and personalised user experience. Oracle Application Express (APEX), a popular low-code development platform, provides robust tools for managing sessions effectively.
 In this article, we’ll delve into the concepts of Session ID, Session State, and Sessions in APEX.
 Understanding Session ID: At the heart of session management lies the Session ID, a unique identifier assigned to each user’s session.</description>
     </item>
     <item>
       <title>HTML: Creating Links for Seamless Navigation</title>
-      <link>https://learnerloft.com/html/chap5/</link>
+      <link>http://localhost:1313/html/chap5/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/html/chap5/</guid>
+      <guid>http://localhost:1313/html/chap5/</guid>
       <description>HTML, the cornerstone of web development, empowers developers to create hyperlinks, or simply links, that connect web pages together, enabling seamless navigation across the vast landscape of the internet. In this article, we’ll uncover the art of creating links in HTML, exploring various techniques and examples to enhance user experience and connectivity.
 Understanding Links in HTML: Links are essential components of web pages, allowing users to navigate between different pages or resources with a simple click.</description>
     </item>
     <item>
       <title>Window Functions in SQL</title>
-      <link>https://learnerloft.com/sql/chapp5/</link>
+      <link>http://localhost:1313/sql/chapp5/</link>
       <pubDate>Wed, 10 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chapp5/</guid>
+      <guid>http://localhost:1313/sql/chapp5/</guid>
       <description>Window functions are a type of function in SQL that allow you to perform calculations across a set of rows related to the current row, called a “window,” without collapsing the result set. They are used to perform aggregate calculations (like sum, average, count) and ranking operations (like row number, rank) within a specific partition or window of data.
 Syntax Types of Window Functions: There are a few common window functions you might encounter:</description>
     </item>
     <item>
       <title>How to update the view height with animation programmatically</title>
-      <link>https://learnerloft.com/swift/chap6/</link>
+      <link>http://localhost:1313/swift/chap6/</link>
       <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/swift/chap6/</guid>
+      <guid>http://localhost:1313/swift/chap6/</guid>
       <description>Common problems of writing NSLayoutConstraint
 Hello swift programmers, in this article we will look at how to use NSLayoutConstraint to elegantly handle the resize of view using some animation. let’s take an example
 In apple notes app if you notice as soon as the keyboard comes up the text fields height changes with sweet animation. which look good to eyes and gives thoughts to the brain how to they do it?</description>
     </item>
     <item>
       <title>Progressive Web App in Oracle APEX</title>
-      <link>https://learnerloft.com/oracleapplicationexpress/chap6/</link>
+      <link>http://localhost:1313/oracleapplicationexpress/chap6/</link>
       <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/oracleapplicationexpress/chap6/</guid>
+      <guid>http://localhost:1313/oracleapplicationexpress/chap6/</guid>
       <description>Progressive Web Applications leverage modern web APIs giving users an experience that looks and feels like a native application. Your APEX applications can easily be defined as a PWA or Progressive Web Application to take advantage of advanced caching and improved performance. These applications can also be installed on your smartphone of choice with device-specific installation instructions.
 Install Progressive Web App: The “Install Progressive Web App” feature in Oracle APEX allows developers to leverage the capabilities of PWAs within their applications.</description>
     </item>
     <item>
       <title>Adding Images and Other Page Elements with HTML</title>
-      <link>https://learnerloft.com/html/chap6/</link>
+      <link>http://localhost:1313/html/chap6/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/html/chap6/</guid>
+      <guid>http://localhost:1313/html/chap6/</guid>
       <description>In the realm of web design, visuals play a pivotal role in capturing users’ attention and enhancing the overall aesthetic appeal of a website. HTML, the backbone of web development, offers an array of tags and elements to seamlessly integrate images and other page elements into web pages. In this article, we’ll explore how HTML enables developers to elevate their web design by adding images and other essential page elements with practical examples.</description>
     </item>
     <item>
       <title>SQL Clause: Group By, Having, IN and NOT IN</title>
-      <link>https://learnerloft.com/sql/chap6/</link>
+      <link>http://localhost:1313/sql/chap6/</link>
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap6/</guid>
+      <guid>http://localhost:1313/sql/chap6/</guid>
       <description>Let’s say we have a table named “Games” with the following data:
 GROUP BY: Think of GROUP BY like organizing your games into groups based on their ratings. It&amp;rsquo;s like sorting them into piles of similar ratings.
 SELECT Rating, COUNT(\*) AS NumOfGames FROM Games GROUP BY Rating; This query will count the number of games for each rating group. For example, it will show how many games have a rating of 4.</description>
     </item>
     <item>
       <title>How to install iOS 14 beta</title>
-      <link>https://learnerloft.com/swift/chap7/</link>
+      <link>http://localhost:1313/swift/chap7/</link>
       <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/swift/chap7/</guid>
+      <guid>http://localhost:1313/swift/chap7/</guid>
       <description>WWDC 2020 happened on Mon, 22 June 2020, as expected lot of new features announced and are available under the developer beta program. If you want to use them before the actual release follow these simple steps.
 Note: As these update are beta there is possiblity of issue like data loss and bugs. so before starting the installation back up your data.
 Step 1 Download iOS beta profile from https://developer.</description>
     </item>
     <item>
       <title>Exploring the Three Types of Applications in Oracle APEX : — Sample Apps, Starter Apps, and Custom Apps</title>
-      <link>https://learnerloft.com/oracleapplicationexpress/chap7/</link>
+      <link>http://localhost:1313/oracleapplicationexpress/chap7/</link>
       <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/oracleapplicationexpress/chap7/</guid>
+      <guid>http://localhost:1313/oracleapplicationexpress/chap7/</guid>
       <description>Oracle Application Express (APEX) is a powerful tool for rapidly developing web applications on top of the Oracle Database. It provides developers with a range of features and functionalities to build robust applications efficiently.
 One of the key aspects of APEX development is understanding the different types of applications it offers: Sample Apps, Starter Apps, and Custom Apps.
 Let’s delve into each of these types to understand their purposes and benefits.</description>
     </item>
     <item>
       <title>HTML Frames: Enhancing Web Layouts with Frame Elements</title>
-      <link>https://learnerloft.com/html/chap7/</link>
+      <link>http://localhost:1313/html/chap7/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/html/chap7/</guid>
+      <guid>http://localhost:1313/html/chap7/</guid>
       <description>HTML frames provide a powerful way to divide a web page into multiple sections, each with its own content. Despite their declining usage due to modern CSS techniques, frames remain a valuable tool for certain scenarios, such as creating sidebars or displaying content from different sources simultaneously. In this article, we’ll explore HTML frames, their syntax, attributes, and examples to help you understand and utilize them effectively in your web designs.</description>
     </item>
     <item>
       <title>Aggregate Functions in SQL</title>
-      <link>https://learnerloft.com/sql/chap7/</link>
+      <link>http://localhost:1313/sql/chap7/</link>
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap7/</guid>
+      <guid>http://localhost:1313/sql/chap7/</guid>
       <description>Imagine you’re at a party with a bunch of friends, and there’s a big bowl of candies on the table. Now, you want to know some information about those candies, like how many candies are there in total, what’s the average number of candies each person has, or which friend has the most candies.
 In SQL, aggregate functions are like magical candy counters that help you answer these questions by performing calculations on groups of data.</description>
     </item>
     <item>
       <title>Color theory</title>
-      <link>https://learnerloft.com/swift/chap8/</link>
+      <link>http://localhost:1313/swift/chap8/</link>
       <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/swift/chap8/</guid>
+      <guid>http://localhost:1313/swift/chap8/</guid>
       <description>How to choose the right color?
 What is Color theory? Practical guidance to create or choose the right colors for your needs. Yes, there are set of rule to create or choose colors and we will discover these rules in this article.
 What is color? To answer what is color, we will have to understand the components of it
@@ -259,34 +259,34 @@ Hue: Name of the color is called hue. Saturation: Intensity of the hue is call
     </item>
     <item>
       <title>The Interactive Report, Interactive Grid, and Classic Report -Oracle APEX</title>
-      <link>https://learnerloft.com/oracleapplicationexpress/chap8/</link>
+      <link>http://localhost:1313/oracleapplicationexpress/chap8/</link>
       <pubDate>Fri, 03 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/oracleapplicationexpress/chap8/</guid>
+      <guid>http://localhost:1313/oracleapplicationexpress/chap8/</guid>
       <description>Oracle APEX offers various report types to display data effectively, catering to different user needs and preferences. Here’s an overview of the three main report types:- Interactive Report, Interactive Grid, and Classic Report:
 Interactive Report Interactive Reports are highly customisable and user-friendly. They offer features such as sorting, filtering, highlighting, and aggregation directly within the report itself, providing users with a dynamic and interactive experience.
 Key Features: Interactive Features: Users can sort, filter, and customise the display of data interactively without needing to reload the page.</description>
     </item>
     <item>
       <title>User-Defined Function (UDF) in SQL</title>
-      <link>https://learnerloft.com/sql/chap8/</link>
+      <link>http://localhost:1313/sql/chap8/</link>
       <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap8/</guid>
+      <guid>http://localhost:1313/sql/chap8/</guid>
       <description>Let’s say, you have a special calculator that can perform a specific calculation, like doubling a number or calculating the average of a set of numbers. You can use this calculator whenever you need to perform that calculation, without having to write out the steps each time. In SQL, a user-defined function is like that special calculator — it’s a custom function that you can create to perform a specific task or calculation.</description>
     </item>
     <item>
       <title>What is Page Zero / Global Page in Oracle APEX?</title>
-      <link>https://learnerloft.com/oracleapplicationexpress/chap9/</link>
+      <link>http://localhost:1313/oracleapplicationexpress/chap9/</link>
       <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/oracleapplicationexpress/chap9/</guid>
+      <guid>http://localhost:1313/oracleapplicationexpress/chap9/</guid>
       <description>Oracle Application Express (APEX) includes a powerful feature called the Global Page, often referred to as Page Zero. This feature functions as a master page within your application, ensuring that certain elements are consistently rendered across multiple pages without the need for repetitive coding.
 Here’s an in-depth look at what the Global Page is and how it can be effectively used.
 Understanding the Global Page The Global Page is a unique type of page in Oracle APEX.</description>
     </item>
     <item>
       <title>Control Transfer Statements in swift- `continue, break, fallthrough in swift</title>
-      <link>https://learnerloft.com/swift/chap9/</link>
+      <link>http://localhost:1313/swift/chap9/</link>
       <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/swift/chap9/</guid>
+      <guid>http://localhost:1313/swift/chap9/</guid>
       <description>In this article, we will look at the continue, break, fallthrough keywords in swift
 Continue: A continue statement ends program execution of the current iteration of a loop statement and move to next iteration.
 Ex: Increment the values of odd number in the array
@@ -295,16 +295,16 @@ for number in array { ///Check if value is even if number % 2 == 0 { ///number a
     </item>
     <item>
       <title>What is Stored Procedure in SQL</title>
-      <link>https://learnerloft.com/sql/chap9/</link>
+      <link>http://localhost:1313/sql/chap9/</link>
       <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap9/</guid>
+      <guid>http://localhost:1313/sql/chap9/</guid>
       <description>Imagine you’re baking a cake, and you have a recipe written down on a piece of paper. This recipe contains all the steps you need to follow to bake the cake, from mixing the ingredients to putting it in the oven. A stored procedure in SQL is like that recipe — it’s a set of instructions stored in the database that you can execute whenever you need to perform a specific task or set of tasks.</description>
     </item>
     <item>
       <title>Class vs structure in Swift</title>
-      <link>https://learnerloft.com/swift/chap10/</link>
+      <link>http://localhost:1313/swift/chap10/</link>
       <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/swift/chap10/</guid>
+      <guid>http://localhost:1313/swift/chap10/</guid>
       <description>In this article, we will learn about classes and Structs, the Difference between classes and structs and common features.
 Class Classes are reference types. It means that if you assign an instance of the class to a variable, it will hold only the reference to the instance and not the copy.
 class Person { var name: String init(name: String) { self.name = name } }
@@ -312,9 +312,9 @@ var ceo = SomeClass(name: &amp;ldquo;steve&amp;rdquo;) var newCeo = ceo //ceo an
     </item>
     <item>
       <title>Difference between Function and stored procedure in SQL</title>
-      <link>https://learnerloft.com/sql/chap10/</link>
+      <link>http://localhost:1313/sql/chap10/</link>
       <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap10/</guid>
+      <guid>http://localhost:1313/sql/chap10/</guid>
       <description>Stored Procedures: Execution:
 Stored procedures may or may not return a value. They can execute a series of SQL statements or perform actions such as data manipulation or transaction management. Usage:
 Stored procedures are used to encapsulate a set of SQL statements for reuse and maintainability. They can be called from client applications or other stored procedures. Modifications:
@@ -322,16 +322,16 @@ Stored procedures can include data manipulation operations, transaction control,
     </item>
     <item>
       <title>Demystifying Bitcode: Understanding What, Why, and How for iOS Engineers</title>
-      <link>https://learnerloft.com/swift/chap11/</link>
+      <link>http://localhost:1313/swift/chap11/</link>
       <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/swift/chap11/</guid>
+      <guid>http://localhost:1313/swift/chap11/</guid>
       <description>Introduction In the world of making iOS apps, there are lots of new things to learn. One of these things is Bitcode. If you’ve ever sent your app to the App Store, you might have heard about it. But what exactly is Bitcode, and why should iOS engineers care about it? In this blog post, we will break down what Bitcode is, its benefits, and how it fits into the way we make apps</description>
     </item>
     <item>
       <title>CHOOSE and IIF — SQL</title>
-      <link>https://learnerloft.com/sql/chap11/</link>
+      <link>http://localhost:1313/sql/chap11/</link>
       <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap11/</guid>
+      <guid>http://localhost:1313/sql/chap11/</guid>
       <description>Imagine you’re organizing a gaming tournament, and you want to assign a different prize based on the rank players achieved.
 Let’s say you have the following rankings:
 Ranking Table
@@ -342,44 +342,44 @@ The CHOOSE function takes the Rank as an index.</description>
     </item>
     <item>
       <title>Swift Dispatch 101: Understanding Static, Dynamic, and V Tables!</title>
-      <link>https://learnerloft.com/swift/chap12/</link>
+      <link>http://localhost:1313/swift/chap12/</link>
       <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/swift/chap12/</guid>
+      <guid>http://localhost:1313/swift/chap12/</guid>
       <description>Static Dispatch: Static dispatch refers to the process of determining which function or method to call at compile-time, based on the declared type of the variable or object. In simpler terms, it’s like deciding what action to take when you know exactly what type of thing you’re dealing with.
 For example, if you have a Swift function that adds two numbers:
 func add(\_ a: Int, \_ b: Int) -&amp;gt; Int { return a + b } And you call it like this:</description>
     </item>
     <item>
       <title>Special operators in SQL</title>
-      <link>https://learnerloft.com/sql/chap12/</link>
+      <link>http://localhost:1313/sql/chap12/</link>
       <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap12/</guid>
+      <guid>http://localhost:1313/sql/chap12/</guid>
       <description>There are several special operators that serve specific purposes beyond basic comparison and arithmetic operations.
 Some of these special operators include: LIKE Operator: The LIKE operator is used to search for a specified pattern in a column. It&amp;rsquo;s commonly used with wildcard characters such as % (matches any sequence of characters) and _ (matches any single character).
 SELECT \* FROM Employees WHERE FirstName LIKE &amp;#39;J%&amp;#39;; IN Operator: The IN operator is used to specify multiple values in a WHERE clause.</description>
     </item>
     <item>
       <title>For Beginners to Understand Constraints in Database</title>
-      <link>https://learnerloft.com/sql/chap13/</link>
+      <link>http://localhost:1313/sql/chap13/</link>
       <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap13/</guid>
+      <guid>http://localhost:1313/sql/chap13/</guid>
       <description>Think of constraints in a database as rules that ensure data behaves properly, just like rules in a game. For instance, if you’re playing basketball, you can’t use your hands to touch the ball unless you’re dribbling or shooting. Similarly, constraints in a database ensure that data follows certain rules, like not allowing duplicate values in a column or making sure each student has a unique student ID.
 Let’s say we have a table called “Students” with columns for StudentID, Name, and Age.</description>
     </item>
     <item>
       <title>Beginners Guide — Inner,Outer,left and right JOINS in SQL</title>
-      <link>https://learnerloft.com/sql/chap14/</link>
+      <link>http://localhost:1313/sql/chap14/</link>
       <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap14/</guid>
+      <guid>http://localhost:1313/sql/chap14/</guid>
       <description>What are Joins? Imagine you have two lists of friends — one list with their names and another list with their hobbies. Now, you want to find out which friend has which hobby. This is where joins come in handy!
 In databases, tables are like lists, and joins help us combine information from different tables based on a common piece of information, like a friend’s name or an ID.
 Let’s consider two tables: friends and hobbies.</description>
     </item>
     <item>
       <title>For Beginners to Understand Triggers in SQL</title>
-      <link>https://learnerloft.com/sql/chap15/</link>
+      <link>http://localhost:1313/sql/chap15/</link>
       <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap15/</guid>
+      <guid>http://localhost:1313/sql/chap15/</guid>
       <description>Lets assume !! you have a magic toy box that automatically does something whenever you put a specific type of toy inside it. Triggers in SQL are like these magical rules that automatically perform actions in the database when certain events happen.
 Example:
 Let’s say you have a database table called “Orders” that stores information about orders placed by customers:
@@ -388,67 +388,67 @@ Now, imagine you want to keep track of any large orders (orders with a total amo
     </item>
     <item>
       <title>SQL — Temporary Tables</title>
-      <link>https://learnerloft.com/sql/chap16/</link>
+      <link>http://localhost:1313/sql/chap16/</link>
       <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap16/</guid>
+      <guid>http://localhost:1313/sql/chap16/</guid>
       <description>Temporary tables are like a temporary workspace or desk that you set up when you need some extra space to work on a project. You can use this space to organize and manipulate data without affecting your main workspace (or database) permanently. Once you’re done with your task, you can clean up and remove the temporary workspace, and everything goes back to how it was before.
 Example: Suppose you’re working on a school project where you need to analyze data about students’ grades and attendance.</description>
     </item>
     <item>
       <title>Views in SQL</title>
-      <link>https://learnerloft.com/sql/chap17/</link>
+      <link>http://localhost:1313/sql/chap17/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap17/</guid>
+      <guid>http://localhost:1313/sql/chap17/</guid>
       <description>Imagine you have a favourite playlist on your music app. Instead of going through all your songs every time you want to listen to your favorite tracks, you create a playlist that contains only the songs you love.
 A view in a database is like that playlist — it’s a saved query that contains only the data you’re interested in, making it easier and faster to access.
 Suppose we have a database with a table called “Students” that contains information about students, including their names and ages.</description>
     </item>
     <item>
       <title>What is a Cursor in SQL ?</title>
-      <link>https://learnerloft.com/sql/chap18/</link>
+      <link>http://localhost:1313/sql/chap18/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap18/</guid>
+      <guid>http://localhost:1313/sql/chap18/</guid>
       <description>Think of a cursor in SQL like a pointer that allows you to navigate through a set of rows returned by a query, one row at a time. It’s like a virtual hand that can grab one row of data from a table, process it, and then move on to the next row.
 Types of Cursors: There are mainly two types of cursors in SQL:
 Implicit Cursors: These cursors are created by default when you execute a SQL query.</description>
     </item>
     <item>
       <title>Understanding REF_CURSOR in SQL</title>
-      <link>https://learnerloft.com/sql/chap19/</link>
+      <link>http://localhost:1313/sql/chap19/</link>
       <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap19/</guid>
+      <guid>http://localhost:1313/sql/chap19/</guid>
       <description>Ever heard of something called REF_CURSOR Don’t worry if it sounds like gibberish right now. I’m here to break it down for you in the simplest way possible, so grab a snack and let’s dive in!
 Imagine you’re at a library, and you ask the librarian to recommend some good books. Instead of giving you a list of book titles right away, the librarian hands you a special kind of card called a REF_CURSOR.</description>
     </item>
     <item>
       <title>Difference between REF CURSOR and CURSOR</title>
-      <link>https://learnerloft.com/sql/chap20/</link>
+      <link>http://localhost:1313/sql/chap20/</link>
       <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap20/</guid>
+      <guid>http://localhost:1313/sql/chap20/</guid>
       <description>To know the difference between ref cursor and cursor , first you should know what is cursor and ref_cursor.
 REF_CURSOR: Dynamic Result Sets: REF_CURSOR, or reference cursor, is a data type that represents a cursor variable. It allows for dynamic result sets to be returned from stored procedures or functions in Oracle.
 Data Pointing: REF_CURSOR does not hold actual data but acts as a reference to the result set generated by a query.</description>
     </item>
     <item>
       <title>PRAGMA in PL/SQL</title>
-      <link>https://learnerloft.com/sql/chap21/</link>
+      <link>http://localhost:1313/sql/chap21/</link>
       <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap21/</guid>
+      <guid>http://localhost:1313/sql/chap21/</guid>
       <description>Imagine you’re writing a story in your notebook, and sometimes you want to add special notes to yourself or your friend about how to read the story. You might write something like “Don’t worry about the spelling mistakes” or “Read this part very carefully.”
 In programming, a pragma is a bit like those special notes. It’s a way for the computer to understand special instructions or hints about how to handle your code.</description>
     </item>
     <item>
       <title>For Beginners EXCEPTION in SQL</title>
-      <link>https://learnerloft.com/sql/chap22/</link>
+      <link>http://localhost:1313/sql/chap22/</link>
       <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap22/</guid>
+      <guid>http://localhost:1313/sql/chap22/</guid>
       <description>Imagine you’re playing a game where you need to catch a ball. Sometimes, you might not catch the ball perfectly, and it might fall to the ground. But instead of giving up, you learn from your mistake and try again. In SQL, exceptions are like errors that occur during a task, but instead of crashing the program, they give you a chance to handle the error and continue with your task.</description>
     </item>
     <item>
       <title>The differences in SQL</title>
-      <link>https://learnerloft.com/sql/chap23/</link>
+      <link>http://localhost:1313/sql/chap23/</link>
       <pubDate>Tue, 16 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chap23/</guid>
+      <guid>http://localhost:1313/sql/chap23/</guid>
       <description>Truncate and Delete: Truncate: Truncate is like clearing the entire table at once. It removes all the rows from a table but keeps the table structure intact. It’s faster than DELETE but doesn’t allow for conditions.
 TRUNCATE TABLE Students; Delete: Delete removes specific rows from a table based on conditions. It’s slower than TRUNCATE but allows for specifying conditions.
 DELETE FROM Students WHERE Age &amp;gt; 18; Merge and Insert: Merge: Merge performs an INSERT, UPDATE, or DELETE operation based on the condition provided.</description>
