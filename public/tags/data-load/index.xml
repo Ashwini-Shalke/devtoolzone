@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Data Load on Learner Loft</title>
+    <link>https://learnerloft.com/tags/data-load/</link>
+    <description>Recent content in Data Load on Learner Loft</description>
+    <generator>Hugo -- 0.124.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://learnerloft.com/tags/data-load/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Exploring Data Load Definitions in Oracle APEX: A Beginner’s Guide</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap11/</link>
+      <pubDate>Fri, 09 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap11/</guid>
+      <description>What is a Data Load Definition? Imagine you have a super cool app that needs to bring in lots of data from different files like Excel or CSV. A data load definition in Oracle APEX is like a set of instructions that tells your app how to do this properly. It’s like giving your app a map to follow when it gets new data.
+How Do You Add Data Loading to Your App?</description>
+    </item>
+  </channel>
+</rss>

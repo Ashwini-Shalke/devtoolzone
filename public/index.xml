@@ -329,6 +329,14 @@ Stored procedures are used to encapsulate a set of SQL statements for reuse and 
 Stored procedures can include data manipulation operations, transaction control, conditional logic, and error handling.</description>
     </item>
     <item>
+      <title>Exploring Data Load Definitions in Oracle APEX: A Beginner’s Guide</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap11/</link>
+      <pubDate>Fri, 09 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap11/</guid>
+      <description>What is a Data Load Definition? Imagine you have a super cool app that needs to bring in lots of data from different files like Excel or CSV. A data load definition in Oracle APEX is like a set of instructions that tells your app how to do this properly. It’s like giving your app a map to follow when it gets new data.
+How Do You Add Data Loading to Your App?</description>
+    </item>
+    <item>
       <title>Demystifying Bitcode: Understanding What, Why, and How for iOS Engineers</title>
       <link>https://learnerloft.com/swift/chap11/</link>
       <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>

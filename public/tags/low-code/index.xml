@@ -95,5 +95,13 @@ Understanding the Global Page The Global Page is a unique type of page in Oracl
       <description>To begin, let’s familiarize ourselves with the layout of the Interactive Grid toolbar. The toolbar is divided into seven distinct sections, each serving a specific function. Understanding this layout is crucial as we’ll use it to strategically assign our custom buttons. Here’s an overview of these sections:
 Step by step guide : Navigate to your Oracle APEX application and locate the page containing the Interactive Grid where you want to add the custom button.</description>
     </item>
+    <item>
+      <title>Exploring Data Load Definitions in Oracle APEX: A Beginner’s Guide</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap11/</link>
+      <pubDate>Fri, 09 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap11/</guid>
+      <description>What is a Data Load Definition? Imagine you have a super cool app that needs to bring in lots of data from different files like Excel or CSV. A data load definition in Oracle APEX is like a set of instructions that tells your app how to do this properly. It’s like giving your app a map to follow when it gets new data.
+How Do You Add Data Loading to Your App?</description>
+    </item>
   </channel>
 </rss>
