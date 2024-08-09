@@ -73,4 +73,4 @@ Once you have your data load definition ready, you create a data load page. This
 
 ![](https://cdn-images-1.medium.com/max/1600/1*-7I5qw33SCCu1sKZHd5xpQ.png)
 
-### _I hope this guide was helpful and that you’re excited to dive deeper into the world of Oracle APEX. Keep exploring and learning !!!_
+ _I hope this guide was helpful and that you’re excited to dive deeper into the world of Oracle APEX. Keep exploring and learning !!!_

@@ -30,7 +30,7 @@ Navigate to your Oracle APEX application and locate the page containing the Inte
 
 ![](https://cdn-images-1.medium.com/max/2400/1*t7J7tRQlUENZKY8iXxcOnQ.png)
 
-> These settings ensure that users can interact with data effectively within the grid.
+_These settings ensure that users can interact with data effectively within the grid._
 
 #### **2\. Add Custom JavaScript Code**
 
@@ -72,6 +72,8 @@ function(config) {
 *   **_Updating Configuration_**_: We update_ `_config.toolbarData_` _with our modified toolbar configuration to ensure the custom button appears in the Interactive Grid._
 *   **_Enabling Features_**_: To enable edit and delete functionalities within the grid, we configure_ `_config.features_`_:_
 
-> By following this guide, you’ve learned how to incorporate a custom button while ensuring delete capabilities are readily available within the grid.Happy developing!
+_By following this guide, you’ve learned how to incorporate a custom button while ensuring delete capabilities are readily available within the grid._
+
+_Happy developing!_
 
 ###
