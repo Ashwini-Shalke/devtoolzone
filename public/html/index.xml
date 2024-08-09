@@ -2,64 +2,64 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>HTMLs on Learner Loft</title>
-    <link>http://localhost:1313/html/</link>
+    <link>https://learnerloft.com/html/</link>
     <description>Recent content in HTMLs on Learner Loft</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 15 Apr 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/html/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://learnerloft.com/html/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Understanding HTML: Structural Tags — Beginners</title>
-      <link>http://localhost:1313/html/chap1/</link>
+      <link>https://learnerloft.com/html/chap1/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/html/chap1/</guid>
+      <guid>https://learnerloft.com/html/chap1/</guid>
       <description>HTML, or HyperText Markup Language, is the backbone of web development. It is the standard markup language for creating web pages and applications. In this article, we’ll delve into the fundamentals of HTML, including its introduction and basic tags, to help you kickstart your journey into web development.
 Introduction to HTML: HTML is a markup language used to structure content on the web. It provides a set of elements or tags that define the structure of a web page.</description>
     </item>
     <item>
       <title>HTML : Formatting Text — Beginners</title>
-      <link>http://localhost:1313/html/chap2/</link>
+      <link>https://learnerloft.com/html/chap2/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/html/chap2/</guid>
+      <guid>https://learnerloft.com/html/chap2/</guid>
       <description>HTML, the cornerstone of web development, not only structures content but also allows for the formatting of text. In this article, we’ll explore various HTML tags used for text formatting along with practical examples to demonstrate their usage.
 1. Bold Text: The &amp;lt;strong&amp;gt; tag is used to represent text with strong importance, typically rendered as bold by browsers.
 &amp;lt;p&amp;gt;This is &amp;lt;strong&amp;gt;bold&amp;lt;/strong&amp;gt; text.&amp;lt;/p&amp;gt; 2. Italic Text: The &amp;lt;em&amp;gt; tag is used to emphasize text, typically rendered as italic by browsers.</description>
     </item>
     <item>
       <title>Mastering HTML Tables: A Comprehensive Guide with Examples</title>
-      <link>http://localhost:1313/html/chap3/</link>
+      <link>https://learnerloft.com/html/chap3/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/html/chap3/</guid>
+      <guid>https://learnerloft.com/html/chap3/</guid>
       <description>HTML tables have been a fundamental part of web design since the early days of the internet. They provide a structured way to display data in rows and columns, making it easier for users to interpret and analyze information. In this article, we’ll delve into the world of HTML tables, exploring their syntax, attributes, and examples to help you master this essential web design tool.
 Understanding HTML Tables: HTML tables consist of rows and columns, organized within the &amp;lt;table&amp;gt; element.</description>
     </item>
     <item>
       <title>HTML Forms: Building Interactive Web Experiences</title>
-      <link>http://localhost:1313/html/chap4/</link>
+      <link>https://learnerloft.com/html/chap4/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/html/chap4/</guid>
+      <guid>https://learnerloft.com/html/chap4/</guid>
       <description>HTML forms serve as the gateway for user interaction on the web, enabling users to submit data, provide feedback, and engage with web applications seamlessly. From login pages to contact forms, HTML forms are integral to capturing user input and driving interactive web experiences. In this article, we’ll dive deep into the world of HTML forms, exploring their structure, elements, attributes, and examples to help you harness their full potential in your web development projects.</description>
     </item>
     <item>
       <title>HTML: Creating Links for Seamless Navigation</title>
-      <link>http://localhost:1313/html/chap5/</link>
+      <link>https://learnerloft.com/html/chap5/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/html/chap5/</guid>
+      <guid>https://learnerloft.com/html/chap5/</guid>
       <description>HTML, the cornerstone of web development, empowers developers to create hyperlinks, or simply links, that connect web pages together, enabling seamless navigation across the vast landscape of the internet. In this article, we’ll uncover the art of creating links in HTML, exploring various techniques and examples to enhance user experience and connectivity.
 Understanding Links in HTML: Links are essential components of web pages, allowing users to navigate between different pages or resources with a simple click.</description>
     </item>
     <item>
       <title>Adding Images and Other Page Elements with HTML</title>
-      <link>http://localhost:1313/html/chap6/</link>
+      <link>https://learnerloft.com/html/chap6/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/html/chap6/</guid>
+      <guid>https://learnerloft.com/html/chap6/</guid>
       <description>In the realm of web design, visuals play a pivotal role in capturing users’ attention and enhancing the overall aesthetic appeal of a website. HTML, the backbone of web development, offers an array of tags and elements to seamlessly integrate images and other page elements into web pages. In this article, we’ll explore how HTML enables developers to elevate their web design by adding images and other essential page elements with practical examples.</description>
     </item>
     <item>
       <title>HTML Frames: Enhancing Web Layouts with Frame Elements</title>
-      <link>http://localhost:1313/html/chap7/</link>
+      <link>https://learnerloft.com/html/chap7/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/html/chap7/</guid>
+      <guid>https://learnerloft.com/html/chap7/</guid>
       <description>HTML frames provide a powerful way to divide a web page into multiple sections, each with its own content. Despite their declining usage due to modern CSS techniques, frames remain a valuable tool for certain scenarios, such as creating sidebars or displaying content from different sources simultaneously. In this article, we’ll explore HTML frames, their syntax, attributes, and examples to help you understand and utilize them effectively in your web designs.</description>
     </item>
   </channel>

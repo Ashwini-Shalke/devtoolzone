@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Session on Learner Loft</title>
-    <link>http://localhost:1313/tags/session/</link>
+    <link>https://learnerloft.com/tags/session/</link>
     <description>Recent content in Session on Learner Loft</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 19 Apr 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/session/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://learnerloft.com/tags/session/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Understanding Session ID, Session State, and Sessions</title>
-      <link>http://localhost:1313/oracleapplicationexpress/chap5/</link>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap5/</link>
       <pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/oracleapplicationexpress/chap5/</guid>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap5/</guid>
       <description>In the dynamic world of web application development, managing user sessions efficiently is paramount for delivering a seamless and personalised user experience. Oracle Application Express (APEX), a popular low-code development platform, provides robust tools for managing sessions effectively.
 In this article, we’ll delve into the concepts of Session ID, Session State, and Sessions in APEX.
 Understanding Session ID: At the heart of session management lies the Session ID, a unique identifier assigned to each user’s session.</description>

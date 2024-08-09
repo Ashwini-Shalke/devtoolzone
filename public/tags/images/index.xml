@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Images on Learner Loft</title>
-    <link>http://localhost:1313/tags/images/</link>
+    <link>https://learnerloft.com/tags/images/</link>
     <description>Recent content in Images on Learner Loft</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 15 Apr 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/images/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://learnerloft.com/tags/images/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Adding Images and Other Page Elements with HTML</title>
-      <link>http://localhost:1313/html/chap6/</link>
+      <link>https://learnerloft.com/html/chap6/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/html/chap6/</guid>
+      <guid>https://learnerloft.com/html/chap6/</guid>
       <description>In the realm of web design, visuals play a pivotal role in capturing users’ attention and enhancing the overall aesthetic appeal of a website. HTML, the backbone of web development, offers an array of tags and elements to seamlessly integrate images and other page elements into web pages. In this article, we’ll explore how HTML enables developers to elevate their web design by adding images and other essential page elements with practical examples.</description>
     </item>
   </channel>

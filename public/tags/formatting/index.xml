@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Formatting on Learner Loft</title>
-    <link>http://localhost:1313/tags/formatting/</link>
+    <link>https://learnerloft.com/tags/formatting/</link>
     <description>Recent content in Formatting on Learner Loft</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 15 Apr 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/formatting/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://learnerloft.com/tags/formatting/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HTML : Formatting Text — Beginners</title>
-      <link>http://localhost:1313/html/chap2/</link>
+      <link>https://learnerloft.com/html/chap2/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/html/chap2/</guid>
+      <guid>https://learnerloft.com/html/chap2/</guid>
       <description>HTML, the cornerstone of web development, not only structures content but also allows for the formatting of text. In this article, we’ll explore various HTML tags used for text formatting along with practical examples to demonstrate their usage.
 1. Bold Text: The &amp;lt;strong&amp;gt; tag is used to represent text with strong importance, typically rendered as bold by browsers.
 &amp;lt;p&amp;gt;This is &amp;lt;strong&amp;gt;bold&amp;lt;/strong&amp;gt; text.&amp;lt;/p&amp;gt; 2. Italic Text: The &amp;lt;em&amp;gt; tag is used to emphasize text, typically rendered as italic by browsers.</description>

@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tables on Learner Loft</title>
-    <link>http://localhost:1313/tags/tables/</link>
+    <link>https://learnerloft.com/tags/tables/</link>
     <description>Recent content in Tables on Learner Loft</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 15 Apr 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/tables/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://learnerloft.com/tags/tables/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mastering HTML Tables: A Comprehensive Guide with Examples</title>
-      <link>http://localhost:1313/html/chap3/</link>
+      <link>https://learnerloft.com/html/chap3/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/html/chap3/</guid>
+      <guid>https://learnerloft.com/html/chap3/</guid>
       <description>HTML tables have been a fundamental part of web design since the early days of the internet. They provide a structured way to display data in rows and columns, making it easier for users to interpret and analyze information. In this article, we’ll delve into the world of HTML tables, exploring their syntax, attributes, and examples to help you master this essential web design tool.
 Understanding HTML Tables: HTML tables consist of rows and columns, organized within the &amp;lt;table&amp;gt; element.</description>
     </item>
     <item>
       <title>SQL — Temporary Tables</title>
-      <link>http://localhost:1313/sql/chap16/</link>
+      <link>https://learnerloft.com/sql/chap16/</link>
       <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/sql/chap16/</guid>
+      <guid>https://learnerloft.com/sql/chap16/</guid>
       <description>Temporary tables are like a temporary workspace or desk that you set up when you need some extra space to work on a project. You can use this space to organize and manipulate data without affecting your main workspace (or database) permanently. Once you’re done with your task, you can clean up and remove the temporary workspace, and everything goes back to how it was before.
 Example: Suppose you’re working on a school project where you need to analyze data about students’ grades and attendance.</description>
     </item>

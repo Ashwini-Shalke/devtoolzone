@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Clause on Learner Loft</title>
-    <link>http://localhost:1313/tags/clause/</link>
+    <link>https://learnerloft.com/tags/clause/</link>
     <description>Recent content in Clause on Learner Loft</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 08 Apr 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/clause/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://learnerloft.com/tags/clause/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SQL Clause: Group By, Having, IN and NOT IN</title>
-      <link>http://localhost:1313/sql/chap6/</link>
+      <link>https://learnerloft.com/sql/chap6/</link>
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/sql/chap6/</guid>
+      <guid>https://learnerloft.com/sql/chap6/</guid>
       <description>Let’s say we have a table named “Games” with the following data:
 GROUP BY: Think of GROUP BY like organizing your games into groups based on their ratings. It&amp;rsquo;s like sorting them into piles of similar ratings.
 SELECT Rating, COUNT(\*) AS NumOfGames FROM Games GROUP BY Rating; This query will count the number of games for each rating group. For example, it will show how many games have a rating of 4.</description>
