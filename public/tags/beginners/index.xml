@@ -6,7 +6,7 @@
     <description>Recent content in Beginners on Learner Loft</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Aug 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://learnerloft.com/tags/beginners/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wireless Debugging on Xcode 9</title>
@@ -299,6 +299,14 @@ for number in array { ///Check if value is even if number % 2 == 0 { ///number a
       <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/sql/chap9/</guid>
       <description>Imagine you’re baking a cake, and you have a recipe written down on a piece of paper. This recipe contains all the steps you need to follow to bake the cake, from mixing the ingredients to putting it in the oven. A stored procedure in SQL is like that recipe — it’s a set of instructions stored in the database that you can execute whenever you need to perform a specific task or set of tasks.</description>
+    </item>
+    <item>
+      <title>Adding a Custom Button with Delete Functionality — Oracle APEX Interactive Grid</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap10/</link>
+      <pubDate>Fri, 09 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap10/</guid>
+      <description>To begin, let’s familiarize ourselves with the layout of the Interactive Grid toolbar. The toolbar is divided into seven distinct sections, each serving a specific function. Understanding this layout is crucial as we’ll use it to strategically assign our custom buttons. Here’s an overview of these sections:
+Step by step guide : Navigate to your Oracle APEX application and locate the page containing the Interactive Grid where you want to add the custom button.</description>
     </item>
     <item>
       <title>Class vs structure in Swift</title>

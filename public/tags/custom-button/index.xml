@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Custom Button on Learner Loft</title>
+    <link>https://learnerloft.com/tags/custom-button/</link>
+    <description>Recent content in Custom Button on Learner Loft</description>
+    <generator>Hugo -- 0.124.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://learnerloft.com/tags/custom-button/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adding a Custom Button with Delete Functionality — Oracle APEX Interactive Grid</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap10/</link>
+      <pubDate>Fri, 09 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap10/</guid>
+      <description>To begin, let’s familiarize ourselves with the layout of the Interactive Grid toolbar. The toolbar is divided into seven distinct sections, each serving a specific function. Understanding this layout is crucial as we’ll use it to strategically assign our custom buttons. Here’s an overview of these sections:
+Step by step guide : Navigate to your Oracle APEX application and locate the page containing the Interactive Grid where you want to add the custom button.</description>
+    </item>
+  </channel>
+</rss>

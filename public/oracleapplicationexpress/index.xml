@@ -6,7 +6,7 @@
     <description>Recent content in OracleApplicationExpresses on Learner Loft</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Aug 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://learnerloft.com/oracleapplicationexpress/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction to Oracle APEX</title>
@@ -86,6 +86,14 @@ Key Features: Interactive Features: Users can sort, filter, and customise the d
       <description>Oracle Application Express (APEX) includes a powerful feature called the Global Page, often referred to as Page Zero. This feature functions as a master page within your application, ensuring that certain elements are consistently rendered across multiple pages without the need for repetitive coding.
 Here’s an in-depth look at what the Global Page is and how it can be effectively used.
 Understanding the Global Page The Global Page is a unique type of page in Oracle APEX.</description>
+    </item>
+    <item>
+      <title>Adding a Custom Button with Delete Functionality — Oracle APEX Interactive Grid</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap10/</link>
+      <pubDate>Fri, 09 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap10/</guid>
+      <description>To begin, let’s familiarize ourselves with the layout of the Interactive Grid toolbar. The toolbar is divided into seven distinct sections, each serving a specific function. Understanding this layout is crucial as we’ll use it to strategically assign our custom buttons. Here’s an overview of these sections:
+Step by step guide : Navigate to your Oracle APEX application and locate the page containing the Interactive Grid where you want to add the custom button.</description>
     </item>
   </channel>
 </rss>
