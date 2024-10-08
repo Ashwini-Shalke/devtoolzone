@@ -11,7 +11,9 @@ tags = ["SQL", "Database", "Beginners","Data"]
 
 ### 1\. Introduction to SQL
 
-Imagine your room filled with video games, books, and snacks. Finding that one game you want to play? Total chaos! Now, think of SQL as your super-organized friend who knows exactly where everything is. SQL stands for **Structured Query Language** — a special way to communicate with databases, which are like digital storage rooms.
+Imagine your room filled with video games, books, and snacks. Finding that one game you want to play? Total chaos! Now, think of SQL as your super-organized friend who knows exactly where everything is. 
+
+SQL stands for **Structured Query Language** — a special way to communicate with databases, which are like digital storage rooms.
 
 ![](https://cdn-images-1.medium.com/max/2400/1*sXIJCSHozwhOUvb983v81Q.jpeg)
 
@@ -41,7 +43,9 @@ Let’s say you’re the proud owner of a massive game library. You create a tab
 
 Want to find all the games you rated 5 stars? You’d type this SQL command:
 
+```html
 SELECT \* FROM Games WHERE Rating = 5;
+```
 
 ![](https://cdn-images-1.medium.com/max/1600/1*ggCzacj391vU2edt5PtjkA.jpeg)
 
@@ -49,7 +53,9 @@ SELECT \* FROM Games WHERE Rating = 5;
 
 Imagine you’re working on a group project. You can create a database to store all your research, with a table called `Research_Papers`. You might want to find all papers from 2023:
 
+```html
 SELECT \* FROM Research\_Papers WHERE Year = 2023;
+```
 
 This helps you access all relevant info quickly!
 
