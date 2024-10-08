@@ -9,12 +9,12 @@
     <lastBuildDate>Tue, 16 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://learnerloft.com/tags/database/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>What is SQL, Data and Database with examples</title>
+      <title>What is SQL, Data, and Database? — Explained with Fun Examples!</title>
       <link>https://learnerloft.com/sql/chap1/</link>
       <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/sql/chap1/</guid>
-      <description>Imagine you have a big collection of toys scattered all over your room. You want to find your favorite toy, but searching through the mess by yourself might take a lot of time and effort. Here’s where your friend SQL comes in!
-SQL is like having a magic wand that helps you organize and find your toys quickly and easily. It stands for Structured Query Language, but you can just think of it as a special language that lets you talk to a smart toy organizer.</description>
+      <description>1. Introduction to SQL Imagine your room filled with video games, books, and snacks. Finding that one game you want to play? Total chaos! Now, think of SQL as your super-organized friend who knows exactly where everything is. SQL stands for Structured Query Language — a special way to communicate with databases, which are like digital storage rooms.
+2. What is Data? Data is any piece of information you can think of — like your favorite song’s title, a photo of your pet, or your gaming stats.</description>
     </item>
     <item>
       <title>SQL language — DDL, DML, DCL, and TCL</title>

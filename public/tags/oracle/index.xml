@@ -103,5 +103,12 @@ Step by step guide : Navigate to your Oracle APEX application and locate the pa
       <description>What is a Data Load Definition? Imagine you have a super cool app that needs to bring in lots of data from different files like Excel or CSV. A data load definition in Oracle APEX is like a set of instructions that tells your app how to do this properly. It’s like giving your app a map to follow when it gets new data.
 How Do You Add Data Loading to Your App?</description>
     </item>
+    <item>
+      <title>Exploring Data Load Definitions in Oracle APEX: A Beginner’s Guide</title>
+      <link>https://learnerloft.com/oracleapplicationexpress/chap12/</link>
+      <pubDate>Fri, 09 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://learnerloft.com/oracleapplicationexpress/chap12/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
