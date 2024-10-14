@@ -37,7 +37,8 @@ Introduction to HTML: HTML is a markup language used to structure content on th
       <link>https://learnerloft.com/sql/chap1/</link>
       <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/sql/chap1/</guid>
-      <description>1. Introduction to SQL Imagine your room filled with video games, books, and snacks. Finding that one game you want to play? Total chaos! Now, think of SQL as your super-organized friend who knows exactly where everything is. SQL stands for Structured Query Language — a special way to communicate with databases, which are like digital storage rooms.
+      <description>1. Introduction to SQL Imagine your room filled with video games, books, and snacks. Finding that one game you want to play? Total chaos! Now, think of SQL as your super-organized friend who knows exactly where everything is.
+SQL stands for Structured Query Language — a special way to communicate with databases, which are like digital storage rooms.
 2. What is Data? Data is any piece of information you can think of — like your favorite song’s title, a photo of your pet, or your gaming stats.</description>
     </item>
     <item>
@@ -67,16 +68,11 @@ In this article, we’ll delve into the intricacies of Oracle APEX’s three-tie
 Presentation Tier: At the forefront of Oracle APEX’s architecture lies the presentation tier.</description>
     </item>
     <item>
-      <title>SQL language — DDL, DML, DCL, and TCL</title>
+      <title>Unlocking the Power of SQL Commands: A Fun Guide for Students — DDL, DML, DCL, and TCL</title>
       <link>https://learnerloft.com/sql/chap2/</link>
       <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/sql/chap2/</guid>
-      <description>DDL (Data Definition Language): DDL is used to define and manage the structure of database objects. Here are some common DDL commands:
-CREATE: Used to create new database objects such as tables, views, indexes, etc.
-ALTER: Used to modify the structure of existing database objects, such as adding, modifying, or dropping columns.
-Here are few examples :-
-1.Adding a new column:
-This command adds a new column named “Email” to the “Students” table with a data type of VARCHAR(100).</description>
+      <description>Ever wondered how massive websites like YouTube or Instagram handle tons of data? SQL (Structured Query Language) is the magical tool that makes this possible. SQL helps organize, manage, and retrieve information in databases, making it easy for you to keep track of everything! Here, we’ll explore different types of SQL commands used to manage databases, known as DDL, DML, DCL, and TCL. Get ready for an adventure through the world of SQL with some fun examples along the way!</description>
     </item>
     <item>
       <title>Access specifier in Swift</title>
@@ -109,10 +105,7 @@ App Builder: Crafting Stunning Applications App Builder serves as your gateway t
       <link>https://learnerloft.com/sql/chap3/</link>
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/sql/chap3/</guid>
-      <description>Think of SQL queries as requests you make to find specific snacks in your snack box. Just like asking your friend to find your favorite candy in the snack box, SQL queries help you find specific information from a database.
-Example:
-Let’s say you have a table that lists all your favorite snacks and their quantities in your snack box, like this:
-Now, using SQL queries, you can ask questions to find out specific information from this table.</description>
+      <description>Imagine this: You have a gigantic snack box filled with all kinds of snacks — chips, cookies, chocolates, and more. But finding exactly what you want is tough, especially with so many options mixed up together! SQL (Structured Query Language) is like a personal assistant for organizing and finding things in your snack box. Just like you would ask your friend to grab a specific snack for you, you can ask SQL to find, add, change, or remove data in a database.</description>
     </item>
     <item>
       <title>Final in swift for Begineers</title>
