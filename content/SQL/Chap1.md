@@ -35,6 +35,7 @@ Think of a **database** as a giant digital shelf where you keep all your impor
 
 ![](https://cdn-images-1.medium.com/max/1600/1*4fWemOscVLKL0TflZybkBw.jpeg)
 
+
 ### Fun Real-World Examples
 
 #### Example 1: Organizing Your Game Collect

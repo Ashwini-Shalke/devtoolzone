@@ -25,7 +25,7 @@ In the world of databases, SQL is essential. Databases are structured collection
 
 Now, let’s break down each command using the snack box analogy to make things fun and easy to understand.
 
-  
+---
 
 ### SELECT Query: Picking Your Favorite Snacks
 
