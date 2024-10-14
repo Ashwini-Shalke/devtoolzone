@@ -44,7 +44,7 @@ Let’s say you’re the proud owner of a massive game library. You create a tab
 Want to find all the games you rated 5 stars? You’d type this SQL command:
 
 ```html
-SELECT \* FROM Games WHERE Rating = 5;
+SELECT * FROM Games WHERE Rating = 5;
 ```
 
 ![](https://cdn-images-1.medium.com/max/1600/1*ggCzacj391vU2edt5PtjkA.jpeg)
@@ -54,7 +54,7 @@ SELECT \* FROM Games WHERE Rating = 5;
 Imagine you’re working on a group project. You can create a database to store all your research, with a table called `Research_Papers`. You might want to find all papers from 2023:
 
 ```html
-SELECT \* FROM Research\_Papers WHERE Year = 2023;
+SELECT * FROM Research_Papers WHERE Year = 2023;
 ```
 
 This helps you access all relevant info quickly!

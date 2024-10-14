@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Unlocking the Power of SQL Commands: A Fun Guide for Students — DDL, DML, DCL, and TCL | Learner Loft</title>
+<title>Unlocking the Power of SQL Commands:— DDL, DML, DCL, and TCL | Learner Loft</title>
 <meta name="keywords" content="SQL, Database, Beginners, DDL, DCL, DML">
 <meta name="description" content="Ever wondered how massive websites like YouTube or Instagram handle tons of data? SQL (Structured Query Language) is the magical tool that makes this possible. SQL helps organize, manage, and retrieve information in databases, making it easy for you to keep track of everything! Here, we’ll explore different types of SQL commands used to manage databases, known as DDL, DML, DCL, and TCL. Get ready for an adventure through the world of SQL with some fun examples along the way!">
 <meta name="author" content="Ashwini Shalke">
@@ -134,7 +134,7 @@
   <header class="post-header">
     <div class="breadcrumbs"><a href="https://learnerloft.com/">Home</a>&nbsp;»&nbsp;<a href="https://learnerloft.com/sql/">SQLs</a></div>
     <h1 class="post-title entry-hint-parent">
-      Unlocking the Power of SQL Commands: A Fun Guide for Students — DDL, DML, DCL, and TCL
+      Unlocking the Power of SQL Commands:— DDL, DML, DCL, and TCL
     </h1>
     <div class="post-meta"><span title='2024-04-05 00:00:00 +0000 UTC'>April 5, 2024</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Ashwini Shalke
 
@@ -152,44 +152,14 @@
                     <a href="#2-data-definition-languageddl" aria-label="2. Data Definition Language (DDL)">2. Data Definition Language (DDL)</a><ul>
                         
                 <li>
-                    <a href="#creating-tables-withcreate" aria-label="Creating Tables with CREATE">Creating Tables with CREATE</a></li>
-                <li>
-                    <a href="#modifying-tables-withalter" aria-label="Modifying Tables with ALTER">Modifying Tables with ALTER</a></li>
-                <li>
-                    <a href="#deleting-tables-withdrop" aria-label="Deleting Tables with DROP">Deleting Tables with DROP</a></li>
-                <li>
-                    <a href="#truncating-tables-withtruncate" aria-label="Truncating Tables with TRUNCATE">Truncating Tables with TRUNCATE</a></li></ul>
+                    <a href="#_explanation_" aria-label="Explanation: ">Explanation: </a></li></ul>
                 </li>
                 <li>
-                    <a href="#3-data-manipulation-languagedml" aria-label="3. Data Manipulation Language (DML)">3. Data Manipulation Language (DML)</a><ul>
-                        
+                    <a href="#3-data-manipulation-languagedml" aria-label="3. Data Manipulation Language (DML)">3. Data Manipulation Language (DML)</a></li>
                 <li>
-                    <a href="#adding-data-withinsert" aria-label="Adding Data with INSERT">Adding Data with INSERT</a></li>
+                    <a href="#4-data-control-languagedcl" aria-label="4. Data Control Language (DCL)">4. Data Control Language (DCL)</a></li>
                 <li>
-                    <a href="#updating-data-withupdate" aria-label="Updating Data with UPDATE">Updating Data with UPDATE</a></li>
-                <li>
-                    <a href="#deleting-data-withdelete" aria-label="Deleting Data with DELETE">Deleting Data with DELETE</a></li>
-                <li>
-                    <a href="#retrieving-data-withselect" aria-label="Retrieving Data with SELECT">Retrieving Data with SELECT</a></li></ul>
-                </li>
-                <li>
-                    <a href="#4-data-control-languagedcl" aria-label="4. Data Control Language (DCL)">4. Data Control Language (DCL)</a><ul>
-                        
-                <li>
-                    <a href="#granting-access-withgrant" aria-label="Granting Access with GRANT">Granting Access with GRANT</a></li>
-                <li>
-                    <a href="#revoking-access-withrevoke" aria-label="Revoking Access with REVOKE">Revoking Access with REVOKE</a></li></ul>
-                </li>
-                <li>
-                    <a href="#5-transaction-control-languagetcl" aria-label="5. Transaction Control Language (TCL)">5. Transaction Control Language (TCL)</a><ul>
-                        
-                <li>
-                    <a href="#saving-changes-withcommit" aria-label="Saving Changes with COMMIT">Saving Changes with COMMIT</a></li>
-                <li>
-                    <a href="#undoing-changes-withrollback" aria-label="Undoing Changes with ROLLBACK">Undoing Changes with ROLLBACK</a></li>
-                <li>
-                    <a href="#creating-save-points-withsavepoint" aria-label="Creating Save Points with SAVEPOINT">Creating Save Points with SAVEPOINT</a></li></ul>
-                </li>
+                    <a href="#5-transaction-control-languagetcl" aria-label="5. Transaction Control Language (TCL)">5. Transaction Control Language (TCL)</a></li>
                 <li>
                     <a href="#6-real-world-applications-ofsql" aria-label="6. Real-World Applications of SQL">6. Real-World Applications of SQL</a></li>
                 <li>
@@ -213,70 +183,97 @@
 </ul>
 <h3 id="2-data-definition-languageddl">2. Data Definition Language (DDL)<a hidden class="anchor" aria-hidden="true" href="#2-data-definition-languageddl">#</a></h3>
 <p>DDL commands are like the blueprints for your database. They help you set up and adjust the structure of your data storage.</p>
-<h4 id="creating-tables-withcreate">Creating Tables with <code>CREATE</code><a hidden class="anchor" aria-hidden="true" href="#creating-tables-withcreate">#</a></h4>
+<ul>
+<li><strong>Creating Tables with <code>CREATE</code></strong></li>
+</ul>
 <p>Let’s say you’re building a database to manage a virtual zoo. You’ll need tables for animals, staff, and food supplies. Here’s how to create a table for your animals:</p>
-<p>CREATE TABLE Animals (
-ID INT PRIMARY KEY,
-Name VARCHAR(50),
-Species VARCHAR(50),
-Age INT,
-Habitat VARCHAR(100)
-);</p>
-<p><em>Explanation:</em> You’ve just created a table called “Animals” with columns for ID, Name, Species, Age, and Habitat. This structure helps organize information about each animal in your virtual zoo.</p>
-<h4 id="modifying-tables-withalter">Modifying Tables with <code>ALTER</code><a hidden class="anchor" aria-hidden="true" href="#modifying-tables-withalter">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>CREATE TABLE Animals (
+</span></span><span style="display:flex;"><span>    ID INT PRIMARY KEY,
+</span></span><span style="display:flex;"><span>    Name VARCHAR(50),
+</span></span><span style="display:flex;"><span>    Species VARCHAR(50),
+</span></span><span style="display:flex;"><span>    Age INT,
+</span></span><span style="display:flex;"><span>    Habitat VARCHAR(100)
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><h4 id="_explanation_"><em>Explanation:</em> <a hidden class="anchor" aria-hidden="true" href="#_explanation_">#</a></h4>
+<p>You’ve just created a table called “Animals” with columns for ID, Name, Species, Age, and Habitat. This structure helps organize information about each animal in your virtual zoo.</p>
+<ul>
+<li><strong>Modifying Tables with <code>ALTER</code></strong></li>
+</ul>
 <p>Now that you have your Animals table, what if you forgot to add a column for their diet? No problem — just alter the table:</p>
-<p>ALTER TABLE Animals
-ADD Diet VARCHAR(50);</p>
-<p>This command adds a new column named “Diet” where you can store each animal’s diet type.</p>
-<h4 id="deleting-tables-withdrop">Deleting Tables with <code>DROP</code><a hidden class="anchor" aria-hidden="true" href="#deleting-tables-withdrop">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>ALTER TABLE Animals
+</span></span><span style="display:flex;"><span>ADD Diet VARCHAR(50);
+</span></span></code></pre></div><p>This command adds a new column named “Diet” where you can store each animal’s diet type.</p>
+<ul>
+<li><strong>Deleting Tables with <code>DROP</code></strong></li>
+</ul>
 <p>If you decide to remove the entire Animals table, you can use the <code>DROP</code> command. But be careful! This permanently deletes the table:</p>
-<p>DROP TABLE Animals;</p>
-<h4 id="truncating-tables-withtruncate">Truncating Tables with <code>TRUNCATE</code><a hidden class="anchor" aria-hidden="true" href="#truncating-tables-withtruncate">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>DROP TABLE Animals;
+</span></span></code></pre></div><ul>
+<li><strong>Truncating Tables with <code>TRUNCATE</code></strong></li>
+</ul>
 <p>Want to clear all the animals from your table without deleting the table itself? Use <code>TRUNCATE</code>:</p>
 <p>TRUNCATE TABLE Animals;</p>
 <p><em>Example:</em> It’s like wiping your animal list clean but keeping the structure of the list.</p>
 <h3 id="3-data-manipulation-languagedml">3. Data Manipulation Language (DML)<a hidden class="anchor" aria-hidden="true" href="#3-data-manipulation-languagedml">#</a></h3>
 <p>While DDL defines the structure, <strong>DML</strong> works with the actual data inside your tables.</p>
-<h4 id="adding-data-withinsert">Adding Data with <code>INSERT</code><a hidden class="anchor" aria-hidden="true" href="#adding-data-withinsert">#</a></h4>
+<ul>
+<li><strong>Adding Data with <code>INSERT</code></strong></li>
+</ul>
 <p>Let’s add some animals to our zoo:</p>
-<p>INSERT INTO Animals (ID, Name, Species, Age, Habitat, Diet)
-VALUES (1, &lsquo;Leo&rsquo;, &lsquo;Lion&rsquo;, 5, &lsquo;Savannah&rsquo;, &lsquo;Carnivore&rsquo;);</p>
-<p>This command adds Leo the Lion to the Animals table.</p>
-<h4 id="updating-data-withupdate">Updating Data with <code>UPDATE</code><a hidden class="anchor" aria-hidden="true" href="#updating-data-withupdate">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>INSERT INTO Animals (ID, Name, Species, Age, Habitat, Diet)
+</span></span><span style="display:flex;"><span>VALUES (1, &#39;Leo&#39;, &#39;Lion&#39;, 5, &#39;Savannah&#39;, &#39;Carnivore&#39;);
+</span></span></code></pre></div><p>This command adds Leo the Lion to the Animals table.</p>
+<ul>
+<li><strong>Updating Data with <code>UPDATE</code></strong></li>
+</ul>
 <p>Maybe Leo recently celebrated a birthday and is now 6 years old. Update his age like this:</p>
-<p>UPDATE Animals
-SET Age = 6
-WHERE Name = &lsquo;Leo&rsquo;;</p>
-<h4 id="deleting-data-withdelete">Deleting Data with <code>DELETE</code><a hidden class="anchor" aria-hidden="true" href="#deleting-data-withdelete">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>UPDATE Animals
+</span></span><span style="display:flex;"><span>SET Age = 6
+</span></span><span style="display:flex;"><span>WHERE Name = &#39;Leo&#39;;
+</span></span></code></pre></div><ul>
+<li><strong>Deleting Data with <code>DELETE</code></strong></li>
+</ul>
 <p>If Leo moves to another zoo, you can remove him from the table:</p>
-<p>DELETE FROM Animals
-WHERE Name = &lsquo;Leo&rsquo;;</p>
-<h4 id="retrieving-data-withselect">Retrieving Data with <code>SELECT</code><a hidden class="anchor" aria-hidden="true" href="#retrieving-data-withselect">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>DELETE FROM Animals
+</span></span><span style="display:flex;"><span>WHERE Name = &#39;Leo&#39;;
+</span></span></code></pre></div><ul>
+<li><strong>Retrieving Data with <code>SELECT</code></strong></li>
+</ul>
 <p>Want to see all the carnivores in your zoo? Use the <code>SELECT</code> command:</p>
-<p>SELECT * FROM Animals
-WHERE Diet = &lsquo;Carnivore&rsquo;;</p>
-<h3 id="4-data-control-languagedcl">4. Data Control Language (DCL)<a hidden class="anchor" aria-hidden="true" href="#4-data-control-languagedcl">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>SELECT \* FROM Animals
+</span></span><span style="display:flex;"><span>WHERE Diet = &#39;Carnivore&#39;;
+</span></span></code></pre></div><h3 id="4-data-control-languagedcl">4. Data Control Language (DCL)<a hidden class="anchor" aria-hidden="true" href="#4-data-control-languagedcl">#</a></h3>
 <p>DCL commands control who can access the data within the database.</p>
-<h4 id="granting-access-withgrant">Granting Access with <code>GRANT</code><a hidden class="anchor" aria-hidden="true" href="#granting-access-withgrant">#</a></h4>
+<ul>
+<li><strong>Granting Access with <code>GRANT</code></strong></li>
+</ul>
 <p>Let’s say you have a zookeeper who needs access to update animal ages but shouldn’t be able to delete records. You can grant them specific permissions:</p>
-<p>GRANT UPDATE ON Animals TO Zookeeper;</p>
-<h4 id="revoking-access-withrevoke">Revoking Access with <code>REVOKE</code><a hidden class="anchor" aria-hidden="true" href="#revoking-access-withrevoke">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>GRANT UPDATE ON Animals TO Zookeeper;
+</span></span></code></pre></div><ul>
+<li><strong>Revoking Access with <code>REVOKE</code></strong></li>
+</ul>
 <p>If the zookeeper no longer needs that access, revoke it:</p>
 <p>REVOKE UPDATE ON Animals FROM Zookeeper;</p>
 <h3 id="5-transaction-control-languagetcl">5. Transaction Control Language (TCL)<a hidden class="anchor" aria-hidden="true" href="#5-transaction-control-languagetcl">#</a></h3>
 <p>TCL helps manage transactions to ensure data integrity.</p>
-<h4 id="saving-changes-withcommit">Saving Changes with <code>COMMIT</code><a hidden class="anchor" aria-hidden="true" href="#saving-changes-withcommit">#</a></h4>
+<ul>
+<li><strong>Saving Changes with <code>COMMIT</code></strong></li>
+</ul>
 <p>If you’ve made multiple changes and want to save them, use <code>COMMIT</code>:</p>
-<p>COMMIT;</p>
-<h4 id="undoing-changes-withrollback">Undoing Changes with <code>ROLLBACK</code><a hidden class="anchor" aria-hidden="true" href="#undoing-changes-withrollback">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>COMMIT;
+</span></span></code></pre></div><ul>
+<li><strong>Undoing Changes with <code>ROLLBACK</code></strong></li>
+</ul>
 <p>If you realize you’ve made a mistake, use <code>ROLLBACK</code> to undo recent changes</p>
-<p>ROLLBACK;</p>
-<h4 id="creating-save-points-withsavepoint">Creating Save Points with <code>SAVEPOINT</code><a hidden class="anchor" aria-hidden="true" href="#creating-save-points-withsavepoint">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>ROLLBACK;
+</span></span></code></pre></div><ul>
+<li><strong>Creating Save Points with <code>SAVEPOINT</code></strong></li>
+</ul>
 <p>A <code>SAVEPOINT</code> lets you set a point in a transaction to which you can later return:</p>
-<p>SAVEPOINT BeforeDelete;
-DELETE FROM Animals WHERE Species = &lsquo;Lion&rsquo;;
-ROLLBACK TO BeforeDelete;</p>
-<p>This will undo only the changes made after the save point.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>SAVEPOINT BeforeDelete;
+</span></span><span style="display:flex;"><span>DELETE FROM Animals WHERE Species = &#39;Lion&#39;;
+</span></span><span style="display:flex;"><span>ROLLBACK TO BeforeDelete;
+</span></span></code></pre></div><p>This will undo only the changes made after the save point.</p>
 <h3 id="6-real-world-applications-ofsql">6. Real-World Applications of SQL<a hidden class="anchor" aria-hidden="true" href="#6-real-world-applications-ofsql">#</a></h3>
 <p>SQL is not just about fun commands; it has real-world applications everywhere!</p>
 <ul>
@@ -316,8 +313,8 @@ ROLLBACK TO BeforeDelete;</p>
 
 <ul class="share-buttons">
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Unlocking the Power of SQL Commands: A Fun Guide for Students — DDL, DML, DCL, and TCL on x"
-            href="https://x.com/intent/tweet/?text=Unlocking%20the%20Power%20of%20SQL%20Commands%3a%20A%20Fun%20Guide%20for%c2%a0Students%20%e2%80%94%20DDL%2c%20DML%2c%20DCL%2c%20and%20TCL&amp;url=https%3a%2f%2flearnerloft.com%2fsql%2fchap2%2f&amp;hashtags=SQL%2cDatabase%2cBeginners%2cDDL%2cDCL%2cDML">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Unlocking the Power of SQL Commands:— DDL, DML, DCL, and TCL on x"
+            href="https://x.com/intent/tweet/?text=Unlocking%20the%20Power%20of%20SQL%20Commands%3a%e2%80%94%20DDL%2c%20DML%2c%20DCL%2c%20and%20TCL&amp;url=https%3a%2f%2flearnerloft.com%2fsql%2fchap2%2f&amp;hashtags=SQL%2cDatabase%2cBeginners%2cDDL%2cDCL%2cDML">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
@@ -325,8 +322,8 @@ ROLLBACK TO BeforeDelete;</p>
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Unlocking the Power of SQL Commands: A Fun Guide for Students — DDL, DML, DCL, and TCL on linkedin"
-            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2flearnerloft.com%2fsql%2fchap2%2f&amp;title=Unlocking%20the%20Power%20of%20SQL%20Commands%3a%20A%20Fun%20Guide%20for%c2%a0Students%20%e2%80%94%20DDL%2c%20DML%2c%20DCL%2c%20and%20TCL&amp;summary=Unlocking%20the%20Power%20of%20SQL%20Commands%3a%20A%20Fun%20Guide%20for%c2%a0Students%20%e2%80%94%20DDL%2c%20DML%2c%20DCL%2c%20and%20TCL&amp;source=https%3a%2f%2flearnerloft.com%2fsql%2fchap2%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Unlocking the Power of SQL Commands:— DDL, DML, DCL, and TCL on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2flearnerloft.com%2fsql%2fchap2%2f&amp;title=Unlocking%20the%20Power%20of%20SQL%20Commands%3a%e2%80%94%20DDL%2c%20DML%2c%20DCL%2c%20and%20TCL&amp;summary=Unlocking%20the%20Power%20of%20SQL%20Commands%3a%e2%80%94%20DDL%2c%20DML%2c%20DCL%2c%20and%20TCL&amp;source=https%3a%2f%2flearnerloft.com%2fsql%2fchap2%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
@@ -334,8 +331,8 @@ ROLLBACK TO BeforeDelete;</p>
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Unlocking the Power of SQL Commands: A Fun Guide for Students — DDL, DML, DCL, and TCL on reddit"
-            href="https://reddit.com/submit?url=https%3a%2f%2flearnerloft.com%2fsql%2fchap2%2f&title=Unlocking%20the%20Power%20of%20SQL%20Commands%3a%20A%20Fun%20Guide%20for%c2%a0Students%20%e2%80%94%20DDL%2c%20DML%2c%20DCL%2c%20and%20TCL">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Unlocking the Power of SQL Commands:— DDL, DML, DCL, and TCL on reddit"
+            href="https://reddit.com/submit?url=https%3a%2f%2flearnerloft.com%2fsql%2fchap2%2f&title=Unlocking%20the%20Power%20of%20SQL%20Commands%3a%e2%80%94%20DDL%2c%20DML%2c%20DCL%2c%20and%20TCL">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
@@ -343,7 +340,7 @@ ROLLBACK TO BeforeDelete;</p>
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Unlocking the Power of SQL Commands: A Fun Guide for Students — DDL, DML, DCL, and TCL on facebook"
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Unlocking the Power of SQL Commands:— DDL, DML, DCL, and TCL on facebook"
             href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2flearnerloft.com%2fsql%2fchap2%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
@@ -352,8 +349,8 @@ ROLLBACK TO BeforeDelete;</p>
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Unlocking the Power of SQL Commands: A Fun Guide for Students — DDL, DML, DCL, and TCL on whatsapp"
-            href="https://api.whatsapp.com/send?text=Unlocking%20the%20Power%20of%20SQL%20Commands%3a%20A%20Fun%20Guide%20for%c2%a0Students%20%e2%80%94%20DDL%2c%20DML%2c%20DCL%2c%20and%20TCL%20-%20https%3a%2f%2flearnerloft.com%2fsql%2fchap2%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Unlocking the Power of SQL Commands:— DDL, DML, DCL, and TCL on whatsapp"
+            href="https://api.whatsapp.com/send?text=Unlocking%20the%20Power%20of%20SQL%20Commands%3a%e2%80%94%20DDL%2c%20DML%2c%20DCL%2c%20and%20TCL%20-%20https%3a%2f%2flearnerloft.com%2fsql%2fchap2%2f">
             <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
@@ -361,8 +358,8 @@ ROLLBACK TO BeforeDelete;</p>
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Unlocking the Power of SQL Commands: A Fun Guide for Students — DDL, DML, DCL, and TCL on telegram"
-            href="https://telegram.me/share/url?text=Unlocking%20the%20Power%20of%20SQL%20Commands%3a%20A%20Fun%20Guide%20for%c2%a0Students%20%e2%80%94%20DDL%2c%20DML%2c%20DCL%2c%20and%20TCL&amp;url=https%3a%2f%2flearnerloft.com%2fsql%2fchap2%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Unlocking the Power of SQL Commands:— DDL, DML, DCL, and TCL on telegram"
+            href="https://telegram.me/share/url?text=Unlocking%20the%20Power%20of%20SQL%20Commands%3a%e2%80%94%20DDL%2c%20DML%2c%20DCL%2c%20and%20TCL&amp;url=https%3a%2f%2flearnerloft.com%2fsql%2fchap2%2f">
             <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
                 <path
                     d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
@@ -370,8 +367,8 @@ ROLLBACK TO BeforeDelete;</p>
         </a>
     </li>
     <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Unlocking the Power of SQL Commands: A Fun Guide for Students — DDL, DML, DCL, and TCL on ycombinator"
-            href="https://news.ycombinator.com/submitlink?t=Unlocking%20the%20Power%20of%20SQL%20Commands%3a%20A%20Fun%20Guide%20for%c2%a0Students%20%e2%80%94%20DDL%2c%20DML%2c%20DCL%2c%20and%20TCL&u=https%3a%2f%2flearnerloft.com%2fsql%2fchap2%2f">
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Unlocking the Power of SQL Commands:— DDL, DML, DCL, and TCL on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=Unlocking%20the%20Power%20of%20SQL%20Commands%3a%e2%80%94%20DDL%2c%20DML%2c%20DCL%2c%20and%20TCL&u=https%3a%2f%2flearnerloft.com%2fsql%2fchap2%2f">
             <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
                 xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
                 <path
@@ -408,7 +405,7 @@ ROLLBACK TO BeforeDelete;</p>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unlocking the Power of SQL Commands: A Fun Guide for Students — DDL, DML, DCL, and TCL</title>
+    <title>Unlocking the Power of SQL Commands:— DDL, DML, DCL, and TCL</title>
     <link rel="stylesheet" href="/css/jsonFormatter.css">
     <script src="/js/jsonFormatter.js" defer></script>
 </head>

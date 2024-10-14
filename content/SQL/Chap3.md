@@ -33,7 +33,9 @@ The `SELECT` query is the most basic and commonly used SQL command. Think of i
 
 Let’s say you have a table named `Snacks` listing all your favorite treats, their types, and how many you have. To see everything, you can use the `SELECT` command like this:
 
-SELECT \* FROM Snacks;
+```html
+SELECT * FROM Snacks;
+```
 
 In plain language, this command tells SQL, “Show me everything in my snack box.” The `*` symbol means _everything_, so the output will include all snacks and their quantities.
 
@@ -57,7 +59,9 @@ Imagine your school has a database of all students and you need to list everyone
 
 The `WHERE` clause is like giving SQL a bit more guidance about what you’re looking for. For example, maybe you’re craving something salty — you can use `WHERE` to filter out the snacks by type.
 
-SELECT \* FROM Snacks WHERE Type = 'Salty';
+```html
+SELECT * FROM Snacks WHERE Type = 'Salty';
+```
 
 This command tells SQL, “Show me only the salty snacks.” Now SQL goes through the snack box and finds just the salty treats for you.
 
@@ -67,7 +71,9 @@ This command tells SQL, “Show me only the salty snacks.” Now SQL goes throug
 
 With `WHERE`, you can be as specific as you like. Maybe you want the salty snacks that are also fewer than 5 in quantity. Here’s how you’d write that:
 
-SELECT \* FROM Snacks WHERE Type = 'Salty' AND Quantity < 5;
+```html
+SELECT * FROM Snacks WHERE Type = 'Salty' AND Quantity < 5;
+```
 
 #### Fun Twist:
 
@@ -77,8 +83,10 @@ Imagine you’re looking for only chocolate-flavored snacks with more than 8 pie
 
 The `INSERT` command is like adding something new to your snack box. If you went shopping and picked up some gummy bears, you’d use `INSERT` to add them to your list.
 
+```html
 INSERT INTO Snacks (Snack, Quantity, Type) VALUES 
 ('Gummy Bears', 7, 'Sweet');
+```
 
 This command tells SQL to add “Gummy Bears” with a quantity of 7 to the snack list.
 
@@ -100,7 +108,9 @@ Think of a school library adding a new book to its database. They’d use a comm
 
 The `UPDATE` command is for when you need to change something about an item already in the box. Maybe you ate a few chips, so you need to adjust the quantity.
 
+```html
 UPDATE Snacks SET Quantity = 2 WHERE Snack = 'Chips';
+```
 
 This tells SQL, “Change the quantity of chips to 2.” With `UPDATE`, you can modify any information, whether it’s the type, name, or quantity.
 
@@ -120,7 +130,9 @@ A shop might use `UPDATE` to change the prices of items in their inventory dat
 
 The `DELETE` command is like asking your friend to throw out something you don’t want anymore. Maybe you’re over cookies and want to clear them from the snack box.
 
+```html
 DELETE FROM Snacks WHERE Snack = 'Cookies';
+```
 
 This tells SQL, “Remove cookies from the list.” The snack box is now one item lighter.
 

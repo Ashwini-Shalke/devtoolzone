@@ -212,8 +212,8 @@
 <h3 id="1-select-query-picking-your-favoritesnacks">1. SELECT Query: Picking Your Favorite Snacks<a hidden class="anchor" aria-hidden="true" href="#1-select-query-picking-your-favoritesnacks">#</a></h3>
 <p>The <code>SELECT</code> query is the most basic and commonly used SQL command. Think of it as a way to see all the snacks in your box.</p>
 <p>Let’s say you have a table named <code>Snacks</code> listing all your favorite treats, their types, and how many you have. To see everything, you can use the <code>SELECT</code> command like this:</p>
-<p>SELECT * FROM Snacks;</p>
-<p>In plain language, this command tells SQL, “Show me everything in my snack box.” The <code>*</code> symbol means <em>everything</em>, so the output will include all snacks and their quantities.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>SELECT * FROM Snacks;
+</span></span></code></pre></div><p>In plain language, this command tells SQL, “Show me everything in my snack box.” The <code>*</code> symbol means <em>everything</em>, so the output will include all snacks and their quantities.</p>
 <p>Imagine your friend lays out each snack in front of you, along with the details about it. This is a lot easier than looking through the box yourself!</p>
 <h4 id="example-tablesnacks">Example Table: Snacks<a hidden class="anchor" aria-hidden="true" href="#example-tablesnacks">#</a></h4>
 <p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*MQ73_FvMTbez1SiA3pLliw.png" alt=""  />
@@ -226,20 +226,20 @@
 <p> SQL can display a list just like you’d see laid out on a table.</p>
 <h3 id="2-where-clause-finding-specificsnacks">2. WHERE Clause: Finding Specific Snacks<a hidden class="anchor" aria-hidden="true" href="#2-where-clause-finding-specificsnacks">#</a></h3>
 <p>The <code>WHERE</code> clause is like giving SQL a bit more guidance about what you’re looking for. For example, maybe you’re craving something salty — you can use <code>WHERE</code> to filter out the snacks by type.</p>
-<p>SELECT * FROM Snacks WHERE Type = &lsquo;Salty&rsquo;;</p>
-<p>This command tells SQL, “Show me only the salty snacks.” Now SQL goes through the snack box and finds just the salty treats for you.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>SELECT * FROM Snacks WHERE Type = &#39;Salty&#39;;
+</span></span></code></pre></div><p>This command tells SQL, “Show me only the salty snacks.” Now SQL goes through the snack box and finds just the salty treats for you.</p>
 <h4 id="example-table-salty-snacksonly">Example Table: Salty Snacks Only<a hidden class="anchor" aria-hidden="true" href="#example-table-salty-snacksonly">#</a></h4>
 <p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*idUkY05OiD_LF5HvYmvnKw.png" alt=""  />
 </p>
 <p>With <code>WHERE</code>, you can be as specific as you like. Maybe you want the salty snacks that are also fewer than 5 in quantity. Here’s how you’d write that:</p>
-<p>SELECT * FROM Snacks WHERE Type = &lsquo;Salty&rsquo; AND Quantity &lt; 5;</p>
-<h4 id="fun-twist">Fun Twist:<a hidden class="anchor" aria-hidden="true" href="#fun-twist">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>SELECT * FROM Snacks WHERE Type = &#39;Salty&#39; AND Quantity &lt; <span style="color:#f92672">5</span><span style="color:#960050;background-color:#1e0010">;</span>
+</span></span></code></pre></div><h4 id="fun-twist">Fun Twist:<a hidden class="anchor" aria-hidden="true" href="#fun-twist">#</a></h4>
 <p>Imagine you’re looking for only chocolate-flavored snacks with more than 8 pieces. You’d use <code>WHERE</code> to filter by <code>Snack = 'Chocolate' AND Quantity &gt; 8</code>.</p>
 <h3 id="3-insert-query-adding-newsnacks">3. INSERT Query: Adding New Snacks<a hidden class="anchor" aria-hidden="true" href="#3-insert-query-adding-newsnacks">#</a></h3>
 <p>The <code>INSERT</code> command is like adding something new to your snack box. If you went shopping and picked up some gummy bears, you’d use <code>INSERT</code> to add them to your list.</p>
-<p>INSERT INTO Snacks (Snack, Quantity, Type) VALUES
-(&lsquo;Gummy Bears&rsquo;, 7, &lsquo;Sweet&rsquo;);</p>
-<p>This command tells SQL to add “Gummy Bears” with a quantity of 7 to the snack list.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>INSERT INTO Snacks (Snack, Quantity, Type) VALUES 
+</span></span><span style="display:flex;"><span>(&#39;Gummy Bears&#39;, 7, &#39;Sweet&#39;);
+</span></span></code></pre></div><p>This command tells SQL to add “Gummy Bears” with a quantity of 7 to the snack list.</p>
 <h4 id="example-table-afterinsert">Example Table: After INSERT<a hidden class="anchor" aria-hidden="true" href="#example-table-afterinsert">#</a></h4>
 <p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*X74Ul1oHsEeXOtmvVA4yHQ.png" alt=""  />
 </p>
@@ -250,8 +250,8 @@
 </p>
 <h3 id="4-update-query-changing-snack-quantities">4. UPDATE Query: Changing Snack Quantities<a hidden class="anchor" aria-hidden="true" href="#4-update-query-changing-snack-quantities">#</a></h3>
 <p>The <code>UPDATE</code> command is for when you need to change something about an item already in the box. Maybe you ate a few chips, so you need to adjust the quantity.</p>
-<p>UPDATE Snacks SET Quantity = 2 WHERE Snack = &lsquo;Chips&rsquo;;</p>
-<p>This tells SQL, “Change the quantity of chips to 2.” With <code>UPDATE</code>, you can modify any information, whether it’s the type, name, or quantity.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>UPDATE Snacks SET Quantity = 2 WHERE Snack = &#39;Chips&#39;;
+</span></span></code></pre></div><p>This tells SQL, “Change the quantity of chips to 2.” With <code>UPDATE</code>, you can modify any information, whether it’s the type, name, or quantity.</p>
 <h4 id="example-table-afterupdate">Example Table: After UPDATE<a hidden class="anchor" aria-hidden="true" href="#example-table-afterupdate">#</a></h4>
 <p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*zP6hi56u3tO6wJcLh-FrOA.png" alt=""  />
 </p>
@@ -261,8 +261,8 @@
 <h4 id="heading"><a hidden class="anchor" aria-hidden="true" href="#heading">#</a></h4>
 <h3 id="5-delete-query-removing-snacks-from-thebox">5. DELETE Query: Removing Snacks from the Box<a hidden class="anchor" aria-hidden="true" href="#5-delete-query-removing-snacks-from-thebox">#</a></h3>
 <p>The <code>DELETE</code> command is like asking your friend to throw out something you don’t want anymore. Maybe you’re over cookies and want to clear them from the snack box.</p>
-<p>DELETE FROM Snacks WHERE Snack = &lsquo;Cookies&rsquo;;</p>
-<p>This tells SQL, “Remove cookies from the list.” The snack box is now one item lighter.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>DELETE FROM Snacks WHERE Snack = &#39;Cookies&#39;;
+</span></span></code></pre></div><p>This tells SQL, “Remove cookies from the list.” The snack box is now one item lighter.</p>
 <h4 id="example-table-afterdelete">Example Table: After DELETE<a hidden class="anchor" aria-hidden="true" href="#example-table-afterdelete">#</a></h4>
 <p><img loading="lazy" src="https://cdn-images-1.medium.com/max/1600/1*9xHOMJ078HMQgRpaxpxuTg.png" alt=""  />
 </p>
@@ -287,7 +287,7 @@
   <a class="prev" href="https://learnerloft.com/sql/chap2/">
     <span class="title">« Prev</span>
     <br>
-    <span>Unlocking the Power of SQL Commands: A Fun Guide for Students — DDL, DML, DCL, and TCL</span>
+    <span>Unlocking the Power of SQL Commands:— DDL, DML, DCL, and TCL</span>
   </a>
   <a class="next" href="https://learnerloft.com/sql/chap4/">
     <span class="title">Next »</span>
