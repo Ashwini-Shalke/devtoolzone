@@ -1,5 +1,5 @@
 +++
-title = 'Understanding HTML: Structural Tags — Beginners'
+title = 'Understanding HTML: The Backbone of the Web'
 date = 2024-04-15
 draft = false
 author = "Ashwini Shalke"
@@ -74,7 +74,6 @@ The `<head>` section holds meta-information about the document. It includes de
 
 #### Common Elements in the `<head>` Section
 
----
 
 *   `**<title>**`: Defines the title of the webpage that appears in the browser’s title bar or tab. This is the name you see when you hover over a tab in your browser.
 
@@ -83,7 +82,6 @@ The `<head>` section holds meta-information about the document. It includes de
 <title>About My Website</title> 
 </head>
 ```
----
 
 *   `**<meta>**`: Provides metadata about the webpage, such as character set and description.
 
@@ -198,6 +196,7 @@ The `<section>` tag divides the page into different sections. You can think of
 #### The `<article>` Tag
 
 The `<article>` tag represents a self-contained piece of content, like a blog post or news article. It can be distributed and read independently.
+
 ---
 #### The `<footer>` Tag
 
@@ -248,7 +247,7 @@ Let’s look at how all these tags work together to create a simple webpage layo
 </body>
 </html>
 ```
----
+
 
 ### Conclusion
 
