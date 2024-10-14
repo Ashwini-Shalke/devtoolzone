@@ -27,7 +27,7 @@ Now, let’s break down each command using the snack box analogy to make things 
 
   
 
-### 1\. SELECT Query: Picking Your Favorite Snacks
+### SELECT Query: Picking Your Favorite Snacks
 
 The `SELECT` query is the most basic and commonly used SQL command. Think of it as a way to see all the snacks in your box.
 
@@ -55,7 +55,9 @@ Imagine your school has a database of all students and you need to list everyone
 
  SQL can display a list just like you’d see laid out on a table.
 
-### 2\. WHERE Clause: Finding Specific Snacks
+---
+
+### WHERE Clause: Finding Specific Snacks
 
 The `WHERE` clause is like giving SQL a bit more guidance about what you’re looking for. For example, maybe you’re craving something salty — you can use `WHERE` to filter out the snacks by type.
 
@@ -79,7 +81,9 @@ SELECT * FROM Snacks WHERE Type = 'Salty' AND Quantity < 5;
 
 Imagine you’re looking for only chocolate-flavored snacks with more than 8 pieces. You’d use `WHERE` to filter by `Snack = 'Chocolate' AND Quantity > 8`.
 
-### 3\. INSERT Query: Adding New Snacks
+---
+
+### INSERT Query: Adding New Snacks
 
 The `INSERT` command is like adding something new to your snack box. If you went shopping and picked up some gummy bears, you’d use `INSERT` to add them to your list.
 
@@ -102,9 +106,9 @@ Think of a school library adding a new book to its database. They’d use a comm
 
 ![](https://cdn-images-1.medium.com/max/1600/1*Zt2WTCS8tcpKvGOxnkyd2A.png)
 
-  
+---
 
-### 4\. UPDATE Query: Changing Snack Quantities
+### UPDATE Query: Changing Snack Quantities
 
 The `UPDATE` command is for when you need to change something about an item already in the box. Maybe you ate a few chips, so you need to adjust the quantity.
 
@@ -126,7 +130,9 @@ A shop might use `UPDATE` to change the prices of items in their inventory dat
 
 ####   
 
-### 5\. DELETE Query: Removing Snacks from the Box
+---
+
+### DELETE Query: Removing Snacks from the Box
 
 The `DELETE` command is like asking your friend to throw out something you don’t want anymore. Maybe you’re over cookies and want to clear them from the snack box.
 
@@ -152,4 +158,4 @@ A school might use `DELETE` to remove students who have graduated from the enr
 
 SQL is like having a super-organized friend who helps you manage all your snacks with just a few simple commands. Whether you want to find, add, change, or remove items, SQL has you covered. In the world of databases, these commands let you keep track of large amounts of data, just like you manage your snack box.
 
-### Now you’re ready to take on the world of databases with SQL!
+

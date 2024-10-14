@@ -14,7 +14,7 @@ Ever wondered how massive websites like YouTube or Instagram handle tons of data
 
 ![](https://cdn-images-1.medium.com/max/1600/1*Z4YDMc0DbqzBekGtakbmZg.png)
 
-### 1\. Introduction to SQL Command Categories
+### Introduction to SQL Command Categories
 
 SQL commands are grouped into four main categories, each serving a unique purpose:
 
@@ -23,7 +23,9 @@ SQL commands are grouped into four main categories, each serving a unique purpos
 *   **DCL (Data Control Language)**: Controls access to the data.
 *   **TCL (Transaction Control Language)**: Manages the transactions and integrity of data.
 
-### 2\. Data Definition Language (DDL)
+---
+
+### Data Definition Language (DDL)
 
 DDL commands are like the blueprints for your database. They help you set up and adjust the structure of your data storage.
 
@@ -56,22 +58,26 @@ ADD Diet VARCHAR(50);
 This command adds a new column named “Diet” where you can store each animal’s diet type.
 
 *   **Deleting Tables with `DROP`**
-
 If you decide to remove the entire Animals table, you can use the `DROP` command. But be careful! This permanently deletes the table:
 
 ```html
 DROP TABLE Animals;
 ```
 
+
 *   **Truncating Tables with `TRUNCATE`**
 
 Want to clear all the animals from your table without deleting the table itself? Use `TRUNCATE`:
 
+```html
 TRUNCATE TABLE Animals;
+```
 
 _Example:_ It’s like wiping your animal list clean but keeping the structure of the list.
 
-### 3\. Data Manipulation Language (DML)
+---
+
+### Data Manipulation Language (DML)
 
 While DDL defines the structure, **DML** works with the actual data inside your tables.
 
@@ -114,7 +120,9 @@ SELECT \* FROM Animals
 WHERE Diet = 'Carnivore';
 ```
 
-### 4\. Data Control Language (DCL)
+---
+
+### Data Control Language (DCL)
 
 DCL commands control who can access the data within the database.
 
@@ -130,9 +138,13 @@ GRANT UPDATE ON Animals TO Zookeeper;
 
 If the zookeeper no longer needs that access, revoke it:
 
+```html
 REVOKE UPDATE ON Animals FROM Zookeeper;
+```
 
-### 5\. Transaction Control Language (TCL)
+---
+
+### Transaction Control Language (TCL)
 
 TCL helps manage transactions to ensure data integrity.
 
@@ -164,7 +176,9 @@ ROLLBACK TO BeforeDelete;
 
 This will undo only the changes made after the save point.
 
-### 6\. Real-World Applications of SQL
+---
+
+### Real-World Applications of SQL
 
 SQL is not just about fun commands; it has real-world applications everywhere!
 
@@ -172,7 +186,7 @@ SQL is not just about fun commands; it has real-world applications everywhere!
 *   **Social Media**: Platforms use SQL to manage user data, posts, and interactions.
 *   **Education**: Schools use SQL databases to store student records, attendance, and performance data.
 
-### 7\. Conclusion
+###  Conclusion
 
 By learning SQL and its various commands — DDL, DML, DCL, and TCL — you gain the power to create, manage, and secure databases like a pro! SQL skills can lead to amazing opportunities and open doors to exciting fields in technology.
 

@@ -37,9 +37,9 @@ Introduction to HTML: HTML is a markup language used to structure content on th
       <link>https://learnerloft.com/sql/chap1/</link>
       <pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/sql/chap1/</guid>
-      <description>1. Introduction to SQL Imagine your room filled with video games, books, and snacks. Finding that one game you want to play? Total chaos! Now, think of SQL as your super-organized friend who knows exactly where everything is.
+      <description>Introduction to SQL Imagine your room filled with video games, books, and snacks. Finding that one game you want to play? Total chaos! Now, think of SQL as your super-organized friend who knows exactly where everything is.
 SQL stands for Structured Query Language — a special way to communicate with databases, which are like digital storage rooms.
-2. What is Data? Data is any piece of information you can think of — like your favorite song’s title, a photo of your pet, or your gaming stats.</description>
+What is Data? Data is any piece of information you can think of — like your favorite song’s title, a photo of your pet, or your gaming stats.</description>
     </item>
     <item>
       <title>Generate timebase UUID in swift</title>
