@@ -137,7 +137,7 @@ The `<code>` tag is commonly used in technical documentation, tutorials, and c
 
 --- 
 
-### 7\. Blockquote: `<blockquote>` Tag
+### Blockquote: `<blockquote>` Tag
 
 The `<blockquote>` tag is used to designate quoted content. This tag typically renders with indentation, helping to visually separate the quoted material from the rest of the content.
 
@@ -174,7 +174,7 @@ The `<br>` tag can be used in poetry or addresses where line breaks are signif
 
 ---
 
-### 9\. Horizontal Rule: `<hr>` Tag
+### Horizontal Rule: `<hr>` Tag
 
 The `<hr>` tag is used to insert a thematic break or horizontal rule between paragraphs. This is useful for visually separating content sections within your webpage.
 
@@ -243,7 +243,7 @@ This creates a numbered list with two items.
 
 Lists are great for summarizing points, organizing steps in a process, or presenting items for sale in an e-commerce setting.
 
-  
+---
 
 ### Conclusion
 

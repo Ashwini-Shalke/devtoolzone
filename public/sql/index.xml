@@ -32,13 +32,12 @@ What is Data? Data is any piece of information you can think of — like yo
       <description>Imagine this: You have a gigantic snack box filled with all kinds of snacks — chips, cookies, chocolates, and more. But finding exactly what you want is tough, especially with so many options mixed up together! SQL (Structured Query Language) is like a personal assistant for organizing and finding things in your snack box. Just like you would ask your friend to grab a specific snack for you, you can ask SQL to find, add, change, or remove data in a database.</description>
     </item>
     <item>
-      <title>For Beginners — TCL Commands in SQL with Example</title>
+      <title>*Mastering SQL Transactions: How COMMIT, ROLLBACK, and SAVEPOINT Work (With Fun Examples!)</title>
       <link>https://learnerloft.com/sql/chap4/</link>
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/sql/chap4/</guid>
-      <description>TCL commands are COMMIT, ROLLBACK, and SAVEPOINT.
-COMMIT: The COMMIT command is used to permanently save the changes made during the current transaction. Once a COMMIT command is executed, all changes made within the transaction become permanent and are visible to other users. Example: Suppose we have a transaction that updates the age of a student in the database:
-BEGIN TRANSACTION; UPDATE Students SET Age = 16 WHERE Name = &amp;#39;Alice&amp;#39;; COMMIT; In this example:</description>
+      <description>Imagine you’re a student, and you need to update your information in a school database. Let’s say you’re updating your age, but what if something goes wrong? Or, you decide to make a change but then realize you made a mistake? Don’t worry, SQL has your back! This is where COMMIT, ROLLBACK, and SAVEPOINT come into play.
+These SQL commands help you manage changes to your database and make sure things run smoothly.</description>
     </item>
     <item>
       <title>Window Functions in SQL</title>
