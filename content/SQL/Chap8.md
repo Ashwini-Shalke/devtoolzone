@@ -9,52 +9,61 @@ tags = ["SQL", "Database", "Beginners","Data"]
 
 
 
-Let’s say, you have a special calculator that can perform a specific calculation, like doubling a number or calculating the average of a set of numbers. You can use this calculator whenever you need to perform that calculation, without having to write out the steps each time. In SQL, a user-defined function is like that special calculator — it’s a custom function that you can create to perform a specific task or calculation.
+![](https://cdn-images-1.medium.com/max/1600/1*f_xb9ikTC4RgBUn8MMMd9g.png)
 
-![](https://cdn-images-1.medium.com/max/1600/1*T-FFvIjPfDPFjyl9IJ0aJw.jpeg)
+Imagine you run a smoothie shop, and each customer can customize their smoothie with different add-ons, like protein powder, extra fruit, and chia seeds. You want a quick way to calculate the total sale price of each smoothie based on its base price and the cost of each add-on. Instead of calculating the total price manually every time, we’ll create a **user-defined function** to do it for us!
 
+ --- 
 
-**Example:**
+### Example: Defining the Function
 
-Now , Let’s say you want to create a user-defined function in SQL that calculates the total score of a student based on their individual test scores.
+Let’s say you have a `SmoothieSales` table, and you want to calculate each smoothie’s total price by adding the base price and each add-on.
 
-**Here’s how you can define the UDF:**
+Here’s how we can define a SQL function to calculate this total price:
 
 ```html
-
-CREATE FUNCTION CalculateTotalScore (@Test1 INT, @Test2 INT, @Test3 INT) 
-RETURNS INT AS
+CREATE FUNCTION CalculateTotalPrice (@BasePrice DECIMAL(5,2), @AddOn1 DECIMAL(5,2), @AddOn2 DECIMAL(5,2)) 
+RETURNS DECIMAL(5,2) AS
 BEGIN 
-  DECLARE @TotalScore INT; 
-  SET @TotalScore = @Test1 + @Test2 + @Test3; 
-RETURN @TotalScore; 
+  DECLARE @TotalPrice DECIMAL(5,2); 
+  SET @TotalPrice = @BasePrice + @AddOn1 + @AddOn2; 
+  RETURN @TotalPrice; 
 END;
-
 ```
 
-**Explanation:**
+### Explanation
 
-*   `CREATE FUNCTION`: This SQL statement is used to create a new user-defined function.
-*   `CalculateTotalScore`: This is the name of the user-defined function.
-*   `@Test1 INT, @Test2 INT, @Test3 INT`: These are the input parameters of the function, representing the scores of three tests.
-*   `RETURNS INT`: This specifies the data type (INT) that the function will return.
-*   `AS`: This keyword indicates the beginning of the function's body.
-*   `DECLARE @TotalScore INT;`: This line declares a variable `@TotalScore` of type INT to store the total score.
-*   `SET @TotalScore = @Test1 + @Test2 + @Test3;`: This line calculates the total score by adding the scores of the three tests.
-*   `RETURN @TotalScore;`: This line returns the calculated total score.
+Let’s go over each part of the function:
 
+*   `**CREATE FUNCTION**`: This SQL statement is used to create a new user-defined function.
+*   `**CalculateTotalPrice**`: This is the name of our custom function.
+*   `**@BasePrice DECIMAL(5,2), @AddOn1 DECIMAL(5,2), @AddOn2 DECIMAL(5,2)**`: These are input parameters for the function, representing the base price and two add-on prices. The **DECIMAL(5,2)** data type specifies that these values are decimal numbers with two decimal places.
+*   `**RETURNS DECIMAL(5,2)**`: This indicates that the function will return a decimal value with two decimal places.
+*   `**AS**`: This signals the start of the function’s body.
+*   `**DECLARE @TotalPrice DECIMAL(5,2);**`: Here, we declare a variable called `@TotalPrice` to store the calculated total price.
+*   `**SET @TotalPrice = @BasePrice + @AddOn1 + @AddOn2;**`: This line calculates the total price by adding up the base price and the add-on prices.
+*   `**RETURN @TotalPrice;**`: This returns the calculated total price.
 
-Once you’ve created the user-defined function, you can use it in SQL queries just like any built-in function. 
+  
+---
+### Using the Function in a Query
 
-**For example:**
+Once you’ve created this user-defined function, you can use it to quickly calculate the total price for each smoothie in your `SmoothieSales` table.
 
 ```html
-
-SELECT Name, Test1, Test2, Test3, dbo.CalculateTotalScore(Test1, Test2, Test3)
- AS TotalScore FROM Students;
-
+SELECT CustomerName, BasePrice, AddOn1, AddOn2,
+       dbo.CalculateTotalPrice(BasePrice, AddOn1, AddOn2) AS TotalPrice
+FROM SmoothieSales;
 ```
 
-This query selects the names and individual test scores of students from a table called `Students`, and calculates the total score using the `CalculateTotalScore` function.
+In this query:
 
-In simple terms, a user-defined function in SQL is like a custom tool that performs a specific task or calculation for you. You can create these functions to simplify your SQL queries and make them more reusable and easier to manage.
+*   We select the customer’s name, base price, and add-on prices.
+*   We use the `CalculateTotalPrice` function to calculate the total price for each smoothie.
+*   This makes it easy to calculate the final price without manually summing up each price component every time!
+
+---  
+
+### In Summary
+
+In SQL, a user-defined function is like a handy calculator or custom formula. You can create functions like this one to calculate totals, averages, or any other custom calculation you need. This makes your SQL queries more efficient and easier to manage — just like using a special recipe or formula whenever you need it.

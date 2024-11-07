@@ -198,19 +198,6 @@ These SQL commands help you manage changes to your database and make sure things
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Window Functions in SQL
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Window functions are a type of function in SQL that allow you to perform calculations across a set of rows related to the current row, called a “window,” without collapsing the result set. They are used to perform aggregate calculations (like sum, average, count) and ranking operations (like row number, rank) within a specific partition or window of data.
-Syntax Types of Window Functions: There are a few common window functions you might encounter:...</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-04-10 00:00:00 +0000 UTC'>April 10, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Ashwini Shalke</footer>
-  <a class="entry-link" aria-label="post link to Window Functions in SQL" href="https://learnerloft.com/sql/chapp5/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
     <h2 class="entry-hint-parent">SQL Window Functions: Get Smarter with Data Analysis
     </h2>
   </header>
@@ -223,15 +210,15 @@ Syntax Types of Window Functions: There are a few common window functions you mi
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Aggregate Functions in SQL
+    <h2 class="entry-hint-parent">Aggregate Functions in SQL — Party Time with Candy Counting!
     </h2>
   </header>
   <div class="entry-content">
-    <p>Imagine you’re at a party with a bunch of friends, and there’s a big bowl of candies on the table. Now, you want to know some information about those candies, like how many candies are there in total, what’s the average number of candies each person has, or which friend has the most candies.
-In SQL, aggregate functions are like magical candy counters that help you answer these questions by performing calculations on groups of data....</p>
+    <p>Hey there, SQL enthusiast! Imagine you’re at a lively party with a bunch of friends, and there’s a big bowl of colorful candies on the table. Now, let’s say you want to figure out some cool stats about those candies: like the total number of candies, the average amount each friend has, or even which friend has a candy stash that puts everyone else to shame.
+Believe it or not, SQL has some powerful tools, called aggregate functions, that do just this kind of “candy counting” on data!...</p>
   </div>
-  <footer class="entry-footer"><span title='2024-04-08 00:00:00 +0000 UTC'>April 8, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Ashwini Shalke</footer>
-  <a class="entry-link" aria-label="post link to Aggregate Functions in SQL" href="https://learnerloft.com/sql/chap7/"></a>
+  <footer class="entry-footer"><span title='2024-04-08 00:00:00 +0000 UTC'>April 8, 2024</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Ashwini Shalke</footer>
+  <a class="entry-link" aria-label="post link to Aggregate Functions in SQL — Party Time with Candy Counting!" href="https://learnerloft.com/sql/chap7/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -240,7 +227,8 @@ In SQL, aggregate functions are like magical candy counters that help you answer
     </h2>
   </header>
   <div class="entry-content">
-    <p>Let’s say, you have a special calculator that can perform a specific calculation, like doubling a number or calculating the average of a set of numbers. You can use this calculator whenever you need to perform that calculation, without having to write out the steps each time. In SQL, a user-defined function is like that special calculator — it’s a custom function that you can create to perform a specific task or calculation....</p>
+    <p>Imagine you run a smoothie shop, and each customer can customize their smoothie with different add-ons, like protein powder, extra fruit, and chia seeds. You want a quick way to calculate the total sale price of each smoothie based on its base price and the cost of each add-on. Instead of calculating the total price manually every time, we’ll create a user-defined function to do it for us!
+Example: Defining the Function Let’s say you have a SmoothieSales table, and you want to calculate each smoothie’s total price by adding the base price and each add-on....</p>
   </div>
   <footer class="entry-footer"><span title='2024-04-11 00:00:00 +0000 UTC'>April 11, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Ashwini Shalke</footer>
   <a class="entry-link" aria-label="post link to User-Defined Function (UDF) in SQL" href="https://learnerloft.com/sql/chap8/"></a>
@@ -271,6 +259,24 @@ Stored procedures can include data manipulation operations, transaction control,
   </div>
   <footer class="entry-footer"><span title='2024-04-11 00:00:00 +0000 UTC'>April 11, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Ashwini Shalke</footer>
   <a class="entry-link" aria-label="post link to Difference between Function and stored procedure in SQL" href="https://learnerloft.com/sql/chap10/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">CHOOSE and IIF — SQL
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Imagine you’re organizing a gaming tournament, and you want to assign a different prize based on the rank players achieved.
+Let’s say you have the following rankings:
+Ranking Table
+Using CHOOSE CHOOSE function returns the value from a list of values based on the specified index.
+SELECT CHOOSE(Rank, &#39;Gold Medal&#39;, &#39;Silver Medal&#39;, &#39;Bronze Medal&#39;, &#39;Participation Prize&#39;, &#39;Participation Prize&#39;) AS Prize FROM Rankings; Result:
+Explanation:
+The CHOOSE function takes the Rank as an index....</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-04-11 00:00:00 +0000 UTC'>April 11, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Ashwini Shalke</footer>
+  <a class="entry-link" aria-label="post link to CHOOSE and IIF — SQL" href="https://learnerloft.com/sql/chap11/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

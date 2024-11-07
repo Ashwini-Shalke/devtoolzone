@@ -9,12 +9,12 @@
     <lastBuildDate>Mon, 08 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://learnerloft.com/tags/aggregate/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Aggregate Functions in SQL</title>
+      <title>Aggregate Functions in SQL — Party Time with Candy Counting!</title>
       <link>https://learnerloft.com/sql/chap7/</link>
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/sql/chap7/</guid>
-      <description>Imagine you’re at a party with a bunch of friends, and there’s a big bowl of candies on the table. Now, you want to know some information about those candies, like how many candies are there in total, what’s the average number of candies each person has, or which friend has the most candies.
-In SQL, aggregate functions are like magical candy counters that help you answer these questions by performing calculations on groups of data.</description>
+      <description>Hey there, SQL enthusiast! Imagine you’re at a lively party with a bunch of friends, and there’s a big bowl of colorful candies on the table. Now, let’s say you want to figure out some cool stats about those candies: like the total number of candies, the average amount each friend has, or even which friend has a candy stash that puts everyone else to shame.
+Believe it or not, SQL has some powerful tools, called aggregate functions, that do just this kind of “candy counting” on data!</description>
     </item>
   </channel>
 </rss>

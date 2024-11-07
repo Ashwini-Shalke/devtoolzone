@@ -40,14 +40,6 @@ What is Data? Data is any piece of information you can think of — like yo
 These SQL commands help you manage changes to your database and make sure things run smoothly.</description>
     </item>
     <item>
-      <title>Window Functions in SQL</title>
-      <link>https://learnerloft.com/sql/chapp5/</link>
-      <pubDate>Wed, 10 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://learnerloft.com/sql/chapp5/</guid>
-      <description>Window functions are a type of function in SQL that allow you to perform calculations across a set of rows related to the current row, called a “window,” without collapsing the result set. They are used to perform aggregate calculations (like sum, average, count) and ranking operations (like row number, rank) within a specific partition or window of data.
-Syntax Types of Window Functions: There are a few common window functions you might encounter:</description>
-    </item>
-    <item>
       <title>SQL Window Functions: Get Smarter with Data Analysis</title>
       <link>https://learnerloft.com/sql/chap6/</link>
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
@@ -55,19 +47,20 @@ Syntax Types of Window Functions: There are a few common window functions you mi
       <description>If you’ve ever wanted to perform complex calculations on your data without losing details or collapsing your results into a single row, you’re in the right place. Enter Window Functions in SQL! These powerful tools allow you to perform calculations across a set of rows, called a “window,” but without changing the number of rows you see in your results. It’s like using a magnifying glass to zoom into specific parts of your data without losing the overall picture.</description>
     </item>
     <item>
-      <title>Aggregate Functions in SQL</title>
+      <title>Aggregate Functions in SQL — Party Time with Candy Counting!</title>
       <link>https://learnerloft.com/sql/chap7/</link>
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/sql/chap7/</guid>
-      <description>Imagine you’re at a party with a bunch of friends, and there’s a big bowl of candies on the table. Now, you want to know some information about those candies, like how many candies are there in total, what’s the average number of candies each person has, or which friend has the most candies.
-In SQL, aggregate functions are like magical candy counters that help you answer these questions by performing calculations on groups of data.</description>
+      <description>Hey there, SQL enthusiast! Imagine you’re at a lively party with a bunch of friends, and there’s a big bowl of colorful candies on the table. Now, let’s say you want to figure out some cool stats about those candies: like the total number of candies, the average amount each friend has, or even which friend has a candy stash that puts everyone else to shame.
+Believe it or not, SQL has some powerful tools, called aggregate functions, that do just this kind of “candy counting” on data!</description>
     </item>
     <item>
       <title>User-Defined Function (UDF) in SQL</title>
       <link>https://learnerloft.com/sql/chap8/</link>
       <pubDate>Thu, 11 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/sql/chap8/</guid>
-      <description>Let’s say, you have a special calculator that can perform a specific calculation, like doubling a number or calculating the average of a set of numbers. You can use this calculator whenever you need to perform that calculation, without having to write out the steps each time. In SQL, a user-defined function is like that special calculator — it’s a custom function that you can create to perform a specific task or calculation.</description>
+      <description>Imagine you run a smoothie shop, and each customer can customize their smoothie with different add-ons, like protein powder, extra fruit, and chia seeds. You want a quick way to calculate the total sale price of each smoothie based on its base price and the cost of each add-on. Instead of calculating the total price manually every time, we’ll create a user-defined function to do it for us!
+Example: Defining the Function Let’s say you have a SmoothieSales table, and you want to calculate each smoothie’s total price by adding the base price and each add-on.</description>
     </item>
     <item>
       <title>What is Stored Procedure in SQL</title>
