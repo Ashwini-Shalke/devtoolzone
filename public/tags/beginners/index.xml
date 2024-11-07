@@ -130,7 +130,7 @@ To shed light on this process, let’s delve into the two crucial processes that
 Page Rendering Imagine you’ve built a sleek and functional application using APEX, complete with interactive forms, dynamic reports, and engaging charts. When a user accesses your application, the APEX engine kicks into action.</description>
     </item>
     <item>
-      <title>*Mastering SQL Transactions: How COMMIT, ROLLBACK, and SAVEPOINT Work (With Fun Examples!)</title>
+      <title>Mastering SQL Transactions: How COMMIT, ROLLBACK, and SAVEPOINT Work (With Fun Examples!)</title>
       <link>https://learnerloft.com/sql/chap4/</link>
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/sql/chap4/</guid>

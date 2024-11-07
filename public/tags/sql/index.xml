@@ -32,7 +32,7 @@ What is Data? Data is any piece of information you can think of — like yo
       <description>Imagine this: You have a gigantic snack box filled with all kinds of snacks — chips, cookies, chocolates, and more. But finding exactly what you want is tough, especially with so many options mixed up together! SQL (Structured Query Language) is like a personal assistant for organizing and finding things in your snack box. Just like you would ask your friend to grab a specific snack for you, you can ask SQL to find, add, change, or remove data in a database.</description>
     </item>
     <item>
-      <title>*Mastering SQL Transactions: How COMMIT, ROLLBACK, and SAVEPOINT Work (With Fun Examples!)</title>
+      <title>Mastering SQL Transactions: How COMMIT, ROLLBACK, and SAVEPOINT Work (With Fun Examples!)</title>
       <link>https://learnerloft.com/sql/chap4/</link>
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/sql/chap4/</guid>

@@ -1,5 +1,5 @@
 +++
-title = '*Mastering SQL Transactions: How COMMIT, ROLLBACK, and SAVEPOINT Work (With Fun Examples!)'
+title = 'Mastering SQL Transactions: How COMMIT, ROLLBACK, and SAVEPOINT Work (With Fun Examples!)'
 date = 2024-04-08
 draft = false
 author = "Ashwini Shalke"
@@ -8,16 +8,11 @@ tags = ["SQL", "Database", "Beginners","TCL"]
 +++
 
   
-
-
-
-  
-
 Imagine you’re a student, and you need to update your information in a school database. Let’s say you’re updating your age, but what if something goes wrong? Or, you decide to make a change but then realize you made a mistake? Don’t worry, SQL has your back! This is where **COMMIT**, **ROLLBACK**, and **SAVEPOINT** come into play.
 
 These SQL commands help you manage changes to your database and make sure things run smoothly. Let’s break it down with some fun examples, so you’ll understand how to use them!
 
----
+--- 
 
 ### 1\. COMMIT: Locking in Your Changes for Good
 
@@ -43,7 +38,7 @@ COMMIT;
 
 After the **COMMIT**, no one can undo the change. Alice’s age is now permanently 16.
 
---- 
+---  
 
 ### 2\. ROLLBACK: Oops, Let’s Undo That!
 
@@ -73,7 +68,7 @@ A **ROLLBACK** can be used if you made any error, or even if you just changed 
 
 Okay, imagine you’re working on a big project, and you want to save your progress at certain points. You don’t want to restart from the beginning if something goes wrong later. That’s exactly what the **SAVEPOINT** command does — it allows you to set a “checkpoint” within a transaction. If something goes wrong later, you can **ROLLBACK** to that specific checkpoint and not lose everything you’ve done.
 
-  
+![](https://cdn-images-1.medium.com/max/1600/1*etvYUqSUzBcctB4hbZ4CRw.png)
 
 #### Example: Updating Multiple Students’ Ages
 
