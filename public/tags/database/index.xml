@@ -48,13 +48,11 @@ These SQL commands help you manage changes to your database and make sure things
 Syntax Types of Window Functions: There are a few common window functions you might encounter:</description>
     </item>
     <item>
-      <title>SQL Clause: Group By, Having, IN and NOT IN</title>
+      <title>SQL Window Functions: Get Smarter with Data Analysis</title>
       <link>https://learnerloft.com/sql/chap6/</link>
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/sql/chap6/</guid>
-      <description>Let’s say we have a table named “Games” with the following data:
-GROUP BY: Think of GROUP BY like organizing your games into groups based on their ratings. It&amp;rsquo;s like sorting them into piles of similar ratings.
-SELECT Rating, COUNT(\*) AS NumOfGames FROM Games GROUP BY Rating; This query will count the number of games for each rating group. For example, it will show how many games have a rating of 4.</description>
+      <description>If you’ve ever wanted to perform complex calculations on your data without losing details or collapsing your results into a single row, you’re in the right place. Enter Window Functions in SQL! These powerful tools allow you to perform calculations across a set of rows, called a “window,” but without changing the number of rows you see in your results. It’s like using a magnifying glass to zoom into specific parts of your data without losing the overall picture.</description>
     </item>
     <item>
       <title>Aggregate Functions in SQL</title>

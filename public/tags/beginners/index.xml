@@ -196,13 +196,11 @@ Install Progressive Web App: The “Install Progressive Web App” feature in O
       <description>In the realm of web design, visuals play a pivotal role in capturing users’ attention and enhancing the overall aesthetic appeal of a website. HTML, the backbone of web development, offers an array of tags and elements to seamlessly integrate images and other page elements into web pages. In this article, we’ll explore how HTML enables developers to elevate their web design by adding images and other essential page elements with practical examples.</description>
     </item>
     <item>
-      <title>SQL Clause: Group By, Having, IN and NOT IN</title>
+      <title>SQL Window Functions: Get Smarter with Data Analysis</title>
       <link>https://learnerloft.com/sql/chap6/</link>
       <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://learnerloft.com/sql/chap6/</guid>
-      <description>Let’s say we have a table named “Games” with the following data:
-GROUP BY: Think of GROUP BY like organizing your games into groups based on their ratings. It&amp;rsquo;s like sorting them into piles of similar ratings.
-SELECT Rating, COUNT(\*) AS NumOfGames FROM Games GROUP BY Rating; This query will count the number of games for each rating group. For example, it will show how many games have a rating of 4.</description>
+      <description>If you’ve ever wanted to perform complex calculations on your data without losing details or collapsing your results into a single row, you’re in the right place. Enter Window Functions in SQL! These powerful tools allow you to perform calculations across a set of rows, called a “window,” but without changing the number of rows you see in your results. It’s like using a magnifying glass to zoom into specific parts of your data without losing the overall picture.</description>
     </item>
     <item>
       <title>How to install iOS 14 beta</title>

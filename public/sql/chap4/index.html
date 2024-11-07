@@ -185,10 +185,10 @@ These SQL commands help you manage changes to your database and make sure things
 </p>
 <h4 id="example-updating-alicesage">Example: Updating Alice’s Age<a hidden class="anchor" aria-hidden="true" href="#example-updating-alicesage">#</a></h4>
 <p>Let’s say you want to update Alice’s age in the database. Here’s how you’d do it:</p>
-<p>BEGIN TRANSACTION;
-UPDATE Students SET Age = 16 WHERE Name = &lsquo;Alice&rsquo;;
-COMMIT;</p>
-<p><strong>Step-by-Step:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>BEGIN TRANSACTION; 
+</span></span><span style="display:flex;"><span>UPDATE Students SET Age = 16 WHERE Name = &#39;Alice&#39;; 
+</span></span><span style="display:flex;"><span>COMMIT;
+</span></span></code></pre></div><p><strong>Step-by-Step:</strong></p>
 <ol>
 <li><strong>BEGIN TRANSACTION</strong>: This starts your “transaction,” or set of changes.</li>
 <li><strong>UPDATE Students SET Age = 16 WHERE Name = ‘Alice’</strong>: You’re updating Alice’s age to 16.</li>
@@ -202,10 +202,10 @@ COMMIT;</p>
 </p>
 <h4 id="example-rolling-back-alices-ageupdate">Example: Rolling Back Alice’s Age Update<a hidden class="anchor" aria-hidden="true" href="#example-rolling-back-alices-ageupdate">#</a></h4>
 <p>Let’s say you updated Alice’s age but realized she’s actually still 15, not 16! Time to hit the <strong>ROLLBACK</strong> button.</p>
-<p>BEGIN TRANSACTION;
-UPDATE Students SET Age = 16 WHERE Name = &lsquo;Alice&rsquo;;
-ROLLBACK;</p>
-<p><strong>Step-by-Step:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>BEGIN TRANSACTION; 
+</span></span><span style="display:flex;"><span>UPDATE Students SET Age = 16 WHERE Name = &#39;Alice&#39;; 
+</span></span><span style="display:flex;"><span>ROLLBACK;
+</span></span></code></pre></div><p><strong>Step-by-Step:</strong></p>
 <ol>
 <li><strong>BEGIN TRANSACTION</strong>: You start making your changes.</li>
 <li><strong>UPDATE Students SET Age = 16 WHERE Name = ‘Alice’</strong>: You accidentally set Alice’s age to 16.</li>
@@ -219,14 +219,14 @@ ROLLBACK;</p>
 </p>
 <h4 id="example-updating-multiple-students-ages">Example: Updating Multiple Students’ Ages<a hidden class="anchor" aria-hidden="true" href="#example-updating-multiple-students-ages">#</a></h4>
 <p>Let’s say you want to update the ages of two students, Alice and Bob. You want to save your progress after updating Alice’s age, in case something goes wrong when you update Bob’s age. Here’s how:</p>
-<p>BEGIN TRANSACTION;
-UPDATE Students SET Age = 16 WHERE Name = &lsquo;Alice&rsquo;;
-SAVEPOINT sp1;
-UPDATE Students SET Age = 17 WHERE Name = &lsquo;Bob&rsquo;;
-&ndash; Uh-oh, something goes wrong!
-ROLLBACK TO SAVEPOINT sp1;
-COMMIT;</p>
-<p><strong>Step-by-Step:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>BEGIN TRANSACTION;
+</span></span><span style="display:flex;"><span>UPDATE Students SET Age = 16 WHERE Name = &#39;Alice&#39;;
+</span></span><span style="display:flex;"><span>SAVEPOINT sp1; 
+</span></span><span style="display:flex;"><span>UPDATE Students SET Age = 17 WHERE Name = &#39;Bob&#39;; 
+</span></span><span style="display:flex;"><span>-- Uh-oh, something goes wrong!
+</span></span><span style="display:flex;"><span>ROLLBACK TO SAVEPOINT sp1;
+</span></span><span style="display:flex;"><span>COMMIT;
+</span></span></code></pre></div><p><strong>Step-by-Step:</strong></p>
 <ol>
 <li><strong>BEGIN TRANSACTION</strong>: Start a new transaction.</li>
 <li><strong>UPDATE Students SET Age = 16 WHERE Name = ‘Alice’</strong>: You update Alice’s age to 16.</li>

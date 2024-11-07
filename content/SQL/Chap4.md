@@ -26,9 +26,11 @@ When you make changes to the database (like updating a student’s age or adding
 
 Let’s say you want to update Alice’s age in the database. Here’s how you’d do it:
 
+```html
 BEGIN TRANSACTION; 
 UPDATE Students SET Age = 16 WHERE Name = 'Alice'; 
 COMMIT;
+```
 
 **Step-by-Step:**
 
@@ -50,9 +52,11 @@ What if you made a mistake? Maybe you accidentally updated the wrong student’s
 
 Let’s say you updated Alice’s age but realized she’s actually still 15, not 16! Time to hit the **ROLLBACK** button.
 
+```html
 BEGIN TRANSACTION; 
 UPDATE Students SET Age = 16 WHERE Name = 'Alice'; 
 ROLLBACK;
+```
 
 **Step-by-Step:**
 
@@ -74,6 +78,7 @@ Okay, imagine you’re working on a big project, and you want to save your progr
 
 Let’s say you want to update the ages of two students, Alice and Bob. You want to save your progress after updating Alice’s age, in case something goes wrong when you update Bob’s age. Here’s how:
 
+```html
 BEGIN TRANSACTION;
 UPDATE Students SET Age = 16 WHERE Name = 'Alice';
 SAVEPOINT sp1; 
@@ -81,6 +86,7 @@ UPDATE Students SET Age = 17 WHERE Name = 'Bob';
 -- Uh-oh, something goes wrong!
 ROLLBACK TO SAVEPOINT sp1;
 COMMIT;
+```
 
 **Step-by-Step:**
 
