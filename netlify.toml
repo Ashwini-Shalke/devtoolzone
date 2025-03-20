@@ -1,0 +1,13 @@
+[build]
+  command = """
+    cd ../learnerloft-apps && npm install && npm run build && cp -r dist/* ../devtoolzone/static/devtools/ && cd ../devtoolzone && hugo
+  """
+  publish = "public"
+
+[[redirects]]
+  from = "/devtools/*"
+  to = "/devtools/index.html"
+  status = 200
+
+[context.production]
+  environment = { HUGO_VERSION = "0.145.0" } 
