@@ -10,9 +10,6 @@ markup:
     renderer:
       unsafe: true
 
-ignoreFiles:
-  - "static/devtools/*"
-
 security:
   funcs:
     getenv:
