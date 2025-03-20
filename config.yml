@@ -42,24 +42,28 @@ params:
 
 menu:
   main:
-    - identifier: SQL
+    - identifier: devtools
+      name: Dev Tools
+      url: /devtools/
+      weight: -100
+    - identifier: sql
       name: SQL
       url: /sql/
-      weight: 10
-    - identifier: HTML
+      weight: -90
+    - identifier: html
       name: HTML
       url: /html/
-      weight: 20
-    - identifier: Oracle APEX
+      weight: -80
+    - identifier: oracleapex
       name: Oracle APEX
       url: /OracleApplicationExpress/
-      weight: 30
-    - identifier: Swift
+      weight: -70
+    - identifier: swift
       name: Swift
       url: /swift/
-      weight: 40
+      weight: -60
     - identifier: archives
       name: Archives
       url: /archives/
-      weight: 50
+      weight: -50
    
