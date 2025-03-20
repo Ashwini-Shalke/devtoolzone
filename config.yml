@@ -39,10 +39,6 @@ params:
             inspired, and ahead of the curve. We believe that technology has the power to transform lives and drive innovation, 
             and we're committed to sharing our passion for tech with our community."
 
-  socialIcons:
-    - name: github
-      url: "https://github.com/Ashwini-Shalke/devtoolzone"
-
   ShowAllPagesInArchive: true
   ShowPageNums: true
   ShowCodeCopyButtons: true
@@ -81,4 +77,9 @@ menu:
       name: Archives
       url: /archives/
       weight: -50
+
+# Social icons configuration
+social:
+  - name: github
+    url: "https://github.com/Ashwini-Shalke/devtoolzone"
    
