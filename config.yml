@@ -51,6 +51,11 @@ params:
   ShowRssButtonInSectionTermList: true
   ShowToc: true
 
+  # Social icons configuration moved under params
+  Social:
+    - name: github
+      url: "https://github.com/Ashwini-Shalke/devtoolzone"
+
 menu:
   main:
     - identifier: devtools
@@ -77,9 +82,4 @@ menu:
       name: Archives
       url: /archives/
       weight: -50
-
-# Social icons configuration
-social:
-  - name: github
-    url: "https://github.com/Ashwini-Shalke/devtoolzone"
    
