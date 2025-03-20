@@ -1,0 +1,21 @@
+/* Ad Container Styling */
+.ad-container {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 100%;
+    overflow: hidden;
+    clear: both;
+}
+
+/* Add space between ads and content */
+.ad-container + p, 
+p + .ad-container {
+    margin-top: 30px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .ad-container {
+        margin: 15px auto;
+    }
+} 
