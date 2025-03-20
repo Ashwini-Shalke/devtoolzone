@@ -1,7 +1,5 @@
 [build]
-  command = """
-    cd ../learnerloft-apps && npm install && npm run build && cp -r dist/* ../devtoolzone/static/devtools/ && cd ../devtoolzone && hugo --gc --minify
-  """
+  command = "hugo --gc --minify"
   publish = "public"
 
 [[redirects]]
