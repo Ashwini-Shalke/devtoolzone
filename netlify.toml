@@ -6,12 +6,12 @@
   from = "/devtools/*"
   to = "/devtools/index.html"
   status = 200
+  force = true
 
 [build.environment]
-  HUGO_VERSION = "0.121.1"
+  HUGO_VERSION = "0.145.0"
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "true"
 
 [context.production]
-  command = "hugo --gc --minify"
-  environment = { HUGO_VERSION = "0.121.1" } 
+  environment = { HUGO_VERSION = "0.145.0" } 

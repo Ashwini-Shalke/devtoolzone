@@ -1,40 +1,53 @@
-baseURL: "https://learnerloft.com"
-languageCode: en-us
-title: Learner Loft
-theme: PaperMod
+baseURL: "/"
+languageCode: "en-us"
+title: "Learner Loft"
+theme: "PaperMod"
+
+staticDir: ["static"]
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+ignoreFiles:
+  - "static/devtools/*"
+
+security:
+  funcs:
+    getenv:
+      - ^HUGO_
+      - ^NODE_
+
+# Suppress HTML warnings
+ignoreLogs:
+  - 'warning-goldmark-raw-html'
 
 params:
+  defaultTheme: auto
+  ShowBreadCrumbs: true
+  ShowBreadCrumbsOnHome: false
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+  
   homeInfoParams:
-    Title: "Hello, Pals !!"
-    Content: "Welcome to Learner Loft, your ultimate destination for all things tech! 
-            Whether you're a seasoned developer, a budding programmer, or simply passionate about technology, 
-            Learner Loft is your one-stop-shop for the latest articles and insights on HTML, SQL, Oracle APEX, and more.
-            Our mission is to empower tech enthusiasts with the knowledge and resources they need to stay informed, 
-            inspired, and ahead of the curve. We believe that technology has the power to transform lives and drive innovation, 
-            and we're committed to sharing our passion for tech with our community."
-  # socialIcons:
-  #   - name: facebook
-  #     url: "https://facebook.com/"
-  #   - name: twitter
-  #     url: "https://twitter.com/"
-  #   - name: github
-  #     url: "https://github.com/"
+    Title: "Welcome to Learner Loft"
+    Content: "A place to learn and grow together"
+
+  socialIcons:
+    - name: "github"
+      url: "https://github.com/yourusername"
 
   ShowAllPagesInArchive: true
   ShowPageNums: true
-  ShowCodeCopyButtons: true
 
   cover:
     linkFullImages: true
-
-  ShowBreadCrumbs: true
 
   ShowReadingTime: true
 
   ShowShareButtons: true
 
-  ShowPostNavLinks: true
-  
   ShowRssButtonInSectionTermList: true
 
   ShowToc: true
