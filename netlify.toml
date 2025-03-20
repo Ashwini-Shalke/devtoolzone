@@ -1,5 +1,7 @@
 [build]
-  command = "hugo --gc --minify"
+  command = """
+    cd ../learnerloft-apps && npm install && npm run build && cp -r dist/* ../devtoolzone/static/devtools/ && cd ../devtoolzone && hugo --gc --minify
+  """
   publish = "public"
 
 [[redirects]]
@@ -14,4 +16,4 @@
   HUGO_ENABLEGITINFO = "true"
 
 [context.production]
-  environment = { HUGO_VERSION = "0.145.0" } 
+  environment = { HUGO_VERSION = "0.145.0" }
