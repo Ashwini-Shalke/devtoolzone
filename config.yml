@@ -1,7 +1,7 @@
-baseURL: "/"
-languageCode: "en-us"
-title: "Learner Loft"
-theme: "PaperMod"
+baseURL: "https://learnerloft.com"
+languageCode: en-us
+title: Learner Loft
+theme: PaperMod
 
 staticDir: ["static"]
 
@@ -31,27 +31,29 @@ params:
   ShowCodeCopyButtons: true
   
   homeInfoParams:
-    Title: "Welcome to Learner Loft"
-    Content: "A place to learn and grow together"
+    Title: "Hello, Pals !!"
+    Content: "Welcome to Learner Loft, your ultimate destination for all things tech! 
+            Whether you're a seasoned developer, a budding programmer, or simply passionate about technology, 
+            Learner Loft is your one-stop-shop for the latest articles and insights on HTML, SQL, Oracle APEX, and more.
+            Our mission is to empower tech enthusiasts with the knowledge and resources they need to stay informed, 
+            inspired, and ahead of the curve. We believe that technology has the power to transform lives and drive innovation, 
+            and we're committed to sharing our passion for tech with our community."
 
   socialIcons:
-    - name: "github"
-      url: "https://github.com/yourusername"
+    - name: github
+      url: "https://github.com/Ashwini-Shalke/devtoolzone"
 
   ShowAllPagesInArchive: true
   ShowPageNums: true
-
+  ShowCodeCopyButtons: true
   cover:
     linkFullImages: true
-
+  ShowBreadCrumbs: true
   ShowReadingTime: true
-
   ShowShareButtons: true
-
+  ShowPostNavLinks: true
   ShowRssButtonInSectionTermList: true
-
   ShowToc: true
-
 
 menu:
   main:

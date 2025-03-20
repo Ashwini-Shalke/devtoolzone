@@ -6,7 +6,7 @@
 
 {{- if .Title }}
 <header class="page-header">
-  {{- if and (.Param "ShowBreadCrumbs") (not .IsHome) }}
+  {{- if and (.Param "ShowBreadCrumbs") (not .IsHome) (ne .Kind "home") }}
     {{- partial "breadcrumbs.html" . }}
   {{- end }}
   <h1>{{ .Title }}</h1>
