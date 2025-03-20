@@ -1,9 +1,12 @@
 /* Ad Container Styling */
 .ad-container {
     text-align: center;
-    margin: 20px auto;
-    max-width: 100%;
+    margin: 2rem auto;
+    padding: 1rem 0;
+    width: 100%;
+    max-width: 728px;
     overflow: hidden;
+    background-color: transparent;
     clear: both;
 }
 
@@ -18,4 +21,31 @@ p + .ad-container {
     .ad-container {
         margin: 15px auto;
     }
+}
+
+.sidebar-ad {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+}
+
+@media (min-width: 1400px) {
+    .sidebar-ad {
+        display: block;
+    }
+}
+
+/* Add a slight background to help identify ad placements during development */
+.dev-ad-placeholder {
+    background-color: rgba(200, 200, 200, 0.1);
+    border: 1px dashed #ddd;
+    border-radius: 4px;
+    text-align: center;
+    padding: 1rem;
+    margin: 2rem auto;
+    max-width: 728px;
+    font-size: 0.8rem;
+    color: #888;
 } 

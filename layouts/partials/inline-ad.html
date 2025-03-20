@@ -1,5 +1,6 @@
 <!-- Display Ad -->
 <div class="ad-container">
+    {{- if eq (getenv "HUGO_ENV") "production" -}}
     <ins class="adsbygoogle"
          style="display:block"
          data-ad-client="ca-pub-1623190812203974"
@@ -9,4 +10,10 @@
     <script>
          (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
+    {{- else -}}
+    <!-- Development placeholder for ads -->
+    <div class="dev-ad-placeholder">
+        Ad Placeholder - 728x90
+    </div>
+    {{- end -}}
 </div> 
