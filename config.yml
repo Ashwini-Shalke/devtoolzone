@@ -3,7 +3,33 @@ languageCode: en-us
 title: Learner Loft
 theme: PaperMod
 
+staticDir: ["static"]
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+ignoreFiles:
+  - "static/devtools/*"
+
+security:
+  funcs:
+    getenv:
+      - ^HUGO_
+      - ^NODE_
+
+# Suppress HTML warnings
+ignoreLogs:
+  - 'warning-goldmark-raw-html'
+
 params:
+  defaultTheme: auto
+  ShowBreadCrumbs: true
+  ShowBreadCrumbsOnHome: false
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+  
   homeInfoParams:
     Title: "Hello, Pals !!"
     Content: "Welcome to Learner Loft, your ultimate destination for all things tech! 
@@ -12,33 +38,23 @@ params:
             Our mission is to empower tech enthusiasts with the knowledge and resources they need to stay informed, 
             inspired, and ahead of the curve. We believe that technology has the power to transform lives and drive innovation, 
             and we're committed to sharing our passion for tech with our community."
-  # socialIcons:
-  #   - name: facebook
-  #     url: "https://facebook.com/"
-  #   - name: twitter
-  #     url: "https://twitter.com/"
-  #   - name: github
-  #     url: "https://github.com/"
 
   ShowAllPagesInArchive: true
   ShowPageNums: true
   ShowCodeCopyButtons: true
-
   cover:
     linkFullImages: true
-
   ShowBreadCrumbs: true
-
   ShowReadingTime: true
-
   ShowShareButtons: true
-
   ShowPostNavLinks: true
-  
   ShowRssButtonInSectionTermList: true
-
   ShowToc: true
 
+  # Social icons configuration moved under params
+  Social:
+    - name: github
+      url: "https://github.com/Ashwini-Shalke/devtoolzone"
 
 menu:
   main:
