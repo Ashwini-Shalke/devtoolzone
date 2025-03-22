@@ -1,98 +1,47 @@
 {{ define "main" }}
-<div class="post-content navigation-width">
-  <header class="post-header compact-header">
-    <h2 class="extra-small-title">{{ .Title }}</h2>
-  </header>
+{{ $params := dict "showDescription" false }}
+{{ with merge . $params }}
+  {{ template "layouts/_default/tool-page.html" . }}
+{{ end }}
+{{ end }}
 
-  <div class="json-formatter-container">
-    <div class="input-output-container">
-      <div class="input-section">
-        <div class="section-header">
-          <h3>Input JSON</h3>
-        </div>
-        <div id="json-input-container">
-          <textarea id="json-input" placeholder="Paste your JSON here..."></textarea>
-        </div>
+{{ define "tool-content" }}
+<div class="json-formatter-container">
+  <div class="input-output-container">
+    <div class="input-section">
+      <div class="section-header">
+        <h3>Input JSON</h3>
       </div>
-      <div class="output-section">
-        <div class="section-header">
-          <h3>Formatted JSON</h3>
-        </div>
-        <div id="json-output-container">
-          <pre id="json-output"></pre>
-        </div>
+      <div id="json-input-container">
+        <textarea id="json-input" placeholder="Paste your JSON here..."></textarea>
       </div>
     </div>
-    
-    <div class="controls-container">
-      <div class="button-container">
-        <button id="format-button" class="primary-button">Format JSON</button>
-        <button id="minify-button" class="secondary-button">Minify</button>
-        <button id="clear-button" class="secondary-button">Clear</button>
+    <div class="output-section">
+      <div class="section-header">
+        <h3>Formatted JSON</h3>
       </div>
-      <div class="status-container">
-        <div class="validation-status" id="validation-status"></div>
-        <button id="copy-button" class="secondary-button">Copy</button>
+      <div id="json-output-container">
+        <pre id="json-output"></pre>
       </div>
     </div>
   </div>
   
-  <div class="tool-description compact-description">
-    {{ .Content }}
+  <div class="controls-container">
+    <div class="button-container">
+      <button id="format-button" class="primary-button">Format JSON</button>
+      <button id="minify-button" class="secondary-button">Minify</button>
+      <button id="clear-button" class="secondary-button">Clear</button>
+    </div>
+    <div class="status-container">
+      <div class="validation-status" id="validation-status"></div>
+      <button id="copy-button" class="secondary-button">Copy</button>
+    </div>
   </div>
-  
-  <div class="ad-container inline">
-    {{ partial "inline-ad.html" . }}
-  </div>
-
-  <script src="/js/json-formatter.js"></script>
 </div>
 
+<script src="/js/json-formatter.js"></script>
+
 <style>
-.navigation-width {
-  width: auto !important;
-  max-width: 100% !important;
-  padding: 0 !important;
-  margin: 0 auto !important;
-}
-
-.full-width, .main, .post-content {
-  max-width: none !important;
-}
-
-.extra-small-title {
-  margin-bottom: 0.2rem;
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: normal;
-}
-
-.compact-header h1 {
-  margin-bottom: 0.3rem;
-  text-align: center;
-}
-
-.compact-description {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
-.compact-description p {
-  margin: 0.5rem 0;
-}
-
-.compact-description h2 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-size: 1.25rem;
-}
-
-.compact-description ul {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  padding-left: 1.5rem;
-}
-
 .json-formatter-container {
   width: 100%;
   max-width: 100%;
@@ -258,10 +207,6 @@
 
 .invalid {
   color: #ef4444;
-}
-
-.ad-container {
-  padding: 0;
 }
 
 @media (min-width: 1280px) {
