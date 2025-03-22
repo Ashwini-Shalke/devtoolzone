@@ -1,0 +1,66 @@
+{{ define "main" }}
+<div class="post-content navigation-width">
+  <header class="post-header compact-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+    <div class="post-description">
+      {{ .Description }}
+    </div>
+  </header>
+  
+  <div class="full-width-content">
+    {{- if .Content }}
+    <div class="content">
+      {{ .Content }}
+    </div>
+    {{- end }}
+  </div>
+</div>
+
+<style>
+.navigation-width {
+  width: calc(100% - 50px) !important;
+  max-width: 100% !important;
+  padding: 0 25px !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+}
+
+.full-width, .main, .post-content {
+  max-width: none !important;
+}
+
+.full-width-content {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.content {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.post-header {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.post-header h1 {
+  text-align: left;
+}
+
+.post-description {
+  text-align: left;
+}
+
+/* This ensures all tools are visible and the layout matches JSON Formatter */
+body.layout-devtools-index main {
+  width: 100% !important;
+  margin: 0 auto !important;
+  overflow-x: hidden !important;
+}
+</style>
+{{ end }} 
