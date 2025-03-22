@@ -1,0 +1,223 @@
+{{ define "main" }}
+<div class="post-content navigation-width">
+  <div class="devtools-content-wrapper">
+    <!-- Left side vertical ad -->
+    <div class="side-ad-container left-ad">
+      <div class="ad-container sidebar">
+        <div class="ad-placeholder">Ad Space<br>180x600</div>
+        {{ partial "sidebar-ad.html" . }}
+      </div>
+    </div>
+    
+    <div class="full-width-content">
+      <header class="post-header compact-header">
+        <h2 class="tool-title">{{ .Title }}</h2>
+      </header>
+
+      <!-- Tool-specific content goes here -->
+      <div class="tool-content">
+        {{ block "tool-content" . }}
+          <!-- Default content if not overridden -->
+          {{ .Content }}
+        {{ end }}
+      </div>
+      
+      <!-- Tool description from markdown content -->
+      <div class="tool-description compact-description">
+        {{ if .Params.showDescription }}
+          {{ .Content }}
+        {{ end }}
+      </div>
+      
+      <!-- Bottom horizontal ad -->
+      <div class="ad-container inline bottom-ad">
+        <div class="ad-placeholder">Ad Space<br>728x90</div>
+      </div>
+    </div>
+    
+    <!-- Right side vertical ad -->
+    <div class="side-ad-container right-ad">
+      <div class="ad-container sidebar">
+        <div class="ad-placeholder">Ad Space<br>180x600</div>
+        {{ partial "sidebar-ad.html" . }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.navigation-width {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 25px !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
+.full-width, .main, .post-content {
+  max-width: none !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.full-width-content {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.tool-title {
+  margin-bottom: 1rem;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: normal;
+  width: 100% !important;
+}
+
+.compact-header {
+  text-align: left;
+  margin-bottom: 1rem;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+.compact-header h1, .compact-header h2 {
+  text-align: left;
+  margin-top: 0;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.tool-content {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.compact-description {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.compact-description p {
+  margin: 0.5rem 0;
+}
+
+.compact-description h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.compact-description ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+.ad-container {
+  padding: 0;
+}
+
+/* Bottom ad styling */
+.bottom-ad {
+  margin-top: 2rem;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.dark .bottom-ad {
+  background-color: #2a2a2a;
+}
+
+.bottom-ad .ad-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Wrapper for content and side ads */
+.devtools-content-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Main content takes most of the space */
+.devtools-content-wrapper .full-width-content {
+  flex: 1;
+  min-width: 0; /* Prevent flex item from overflowing */
+}
+
+/* Side ad container */
+.side-ad-container {
+  width: 180px;
+  height: 600px;
+  display: none; /* Hidden on mobile */
+  position: sticky;
+  top: 2rem;
+  flex-shrink: 0;
+}
+
+/* Side ad container styling */
+.side-ad-container .ad-container {
+  width: 180px;
+  height: 600px;
+  position: relative;
+}
+
+/* Ad placeholder styling */
+.ad-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Show side ads on desktop */
+@media (min-width: 1400px) {
+  .side-ad-container {
+    display: block;
+  }
+}
+
+/* Only show left ad on medium-sized screens */
+@media (min-width: 1100px) and (max-width: 1399px) {
+  .left-ad {
+    display: block;
+  }
+  .right-ad {
+    display: none;
+  }
+}
+
+/* This ensures the layout matches across all tool pages */
+body.single main, body.tool-page main {
+  width: 100% !important;
+  margin: 0 auto !important;
+  overflow-x: hidden !important;
+}
+</style>
+{{ end }} 
