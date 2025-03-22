@@ -1,4 +1,4 @@
-{{ define "main" }}
+<!-- tool-page.html - Base template for all tool pages -->
 <div class="post-content navigation-width">
   <div class="devtools-content-wrapper">
     <!-- Left side vertical ad -->
@@ -12,6 +12,12 @@
     <div class="full-width-content">
       <header class="post-header compact-header">
         <h2 class="tool-title">{{ .Title }}</h2>
+        <!-- Display the description from front matter if available -->
+        {{ with .Description }}
+        <div class="tool-description-header">
+          {{ . }}
+        </div>
+        {{ end }}
       </header>
 
       <!-- Tool-specific content goes here -->
@@ -22,12 +28,12 @@
         {{ end }}
       </div>
       
-      <!-- Tool description from markdown content -->
+      <!-- Only display tool description in content if we're not on a tool page with specific content -->
+      {{ if not (findRE "json-formatter|xml-formatter|sql-formatter" .RelPermalink) }}
       <div class="tool-description compact-description">
-        {{ if .Params.showDescription }}
-          {{ .Content }}
-        {{ end }}
+        {{ .Content }}
       </div>
+      {{ end }}
       
       <!-- Bottom horizontal ad -->
       <div class="ad-container inline bottom-ad">
@@ -70,16 +76,23 @@
 }
 
 .tool-title {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   text-align: left;
   font-size: 1.5rem;
   font-weight: normal;
   width: 100% !important;
 }
 
+.tool-description-header {
+  margin-bottom: 1.5rem;
+  text-align: left;
+  width: 100% !important;
+  line-height: 1.5;
+}
+
 .compact-header {
   text-align: left;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   padding: 0 !important;
   width: 100% !important;
 }
@@ -219,5 +232,4 @@ body.single main, body.tool-page main {
   margin: 0 auto !important;
   overflow-x: hidden !important;
 }
-</style>
-{{ end }} 
+</style> 

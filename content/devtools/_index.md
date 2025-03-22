@@ -1,10 +1,8 @@
 ---
 title: "Developer Tools"
-description: "A collection of free online tools for developers to streamline common tasks"
+description: "A collection of free online tools for developers to streamline common tasks. Welcome to our comprehensive suite of developer tools designed to make your coding life easier. All tools are free to use, work directly in your browser, and don't store any of your data."
 layout: "devtools-index"
 ---
-
-Welcome to our comprehensive suite of developer tools designed to make your coding life easier. All tools are **free to use**, work directly in your browser, and don't store any of your data.
 
 ## Text & Code Tools
 
@@ -32,7 +30,7 @@ Welcome to our comprehensive suite of developer tools designed to make your codi
   <div class="tool-card coming-soon">
     <div class="tool-icon">📄</div>
     <h3>XML Formatter</h3>
-    <p>Format, validate, and beautify XML documents</p>
+    <p>Format and beautify XML documents</p>
     <span class="badge">Coming Soon</span>
   </div>
   
@@ -125,7 +123,7 @@ Welcome to our comprehensive suite of developer tools designed to make your codi
 <style>
 .tools-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, minmax(230px, 1fr));
   gap: 1rem;
   margin: 1.5rem 0;
   width: 100%;
@@ -153,10 +151,13 @@ Welcome to our comprehensive suite of developer tools designed to make your codi
 
 .tool-card {
   border-radius: 8px;
-  padding: 1.5rem;
+  padding: 1.25rem;
   transition: transform 0.2s, box-shadow 0.2s;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .dark .tool-card {
@@ -208,13 +209,21 @@ Welcome to our comprehensive suite of developer tools designed to make your codi
 
 .tool-card h3 {
   margin: 0 0 0.5rem 0;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: none;
 }
 
 .tool-card p {
   margin: 0;
   opacity: 0.8;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: none;
 }
 
 .badge {

@@ -1,8 +1,5 @@
 {{ define "main" }}
-{{ $params := dict "showDescription" false }}
-{{ with merge . $params }}
-  {{ template "_default/tool-page.html" . }}
-{{ end }}
+{{ partial "tool-page.html" . }}
 {{ end }}
 
 {{ define "tool-content" }}
