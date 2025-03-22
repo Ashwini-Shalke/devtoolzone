@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $params := dict "showDescription" false }}
 {{ with merge . $params }}
-  {{ template "layouts/_default/tool-page.html" . }}
+  {{ template "_default/tool-page.html" . }}
 {{ end }}
 {{ end }}
 
