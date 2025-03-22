@@ -2,32 +2,7 @@
   command = "hugo --gc --minify"
   publish = "public"
 
-# Handle SPA routing for the Dev Tools app
-[[redirects]]
-  from = "/devtools/*"
-  to = "/devtools/index.html"
-  status = 200
-  force = true
-
-# Ensure trailing slash for consistency
-[[redirects]]
-  from = "/devtools"
-  to = "/devtools/"
-  status = 301
-  force = true
-
-# Set processing options to ensure JS assets are served correctly
-[build.processing]
-  skip_processing = false
-
-[build.processing.js]
-  bundle = false
-  minify = false
-
-[build.processing.css]
-  bundle = false
-  minify = false
-
+# Build environment settings
 [build.environment]
   HUGO_VERSION = "0.145.0"
   HUGO_ENV = "production"
