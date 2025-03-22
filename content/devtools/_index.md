@@ -2,11 +2,14 @@
 title: "Developer Tools"
 ---
 
-Welcome to our Developer Tools section. We're currently rebuilding this section with new tools.
+Welcome to our Developer Tools section. We offer a collection of useful web-based tools to help developers with common tasks.
 
-Check back soon for our collection of useful developer tools:
+## Available Tools
 
-- JSON Formatter
+- [JSON Formatter](/devtools/json-formatter/) - Format, validate, and beautify JSON data with ease
+
+## Coming Soon
+
 - Markdown Editor
 - Code Diff Viewer
 - And more... 
