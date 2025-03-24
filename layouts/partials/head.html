@@ -156,3 +156,32 @@
 {{- template "partials/templates/twitter_cards.html" . }}
 {{- template "partials/templates/schema_json.html" . }}
 {{- end -}}
+
+<!-- Custom CSS -->
+<style>
+/* Custom white background for tool cards in light theme */
+body:not(.dark) .tool-card {
+  background-color: #ffffff !important; 
+  border: 1px solid #e0e0e0 !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08) !important;
+  border-radius: 8px !important;
+}
+
+body:not(.dark) .tool-card.available {
+  background-color: #ffffff !important;
+  border: 1px solid #d0d0ff !important;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.08) !important;
+}
+
+body:not(.dark) .tool-card:hover {
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1) !important;
+}
+
+body:not(.dark) .tool-card.available:hover {
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15) !important;
+}
+</style>
+
+{{- /* Load custom.css for overrides */}}
+{{ $customCSS := resources.Get "css/custom.css" | resources.Minify }}
+<link rel="stylesheet" href="{{ $customCSS.RelPermalink }}">

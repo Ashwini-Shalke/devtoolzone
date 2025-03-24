@@ -7,11 +7,13 @@ layout: "devtools-index"
 ## Text & Code Tools
 
 <div class="tools-grid">
-  <div class="tool-card available">
-    <div class="tool-icon">🔍</div>
-    <h3><a href="/devtools/json-formatter/">JSON Formatter</a></h3>
-    <p>Format, validate, and beautify JSON data with syntax highlighting</p>
-  </div>
+  <a href="/devtools/json-formatter/" class="card-link">
+    <div class="tool-card available">
+      <div class="tool-icon">🔍</div>
+      <h3>JSON Formatter</h3>
+      <p>Format, validate, and beautify JSON data with syntax highlighting</p>
+    </div>
+  </a>
   
   <div class="tool-card coming-soon">
     <div class="tool-icon">📝</div>
@@ -35,7 +37,7 @@ layout: "devtools-index"
   </div>
   
   <div class="tool-card coming-soon">
-    <div class="tool-icon">↔️</div>
+    <div class="tool-icon">⚙️</div>
     <h3>Code Diff Viewer</h3>
     <p>Compare and highlight differences between code snippets</p>
     <span class="badge">Coming Soon</span>
@@ -53,30 +55,30 @@ layout: "devtools-index"
 
 <div class="tools-grid">
   <div class="tool-card coming-soon">
-    <div class="tool-icon">🔐</div>
+    <div class="tool-icon">🔒</div>
     <h3>Base64 Encoder/Decoder</h3>
-    <p>Encode and decode Base64 strings and files</p>
+    <p>Convert text between Base64 and plain formats</p>
     <span class="badge">Coming Soon</span>
   </div>
   
   <div class="tool-card coming-soon">
-    <div class="tool-icon">🔗</div>
+    <div class="tool-icon">🔠</div>
     <h3>URL Encoder/Decoder</h3>
-    <p>Safely encode and decode URL components</p>
+    <p>Escape and unescape URL components</p>
+    <span class="badge">Coming Soon</span>
+  </div>
+  
+  <div class="tool-card coming-soon">
+    <div class="tool-icon">🔏</div>
+    <h3>JWT Decoder</h3>
+    <p>Decode and verify JSON Web Tokens</p>
     <span class="badge">Coming Soon</span>
   </div>
   
   <div class="tool-card coming-soon">
     <div class="tool-icon">🔑</div>
-    <h3>JWT Decoder</h3>
-    <p>Decode and inspect JWT tokens</p>
-    <span class="badge">Coming Soon</span>
-  </div>
-  
-  <div class="tool-card coming-soon">
-    <div class="tool-icon">🔒</div>
     <h3>Hash Generator</h3>
-    <p>Generate MD5, SHA1, SHA256, and other hash formats</p>
+    <p>Generate MD5, SHA-1, SHA-256, and other cryptographic hashes</p>
     <span class="badge">Coming Soon</span>
   </div>
 </div>
@@ -130,6 +132,42 @@ layout: "devtools-index"
   box-sizing: border-box;
 }
 
+/* Card link styling */
+.card-link {
+  display: block;
+  text-decoration: none !important;
+  color: inherit !important;
+  border: none !important;
+  border-bottom: none !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.card-link::after {
+  display: none !important;
+  content: none !important;
+}
+
+.card-link:hover {
+  text-decoration: none !important;
+  border: none !important;
+  border-bottom: none !important;
+}
+
+.card-link:focus {
+  outline: none !important;
+  border: none !important;
+}
+
+.card-link:focus .tool-card {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5) !important;
+}
+
 /* Responsive adjustments */
 @media (max-width: 1400px) {
   .tools-grid {
@@ -160,22 +198,30 @@ layout: "devtools-index"
   flex-direction: column;
 }
 
+/* Style for clickable cards */
+.tool-card.available {
+  cursor: pointer;
+}
+
 .dark .tool-card {
   background-color: #2a2a2a;
 }
 
+body:not(.dark) .tool-card {
+  background-color: #ffffff !important;
+  border: 1px solid #e0e0e0 !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08) !important;
+  border-radius: 8px !important;
+}
+
+body:not(.dark) .tool-card.available {
+  background-color: #ffffff !important;
+  border: 1px solid #d0d0ff !important;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.08) !important;
+}
+
 .dark .tool-card.available {
   background-color: #2a3144;
-}
-
-.light .tool-card {
-  background-color: #f5f5f5;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.light .tool-card.available {
-  background-color: #f0f4ff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .tool-card:hover {
@@ -186,7 +232,7 @@ layout: "devtools-index"
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-.light .tool-card:hover {
+body:not(.dark) .tool-card:hover {
   box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
 
@@ -198,7 +244,7 @@ layout: "devtools-index"
   box-shadow: 0 5px 20px rgba(59, 130, 246, 0.2);
 }
 
-.light .tool-card.available:hover {
+body:not(.dark) .tool-card.available:hover {
   box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15);
 }
 

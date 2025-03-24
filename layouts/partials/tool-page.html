@@ -28,8 +28,8 @@
         {{ end }}
       </div>
       
-      <!-- Only display tool description in content if we're not on a tool page with specific content -->
-      {{ if not (findRE "json-formatter|xml-formatter|sql-formatter" .RelPermalink) }}
+      <!-- Only display tool description in content if we're not using the devtools-index layout -->
+      {{ if ne .Layout "devtools-index" }}
       <div class="tool-description compact-description">
         {{ .Content }}
       </div>

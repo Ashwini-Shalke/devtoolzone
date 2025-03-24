@@ -1,0 +1,57 @@
+/* Custom styles for tool cards */
+body:not(.dark) .tool-card {
+  background-color: #ffffff !important; 
+  border: 1px solid #e0e0e0 !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08) !important;
+  border-radius: 8px !important;
+}
+
+body:not(.dark) .tool-card.available {
+  background-color: #ffffff !important;
+  border: 1px solid #d0d0ff !important;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.08) !important;
+}
+
+body:not(.dark) .tool-card:hover {
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1) !important;
+}
+
+body:not(.dark) .tool-card.available:hover {
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15) !important;
+}
+
+/* Card link styling */
+.card-link {
+  display: block;
+  text-decoration: none !important;
+  color: inherit !important;
+  border: none !important;
+  border-bottom: none !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.card-link::after {
+  display: none !important;
+  content: none !important;
+}
+
+.card-link:hover {
+  text-decoration: none !important;
+  border: none !important;
+  border-bottom: none !important;
+}
+
+.card-link:focus {
+  outline: none !important;
+  border: none !important;
+}
+
+.card-link:focus .tool-card {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5) !important;
+} 

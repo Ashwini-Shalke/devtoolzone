@@ -43,6 +43,28 @@
   padding: 1.25rem !important;
 }
 
+/* Force white background for light theme cards */
+body:not(.dark) .tool-card {
+  background-color: #ffffff !important;
+  border: 1px solid #e0e0e0 !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08) !important;
+  border-radius: 8px !important;
+}
+
+body:not(.dark) .tool-card.available {
+  background-color: #ffffff !important;
+  border: 1px solid #d0d0ff !important;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.08) !important;
+}
+
+body:not(.dark) .tool-card:hover {
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1) !important;
+}
+
+body:not(.dark) .tool-card.available:hover {
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15) !important;
+}
+
 .tool-card h3 {
   overflow-wrap: break-word !important;
   word-wrap: break-word !important;
@@ -67,6 +89,34 @@
   padding: 0 !important;
   margin: 0 !important;
   overflow-x: hidden !important;
+}
+
+/* Card link styling - remove borders */
+.card-link {
+  border: none !important;
+  border-bottom: none !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  display: block !important;
+  color: inherit !important;
+}
+
+.card-link::after {
+  display: none !important;
+  content: none !important;
+}
+
+body.dark .card-link,
+body:not(.dark) .card-link {
+  border: none !important;
+  border-bottom: none !important;
+  text-decoration: none !important;
 }
 </style>
 {{ end }} 
