@@ -188,8 +188,12 @@ body:not(.dark) .tool-card.available:hover {
 </style>
 
 {{- /* Load custom.css for overrides */}}
-{{ $customCSS := resources.Get "css/custom.css" | resources.Minify }}
-<link rel="stylesheet" href="{{ $customCSS.RelPermalink }}">
+{{ with resources.Get "css/custom.css" }}
+  {{ $customCSS := . | resources.Minify }}
+  <link rel="stylesheet" href="{{ $customCSS.RelPermalink }}">
+{{ else }}
+  <!-- Custom CSS file not found -->
+{{ end }}
 
 <!-- Add iframe accessibility fix -->
 {{ partial "iframe-fix.html" . }}
