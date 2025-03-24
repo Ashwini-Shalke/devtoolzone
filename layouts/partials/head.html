@@ -180,8 +180,20 @@ body:not(.dark) .tool-card:hover {
 body:not(.dark) .tool-card.available:hover {
   box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15) !important;
 }
+
+/* Card link styling */
+.card-link:focus .tool-card {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5) !important;
+}
 </style>
 
 {{- /* Load custom.css for overrides */}}
-{{ $customCSS := resources.Get "css/custom.css" | resources.Minify }}
-<link rel="stylesheet" href="{{ $customCSS.RelPermalink }}">
+{{ with resources.Get "css/custom.css" }}
+  {{ $customCSS := . | resources.Minify }}
+  <link rel="stylesheet" href="{{ $customCSS.RelPermalink }}">
+{{ else }}
+  <!-- Custom CSS file not found -->
+{{ end }}
+
+<!-- Add iframe accessibility fix -->
+{{ partial "iframe-fix.html" . }}

@@ -1,0 +1,49 @@
+{
+  "ci": {
+    "collect": {
+      "url": [
+        "http://localhost:8080/",
+        "http://localhost:8080/devtools/",
+        "http://localhost:8080/devtools/json-formatter/"
+      ],
+      "numberOfRuns": 3,
+      "staticDistDir": "./public",
+      "startServerCommand": "cd public && python3 -m http.server 8080"
+    },
+    "assert": {
+      "preset": "lighthouse:recommended",
+      "assertions": {
+        "categories:performance": ["error", {"minScore": 0.7}],
+        "categories:accessibility": ["error", {"minScore": 0.8}],
+        "categories:best-practices": ["error", {"minScore": 0.8}],
+        "categories:seo": ["error", {"minScore": 0.8}],
+
+        "first-contentful-paint": ["warn", {"maxNumericValue": 2500}],
+        "interactive": ["warn", {"maxNumericValue": 4000}],
+        "largest-contentful-paint": ["warn", {"maxNumericValue": 3000}],
+        "cumulative-layout-shift": ["error", {"maxNumericValue": 0.25}],
+        "total-blocking-time": ["warn", {"maxNumericValue": 500}],
+        
+        "tap-targets": "off",
+        "uses-rel-preconnect": "off",
+        "uses-responsive-images": "off",
+        "render-blocking-resources": "warn",
+        "unused-javascript": "warn",
+        
+        "meta-description": ["error", {"minScore": 1}],
+        "document-title": ["error", {"minScore": 1}],
+        "html-has-lang": ["error", {"minScore": 1}],
+        "canonical": "warn",
+        "hreflang": "off",
+        
+        "errors-in-console": "warn",
+        "third-party-cookies": "warn",
+        "inspector-issues": "warn",
+        "color-contrast": "warn"
+      }
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    }
+  }
+} 
