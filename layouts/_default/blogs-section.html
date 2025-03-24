@@ -329,14 +329,16 @@
 <style>
 /* Tab Navigation Styling */
 .blog-tabs-container {
-    margin-top: 2rem;
+    margin-top: 0rem;
+    position: relative;
+    overflow: visible;
 }
 
 .blog-tabs {
     display: flex;
     border-bottom: 1px solid var(--border);
-    margin-bottom: 2rem;
-    overflow-x: auto;
+    margin-bottom: 1rem;
+    overflow: visible;
 }
 
 .tab-button {
@@ -374,11 +376,10 @@
 /* Tab Content Styling */
 .tab-content {
     display: none;
-    padding: 20px;
-    border: 1px solid var(--border);
-    border-radius: 0 5px 5px 5px;
-    margin-top: -1px;
-    background-color: var(--entry);
+    padding: 0;
+    border: none;
+    margin: 0;
+    background-color: transparent;
 }
 
 .tab-content.active {
@@ -390,7 +391,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -405,7 +406,7 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     display: flex;
     min-height: 200px;
-    background-color: var(--entry);
+    background-color: var(--code-bg);
 }
 
 .post-card:hover {
@@ -545,10 +546,10 @@
 .tab-content {
     display: none;
     padding: 20px;
-    border: 1px solid var(--border);
-    border-radius: 0 5px 5px 5px;
-    margin-top: -1px;
-    background-color: var(--entry);
+    border: none;
+    border-radius: 0;
+    margin-top: 0;
+    background-color: transparent;
 }
 
 .tab-content.active {
@@ -560,7 +561,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
-    margin-top: 30px;
+    margin-top: 0.5rem;
 }
 
 /* Post Card */
@@ -572,7 +573,7 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     display: flex;
     min-height: 200px;
-    background-color: var(--entry);
+    background-color: var(--code-bg);
 }
 
 .post-card:hover {
@@ -665,6 +666,22 @@
         flex: 0 0 150px;
         width: 100%;
     }
+}
+
+/* Hide all scrollbars */
+*::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Tab Content Container */
+.tab-content-container {
+    overflow: visible;
+    position: relative;
 }
 </style>
 
