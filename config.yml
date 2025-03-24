@@ -62,22 +62,10 @@ menu:
       name: Dev Tools
       url: "/devtools/"
       weight: -100
-    - identifier: sql
-      name: SQL
-      url: /sql/
+    - identifier: blogs
+      name: Blogs
+      url: /blogs/
       weight: -90
-    - identifier: html
-      name: HTML
-      url: /html/
-      weight: -80
-    - identifier: oracleapex
-      name: Oracle APEX
-      url: /OracleApplicationExpress/
-      weight: -70
-    - identifier: swift
-      name: Swift
-      url: /swift/
-      weight: -60
     - identifier: archives
       name: Archives
       url: /archives/
