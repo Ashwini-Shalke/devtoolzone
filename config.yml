@@ -27,6 +27,9 @@ params:
   ShowPostNavLinks: true
   ShowCodeCopyButtons: true
   
+  # Site-wide description for SEO
+  description: "LearnerLoft DevTools – A one-stop hub for developers and tech enthusiasts! Explore insightful blogs on Swift, SQL, HTML, and Oracle APEX. Access free online developer tools for code formatting, JSON parsing, and text manipulation. Get expert consulting via Topmate for career guidance and tech solutions. Plus, enjoy small fun games to take a break from coding. Stay productive, learn new skills, and have fun – all in one place!"
+
   homeInfoParams:
     Title: "Hello, Pals !!"
     Content: "Welcome to Learner Loft, your ultimate destination for all things tech! 

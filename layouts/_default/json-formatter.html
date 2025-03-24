@@ -26,31 +26,32 @@
           <div class="input-output-container">
             <div class="input-section">
               <div class="section-header">
-                <h3>Input JSON</h3>
+                <h3 id="input-section-header">Input JSON</h3>
               </div>
               <div id="json-input-container">
-                <textarea id="json-input" placeholder="Paste your JSON here..."></textarea>
+                <label for="json-input" class="sr-only">Input JSON data</label>
+                <textarea id="json-input" placeholder="Paste your JSON here..." aria-labelledby="input-section-header"></textarea>
               </div>
             </div>
             <div class="output-section">
               <div class="section-header">
-                <h3>Formatted JSON</h3>
+                <h3 id="output-section-header">Formatted JSON</h3>
               </div>
               <div id="json-output-container">
-                <pre id="json-output"></pre>
+                <pre id="json-output" aria-labelledby="output-section-header"></pre>
               </div>
             </div>
           </div>
           
           <div class="controls-container">
             <div class="button-container">
-              <button id="format-button" class="primary-button">Format JSON</button>
-              <button id="minify-button" class="secondary-button">Minify</button>
-              <button id="clear-button" class="secondary-button">Clear</button>
+              <button id="format-button" class="primary-button" aria-label="Format JSON data">Format JSON</button>
+              <button id="minify-button" class="secondary-button" aria-label="Minify JSON data">Minify</button>
+              <button id="clear-button" class="secondary-button" aria-label="Clear input and output areas">Clear</button>
             </div>
             <div class="status-container">
-              <div class="validation-status" id="validation-status"></div>
-              <button id="copy-button" class="secondary-button">Copy</button>
+              <div class="validation-status" id="validation-status" aria-live="polite"></div>
+              <button id="copy-button" class="secondary-button" aria-label="Copy formatted JSON to clipboard">Copy</button>
             </div>
           </div>
           
@@ -236,6 +237,19 @@
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 0.5rem;
+}
+
+/* Screen reader only class for accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .button-container {

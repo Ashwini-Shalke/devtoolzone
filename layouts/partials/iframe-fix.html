@@ -1,0 +1,25 @@
+<script>
+  // Function to add titles to iframes for accessibility
+  document.addEventListener('DOMContentLoaded', function() {
+    // Add a slight delay to ensure iframes are loaded
+    setTimeout(function() {
+      // Find all iframes without titles
+      var iframes = document.querySelectorAll('iframe:not([title])');
+      
+      // Add appropriate titles based on src or id
+      iframes.forEach(function(iframe) {
+        if (iframe.id === 'google_esf') {
+          iframe.setAttribute('title', 'Google ad service frame');
+        } else if (iframe.src && iframe.src.includes('recaptcha')) {
+          iframe.setAttribute('title', 'Google reCAPTCHA verification frame');
+        } else if (iframe.src && iframe.src.includes('doubleclick')) {
+          iframe.setAttribute('title', 'Google DoubleClick ad frame');
+        } else if (iframe.src && iframe.src.includes('googleads')) {
+          iframe.setAttribute('title', 'Google advertisement frame');
+        } else {
+          iframe.setAttribute('title', 'Advertisement frame');
+        }
+      });
+    }, 1000);
+  });
+</script> 
