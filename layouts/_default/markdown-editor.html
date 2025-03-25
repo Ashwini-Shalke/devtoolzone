@@ -1,0 +1,558 @@
+{{ define "main" }}
+<div class="post-content navigation-width">
+  <div class="devtools-content-wrapper">
+    <!-- Left side vertical ad -->
+    <div class="side-ad-container left-ad">
+      <div class="ad-container sidebar">
+        <div class="ad-placeholder">Ad Space<br>180x600</div>
+        {{ partial "sidebar-ad.html" . }}
+      </div>
+    </div>
+    
+    <div class="full-width-content">
+      <header class="post-header compact-header">
+        <h2 class="tool-title">{{ .Title }}</h2>
+        <!-- Display the description from front matter if available -->
+        {{ with .Description }}
+        <div class="tool-description-header">
+          {{ . }}
+        </div>
+        {{ end }}
+      </header>
+
+      <!-- Markdown Editor Tool Content -->
+      <div class="tool-content">
+        <div class="markdown-editor-container">
+          <div class="input-output-container">
+            <div class="input-section">
+              <div class="section-header">
+                <h3 id="input-section-header">Markdown Input</h3>
+              </div>
+              <div id="markdown-input-container">
+                <label for="markdown-input" class="sr-only">Input Markdown text</label>
+                <textarea id="markdown-input" placeholder="Write your Markdown here..." aria-labelledby="input-section-header"></textarea>
+              </div>
+            </div>
+            <div class="output-section">
+              <div class="section-header">
+                <h3 id="output-section-header">Preview</h3>
+              </div>
+              <div id="markdown-output-container">
+                <div id="markdown-output" aria-labelledby="output-section-header"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="controls-container">
+            <div class="button-container">
+              <button id="preview-button" class="primary-button" aria-label="Preview markdown">Preview</button>
+              <button id="clear-button" class="secondary-button" aria-label="Clear input and output areas">Clear</button>
+            </div>
+            <div class="status-container">
+              <div class="editor-info" id="editor-info" aria-live="polite">
+                <span id="character-count">0</span> characters | <span id="word-count">0</span> words
+              </div>
+              <button id="copy-button" class="secondary-button" aria-label="Copy markdown to clipboard">Copy</button>
+              <button id="download-button" class="secondary-button" aria-label="Download markdown file">Download</button>
+            </div>
+          </div>
+          
+          <div class="markdown-shortcuts">
+            <div class="shortcuts-title">Markdown Shortcuts</div>
+            <div class="shortcuts-grid">
+              <button class="shortcut-button" data-markdown-shortcut="bold" title="Bold">B</button>
+              <button class="shortcut-button" data-markdown-shortcut="italic" title="Italic">I</button>
+              <button class="shortcut-button" data-markdown-shortcut="heading" title="Heading">H</button>
+              <button class="shortcut-button" data-markdown-shortcut="link" title="Link">🔗</button>
+              <button class="shortcut-button" data-markdown-shortcut="image" title="Image">🖼️</button>
+              <button class="shortcut-button" data-markdown-shortcut="list" title="List">📋</button>
+              <button class="shortcut-button" data-markdown-shortcut="code" title="Code">{ }</button>
+              <button class="shortcut-button" data-markdown-shortcut="quote" title="Quote">❝</button>
+            </div>
+          </div>
+          
+          <!-- Tool description in the tool content section -->
+          <div class="tool-description compact-description">
+            {{ .Content }}
+          </div>
+        </div>
+      </div>
+      
+      <!-- Bottom horizontal ad -->
+      <div class="ad-container inline bottom-ad">
+        <div class="ad-placeholder">Ad Space<br>728x90</div>
+      </div>
+    </div>
+    
+    <!-- Right side vertical ad -->
+    <div class="side-ad-container right-ad">
+      <div class="ad-container sidebar">
+        <div class="ad-placeholder">Ad Space<br>180x600</div>
+        {{ partial "sidebar-ad.html" . }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/marked.min.js"></script>
+<script src="/js/markdown-editor.js"></script>
+{{ if eq (getenv "HUGO_ENV") "development" }}
+<script src="/js/markdown-editor.test.js"></script>
+{{ end }}
+
+<style>
+.navigation-width {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 25px !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
+.full-width, .main, .post-content {
+  max-width: none !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.full-width-content {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.tool-title {
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: normal;
+  width: 100% !important;
+}
+
+.tool-description-header {
+  margin-bottom: 1.5rem;
+  text-align: left;
+  width: 100% !important;
+  line-height: 1.5;
+}
+
+.compact-header {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+.compact-header h1, .compact-header h2 {
+  text-align: left;
+  margin-top: 0;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.tool-content {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.markdown-editor-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.input-output-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .input-output-container {
+    flex-direction: row;
+  }
+  .input-section, .output-section {
+    width: calc(50% - 2px);
+  }
+}
+
+.input-section, .output-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.section-header h3 {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+#markdown-input, #markdown-output {
+  height: 450px;
+  padding: 4px;
+  font-family: monospace;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+#markdown-input {
+  resize: vertical;
+  line-height: 1.6;
+}
+
+#markdown-output {
+  background-color: #f5f5f5;
+  white-space: normal;
+  line-height: 1.6;
+  padding: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+}
+
+.dark #markdown-input {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  border-color: #444;
+}
+
+.dark #markdown-output {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  border-color: #444;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.button-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.status-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.primary-button, .secondary-button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.primary-button {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.secondary-button {
+  background-color: #e5e7eb;
+  color: #1f2937;
+}
+
+.dark .secondary-button {
+  background-color: #374151;
+  color: #e5e7eb;
+}
+
+.primary-button:hover {
+  background-color: #2563eb;
+}
+
+.secondary-button:hover {
+  background-color: #d1d5db;
+}
+
+.dark .secondary-button:hover {
+  background-color: #4b5563;
+}
+
+.editor-info {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.dark .editor-info {
+  color: #9ca3af;
+}
+
+/* Markdown Shortcuts */
+.markdown-shortcuts {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.dark .markdown-shortcuts {
+  border-color: #374151;
+}
+
+.shortcuts-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.shortcuts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.shortcut-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  border: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.dark .shortcut-button {
+  background-color: #1f2937;
+  border-color: #374151;
+  color: #e5e7eb;
+}
+
+.shortcut-button:hover {
+  background-color: #f3f4f6;
+  border-color: #d1d5db;
+}
+
+.dark .shortcut-button:hover {
+  background-color: #374151;
+  border-color: #4b5563;
+}
+
+/* Screen reader only class for accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Style for markdown preview content */
+#markdown-output h1, 
+#markdown-output h2, 
+#markdown-output h3, 
+#markdown-output h4, 
+#markdown-output h5, 
+#markdown-output h6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+#markdown-output h1 {
+  font-size: 2rem;
+}
+
+#markdown-output h2 {
+  font-size: 1.5rem;
+}
+
+#markdown-output h3 {
+  font-size: 1.25rem;
+}
+
+#markdown-output p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+#markdown-output ul, 
+#markdown-output ol {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+#markdown-output li {
+  margin-bottom: 0.25rem;
+}
+
+#markdown-output a {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+#markdown-output img {
+  max-width: 100%;
+  height: auto;
+}
+
+#markdown-output blockquote {
+  margin-left: 0;
+  padding-left: 1rem;
+  border-left: 4px solid #e5e7eb;
+  color: #6b7280;
+}
+
+#markdown-output code {
+  padding: 0.2em 0.4em;
+  font-family: monospace;
+  font-size: 0.85em;
+  background-color: #f3f4f6;
+  border-radius: 3px;
+}
+
+#markdown-output pre {
+  background-color: #f3f4f6;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+#markdown-output pre code {
+  padding: 0;
+  background-color: transparent;
+}
+
+.dark #markdown-output blockquote {
+  border-left-color: #4b5563;
+  color: #9ca3af;
+}
+
+.dark #markdown-output code {
+  background-color: #374151;
+}
+
+.dark #markdown-output pre {
+  background-color: #1f2937;
+}
+
+/* Ensure side ads display properly */
+.side-ad-container {
+  width: 180px;
+  height: 600px;
+  display: none; /* Hidden on mobile */
+  position: sticky;
+  top: 2rem;
+  flex-shrink: 0;
+}
+
+/* Side ad container styling */
+.side-ad-container .ad-container {
+  width: 180px;
+  height: 600px;
+  position: relative;
+}
+
+/* Ad placeholder styling */
+.ad-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Bottom ad styling */
+.bottom-ad {
+  margin-top: 2rem;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.dark .bottom-ad {
+  background-color: #2a2a2a;
+}
+
+/* Show side ads on desktop */
+@media (min-width: 1400px) {
+  .side-ad-container {
+    display: block;
+  }
+}
+
+/* Only show left ad on medium-sized screens */
+@media (min-width: 1100px) and (max-width: 1399px) {
+  .left-ad {
+    display: block;
+  }
+  .right-ad {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .controls-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .status-container {
+    justify-content: space-between;
+  }
+}
+
+/* Wrapper for content and side ads */
+.devtools-content-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Main content takes most of the space */
+.devtools-content-wrapper .full-width-content {
+  flex: 1;
+  min-width: 0; /* Prevent flex item from overflowing */
+}
+</style>
+{{ end }} 
