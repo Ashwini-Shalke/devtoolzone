@@ -3,10 +3,30 @@
 <!-- Blog Categories Tabs -->
 <div class="blog-tabs-container">
     <nav class="blog-tabs">
-        <button class="tab-button" data-category="swift" id="default-tab">Swift</button>
-        <button class="tab-button" data-category="sql">SQL</button>
-        <button class="tab-button" data-category="html">HTML</button>
-        <button class="tab-button" data-category="oracle-apex">Oracle APEX</button>
+        <button class="tab-button" data-category="swift" id="default-tab">
+            <svg class="tab-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                <path fill="currentColor" d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.67 14.94,2.04 15.94,2C16.07,3.17 15.6,4.35 14.9,5.19C14.21,6.04 13.07,6.7 11.95,6.61C11.8,5.46 12.36,4.26 13,3.5Z"/>
+            </svg>
+            Swift
+        </button>
+        <button class="tab-button" data-category="sql">
+            <svg class="tab-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                <path fill="currentColor" d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4z"/>
+            </svg>
+            SQL
+        </button>
+        <button class="tab-button" data-category="html">
+            <svg class="tab-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                <path fill="currentColor" d="M12 17.56l4.07-1.13.55-6.1H9.38L9.2 8.3h7.6l.2-1.99H7l.56 6.01h6.89l-.23 2.58-2.22.6-2.22-.6-.14-1.66h-2l.29 3.19L12 17.56M4.07 3h15.86L18.5 19.2 12 21l-6.5-1.8L4.07 3z"/>
+            </svg>
+            HTML
+        </button>
+        <button class="tab-button" data-category="oracle-apex">
+            <svg class="tab-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                <path fill="currentColor" d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3m6.82 6L12 12.72 5.18 9 12 5.28 18.82 9M17 16l-5 2.72L7 16v-3.73L12 15l5-2.73V16z"/>
+            </svg>
+            Oracle APEX
+        </button>
     </nav>
 
     <!-- Tab Content Containers -->
@@ -17,6 +37,7 @@
             {{ $swiftBlogPosts := where (where .Site.Pages "Kind" "page") "Section" "blogs" }}
             {{ $swiftBlogPosts = where $swiftBlogPosts "Dir" "in" (slice "/content/blogs/swift/" "/content/blogs/swift") }}
             {{ $allSwiftPosts := $swiftPosts | union $swiftBlogPosts }}
+            {{ $allSwiftPosts = $allSwiftPosts.Reverse }}
             
             {{ if $allSwiftPosts }}
                 <div class="posts-grid">
@@ -682,6 +703,53 @@
 .tab-content-container {
     overflow: visible;
     position: relative;
+}
+
+/* Tab icon styling */
+.tab-icon {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.tab-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Swift theme icon handling */
+.swift-icon {
+    border-radius: 4px;
+}
+
+.light-theme-icon {
+    display: none;
+}
+
+.dark-theme-icon {
+    display: none;
+}
+
+:root {
+    --display-light-icon: block;
+    --display-dark-icon: none;
+}
+
+:root.dark {
+    --display-light-icon: none;
+    --display-dark-icon: block;
+}
+
+html[data-theme='dark'] {
+    --display-light-icon: none;
+    --display-dark-icon: block;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not(.light) {
+        --display-light-icon: none;
+        --display-dark-icon: block;
+    }
 }
 </style>
 

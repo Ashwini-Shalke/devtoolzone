@@ -62,6 +62,12 @@ menu:
       name: Dev Tools
       url: "/devtools/"
       weight: -100
+    - identifier: consulting
+      name: Consulting & Mentorship
+      url: "https://topmate.io/anilkumar_kotur"
+      weight: -95
+      params:
+        target: _blank
     - identifier: blogs
       name: Blogs
       url: /blogs/
