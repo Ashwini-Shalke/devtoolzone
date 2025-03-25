@@ -15,12 +15,13 @@ layout: "devtools-index"
     </div>
   </a>
   
-  <div class="tool-card coming-soon">
-    <div class="tool-icon">📝</div>
-    <h3>Markdown Editor</h3>
-    <p>Live preview markdown with syntax highlighting and export options</p>
-    <span class="badge">Coming Soon</span>
-  </div>
+  <a href="/devtools/markdown-editor/" class="card-link">
+    <div class="tool-card available">
+      <div class="tool-icon">📝</div>
+      <h3>Markdown Editor</h3>
+      <p>Live preview markdown with syntax highlighting and export options</p>
+    </div>
+  </a>
   
   <div class="tool-card coming-soon">
     <div class="tool-icon">📊</div>
