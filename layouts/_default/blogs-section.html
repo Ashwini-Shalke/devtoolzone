@@ -1,0 +1,737 @@
+{{- define "main" }}
+
+<!-- Blog Categories Tabs -->
+<div class="blog-tabs-container">
+    <nav class="blog-tabs">
+        <button class="tab-button" data-category="swift" id="default-tab">Swift</button>
+        <button class="tab-button" data-category="sql">SQL</button>
+        <button class="tab-button" data-category="html">HTML</button>
+        <button class="tab-button" data-category="oracle-apex">Oracle APEX</button>
+    </nav>
+
+    <!-- Tab Content Containers -->
+    <div class="tab-content-container">
+        <!-- Swift Tab (default active) -->
+        <div class="tab-content active" id="swift-content">
+            {{ $swiftPosts := where (where .Site.Pages "Kind" "page") "Section" "swift" }}
+            {{ $swiftBlogPosts := where (where .Site.Pages "Kind" "page") "Section" "blogs" }}
+            {{ $swiftBlogPosts = where $swiftBlogPosts "Dir" "in" (slice "/content/blogs/swift/" "/content/blogs/swift") }}
+            {{ $allSwiftPosts := $swiftPosts | union $swiftBlogPosts }}
+            
+            {{ if $allSwiftPosts }}
+                <div class="posts-grid">
+                {{ range $allSwiftPosts }}
+                    {{ $hasImage := false }}
+                    {{ $imagePath := "" }}
+                    {{ $imgRegex := `!\[[^\]]*\]\((.*?)\s*(?:\s+\".*\")?\s*\)` }}
+                    
+                    {{ if .RawContent }}
+                        {{ if findRE $imgRegex .RawContent 1 }}
+                            {{ $matches := findRE $imgRegex .RawContent 1 }}
+                            {{ range $matches }}
+                                {{ $url := replaceRE `!\[[^\]]*\]\((.*?)\s*(?:\s+\".*\")?\s*\)` "$1" . }}
+                                {{ $imagePath = $url }}
+                                {{ $hasImage = true }}
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                    
+                    {{ if not $hasImage }}
+                        {{ if .Params.cover }}
+                            {{ $hasImage = true }}
+                            {{ $imagePath = .Params.cover }}
+                        {{ else if .Params.image }}
+                            {{ $hasImage = true }}
+                            {{ $imagePath = .Params.image }}
+                        {{ else if .Params.featured_image }}
+                            {{ $hasImage = true }}
+                            {{ $imagePath = .Params.featured_image }}
+                        {{ else if isset .Params "images" }}
+                            {{ if gt (len .Params.images) 0 }}
+                                {{ $hasImage = true }}
+                                {{ $imagePath = index .Params.images 0 }}
+                            {{ end }}
+                        {{ else }}
+                            {{ with .Resources.GetMatch "{*.jpg,*.png,*.jpeg,*.gif,*.webp}" }}
+                                {{ $hasImage = true }}
+                                {{ $imagePath = .Permalink }}
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                    
+                    <article class="post-card">
+                        <a class="post-card-link" href="{{ .Permalink }}">
+                            <div class="post-card-image">
+                                {{ if $hasImage }}
+                                    <img src="{{ $imagePath | absURL }}" alt="{{ .Title }}">
+                                {{ else }}
+                                    <div class="post-card-image-placeholder" style="background: var(--primary);">
+                                        <span>{{ .Title }}</span>
+                                    </div>
+                                {{ end }}
+                            </div>
+                            <div class="post-card-content">
+                                <h3 class="post-card-title">{{ .Title }}</h3>
+                                <div class="post-card-excerpt">
+                                    Learn about {{ .Title }} in this comprehensive guide.
+                                </div>
+                                <div class="post-card-meta">
+                                    <span class="post-card-date">{{ .Date.Format "January 2, 2006" }}</span>
+                                    <span class="post-card-time">· {{ .ReadingTime }} min read</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                {{ end }}
+                </div>
+            {{ else }}
+                <p>No Swift blog posts found.</p>
+            {{ end }}
+        </div>
+
+        <!-- SQL Tab -->
+        <div class="tab-content" id="sql-content">
+            {{ $sqlPosts := where (where .Site.Pages "Kind" "page") "Section" "sql" }}
+            {{ $sqlBlogPosts := where (where .Site.Pages "Kind" "page") "Section" "blogs" }}
+            {{ $sqlBlogPosts = where $sqlBlogPosts "Dir" "in" (slice "/content/blogs/sql/" "/content/blogs/sql") }}
+            {{ $allSqlPosts := $sqlPosts | union $sqlBlogPosts }}
+            
+            {{ if $allSqlPosts }}
+                <div class="posts-grid">
+                {{ range $allSqlPosts }}
+                    {{ $hasImage := false }}
+                    {{ $imagePath := "" }}
+                    {{ $imgRegex := `!\[[^\]]*\]\((.*?)\s*(?:\s+\".*\")?\s*\)` }}
+                    
+                    {{ if .RawContent }}
+                        {{ if findRE $imgRegex .RawContent 1 }}
+                            {{ $matches := findRE $imgRegex .RawContent 1 }}
+                            {{ range $matches }}
+                                {{ $url := replaceRE `!\[[^\]]*\]\((.*?)\s*(?:\s+\".*\")?\s*\)` "$1" . }}
+                                {{ $imagePath = $url }}
+                                {{ $hasImage = true }}
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                    
+                    {{ if not $hasImage }}
+                        {{ if .Params.cover }}
+                            {{ $hasImage = true }}
+                            {{ $imagePath = .Params.cover }}
+                        {{ else if .Params.image }}
+                            {{ $hasImage = true }}
+                            {{ $imagePath = .Params.image }}
+                        {{ else if .Params.featured_image }}
+                            {{ $hasImage = true }}
+                            {{ $imagePath = .Params.featured_image }}
+                        {{ else if isset .Params "images" }}
+                            {{ if gt (len .Params.images) 0 }}
+                                {{ $hasImage = true }}
+                                {{ $imagePath = index .Params.images 0 }}
+                            {{ end }}
+                        {{ else }}
+                            {{ with .Resources.GetMatch "{*.jpg,*.png,*.jpeg,*.gif,*.webp}" }}
+                                {{ $hasImage = true }}
+                                {{ $imagePath = .Permalink }}
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                    
+                    <article class="post-card">
+                        <a class="post-card-link" href="{{ .Permalink }}">
+                            <div class="post-card-image">
+                                {{ if $hasImage }}
+                                    <img src="{{ $imagePath | absURL }}" alt="{{ .Title }}">
+                                {{ else }}
+                                    <div class="post-card-image-placeholder" style="background: var(--primary);">
+                                        <span>{{ .Title }}</span>
+                                    </div>
+                                {{ end }}
+                            </div>
+                            <div class="post-card-content">
+                                <h3 class="post-card-title">{{ .Title }}</h3>
+                                <div class="post-card-excerpt">
+                                    Learn about {{ .Title }} in this comprehensive guide.
+                                </div>
+                                <div class="post-card-meta">
+                                    <span class="post-card-date">{{ .Date.Format "January 2, 2006" }}</span>
+                                    <span class="post-card-time">· {{ .ReadingTime }} min read</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                {{ end }}
+                </div>
+            {{ else }}
+                <p>No SQL blog posts found.</p>
+            {{ end }}
+        </div>
+
+        <!-- HTML Tab -->
+        <div class="tab-content" id="html-content">
+            {{ $htmlPosts := where (where .Site.Pages "Kind" "page") "Section" "html" }}
+            {{ $htmlBlogPosts := where (where .Site.Pages "Kind" "page") "Section" "blogs" }}
+            {{ $htmlBlogPosts = where $htmlBlogPosts "Dir" "in" (slice "/content/blogs/html/" "/content/blogs/html") }}
+            {{ $allHtmlPosts := $htmlPosts | union $htmlBlogPosts }}
+            
+            {{ if $allHtmlPosts }}
+                <div class="posts-grid">
+                {{ range $allHtmlPosts }}
+                    {{ $hasImage := false }}
+                    {{ $imagePath := "" }}
+                    {{ $imgRegex := `!\[[^\]]*\]\((.*?)\s*(?:\s+\".*\")?\s*\)` }}
+                    
+                    {{ if .RawContent }}
+                        {{ if findRE $imgRegex .RawContent 1 }}
+                            {{ $matches := findRE $imgRegex .RawContent 1 }}
+                            {{ range $matches }}
+                                {{ $url := replaceRE `!\[[^\]]*\]\((.*?)\s*(?:\s+\".*\")?\s*\)` "$1" . }}
+                                {{ $imagePath = $url }}
+                                {{ $hasImage = true }}
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                    
+                    {{ if not $hasImage }}
+                        {{ if .Params.cover }}
+                            {{ $hasImage = true }}
+                            {{ $imagePath = .Params.cover }}
+                        {{ else if .Params.image }}
+                            {{ $hasImage = true }}
+                            {{ $imagePath = .Params.image }}
+                        {{ else if .Params.featured_image }}
+                            {{ $hasImage = true }}
+                            {{ $imagePath = .Params.featured_image }}
+                        {{ else if isset .Params "images" }}
+                            {{ if gt (len .Params.images) 0 }}
+                                {{ $hasImage = true }}
+                                {{ $imagePath = index .Params.images 0 }}
+                            {{ end }}
+                        {{ else }}
+                            {{ with .Resources.GetMatch "{*.jpg,*.png,*.jpeg,*.gif,*.webp}" }}
+                                {{ $hasImage = true }}
+                                {{ $imagePath = .Permalink }}
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                    
+                    <article class="post-card">
+                        <a class="post-card-link" href="{{ .Permalink }}">
+                            <div class="post-card-image">
+                                {{ if $hasImage }}
+                                    <img src="{{ $imagePath | absURL }}" alt="{{ .Title }}">
+                                {{ else }}
+                                    <div class="post-card-image-placeholder" style="background: var(--primary);">
+                                        <span>{{ .Title }}</span>
+                                    </div>
+                                {{ end }}
+                            </div>
+                            <div class="post-card-content">
+                                <h3 class="post-card-title">{{ .Title }}</h3>
+                                <div class="post-card-excerpt">
+                                    Learn about {{ .Title }} in this comprehensive guide.
+                                </div>
+                                <div class="post-card-meta">
+                                    <span class="post-card-date">{{ .Date.Format "January 2, 2006" }}</span>
+                                    <span class="post-card-time">· {{ .ReadingTime }} min read</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                {{ end }}
+                </div>
+            {{ else }}
+                <p>No HTML blog posts found.</p>
+            {{ end }}
+        </div>
+
+        <!-- Oracle APEX Tab -->
+        <div class="tab-content" id="oracle-apex-content">
+            {{ $oraclePosts := where (where .Site.Pages "Kind" "page") "Section" "oracleapplicationexpress" }}
+            {{ $oracleBlogPosts := where (where .Site.Pages "Kind" "page") "Section" "blogs" }}
+            {{ $oracleBlogPosts = where $oracleBlogPosts "Dir" "in" (slice "/content/blogs/oracle-apex/" "/content/blogs/oracle-apex") }}
+            {{ $allOraclePosts := $oraclePosts | union $oracleBlogPosts }}
+            
+            {{ if $allOraclePosts }}
+                <div class="posts-grid">
+                {{ range $allOraclePosts }}
+                    {{ $hasImage := false }}
+                    {{ $imagePath := "" }}
+                    {{ $imgRegex := `!\[[^\]]*\]\((.*?)\s*(?:\s+\".*\")?\s*\)` }}
+                    
+                    {{ if .RawContent }}
+                        {{ if findRE $imgRegex .RawContent 1 }}
+                            {{ $matches := findRE $imgRegex .RawContent 1 }}
+                            {{ range $matches }}
+                                {{ $url := replaceRE `!\[[^\]]*\]\((.*?)\s*(?:\s+\".*\")?\s*\)` "$1" . }}
+                                {{ $imagePath = $url }}
+                                {{ $hasImage = true }}
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                    
+                    {{ if not $hasImage }}
+                        {{ if .Params.cover }}
+                            {{ $hasImage = true }}
+                            {{ $imagePath = .Params.cover }}
+                        {{ else if .Params.image }}
+                            {{ $hasImage = true }}
+                            {{ $imagePath = .Params.image }}
+                        {{ else if .Params.featured_image }}
+                            {{ $hasImage = true }}
+                            {{ $imagePath = .Params.featured_image }}
+                        {{ else if isset .Params "images" }}
+                            {{ if gt (len .Params.images) 0 }}
+                                {{ $hasImage = true }}
+                                {{ $imagePath = index .Params.images 0 }}
+                            {{ end }}
+                        {{ else }}
+                            {{ with .Resources.GetMatch "{*.jpg,*.png,*.jpeg,*.gif,*.webp}" }}
+                                {{ $hasImage = true }}
+                                {{ $imagePath = .Permalink }}
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                    
+                    <article class="post-card">
+                        <a class="post-card-link" href="{{ .Permalink }}">
+                            <div class="post-card-image">
+                                {{ if $hasImage }}
+                                    <img src="{{ $imagePath | absURL }}" alt="{{ .Title }}">
+                                {{ else }}
+                                    <div class="post-card-image-placeholder" style="background: var(--primary);">
+                                        <span>{{ .Title }}</span>
+                                    </div>
+                                {{ end }}
+                            </div>
+                            <div class="post-card-content">
+                                <h3 class="post-card-title">{{ .Title }}</h3>
+                                <div class="post-card-excerpt">
+                                    Learn about {{ .Title }} in this comprehensive guide.
+                                </div>
+                                <div class="post-card-meta">
+                                    <span class="post-card-date">{{ .Date.Format "January 2, 2006" }}</span>
+                                    <span class="post-card-time">· {{ .ReadingTime }} min read</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                {{ end }}
+                </div>
+            {{ else }}
+                <p>No Oracle APEX blog posts found.</p>
+            {{ end }}
+        </div>
+    </div>
+</div>
+
+<!-- Tabs Styling and JavaScript -->
+<style>
+/* Tab Navigation Styling */
+.blog-tabs-container {
+    margin-top: 0rem;
+    position: relative;
+    overflow: visible;
+}
+
+.blog-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1rem;
+    overflow: visible;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    color: var(--secondary);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tab-button:hover {
+    color: var(--primary);
+}
+
+.tab-button.active {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--primary);
+}
+
+/* Tab Content Styling */
+.tab-content {
+    display: none;
+    padding: 0;
+    border: none;
+    margin: 0;
+    background-color: transparent;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Grid Layout for Posts */
+.posts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 0.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Post Card Styling */
+.post-card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    min-height: 200px;
+    background-color: var(--code-bg);
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.post-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.post-card-image {
+    width: 100%;
+    height: 180px;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    overflow: hidden;
+    position: relative;
+}
+
+.post-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.post-card-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    background: var(--primary);
+}
+
+.post-card-image-placeholder span {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.3;
+    font-size: 1.2rem;
+}
+
+.post-card-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex-grow: 1;
+}
+
+.post-card-title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+    color: var(--primary);
+    line-height: 1.3;
+}
+
+.post-card-excerpt {
+    font-size: 0.95rem;
+    color: var(--content);
+    margin-bottom: 5px;
+    line-height: 1.5;
+    overflow: hidden;
+    min-height: 2.8em;
+}
+
+.post-card-meta {
+    font-size: 0.85rem;
+    color: var(--secondary);
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px solid var(--border);
+}
+
+.post-card-time {
+    font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .blog-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .tab-button {
+        padding: 0.5rem 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tabs */
+.tab {
+    cursor: pointer;
+    padding: 10px 20px;
+    display: inline-block;
+    border: 1px solid var(--border);
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    background-color: var(--code-bg);
+    margin-right: 5px;
+    transition: all 0.3s ease;
+}
+
+.tab.active {
+    background-color: var(--entry);
+    border-bottom: 1px solid var(--entry);
+    margin-bottom: -1px;
+    font-weight: bold;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: none;
+    border-radius: 0;
+    margin-top: 0;
+    background-color: transparent;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Posts Grid */
+.posts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 0.5rem;
+}
+
+/* Post Card */
+.post-card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    min-height: 200px;
+    background-color: var(--code-bg);
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.post-card-link {
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-card-image {
+    flex: 0 0 200px;
+    height: auto;
+    overflow: hidden;
+}
+
+.post-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.post-card:hover .post-card-image img {
+    transform: scale(1.05);
+}
+
+.post-card-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    background: var(--primary);
+}
+
+.post-card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.post-card-title {
+    font-size: 1.25rem;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+    color: var(--primary);
+    line-height: 1.3;
+}
+
+.post-card-excerpt {
+    font-size: 0.95rem;
+    color: var(--content);
+    margin-bottom: 5px;
+    line-height: 1.5;
+    overflow: hidden;
+    min-height: 2.8em;
+}
+
+.post-card-meta {
+    font-size: 0.85rem;
+    color: var(--secondary);
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px solid var(--border);
+}
+
+.post-card-date, .post-card-time {
+    display: inline-block;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .post-card-link {
+        flex-direction: column;
+    }
+    
+    .post-card-image {
+        flex: 0 0 150px;
+        width: 100%;
+    }
+}
+
+/* Hide all scrollbars */
+*::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Tab Content Container */
+.tab-content-container {
+    overflow: visible;
+    position: relative;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all tab buttons and content
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    // Function to set active tab
+    function setActiveTab(category) {
+        // Remove active class from all tabs
+        tabButtons.forEach(button => {
+            button.classList.remove('active');
+        });
+        
+        tabContents.forEach(content => {
+            content.classList.remove('active');
+        });
+        
+        // Add active class to selected tab
+        document.querySelector(`.tab-button[data-category="${category}"]`).classList.add('active');
+        document.getElementById(`${category}-content`).classList.add('active');
+        
+        // Update URL hash for bookmarking
+        window.location.hash = category;
+    }
+    
+    // Add click event listeners to tab buttons
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const category = this.getAttribute('data-category');
+            setActiveTab(category);
+        });
+    });
+    
+    // Check if URL has a hash and set that tab active
+    if (window.location.hash) {
+        const category = window.location.hash.substring(1);
+        if (document.querySelector(`.tab-button[data-category="${category}"]`)) {
+            setActiveTab(category);
+        } else {
+            // Default to Swift if hash is invalid
+            setActiveTab('swift');
+        }
+    } else {
+        // Default to Swift tab
+        setActiveTab('swift');
+    }
+});
+</script>
+
+{{- end }}{{- /* end main */ -}} 
