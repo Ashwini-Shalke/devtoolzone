@@ -23,12 +23,13 @@ layout: "devtools-index"
     </div>
   </a>
   
-  <div class="tool-card coming-soon">
-    <div class="tool-icon">📊</div>
-    <h3>SQL Formatter</h3>
-    <p>Format SQL queries for better readability and debugging</p>
-    <span class="badge">Coming Soon</span>
-  </div>
+  <a href="/devtools/sql-formatter/" class="card-link">
+    <div class="tool-card available">
+      <div class="tool-icon">📊</div>
+      <h3>SQL Formatter</h3>
+      <p>Format SQL queries for better readability and debugging</p>
+    </div>
+  </a>
   
   <div class="tool-card coming-soon">
     <div class="tool-icon">📄</div>
