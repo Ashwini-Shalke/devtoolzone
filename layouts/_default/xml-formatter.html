@@ -1,0 +1,946 @@
+{{ define "main" }}
+<div class="post-content navigation-width">
+  <div class="devtools-content-wrapper">
+    <!-- Left side vertical ad -->
+    <div class="side-ad-container left-ad">
+      <div class="ad-container sidebar">
+        <div class="ad-placeholder">Ad Space<br>180x600</div>
+        {{ partial "sidebar-ad.html" . }}
+      </div>
+    </div>
+    
+    <div class="full-width-content">
+      <header class="post-header compact-header">
+        <h2 class="tool-title">{{ .Title }}</h2>
+        <!-- Display the description from front matter if available -->
+        {{ with .Description }}
+        <div class="tool-description-header">
+          {{ . }}
+        </div>
+        {{ end }}
+      </header>
+
+      <!-- XML Formatter Tool Content -->
+      <div class="tool-content">
+        <div class="xml-formatter-container">
+          <div class="top-controls">
+            <div class="mode-container">
+              <label for="xml-mode">Mode:</label>
+              <select id="xml-mode" aria-label="Select XML mode">
+                <option value="format">Format XML</option>
+                <option value="minify">Minify XML</option>
+              </select>
+            </div>
+            
+            <div class="history-container">
+              <label for="history-select">History:</label>
+              <select id="history-select" aria-label="XML history">
+                <option value="">-- Recent Documents --</option>
+              </select>
+            </div>
+            
+            <div class="template-container">
+              <label for="template-select">Templates:</label>
+              <select id="template-select" aria-label="Formatting templates">
+                <option value="">-- Format Templates --</option>
+              </select>
+              <button id="save-template-button" class="icon-button" title="Save current settings as template" aria-label="Save current settings as template">
+                <span class="icon" aria-hidden="true">💾</span>
+              </button>
+            </div>
+          </div>
+          
+          <div class="input-output-container">
+            <div class="input-section">
+              <div class="section-header">
+                <h3 id="input-section-header">XML Input</h3>
+                <div class="output-options" style="visibility: hidden;">
+                  <!-- Hidden placeholder to ensure consistent height -->
+                  <button class="icon-button" style="visibility: hidden;">
+                    <span class="icon" aria-hidden="true">#</span>
+                  </button>
+                </div>
+              </div>
+              <div id="xml-input-container">
+                <label for="xml-input" class="sr-only">Input XML document</label>
+                <textarea id="xml-input" placeholder="Paste your XML document here..." aria-labelledby="input-section-header" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off"></textarea>
+              </div>
+            </div>
+            <div class="output-section">
+              <div class="section-header">
+                <h3 id="output-section-header">Formatted XML</h3>
+                <div class="output-options">
+                  <button id="toggle-line-numbers" class="icon-button" title="Toggle line numbers" aria-label="Toggle line numbers">
+                    <span class="icon" aria-hidden="true">#</span>
+                  </button>
+                </div>
+              </div>
+              <div id="xml-output-container">
+                <pre id="xml-output" aria-labelledby="output-section-header" tabindex="0"></pre>
+              </div>
+            </div>
+          </div>
+          
+          <div class="xml-analysis" id="xml-analysis">
+            <div class="analysis-header">
+              <h3>Structure Analysis</h3>
+              <button id="toggle-analysis" class="icon-button" title="Toggle analysis panel" aria-label="Toggle analysis panel">
+                <span class="icon" aria-hidden="true">▼</span>
+              </button>
+            </div>
+            <div class="analysis-content">
+              <div class="analysis-panel">
+                <div id="elements-panel" class="analysis-section">
+                  <h4>Elements</h4>
+                  <div id="elements-list"></div>
+                </div>
+                <div id="tree-viz" class="analysis-section">
+                  <h4>Structure Visualization</h4>
+                  <div id="tree-diagram"></div>
+                </div>
+                <div id="validation-info" class="analysis-section">
+                  <h4>Validation</h4>
+                  <div id="validation-results"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="controls-container">
+            <div class="button-container">
+              <button id="format-button" class="primary-button" aria-label="Format XML document">Format XML</button>
+              <button id="clear-button" class="secondary-button" aria-label="Clear input and output areas">Clear</button>
+            </div>
+            <div class="formatting-options">
+              <div class="indent-container">
+                <label for="indent-size">Indent Size:</label>
+                <select id="indent-size" aria-label="Select indent size">
+                  <option value="2" selected>2 spaces</option>
+                  <option value="4">4 spaces</option>
+                  <option value="8">8 spaces</option>
+                </select>
+              </div>
+              <div class="newlines-container">
+                <label for="newline-elements">
+                  <input type="checkbox" id="newline-elements" checked>
+                  Newlines Between Elements
+                </label>
+              </div>
+              <div class="comments-container">
+                <label for="preserve-comments">
+                  <input type="checkbox" id="preserve-comments" checked>
+                  Preserve Comments
+                </label>
+              </div>
+            </div>
+            <div class="status-container">
+              <button id="copy-button" class="secondary-button" aria-label="Copy formatted XML to clipboard">Copy</button>
+              <button id="download-button" class="secondary-button" aria-label="Download formatted XML as file">Download</button>
+            </div>
+          </div>
+          
+          <!-- Keyboard shortcuts guide -->
+          <div class="keyboard-shortcuts">
+            <details>
+              <summary>Keyboard Shortcuts</summary>
+              <div class="shortcuts-content">
+                <ul>
+                  <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> or <kbd>⌘</kbd> + <kbd>Enter</kbd>: Format XML</li>
+                  <li><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> or <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd>: Copy formatted XML</li>
+                  <li><kbd>Esc</kbd>: Clear (when input or output is focused)</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+          
+          <!-- Tool description in the tool content section -->
+          <div class="tool-description compact-description">
+            {{ .Content }}
+          </div>
+        </div>
+      </div>
+      
+      <!-- Bottom horizontal ad -->
+      <div class="ad-container inline bottom-ad">
+        <div class="ad-placeholder">Ad Space<br>728x90</div>
+      </div>
+    </div>
+    
+    <!-- Right side vertical ad -->
+    <div class="side-ad-container right-ad">
+      <div class="ad-container sidebar">
+        <div class="ad-placeholder">Ad Space<br>180x600</div>
+        {{ partial "sidebar-ad.html" . }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Template save modal -->
+<div id="template-modal" class="modal" aria-labelledby="template-modal-title" aria-modal="true" role="dialog">
+  <div class="modal-content">
+    <span class="close-modal" aria-label="Close modal">&times;</span>
+    <h3 id="template-modal-title">Save Formatting Template</h3>
+    <div class="form-group">
+      <label for="template-name">Template Name:</label>
+      <input type="text" id="template-name" placeholder="My Template">
+    </div>
+    <div class="form-actions">
+      <button id="save-template-confirm" class="primary-button">Save</button>
+      <button id="cancel-template" class="secondary-button">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- Preloading resources for better performance -->
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js" as="script">
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/xml.min.js" as="script">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/xml.min.js"></script>
+<script>
+  // Add loading class to the document immediately
+  document.documentElement.classList.add('loading');
+</script>
+<script src="/js/xml-formatter.js" defer></script>
+{{ if eq (getenv "HUGO_ENV") "development" }}
+<script src="/js/xml-formatter.test.js" defer></script>
+{{ end }}
+
+{{ if eq (getenv "HUGO_ENV") "development" }}
+<!-- Validation script only loaded in development environment -->
+<script src="/js/xml-formatter-validation.js" defer></script>
+{{ end }}
+
+<style>
+.navigation-width {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 25px !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
+.full-width, .main, .post-content {
+  max-width: none !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.full-width-content {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.tool-title {
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: normal;
+  width: 100% !important;
+}
+
+.tool-description-header {
+  margin-bottom: 1.5rem;
+  text-align: left;
+  width: 100% !important;
+  line-height: 1.5;
+}
+
+.compact-header {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+.compact-header h1, .compact-header h2 {
+  text-align: left;
+  margin-top: 0;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.tool-content {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.xml-formatter-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.xml-formatter-container.loaded {
+  opacity: 1;
+}
+
+.input-output-container {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  border-spacing: 1rem 0;
+}
+
+.input-section, .output-section {
+  flex: 0 0 calc(50% - 0.5rem) !important;
+  width: calc(50% - 0.5rem) !important;
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+  max-width: calc(50% - 0.5rem) !important;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  min-height: 40px;
+}
+
+.section-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  flex: 1;
+}
+
+#xml-input-container, #xml-output-container {
+  height: 400px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Adjust height for smaller screens */
+@media (max-width: 480px) {
+  #xml-input-container, #xml-output-container {
+    height: 300px;
+  }
+}
+
+#xml-input {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border: none;
+  resize: none;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: var(--entry);
+  color: var(--primary);
+  -webkit-overflow-scrolling: touch; /* Better scrolling on iOS */
+}
+
+#xml-output {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  margin: 0;
+  overflow: auto;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre;
+  background-color: var(--entry);
+  color: var(--primary);
+  -webkit-overflow-scrolling: touch; /* Better scrolling on iOS */
+}
+
+.top-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mode-container, .history-container, .template-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.controls-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.button-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.formatting-options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.status-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.primary-button {
+  background-color: var(--primary);
+  color: var(--theme);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  min-height: 40px; /* Better touch target */
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.primary-button:hover {
+  opacity: 0.9;
+}
+
+.primary-button:active {
+  transform: scale(0.98);
+}
+
+.secondary-button {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  min-height: 40px; /* Better touch target */
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.secondary-button:hover {
+  background-color: var(--border);
+}
+
+.secondary-button:active {
+  transform: scale(0.98);
+}
+
+.icon-button {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--border);
+  width: 36px; /* Slightly larger for touch */
+  height: 36px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.icon-button:hover {
+  background-color: var(--border);
+}
+
+.icon-button:active {
+  transform: scale(0.95);
+}
+
+.xml-analysis {
+  margin-top: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.analysis-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--entry);
+  border-bottom: 1px solid var(--border);
+}
+
+.analysis-header h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.analysis-content {
+  padding: 1rem;
+  background-color: var(--entry);
+}
+
+.analysis-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.analysis-section {
+  padding: 1rem;
+  background-color: var(--code-bg);
+  border-radius: 4px;
+  overflow: auto; /* For long content */
+  max-height: 300px;
+}
+
+.analysis-section h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+}
+
+.modal-content {
+  position: relative;
+  background-color: var(--entry);
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.close-modal {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background-color: var(--entry);
+  color: var(--primary);
+  font-size: 16px; /* Prevents zoom on mobile */
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.tree-node {
+  margin-left: 20px;
+  position: relative;
+}
+
+.tree-node::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 10px;
+  border-left: 1px solid var(--border);
+  height: calc(100% - 10px);
+}
+
+.tree-node:last-child::before {
+  display: none;
+}
+
+.tree-node-content {
+  position: relative;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: var(--border);
+  margin-bottom: 4px;
+}
+
+.tree-node-content::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 10px;
+  width: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.tool-description.compact-description {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.devtools-content-wrapper {
+  display: grid;
+  grid-template-columns: 180px 1fr 180px;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .devtools-content-wrapper {
+    grid-template-columns: 1fr;
+  }
+  
+  .side-ad-container {
+    display: none;
+  }
+}
+
+.ad-container {
+  background-color: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.ad-placeholder {
+  padding: 20px;
+  color: var(--secondary);
+  font-size: 14px;
+}
+
+.ad-container.sidebar {
+  width: 180px;
+  height: 600px;
+}
+
+.ad-container.inline {
+  width: 100%;
+  height: 90px;
+  margin-top: 1rem;
+}
+
+/* New style for keyboard shortcuts */
+.keyboard-shortcuts {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.keyboard-shortcuts details {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.5rem;
+  background-color: var(--entry);
+}
+
+.keyboard-shortcuts summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.shortcuts-content {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.shortcuts-content ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.shortcuts-content li {
+  margin-bottom: 0.5rem;
+}
+
+kbd {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.2);
+  display: inline-block;
+  font-size: 0.8rem;
+  font-family: monospace;
+  line-height: 1;
+  padding: 2px 5px;
+}
+
+/* Loading indicator for slower operations */
+.loading-indicator {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  z-index: 100;
+}
+
+/* Validation status styles */
+.validation-success {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.validation-error {
+  color: #f44336;
+  font-weight: bold;
+}
+
+/* Add touch-friendly styles for mobile */
+@media (max-width: 480px) {
+  select, button, input[type="checkbox"] {
+    min-height: 44px; /* Apple's recommended minimum touch target size */
+  }
+  
+  label {
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .icon-button {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* Dark mode optimizations */
+.dark .primary-button {
+  background-color: #3b82f6;
+}
+
+.dark .tree-node-content {
+  background-color: #2d3748;
+}
+
+.dark .analysis-section {
+  background-color: #1a202c;
+}
+
+/* Focus styles for accessibility */
+button:focus-visible, select:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Higher contrast for validation messages */
+.dark .validation-success {
+  color: #4ade80;
+}
+
+.dark .validation-error {
+  color: #f87171;
+}
+
+/* Stabilize layout to prevent reflow */
+.xml-formatter-container * {
+  box-sizing: border-box;
+}
+
+/* Prevent layout shift during page load */
+html.no-js .input-output-container,
+html.js-loading .input-output-container {
+  visibility: hidden;
+}
+
+/* Lock container widths to prevent reflow during rendering */
+#xml-input-container, #xml-output-container {
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden;
+}
+
+/* Force equal sizing on the pre and textarea elements */
+#xml-input, #xml-output {
+  box-sizing: border-box;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: auto;
+}
+
+@media (max-width: 768px) {
+  .input-output-container {
+    display: block;
+  }
+  
+  .input-section, .output-section {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .top-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .controls-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .formatting-options {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .button-container, .status-container {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .analysis-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Critical CSS for layout stability */
+html.loading .input-output-container {
+  visibility: hidden !important;
+}
+
+.input-output-container {
+  display: flex !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  min-height: 400px;
+}
+
+.input-section, .output-section {
+  width: 50% !important;
+  flex: 1 1 50% !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+#xml-input, #xml-output {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  overflow: auto !important;
+}
+
+@media (max-width: 768px) {
+  .input-output-container {
+    flex-direction: column !important;
+  }
+  .input-section, .output-section {
+    width: 100% !important;
+    flex: none !important;
+  }
+}
+
+/* Ensure section headers have consistent height and alignment */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  min-height: 40px;
+}
+
+.section-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.output-options {
+  display: flex;
+  align-items: center;
+}
+</style>
+
+<script>
+// Prevent layout shifts by ensuring equal widths
+window.addEventListener('DOMContentLoaded', function() {
+  // Set a timeout to remove loading class
+  setTimeout(function() {
+    // Ensure equal widths of input and output containers
+    const inputOutputContainer = document.querySelector('.input-output-container');
+    const inputSection = document.querySelector('.input-section');
+    const outputSection = document.querySelector('.output-section');
+    
+    if (inputOutputContainer && inputSection && outputSection) {
+      // Only apply manual width calculations on desktop
+      if (window.innerWidth > 768) {
+        const containerWidth = inputOutputContainer.clientWidth;
+        const halfWidth = Math.floor(containerWidth / 2) + 'px';
+        
+        inputSection.style.width = halfWidth;
+        outputSection.style.width = halfWidth;
+      }
+      
+      // Remove loading class to make content visible
+      document.documentElement.classList.remove('loading');
+    }
+  }, 100);
+  
+  // Re-adjust widths on resize
+  window.addEventListener('resize', function() {
+    const inputOutputContainer = document.querySelector('.input-output-container');
+    const inputSection = document.querySelector('.input-section');
+    const outputSection = document.querySelector('.output-section');
+    
+    if (inputOutputContainer && inputSection && outputSection) {
+      // Only apply manual width calculations on desktop
+      if (window.innerWidth > 768) {
+        const containerWidth = inputOutputContainer.clientWidth;
+        const halfWidth = Math.floor(containerWidth / 2) + 'px';
+        
+        inputSection.style.width = halfWidth;
+        outputSection.style.width = halfWidth;
+      } else {
+        // Reset to full width on mobile
+        inputSection.style.width = '100%';
+        outputSection.style.width = '100%';
+      }
+    }
+  });
+});
+</script>
+{{ end }} 

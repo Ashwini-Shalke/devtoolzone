@@ -31,12 +31,13 @@ layout: "devtools-index"
     </div>
   </a>
   
-  <div class="tool-card coming-soon">
-    <div class="tool-icon">📄</div>
-    <h3>XML Formatter</h3>
-    <p>Format and beautify XML documents</p>
-    <span class="badge">Coming Soon</span>
-  </div>
+  <a href="/devtools/xml-formatter/" class="card-link">
+    <div class="tool-card available">
+      <div class="tool-icon">📄</div>
+      <h3>XML Formatter</h3>
+      <p>Format and beautify XML documents with structure visualization</p>
+    </div>
+  </a>
   
   <div class="tool-card coming-soon">
     <div class="tool-icon">⚙️</div>
