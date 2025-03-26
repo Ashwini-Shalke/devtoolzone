@@ -44,8 +44,8 @@
               <select id="template-select" aria-label="Formatting templates">
                 <option value="">-- Format Templates --</option>
               </select>
-              <button id="save-template-button" class="icon-button" title="Save current settings as template">
-                <span class="icon">💾</span>
+              <button id="save-template-button" class="icon-button" title="Save current settings as template" aria-label="Save current settings as template">
+                <span class="icon" aria-hidden="true">💾</span>
               </button>
             </div>
           </div>
@@ -54,23 +54,29 @@
             <div class="input-section">
               <div class="section-header">
                 <h3 id="input-section-header">XML Input</h3>
+                <div class="output-options" style="visibility: hidden;">
+                  <!-- Hidden placeholder to ensure consistent height -->
+                  <button class="icon-button" style="visibility: hidden;">
+                    <span class="icon" aria-hidden="true">#</span>
+                  </button>
+                </div>
               </div>
               <div id="xml-input-container">
                 <label for="xml-input" class="sr-only">Input XML document</label>
-                <textarea id="xml-input" placeholder="Paste your XML document here..." aria-labelledby="input-section-header"></textarea>
+                <textarea id="xml-input" placeholder="Paste your XML document here..." aria-labelledby="input-section-header" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off"></textarea>
               </div>
             </div>
             <div class="output-section">
               <div class="section-header">
                 <h3 id="output-section-header">Formatted XML</h3>
                 <div class="output-options">
-                  <button id="toggle-line-numbers" class="icon-button" title="Toggle line numbers">
-                    <span class="icon">#</span>
+                  <button id="toggle-line-numbers" class="icon-button" title="Toggle line numbers" aria-label="Toggle line numbers">
+                    <span class="icon" aria-hidden="true">#</span>
                   </button>
                 </div>
               </div>
               <div id="xml-output-container">
-                <pre id="xml-output" aria-labelledby="output-section-header"></pre>
+                <pre id="xml-output" aria-labelledby="output-section-header" tabindex="0"></pre>
               </div>
             </div>
           </div>
@@ -78,8 +84,8 @@
           <div class="xml-analysis" id="xml-analysis">
             <div class="analysis-header">
               <h3>Structure Analysis</h3>
-              <button id="toggle-analysis" class="icon-button" title="Toggle analysis panel">
-                <span class="icon">▼</span>
+              <button id="toggle-analysis" class="icon-button" title="Toggle analysis panel" aria-label="Toggle analysis panel">
+                <span class="icon" aria-hidden="true">▼</span>
               </button>
             </div>
             <div class="analysis-content">
@@ -115,13 +121,13 @@
                 </select>
               </div>
               <div class="newlines-container">
-                <label>
+                <label for="newline-elements">
                   <input type="checkbox" id="newline-elements" checked>
                   Newlines Between Elements
                 </label>
               </div>
               <div class="comments-container">
-                <label>
+                <label for="preserve-comments">
                   <input type="checkbox" id="preserve-comments" checked>
                   Preserve Comments
                 </label>
@@ -131,6 +137,20 @@
               <button id="copy-button" class="secondary-button" aria-label="Copy formatted XML to clipboard">Copy</button>
               <button id="download-button" class="secondary-button" aria-label="Download formatted XML as file">Download</button>
             </div>
+          </div>
+          
+          <!-- Keyboard shortcuts guide -->
+          <div class="keyboard-shortcuts">
+            <details>
+              <summary>Keyboard Shortcuts</summary>
+              <div class="shortcuts-content">
+                <ul>
+                  <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> or <kbd>⌘</kbd> + <kbd>Enter</kbd>: Format XML</li>
+                  <li><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> or <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd>: Copy formatted XML</li>
+                  <li><kbd>Esc</kbd>: Clear (when input or output is focused)</li>
+                </ul>
+              </div>
+            </details>
           </div>
           
           <!-- Tool description in the tool content section -->
@@ -157,10 +177,10 @@
 </div>
 
 <!-- Template save modal -->
-<div id="template-modal" class="modal">
+<div id="template-modal" class="modal" aria-labelledby="template-modal-title" aria-modal="true" role="dialog">
   <div class="modal-content">
-    <span class="close-modal">&times;</span>
-    <h3>Save Formatting Template</h3>
+    <span class="close-modal" aria-label="Close modal">&times;</span>
+    <h3 id="template-modal-title">Save Formatting Template</h3>
     <div class="form-group">
       <label for="template-name">Template Name:</label>
       <input type="text" id="template-name" placeholder="My Template">
@@ -172,11 +192,24 @@
   </div>
 </div>
 
+<!-- Preloading resources for better performance -->
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js" as="script">
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/xml.min.js" as="script">
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/xml.min.js"></script>
-<script src="/js/xml-formatter.js"></script>
+<script>
+  // Add loading class to the document immediately
+  document.documentElement.classList.add('loading');
+</script>
+<script src="/js/xml-formatter.js" defer></script>
 {{ if eq (getenv "HUGO_ENV") "development" }}
-<script src="/js/xml-formatter.test.js"></script>
+<script src="/js/xml-formatter.test.js" defer></script>
+{{ end }}
+
+{{ if eq (getenv "HUGO_ENV") "development" }}
+<!-- Validation script only loaded in development environment -->
+<script src="/js/xml-formatter-validation.js" defer></script>
 {{ end }}
 
 <style>
@@ -244,25 +277,27 @@
   max-width: 100%;
   padding: 0;
   margin: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.xml-formatter-container.loaded {
+  opacity: 1;
 }
 
 .input-output-container {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 768px) {
-  .input-output-container {
-    flex-direction: column;
-  }
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  border-spacing: 1rem 0;
 }
 
 .input-section, .output-section {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+  flex: 0 0 calc(50% - 0.5rem) !important;
+  width: calc(50% - 0.5rem) !important;
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+  max-width: calc(50% - 0.5rem) !important;
 }
 
 .section-header {
@@ -270,11 +305,13 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
+  min-height: 40px;
 }
 
 .section-header h3 {
   margin: 0;
   font-size: 1rem;
+  flex: 1;
 }
 
 #xml-input-container, #xml-output-container {
@@ -282,6 +319,13 @@
   border: 1px solid var(--border);
   border-radius: 4px;
   overflow: hidden;
+}
+
+/* Adjust height for smaller screens */
+@media (max-width: 480px) {
+  #xml-input-container, #xml-output-container {
+    height: 300px;
+  }
 }
 
 #xml-input {
@@ -295,6 +339,7 @@
   line-height: 1.5;
   background-color: var(--entry);
   color: var(--primary);
+  -webkit-overflow-scrolling: touch; /* Better scrolling on iOS */
 }
 
 #xml-output {
@@ -309,6 +354,7 @@
   white-space: pre;
   background-color: var(--entry);
   color: var(--primary);
+  -webkit-overflow-scrolling: touch; /* Better scrolling on iOS */
 }
 
 .top-controls {
@@ -358,10 +404,16 @@
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
+  min-height: 40px; /* Better touch target */
+  transition: background-color 0.2s, transform 0.1s;
 }
 
 .primary-button:hover {
   opacity: 0.9;
+}
+
+.primary-button:active {
+  transform: scale(0.98);
 }
 
 .secondary-button {
@@ -371,27 +423,38 @@
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
+  min-height: 40px; /* Better touch target */
+  transition: background-color 0.2s, transform 0.1s;
 }
 
 .secondary-button:hover {
   background-color: var(--border);
 }
 
+.secondary-button:active {
+  transform: scale(0.98);
+}
+
 .icon-button {
   background-color: transparent;
   color: var(--primary);
   border: 1px solid var(--border);
-  width: 30px;
-  height: 30px;
+  width: 36px; /* Slightly larger for touch */
+  height: 36px;
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
 }
 
 .icon-button:hover {
   background-color: var(--border);
+}
+
+.icon-button:active {
+  transform: scale(0.95);
 }
 
 .xml-analysis {
@@ -430,6 +493,8 @@
   padding: 1rem;
   background-color: var(--code-bg);
   border-radius: 4px;
+  overflow: auto; /* For long content */
+  max-height: 300px;
 }
 
 .analysis-section h4 {
@@ -447,6 +512,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
 }
 
 .modal-content {
@@ -455,8 +521,9 @@
   margin: 15% auto;
   padding: 20px;
   border-radius: 8px;
-  width: 80%;
+  width: 90%;
   max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .close-modal {
@@ -484,6 +551,7 @@
   border-radius: 4px;
   background-color: var(--entry);
   color: var(--primary);
+  font-size: 16px; /* Prevents zoom on mobile */
 }
 
 .form-actions {
@@ -587,5 +655,292 @@
   height: 90px;
   margin-top: 1rem;
 }
+
+/* New style for keyboard shortcuts */
+.keyboard-shortcuts {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.keyboard-shortcuts details {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.5rem;
+  background-color: var(--entry);
+}
+
+.keyboard-shortcuts summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.shortcuts-content {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.shortcuts-content ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.shortcuts-content li {
+  margin-bottom: 0.5rem;
+}
+
+kbd {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.2);
+  display: inline-block;
+  font-size: 0.8rem;
+  font-family: monospace;
+  line-height: 1;
+  padding: 2px 5px;
+}
+
+/* Loading indicator for slower operations */
+.loading-indicator {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  z-index: 100;
+}
+
+/* Validation status styles */
+.validation-success {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.validation-error {
+  color: #f44336;
+  font-weight: bold;
+}
+
+/* Add touch-friendly styles for mobile */
+@media (max-width: 480px) {
+  select, button, input[type="checkbox"] {
+    min-height: 44px; /* Apple's recommended minimum touch target size */
+  }
+  
+  label {
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .icon-button {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* Dark mode optimizations */
+.dark .primary-button {
+  background-color: #3b82f6;
+}
+
+.dark .tree-node-content {
+  background-color: #2d3748;
+}
+
+.dark .analysis-section {
+  background-color: #1a202c;
+}
+
+/* Focus styles for accessibility */
+button:focus-visible, select:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Higher contrast for validation messages */
+.dark .validation-success {
+  color: #4ade80;
+}
+
+.dark .validation-error {
+  color: #f87171;
+}
+
+/* Stabilize layout to prevent reflow */
+.xml-formatter-container * {
+  box-sizing: border-box;
+}
+
+/* Prevent layout shift during page load */
+html.no-js .input-output-container,
+html.js-loading .input-output-container {
+  visibility: hidden;
+}
+
+/* Lock container widths to prevent reflow during rendering */
+#xml-input-container, #xml-output-container {
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden;
+}
+
+/* Force equal sizing on the pre and textarea elements */
+#xml-input, #xml-output {
+  box-sizing: border-box;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: auto;
+}
+
+@media (max-width: 768px) {
+  .input-output-container {
+    display: block;
+  }
+  
+  .input-section, .output-section {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .top-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .controls-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .formatting-options {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .button-container, .status-container {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .analysis-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Critical CSS for layout stability */
+html.loading .input-output-container {
+  visibility: hidden !important;
+}
+
+.input-output-container {
+  display: flex !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  min-height: 400px;
+}
+
+.input-section, .output-section {
+  width: 50% !important;
+  flex: 1 1 50% !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+#xml-input, #xml-output {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  overflow: auto !important;
+}
+
+@media (max-width: 768px) {
+  .input-output-container {
+    flex-direction: column !important;
+  }
+  .input-section, .output-section {
+    width: 100% !important;
+    flex: none !important;
+  }
+}
+
+/* Ensure section headers have consistent height and alignment */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  min-height: 40px;
+}
+
+.section-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.output-options {
+  display: flex;
+  align-items: center;
+}
 </style>
+
+<script>
+// Prevent layout shifts by ensuring equal widths
+window.addEventListener('DOMContentLoaded', function() {
+  // Set a timeout to remove loading class
+  setTimeout(function() {
+    // Ensure equal widths of input and output containers
+    const inputOutputContainer = document.querySelector('.input-output-container');
+    const inputSection = document.querySelector('.input-section');
+    const outputSection = document.querySelector('.output-section');
+    
+    if (inputOutputContainer && inputSection && outputSection) {
+      // Only apply manual width calculations on desktop
+      if (window.innerWidth > 768) {
+        const containerWidth = inputOutputContainer.clientWidth;
+        const halfWidth = Math.floor(containerWidth / 2) + 'px';
+        
+        inputSection.style.width = halfWidth;
+        outputSection.style.width = halfWidth;
+      }
+      
+      // Remove loading class to make content visible
+      document.documentElement.classList.remove('loading');
+    }
+  }, 100);
+  
+  // Re-adjust widths on resize
+  window.addEventListener('resize', function() {
+    const inputOutputContainer = document.querySelector('.input-output-container');
+    const inputSection = document.querySelector('.input-section');
+    const outputSection = document.querySelector('.output-section');
+    
+    if (inputOutputContainer && inputSection && outputSection) {
+      // Only apply manual width calculations on desktop
+      if (window.innerWidth > 768) {
+        const containerWidth = inputOutputContainer.clientWidth;
+        const halfWidth = Math.floor(containerWidth / 2) + 'px';
+        
+        inputSection.style.width = halfWidth;
+        outputSection.style.width = halfWidth;
+      } else {
+        // Reset to full width on mobile
+        inputSection.style.width = '100%';
+        outputSection.style.width = '100%';
+      }
+    }
+  });
+});
+</script>
 {{ end }} 

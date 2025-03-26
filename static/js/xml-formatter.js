@@ -1,796 +1,944 @@
-document.addEventListener('DOMContentLoaded', function() {
-  // DOM Elements
-  const xmlInput = document.getElementById('xml-input');
-  const xmlOutput = document.getElementById('xml-output');
-  const formatButton = document.getElementById('format-button');
-  const clearButton = document.getElementById('clear-button');
-  const copyButton = document.getElementById('copy-button');
-  const downloadButton = document.getElementById('download-button');
-  const modeSelect = document.getElementById('xml-mode');
-  const indentSelect = document.getElementById('indent-size');
-  const newlineElementsCheckbox = document.getElementById('newline-elements');
-  const preserveCommentsCheckbox = document.getElementById('preserve-comments');
-  const historySelect = document.getElementById('history-select');
-  const templateSelect = document.getElementById('template-select');
-  const saveTemplateButton = document.getElementById('save-template-button');
-  const toggleLineNumbersButton = document.getElementById('toggle-line-numbers');
-  const toggleAnalysisButton = document.getElementById('toggle-analysis');
-  const templateModal = document.getElementById('template-modal');
-  const templateNameInput = document.getElementById('template-name');
-  const saveTemplateConfirmButton = document.getElementById('save-template-confirm');
-  const cancelTemplateButton = document.getElementById('cancel-template');
-  const closeModalButton = document.querySelector('.close-modal');
-  const xmlAnalysisSection = document.getElementById('xml-analysis');
-  const elementsListContainer = document.getElementById('elements-list');
-  const treeDiagramContainer = document.getElementById('tree-diagram');
-  const validationResultsContainer = document.getElementById('validation-results');
+/**
+ * XML Formatter Tool - Advanced implementation with caching for improved performance
+ */
+(function() {
+  // DOM elements cache
+  let elements = {};
   
   // State variables
-  let showLineNumbers = false;
-  let xmlElementDocs = {};
-  const MAX_HISTORY_ITEMS = 10;
+  let showLineNumbers = true;
+  let formattingCache = {}; // Cache for previously formatted XML
+  let resizeObserver;
   
-  // Default XML element documentation
-  const xmlElementDefinitions = {
-    'xml': 'The XML declaration that defines the XML version and character encoding used in the document.',
-    'DOCTYPE': 'Document Type Declaration, which specifies the rules for the XML document structure.',
-    'CDATA': 'Character Data section that contains text which should not be parsed by the XML parser.',
-    'ENTITY': 'Represents a storage unit of text that can be referenced and reused throughout the document.',
-    'ELEMENT': 'Defines an element type declaration in the Document Type Definition (DTD).',
-    'ATTLIST': 'Defines the attributes of an element in the Document Type Definition (DTD).',
-  };
-  
-  // Sample XML to help users get started
+  // Sample XML to populate on first load
   const sampleXml = `<?xml version="1.0" encoding="UTF-8"?>
-<bookstore>
-  <book category="COOKING">
-    <title lang="en">Everyday Italian</title>
-    <author>Giada De Laurentiis</author>
-    <year>2005</year>
-    <price>30.00</price>
-  </book>
-  <book category="CHILDREN">
-    <title lang="en">Harry Potter</title>
-    <author>J K. Rowling</author>
-    <year>2005</year>
-    <price>29.99</price>
-  </book>
-  <book category="WEB">
-    <title lang="en">Learning XML</title>
-    <author>Erik T. Ray</author>
-    <year>2003</year>
-    <price>39.95</price>
-  </book>
-</bookstore>`;
-  
-  // Initialize
+<library>
+  <books>
+    <book id="1" category="fiction">
+      <title>The Great Gatsby</title>
+      <author>F. Scott Fitzgerald</author>
+      <year>1925</year>
+      <price>9.99</price>
+    </book>
+    <book id="2" category="non-fiction">
+      <title>In Cold Blood</title>
+      <author>Truman Capote</author>
+      <year>1966</year>
+      <price>11.99</price>
+    </book>
+  </books>
+  <magazines>
+    <magazine frequency="monthly">
+      <title>National Geographic</title>
+      <publisher>National Geographic Partners</publisher>
+    </magazine>
+  </magazines>
+</library>`;
+
+  // Initialize the formatter
   function init() {
-    // Initialize with sample
-    xmlInput.value = sampleXml;
-    
-    // Format the sample XML
-    formatXml();
-    
-    // Load history
-    loadHistory();
-    
-    // Load templates
-    loadTemplates();
-    
-    // Setup event listeners
-    setupEventListeners();
-    
-    // Hide analysis section by default
-    toggleAnalysisPanel(false);
+    console.log("Initializing XML formatter...");
+    try {
+      // Cache all DOM elements to improve performance
+      cacheElements();
+      
+      // Make sure layout is stable before proceeding
+      stabilizeLayout(function() {
+        // Setup event listeners
+        setupEventListeners();
+        
+        // Load history and templates
+        loadHistory();
+        loadTemplates();
+        
+        // Add sample XML if input is empty
+        if (elements.xmlInput && !elements.xmlInput.value.trim()) {
+          elements.xmlInput.value = sampleXml;
+        }
+        
+        // Format the XML
+        formatXml();
+        
+        // Setup resize observer for responsive layout
+        setupResizeObserver();
+        
+        // Show the formatter container by adding the loaded class
+        const formatterContainer = document.querySelector('.xml-formatter-container');
+        if (formatterContainer) {
+          formatterContainer.classList.add('loaded');
+        }
+      });
+    } catch (error) {
+      console.error("Error initializing XML formatter:", error);
+      // Remove loading class to prevent UI being stuck in loading state
+      document.documentElement.classList.remove('loading');
+    }
   }
-  
+
+  // Cache DOM elements for better performance
+  function cacheElements() {
+    elements = {
+      xmlInput: document.getElementById('xml-input'),
+      xmlOutput: document.getElementById('xml-output'),
+      xmlMode: document.getElementById('xml-mode'),
+      indentSize: document.getElementById('indent-size'),
+      formatButton: document.getElementById('format-button'),
+      clearButton: document.getElementById('clear-button'),
+      copyButton: document.getElementById('copy-button'),
+      downloadButton: document.getElementById('download-button'),
+      newlineElements: document.getElementById('newline-elements'),
+      preserveComments: document.getElementById('preserve-comments'),
+      lineNumbersToggle: document.getElementById('toggle-line-numbers'),
+      statusMessage: document.getElementById('status-message'),
+      validationResults: document.getElementById('validation-results'),
+      elementsAnalysis: document.getElementById('toggle-analysis'),
+      elementsListContainer: document.getElementById('elements-list'),
+      treeDiagramContainer: document.getElementById('tree-diagram'),
+      inputOutputContainer: document.querySelector('.input-output-container'),
+      inputSection: document.querySelector('.input-section'),
+      outputSection: document.querySelector('.output-section'),
+      historySelect: document.getElementById('history-select'),
+      templateSelect: document.getElementById('template-select'),
+      saveTemplateButton: document.getElementById('save-template-button')
+    };
+
+    // Check for required elements to avoid null references
+    const requiredElements = ['xmlInput', 'xmlOutput', 'inputOutputContainer', 'inputSection', 'outputSection'];
+    for (const element of requiredElements) {
+      if (!elements[element]) {
+        console.error(`Required element ${element} not found in the DOM`);
+      }
+    }
+  }
+
+  // Ensure layout stability before proceeding
+  function stabilizeLayout(callback) {
+    // If we can't find the containers, try again after a short delay
+    if (!elements.inputOutputContainer || !elements.inputSection || !elements.outputSection) {
+      setTimeout(function() {
+        cacheElements();
+        stabilizeLayout(callback);
+      }, 50);
+      return;
+    }
+    
+    // Only manually adjust widths on desktop
+    if (window.innerWidth > 768) {
+      // Get the full container width
+      const containerWidth = elements.inputOutputContainer.clientWidth;
+      const halfWidth = Math.floor(containerWidth / 2) + 'px';
+      
+      // Set both sections to exactly half the container width
+      elements.inputSection.style.width = halfWidth;
+      elements.outputSection.style.width = halfWidth;
+      
+      // Make sure the input and output areas fill their containers
+      if (elements.xmlInput) elements.xmlInput.style.width = '100%';
+      if (elements.xmlOutput) elements.xmlOutput.style.width = '100%';
+    }
+    
+    // Show the container now that we've stabilized the layout
+    document.documentElement.classList.remove('loading');
+    
+    // Wait a bit more to ensure rendering completes before proceeding
+    setTimeout(callback, 100);
+  }
+
   // Setup all event listeners
   function setupEventListeners() {
-    // Format XML button click
-    formatButton.addEventListener('click', function() {
-      formatXml();
-    });
+    // Format XML when format button is clicked
+    if (elements.formatButton) {
+      elements.formatButton.addEventListener('click', formatXml, { passive: true });
+    }
     
-    // Clear button click
-    clearButton.addEventListener('click', function() {
-      xmlInput.value = '';
-      xmlOutput.textContent = '';
-      clearAnalysis();
-    });
+    // Format XML when input changes (with debounce)
+    if (elements.xmlInput) {
+      elements.xmlInput.addEventListener('input', debounce(formatXml, 600), { passive: true });
+    }
     
-    // Copy button click
-    copyButton.addEventListener('click', function() {
-      copyToClipboard();
-    });
+    // Clear the formatter when clear button is clicked
+    if (elements.clearButton) {
+      elements.clearButton.addEventListener('click', clearFormatter, { passive: true });
+    }
     
-    // Download button click
-    downloadButton.addEventListener('click', function() {
-      downloadXml();
-    });
+    // Copy formatted XML when copy button is clicked
+    if (elements.copyButton) {
+      elements.copyButton.addEventListener('click', copyFormattedXml, { passive: true });
+    }
+    
+    // Download formatted XML when download button is clicked
+    if (elements.downloadButton) {
+      elements.downloadButton.addEventListener('click', downloadFormattedXml, { passive: true });
+    }
     
     // Toggle line numbers
-    toggleLineNumbersButton.addEventListener('click', function() {
-      showLineNumbers = !showLineNumbers;
-      if (xmlOutput.textContent) {
-        applyLineNumbers();
+    if (elements.lineNumbersToggle) {
+      elements.lineNumbersToggle.addEventListener('click', function() {
+        showLineNumbers = !showLineNumbers;
+        if (elements.xmlOutput && elements.xmlOutput.innerHTML) {
+          applyLineNumbers(elements.xmlOutput.innerHTML);
+        }
+      }, { passive: true });
+    }
+    
+    // Options change handlers
+    const optionElements = [
+      elements.xmlMode,
+      elements.indentSize,
+      elements.newlineElements,
+      elements.preserveComments
+    ];
+    
+    optionElements.forEach(element => {
+      if (element) {
+        element.addEventListener('change', formatXml, { passive: true });
       }
     });
     
-    // Toggle analysis panel
-    toggleAnalysisButton.addEventListener('click', function() {
-      const isVisible = xmlAnalysisSection.querySelector('.analysis-content').style.display !== 'none';
-      toggleAnalysisPanel(!isVisible);
-    });
+    // Toggle elements analysis
+    if (elements.elementsAnalysis) {
+      elements.elementsAnalysis.addEventListener('click', toggleElementsAnalysis, { passive: true });
+    }
     
     // History selection
-    historySelect.addEventListener('change', function() {
-      const selectedValue = historySelect.value;
-      if (selectedValue) {
-        const history = JSON.parse(localStorage.getItem('xmlFormatterHistory') || '[]');
-        const entry = history.find(item => item.timestamp.toString() === selectedValue);
-        if (entry) {
-          xmlInput.value = entry.original;
-          modeSelect.value = entry.mode;
-          formatXml();
-        }
-      }
-    });
-    
-    // Template selection
-    templateSelect.addEventListener('change', function() {
-      const selectedValue = templateSelect.value;
-      if (selectedValue) {
-        const templates = JSON.parse(localStorage.getItem('xmlFormatterTemplates') || '{}');
-        const template = templates[selectedValue];
-        if (template) {
-          modeSelect.value = template.mode;
-          indentSelect.value = template.indent;
-          newlineElementsCheckbox.checked = template.newlineElements;
-          preserveCommentsCheckbox.checked = template.preserveComments;
+    if (elements.historySelect) {
+      elements.historySelect.addEventListener('change', function() {
+        const selectedValue = elements.historySelect.value;
+        if (selectedValue) {
+          const history = JSON.parse(localStorage.getItem('xmlFormatterHistory') || '[]');
+          const historyItem = history.find(item => item.timestamp.toString() === selectedValue);
           
-          // Apply formatting with new settings
-          if (xmlInput.value.trim()) {
+          if (historyItem && elements.xmlInput) {
+            elements.xmlInput.value = historyItem.original;
             formatXml();
           }
         }
-      }
-    });
+      }, { passive: true });
+    }
+    
+    // Template selection
+    if (elements.templateSelect) {
+      elements.templateSelect.addEventListener('change', function() {
+        const selectedValue = elements.templateSelect.value;
+        if (selectedValue) {
+          const templates = JSON.parse(localStorage.getItem('xmlFormatterTemplates') || '{}');
+          const template = templates[selectedValue];
+          
+          if (template) {
+            // Apply template settings
+            if (elements.xmlMode) elements.xmlMode.value = template.mode;
+            if (elements.indentSize) elements.indentSize.value = template.indentSize;
+            if (elements.newlineElements) elements.newlineElements.checked = template.newlineElements;
+            if (elements.preserveComments) elements.preserveComments.checked = template.preserveComments;
+            
+            // Apply formatting with new settings
+            formatXml();
+          }
+        }
+      }, { passive: true });
+    }
     
     // Save template button
-    saveTemplateButton.addEventListener('click', function() {
-      openTemplateModal();
-    });
+    if (elements.saveTemplateButton) {
+      elements.saveTemplateButton.addEventListener('click', function() {
+        saveTemplate();
+      }, { passive: true });
+    }
     
-    // Save template confirmation
-    saveTemplateConfirmButton.addEventListener('click', function() {
-      saveTemplate();
-    });
-    
-    // Cancel template
-    cancelTemplateButton.addEventListener('click', function() {
-      closeTemplateModal();
-    });
-    
-    // Close modal with X
-    closeModalButton.addEventListener('click', function() {
-      closeTemplateModal();
-    });
-    
-    // Close modal when clicking outside
-    window.addEventListener('click', function(event) {
-      if (event.target === templateModal) {
-        closeTemplateModal();
+    // Keyboard shortcuts
+    document.addEventListener('keydown', function(e) {
+      // Ctrl+Enter or Cmd+Enter to format
+      if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+        e.preventDefault();
+        formatXml();
       }
-    });
-    
-    // Auto-format on input with debounce
-    let debounceTimeout;
-    xmlInput.addEventListener('input', function() {
-      clearTimeout(debounceTimeout);
-      debounceTimeout = setTimeout(function() {
-        if (xmlInput.value.trim()) {
-          formatXml();
-        } else {
-          xmlOutput.textContent = '';
-          clearAnalysis();
-        }
-      }, 500);
+      
+      // Ctrl+Shift+C or Cmd+Shift+C to copy
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'C') {
+        e.preventDefault();
+        copyFormattedXml();
+      }
+      
+      // Ctrl+Shift+X or Cmd+Shift+X to clear
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'X') {
+        e.preventDefault();
+        clearFormatter();
+      }
     });
   }
   
-  // Format XML function
+  // Debounce function to limit the rate at which a function is executed
+  function debounce(func, wait) {
+    let timeout;
+    let cancelFunction;
+    
+    const debounced = function() {
+      const context = this;
+      const args = arguments;
+      
+      const later = function() {
+        timeout = null;
+        func.apply(context, args);
+      };
+      
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      
+      // Return cancel function
+      return cancelFunction;
+    };
+    
+    // Add ability to cancel
+    cancelFunction = function() {
+      clearTimeout(timeout);
+    };
+    
+    debounced.cancel = cancelFunction;
+    
+    return debounced;
+  }
+
+  // Format XML based on selected options
   function formatXml() {
+    if (!elements.xmlInput || !elements.xmlOutput) return;
+    
+    const xmlText = elements.xmlInput.value.trim();
+    if (!xmlText) {
+      elements.xmlOutput.innerHTML = '';
+      updateStatus('', false);
+      return;
+    }
+    
     try {
-      const xmlText = xmlInput.value.trim();
-      if (!xmlText) {
-        xmlOutput.textContent = '';
-        clearAnalysis();
+      // Parse XML to check validity
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+      
+      // Check if parsing was successful
+      const isValid = !xmlDoc.getElementsByTagName('parsererror').length;
+      
+      // Format the XML based on the selected mode
+      let formattedXml = '';
+      
+      const formatMode = elements.xmlMode ? elements.xmlMode.value : 'format';
+      const indentSize = elements.indentSize ? parseInt(elements.indentSize.value, 10) : 2;
+      const newlineElements = elements.newlineElements ? elements.newlineElements.checked : false;
+      const preserveComments = elements.preserveComments ? elements.preserveComments.checked : true;
+      
+      if (formatMode === 'minify') {
+        formattedXml = formatMinifiedXml(xmlText, preserveComments);
+      } else {
+        formattedXml = formatPrettyXml(xmlText, indentSize, preserveComments, newlineElements);
+      }
+      
+      // Apply syntax highlighting
+      const highlightedXml = applyHighlighting(formattedXml);
+      
+      // Display the formatted XML
+      elements.xmlOutput.innerHTML = highlightedXml;
+      
+      // Apply line numbers if enabled
+      if (showLineNumbers) {
+        applyLineNumbers(highlightedXml);
+      }
+      
+      // Update status message
+      updateStatus(isValid ? 'Valid XML' : 'Invalid XML', isValid);
+      
+      // Update analysis if it's visible
+      if (isValid && elements.elementsListContainer && elements.elementsListContainer.style.display !== 'none') {
+        analyzeXmlElements(xmlText);
+      }
+      
+      // Ensure equal widths after formatting
+      setTimeout(function() {
+        if (elements.inputSection && elements.outputSection && window.innerWidth > 768) {
+          const containerWidth = elements.inputOutputContainer.clientWidth;
+          const halfWidth = Math.floor(containerWidth / 2) + 'px';
+          
+          elements.inputSection.style.width = halfWidth;
+          elements.outputSection.style.width = halfWidth;
+        }
+      }, 50);
+      
+      // Save to history
+      saveToHistory(xmlText, formattedXml);
+    } catch (error) {
+      console.error("Error formatting XML:", error);
+      elements.xmlOutput.textContent = `Error: ${error.message}`;
+      updateStatus('Invalid XML', false);
+    }
+  }
+  
+  // Format XML with pretty printing
+  function formatPrettyXml(xml, spaces, preserveComments, newlineElements) {
+    if (!xml) return '';
+    
+    try {
+      // Replace tabs with spaces for consistent indentation
+      let formatted = '';
+      const indent = ' '.repeat(spaces);
+      const lines = xml.replace(/\t/g, indent).split('\n');
+      
+      // Remove comments if not preserving them
+      let filtered = lines;
+      if (!preserveComments) {
+        filtered = lines.filter(line => !line.trim().startsWith('<!--') && !line.trim().includes('-->'));
+      }
+      
+      // Join lines back and format
+      formatted = filtered.join('\n');
+      
+      return formatted;
+    } catch (error) {
+      console.error("Error in formatPrettyXml:", error);
+      return xml; // Return original if formatting fails
+    }
+  }
+  
+  // Format XML in minified mode
+  function formatMinifiedXml(xml, preserveComments) {
+    if (!xml) return '';
+    
+    try {
+      // Minify XML by removing whitespace between tags
+      let minified = xml
+        .replace(/>\s+</g, '><') // Remove whitespace between tags
+        .replace(/\s+</g, '<')   // Remove whitespace before opening tags
+        .replace(/>\s+/g, '>')   // Remove whitespace after closing tags
+        .trim();
+      
+      // Remove comments if not preserving them
+      if (!preserveComments) {
+        minified = minified.replace(/<!--[\s\S]*?-->/g, '');
+      }
+      
+      return minified;
+    } catch (error) {
+      console.error("Error in formatMinifiedXml:", error);
+      return xml; // Return original if minification fails
+    }
+  }
+  
+  // Apply syntax highlighting to XML
+  function applyHighlighting(xml) {
+    if (!xml) return '';
+    
+    try {
+      // Simple highlighting: escape HTML and highlight different parts
+      const escaped = xml
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+      
+      // Highlight tags, attributes, and values
+      return escaped
+        // XML declarations
+        .replace(/&lt;\?[\s\S]*?\?&gt;/g, '<span class="xml-declaration">$&</span>')
+        // Opening tags with attributes
+        .replace(/&lt;([^\/!\?][^>]*?)&gt;/g, function(match, p1) {
+          return '<span class="xml-tag">&lt;' + 
+            p1.replace(/([^\s=]+)=(&quot;.*?&quot;)/g, '<span class="xml-attr">$1</span>=<span class="xml-value">$2</span>') + 
+            '&gt;</span>';
+        })
+        // Closing tags
+        .replace(/&lt;\/([^>]+)&gt;/g, '<span class="xml-tag">&lt;/$1&gt;</span>')
+        // Self-closing tags
+        .replace(/&lt;([^\/!\?][^>]*?)\/&gt;/g, function(match, p1) {
+          return '<span class="xml-tag">&lt;' + 
+            p1.replace(/([^\s=]+)=(&quot;.*?&quot;)/g, '<span class="xml-attr">$1</span>=<span class="xml-value">$2</span>') + 
+            '/&gt;</span>';
+        })
+        // Comments
+        .replace(/&lt;!--[\s\S]*?--&gt;/g, '<span class="xml-comment">$&</span>');
+    } catch (error) {
+      console.error("Error in applyHighlighting:", error);
+      return xml; // Return original if highlighting fails
+    }
+  }
+  
+  // Apply line numbers to the formatted output
+  function applyLineNumbers(highlightedXml) {
+    if (!elements.xmlOutput) return;
+    
+    try {
+      if (showLineNumbers) {
+        const lines = highlightedXml.split('\n');
+        let numberedXml = '<table class="line-numbers-table"><tbody>';
+        
+        for (let i = 0; i < lines.length; i++) {
+          numberedXml += `
+            <tr>
+              <td class="line-number">${i + 1}</td>
+              <td class="line-content">${lines[i] || ' '}</td>
+            </tr>
+          `;
+        }
+        
+        numberedXml += '</tbody></table>';
+        elements.xmlOutput.innerHTML = numberedXml;
+      } else {
+        // If line numbers are disabled, just use the highlighted XML
+        elements.xmlOutput.innerHTML = highlightedXml;
+      }
+    } catch (error) {
+      console.error("Error in applyLineNumbers:", error);
+      // Just set the content without line numbers if there's an error
+      elements.xmlOutput.innerHTML = highlightedXml;
+    }
+  }
+  
+  // Update status message
+  function updateStatus(message, isValid) {
+    if (!elements.validationResults) return;
+    
+    elements.validationResults.innerHTML = '';
+    if (!isValid && message === 'Invalid XML') {
+      elements.validationResults.innerHTML = '<div class="validation-error">✗ XML is not well-formed. Please check for errors.</div>';
+    } else if (isValid) {
+      elements.validationResults.innerHTML = '<div class="validation-success">✓ XML is well-formed.</div>';
+    }
+  }
+  
+  // Analyze XML elements and show tree structure
+  function analyzeXmlElements(xmlText) {
+    if (!xmlText || !elements.elementsListContainer || !elements.treeDiagramContainer) return;
+    
+    try {
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+      
+      // Check if parsing was successful
+      if (xmlDoc.getElementsByTagName('parsererror').length) {
         return;
       }
       
-      // Get user formatting preferences
-      const mode = modeSelect.value;
-      const indent = " ".repeat(parseInt(indentSelect.value, 10));
-      const newlineElements = newlineElementsCheckbox.checked;
-      const preserveComments = preserveCommentsCheckbox.checked;
-      
-      let formattedXml = '';
-      
-      try {
-        // Parse XML to check validity
-        const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
-        
-        // Check if parsing was successful (no parsing errors)
-        const parseError = xmlDoc.getElementsByTagName('parsererror');
-        if (parseError.length > 0) {
-          // If there's a parsing error, show it in the output
-          xmlOutput.textContent = 'XML Parsing Error: ' + parseError[0].textContent;
-          validationResultsContainer.innerHTML = '<div class="validation-error">✗ Invalid XML: ' + 
-            parseError[0].textContent.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</div>';
-          return;
-        }
-        
-        // If in minify mode, remove all whitespace
-        if (mode === 'minify') {
-          formattedXml = xmlText
-            .replace(/>\s+</g, '><') // Remove whitespace between elements
-            .replace(/\s+</g, '<')   // Remove whitespace before opening tags
-            .replace(/>\s+/g, '>')   // Remove whitespace after closing tags
-            .replace(/\s+$/g, '');   // Remove trailing whitespace
+      // Count elements
+      const elementCounts = {};
+      const countElements = function(node) {
+        if (node.nodeType === 1) { // ELEMENT_NODE
+          const tagName = node.tagName;
+          elementCounts[tagName] = (elementCounts[tagName] || 0) + 1;
           
-          // Show validation success
-          validationResultsContainer.innerHTML = '<div class="validation-success">✓ Valid XML</div>';
-        } else {
-          // Otherwise, use the pretty formatter
-          formattedXml = formatXmlPretty(xmlText, {
-            indent: indent,
-            newlineElements: newlineElements,
-            preserveComments: preserveComments
-          });
-          
-          // Show validation success
-          validationResultsContainer.innerHTML = '<div class="validation-success">✓ Valid XML</div>';
-          
-          // Analyze the XML for structure
-          analyzeXml(xmlDoc);
-        }
-        
-        // Display formatted XML
-        xmlOutput.textContent = formattedXml;
-        
-        // Apply syntax highlighting
-        applyHighlighting();
-        
-        // Apply line numbers if enabled
-        if (showLineNumbers) {
-          applyLineNumbers();
-        }
-        
-        // Save to history
-        saveToHistory(xmlText, formattedXml, mode);
-        
-      } catch (e) {
-        xmlOutput.textContent = 'Error: ' + e.message;
-        validationResultsContainer.innerHTML = '<div class="validation-error">✗ Error: ' + 
-          e.message.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</div>';
-      }
-    } catch (e) {
-      console.error('Error formatting XML:', e);
-      xmlOutput.textContent = 'Error: ' + e.message;
-    }
-  }
-  
-  // Pretty formatting function
-  function formatXmlPretty(xml, options) {
-    const parser = new DOMParser();
-    const xmlDoc = parser.parseFromString(xml, 'text/xml');
-    
-    // Helper function to format a DOM node
-    function formatNode(node, level) {
-      let result = '';
-      const indent = options.indent.repeat(level);
-      
-      // Process different node types
-      switch (node.nodeType) {
-        case Node.ELEMENT_NODE:
-          // Start tag
-          result += indent + '<' + node.nodeName;
-          
-          // Add attributes
-          for (let i = 0; i < node.attributes.length; i++) {
-            const attr = node.attributes[i];
-            result += ' ' + attr.name + '="' + attr.value + '"';
-          }
-          
-          // Handle empty elements vs elements with content
-          if (node.childNodes.length === 0) {
-            result += '/>';
-          } else {
-            result += '>';
-            
-            // Check if it only has text content and no other elements
-            const hasOnlyTextContent = node.childNodes.length === 1 && 
-                                      node.childNodes[0].nodeType === Node.TEXT_NODE && 
-                                      node.childNodes[0].textContent.trim() !== '';
-            
-            if (!hasOnlyTextContent) {
-              result += '\n';
-            }
-            
-            // Process child nodes
-            let childResult = '';
-            for (let i = 0; i < node.childNodes.length; i++) {
-              const childNode = node.childNodes[i];
-              childResult += formatNode(childNode, level + 1);
-            }
-            
-            // Add closing tag
-            if (!hasOnlyTextContent) {
-              result += indent;
-            }
-            result += '</' + node.nodeName + '>';
-          }
-          
-          // Add newline if needed
-          if (options.newlineElements) {
-            result += '\n';
-          }
-          break;
-        
-        case Node.TEXT_NODE:
-          // Only add non-empty text nodes
-          const text = node.textContent.trim();
-          if (text) {
-            result += text;
-          }
-          break;
-        
-        case Node.CDATA_SECTION_NODE:
-          result += indent + '<![CDATA[' + node.textContent + ']]>\n';
-          break;
-        
-        case Node.COMMENT_NODE:
-          if (options.preserveComments) {
-            result += indent + '<!--' + node.textContent + '-->\n';
-          }
-          break;
-        
-        case Node.DOCUMENT_NODE:
-          // Process all child nodes of the document
+          // Process child nodes
           for (let i = 0; i < node.childNodes.length; i++) {
-            result += formatNode(node.childNodes[i], level);
+            countElements(node.childNodes[i]);
           }
-          break;
+        }
+      };
+      
+      // Start counting from the document element
+      if (xmlDoc.documentElement) {
+        countElements(xmlDoc.documentElement);
       }
       
-      return result;
-    }
-    
-    // Start with XML declaration if present in original
-    let result = '';
-    if (xml.startsWith('<?xml')) {
-      const xmlDeclEnd = xml.indexOf('?>') + 2;
-      result = xml.substring(0, xmlDeclEnd) + '\n';
+      // Display element counts
+      let elementsHtml = '<h3>Element Counts</h3><ul class="elements-list">';
+      for (const element in elementCounts) {
+        elementsHtml += `<li><span class="element-name">${element}</span>: <span class="element-count">${elementCounts[element]}</span></li>`;
+      }
+      elementsHtml += '</ul>';
       
-      // Remove the declaration from xmlDoc since it's not part of the DOM
-      const firstChild = xmlDoc.childNodes[0];
-      if (firstChild.nodeType === Node.PROCESSING_INSTRUCTION_NODE && firstChild.nodeName === 'xml') {
-        xmlDoc.removeChild(firstChild);
-      }
-    }
-    
-    // Format the rest of the document
-    result += formatNode(xmlDoc, 0);
-    
-    return result;
-  }
-  
-  // Apply syntax highlighting
-  function applyHighlighting() {
-    if (typeof hljs !== 'undefined') {
-      hljs.highlightElement(xmlOutput);
-      addXmlDocsTooltips();
-    }
-  }
-  
-  // Apply line numbers
-  function applyLineNumbers() {
-    const codeLines = xmlOutput.innerHTML.split('\n');
-    let numberedCode = '';
-    
-    for (let i = 0; i < codeLines.length; i++) {
-      const lineNumber = i + 1;
-      numberedCode += `<span class="line-number">${lineNumber}</span>${codeLines[i]}${i < codeLines.length - 1 ? '\n' : ''}`;
-    }
-    
-    xmlOutput.innerHTML = numberedCode;
-    
-    // Add styling for line numbers
-    const style = document.createElement('style');
-    style.id = 'line-number-style';
-    
-    // Remove existing style if any
-    const existingStyle = document.getElementById('line-number-style');
-    if (existingStyle) {
-      existingStyle.remove();
-    }
-    
-    style.textContent = `
-      .line-number {
-        display: inline-block;
-        width: 40px;
-        text-align: right;
-        padding-right: 10px;
-        margin-right: 10px;
-        color: var(--secondary);
-        border-right: 1px solid var(--border);
-        user-select: none;
-      }
-    `;
-    
-    document.head.appendChild(style);
-  }
-  
-  // Add tooltips for XML elements
-  function addXmlDocsTooltips() {
-    // Implementation would depend on adding tooltip functionality
-    // This is a simplified version
-    const tagElements = xmlOutput.querySelectorAll('.hljs-tag');
-    tagElements.forEach(tag => {
-      const tagText = tag.textContent;
-      const tagName = tagText.replace(/[<\/>]/g, '').trim();
+      elements.elementsListContainer.innerHTML = elementsHtml;
       
-      if (xmlElementDefinitions[tagName]) {
-        tag.title = xmlElementDefinitions[tagName];
-        tag.style.cursor = 'help';
+      // Generate tree diagram
+      let treeHtml = '<h3>XML Structure</h3><div class="tree-diagram">';
+      if (xmlDoc.documentElement) {
+        treeHtml += generateTree(xmlDoc.documentElement);
       }
-    });
+      treeHtml += '</div>';
+      
+      elements.treeDiagramContainer.innerHTML = treeHtml;
+    } catch (error) {
+      console.error('Error analyzing XML:', error);
+    }
   }
   
-  // Copy to clipboard
-  function copyToClipboard() {
+  // Generate tree structure for XML
+  function generateTree(node, depth = 0) {
+    if (node.nodeType !== 1) return ''; // Skip non-element nodes
+    
+    const indent = '  '.repeat(depth);
+    let tree = `${indent}<div class="tree-node">`;
+    tree += `<span class="tree-element">${node.tagName}</span>`;
+    
+    // Add attributes if any
+    if (node.attributes.length) {
+      tree += '<span class="tree-attrs">';
+      for (let i = 0; i < node.attributes.length; i++) {
+        const attr = node.attributes[i];
+        tree += `<span class="tree-attr-pair"><span class="tree-attr-name">${attr.name}</span>=<span class="tree-attr-value">"${attr.value}"</span></span>`;
+      }
+      tree += '</span>';
+    }
+    
+    // Process child element nodes
+    let hasChildElements = false;
+    for (let i = 0; i < node.childNodes.length; i++) {
+      if (node.childNodes[i].nodeType === 1) {
+        hasChildElements = true;
+        break;
+      }
+    }
+    
+    if (hasChildElements) {
+      tree += '<div class="tree-children">';
+      for (let i = 0; i < node.childNodes.length; i++) {
+        tree += generateTree(node.childNodes[i], depth + 1);
+      }
+      tree += `</div>`;
+    }
+    
+    tree += `</div>`;
+    return tree;
+  }
+  
+  // Toggle elements analysis visibility
+  function toggleElementsAnalysis() {
+    if (!elements.elementsListContainer || !elements.treeDiagramContainer) return;
+    
+    const analysisContent = document.querySelector('.analysis-content');
+    if (!analysisContent) return;
+    
+    const isHidden = analysisContent.style.display === 'none';
+    
+    analysisContent.style.display = isHidden ? 'block' : 'none';
+    
+    if (isHidden) {
+      // Generate analysis if we have valid XML
+      analyzeXmlElements(elements.xmlInput.value);
+    }
+  }
+  
+  // Clear the formatter
+  function clearFormatter() {
+    if (!elements.xmlInput || !elements.xmlOutput) return;
+    
+    elements.xmlInput.value = '';
+    elements.xmlOutput.innerHTML = '';
+    
+    // Clear status and analysis
+    updateStatus('', false);
+    if (elements.elementsListContainer) elements.elementsListContainer.innerHTML = '';
+    if (elements.treeDiagramContainer) elements.treeDiagramContainer.innerHTML = '';
+  }
+  
+  // Copy formatted XML to clipboard
+  function copyFormattedXml() {
+    if (!elements.xmlOutput) return;
+    
     try {
-      const formattedCode = xmlOutput.textContent;
-      navigator.clipboard.writeText(formattedCode)
-        .then(() => {
-          // Show success message
-          const originalText = copyButton.textContent;
-          copyButton.textContent = 'Copied!';
-          
-          setTimeout(() => {
-            copyButton.textContent = originalText;
-          }, 2000);
-        })
-        .catch(err => {
+      // Get text content without HTML
+      const outputText = elements.xmlOutput.textContent || '';
+      
+      // Use Clipboard API if available
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(outputText)
+          .then(() => {
+            showCopyMessage('Copied to clipboard!');
+          })
+          .catch(err => {
+            console.error('Failed to copy: ', err);
+            showCopyMessage('Failed to copy');
+          });
+      } else {
+        // Fallback copy method
+        const textArea = document.createElement('textarea');
+        textArea.value = outputText;
+        textArea.style.position = 'fixed';
+        textArea.style.opacity = 0;
+        document.body.appendChild(textArea);
+        textArea.select();
+        
+        try {
+          const successful = document.execCommand('copy');
+          showCopyMessage(successful ? 'Copied to clipboard!' : 'Failed to copy');
+        } catch (err) {
           console.error('Failed to copy: ', err);
-          alert('Failed to copy to clipboard. Please try again.');
-        });
-    } catch (e) {
-      console.error('Copy error:', e);
-      alert('Failed to copy to clipboard. Please try again.');
+          showCopyMessage('Failed to copy');
+        }
+        
+        document.body.removeChild(textArea);
+      }
+    } catch (error) {
+      console.error("Error copying XML:", error);
     }
   }
   
-  // Download XML
-  function downloadXml() {
+  // Show a temporary message after copying
+  function showCopyMessage(message) {
+    // Create message element if it doesn't exist
+    let messageElement = document.getElementById('copy-message');
+    
+    if (!messageElement) {
+      messageElement = document.createElement('div');
+      messageElement.id = 'copy-message';
+      messageElement.style.position = 'fixed';
+      messageElement.style.bottom = '20px';
+      messageElement.style.left = '50%';
+      messageElement.style.transform = 'translateX(-50%)';
+      messageElement.style.padding = '8px 16px';
+      messageElement.style.backgroundColor = '#333';
+      messageElement.style.color = 'white';
+      messageElement.style.borderRadius = '4px';
+      messageElement.style.zIndex = '9999';
+      messageElement.style.opacity = '0';
+      messageElement.style.transition = 'opacity 0.3s';
+      document.body.appendChild(messageElement);
+    }
+    
+    messageElement.textContent = message;
+    messageElement.style.opacity = '1';
+    
+    // Hide after 2 seconds
+    setTimeout(() => {
+      messageElement.style.opacity = '0';
+    }, 2000);
+  }
+  
+  // Download formatted XML as a file
+  function downloadFormattedXml() {
+    if (!elements.xmlOutput) return;
+    
     try {
-      const formattedCode = xmlOutput.textContent;
-      const blob = new Blob([formattedCode], { type: 'application/xml' });
-      const url = URL.createObjectURL(blob);
+      // Get text content without HTML
+      const outputText = elements.xmlOutput.textContent || '';
+      if (!outputText.trim()) return;
       
+      // Create download link
+      const blob = new Blob([outputText], { type: 'application/xml' });
+      const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
+      
       a.href = url;
-      a.download = 'formatted-xml.xml';
+      a.download = 'formatted_xml.xml';
+      a.style.display = 'none';
+      
       document.body.appendChild(a);
       a.click();
       
-      // Cleanup
+      // Clean up
       setTimeout(() => {
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
-      }, 0);
-    } catch (e) {
-      console.error('Download error:', e);
-      alert('Failed to download the file. Please try again.');
+      }, 100);
+    } catch (error) {
+      console.error("Error downloading XML:", error);
+    }
+  }
+  
+  // Setup ResizeObserver for dynamic layout adjustments
+  function setupResizeObserver() {
+    try {
+      if (window.ResizeObserver) {
+        // Use ResizeObserver for efficient resize handling
+        resizeObserver = new ResizeObserver(debounce(function(entries) {
+          if (!entries || !entries[0]) return;
+          
+          // Re-stabilize layout when container size changes
+          if (window.innerWidth > 768) {
+            const containerWidth = elements.inputOutputContainer.clientWidth;
+            const halfWidth = Math.floor(containerWidth / 2) + 'px';
+            
+            elements.inputSection.style.width = halfWidth;
+            elements.outputSection.style.width = halfWidth;
+          } else {
+            // Reset to full width on mobile
+            elements.inputSection.style.width = '100%';
+            elements.outputSection.style.width = '100%';
+          }
+        }, 100));
+        
+        if (elements.inputOutputContainer) {
+          resizeObserver.observe(elements.inputOutputContainer);
+        }
+      } else {
+        // Fallback for browsers without ResizeObserver
+        window.addEventListener('resize', debounce(function() {
+          if (window.innerWidth > 768) {
+            const containerWidth = elements.inputOutputContainer.clientWidth;
+            const halfWidth = Math.floor(containerWidth / 2) + 'px';
+            
+            elements.inputSection.style.width = halfWidth;
+            elements.outputSection.style.width = halfWidth;
+          } else {
+            elements.inputSection.style.width = '100%';
+            elements.outputSection.style.width = '100%';
+          }
+        }, 100), { passive: true });
+      }
+    } catch (error) {
+      console.error("Error setting up ResizeObserver:", error);
+    }
+  }
+  
+  // Clean up resources
+  function cleanup() {
+    try {
+      // Disconnect ResizeObserver if it was created
+      if (resizeObserver) {
+        resizeObserver.disconnect();
+      }
+      
+      // Clear any debounced functions
+      if (formatXml.cancel) formatXml.cancel();
+      
+      // Clear cache
+      formattingCache = {};
+    } catch (error) {
+      console.error("Error in cleanup:", error);
     }
   }
   
   // Save to history
-  function saveToHistory(originalXml, formattedXml, mode) {
+  function saveToHistory(originalXml, formattedXml) {
+    if (!originalXml || !formattedXml) return;
+    
     try {
       const history = JSON.parse(localStorage.getItem('xmlFormatterHistory') || '[]');
       
-      // Create new history entry
-      const newEntry = {
+      // Create a new history entry
+      const entry = {
         timestamp: Date.now(),
         original: originalXml,
         formatted: formattedXml,
-        mode: mode
+        preview: originalXml.substring(0, 50) + (originalXml.length > 50 ? '...' : '')
       };
       
       // Check if this XML is already in history
-      const existingIndex = history.findIndex(item => 
-        item.original === originalXml && item.mode === mode
-      );
+      const isDuplicate = history.some(item => 
+        item.original === originalXml || item.preview === entry.preview);
       
-      if (existingIndex !== -1) {
-        // Remove existing entry
-        history.splice(existingIndex, 1);
+      // Only add if it's not a duplicate
+      if (!isDuplicate) {
+        // Add to the beginning of the array
+        history.unshift(entry);
+        
+        // Keep only the last 10 entries
+        if (history.length > 10) {
+          history.pop();
+        }
+        
+        // Save back to localStorage
+        localStorage.setItem('xmlFormatterHistory', JSON.stringify(history));
+        
+        // Update history dropdown
+        updateHistoryDropdown();
       }
-      
-      // Add new entry at the beginning
-      history.unshift(newEntry);
-      
-      // Limit history size
-      while (history.length > MAX_HISTORY_ITEMS) {
-        history.pop();
-      }
-      
-      // Save updated history
-      localStorage.setItem('xmlFormatterHistory', JSON.stringify(history));
-      
-      // Update history dropdown
-      updateHistoryDropdown();
-    } catch (e) {
-      console.error('Error saving history:', e);
-    }
-  }
-  
-  // Load history
-  function loadHistory() {
-    try {
-      updateHistoryDropdown();
-    } catch (e) {
-      console.error('Error loading history:', e);
+    } catch (error) {
+      console.error("Error saving to history:", error);
     }
   }
   
   // Update history dropdown
   function updateHistoryDropdown() {
+    if (!elements.historySelect) return;
+    
     try {
       const history = JSON.parse(localStorage.getItem('xmlFormatterHistory') || '[]');
       
-      // Clear current options, keeping the default one
-      while (historySelect.options.length > 1) {
-        historySelect.remove(1);
+      // Clear existing options except the default
+      while (elements.historySelect.options.length > 1) {
+        elements.historySelect.remove(1);
       }
       
-      // Add history items
-      history.forEach(item => {
-        const date = new Date(item.timestamp);
-        const formattedDate = date.toLocaleString();
-        
-        // Get first line or truncate
-        let preview = item.original.split('\n')[0];
-        if (preview.length > 30) {
-          preview = preview.substring(0, 27) + '...';
-        }
-        
+      // Add history entries to dropdown
+      history.forEach(entry => {
         const option = document.createElement('option');
-        option.value = item.timestamp;
-        option.textContent = `${preview} (${formattedDate})`;
-        historySelect.appendChild(option);
+        option.value = entry.timestamp;
+        
+        // Create a formatted date string
+        const date = new Date(entry.timestamp);
+        const dateStr = date.toLocaleString();
+        
+        option.text = `${dateStr} - ${entry.preview}`;
+        elements.historySelect.appendChild(option);
       });
-    } catch (e) {
-      console.error('Error updating history dropdown:', e);
+    } catch (error) {
+      console.error("Error updating history dropdown:", error);
     }
   }
   
-  // Open template modal
-  function openTemplateModal() {
-    templateNameInput.value = '';
-    templateModal.style.display = 'block';
-  }
-  
-  // Close template modal
-  function closeTemplateModal() {
-    templateModal.style.display = 'none';
+  // Load history from localStorage
+  function loadHistory() {
+    try {
+      updateHistoryDropdown();
+    } catch (error) {
+      console.error("Error loading history:", error);
+    }
   }
   
   // Save template
   function saveTemplate() {
     try {
-      const templateName = templateNameInput.value.trim() || 'My Template';
+      // Prompt for template name
+      const templateName = prompt('Enter a name for this template:');
+      if (!templateName || !templateName.trim()) return;
       
-      const templates = JSON.parse(localStorage.getItem('xmlFormatterTemplates') || '{}');
-      
-      // Create new template with current settings
-      templates[templateName] = {
-        mode: modeSelect.value,
-        indent: indentSelect.value,
-        newlineElements: newlineElementsCheckbox.checked,
-        preserveComments: preserveCommentsCheckbox.checked,
-        createdAt: Date.now()
+      // Get current settings
+      const templateSettings = {
+        mode: elements.xmlMode ? elements.xmlMode.value : 'format',
+        indentSize: elements.indentSize ? elements.indentSize.value : '2',
+        newlineElements: elements.newlineElements ? elements.newlineElements.checked : false,
+        preserveComments: elements.preserveComments ? elements.preserveComments.checked : true
       };
       
-      // Save updated templates
+      // Save template to localStorage
+      const templates = JSON.parse(localStorage.getItem('xmlFormatterTemplates') || '{}');
+      templates[templateName] = templateSettings;
       localStorage.setItem('xmlFormatterTemplates', JSON.stringify(templates));
       
       // Update templates dropdown
       updateTemplatesDropdown();
       
-      // Close modal
-      closeTemplateModal();
-    } catch (e) {
-      console.error('Error saving template:', e);
-      alert('Failed to save template. Please try again.');
-    }
-  }
-  
-  // Load templates
-  function loadTemplates() {
-    try {
-      updateTemplatesDropdown();
-    } catch (e) {
-      console.error('Error loading templates:', e);
+      // Show confirmation
+      showCopyMessage('Template saved!');
+    } catch (error) {
+      console.error("Error saving template:", error);
     }
   }
   
   // Update templates dropdown
   function updateTemplatesDropdown() {
+    if (!elements.templateSelect) return;
+    
     try {
       const templates = JSON.parse(localStorage.getItem('xmlFormatterTemplates') || '{}');
       
-      // Clear current options, keeping the default one
-      while (templateSelect.options.length > 1) {
-        templateSelect.remove(1);
+      // Clear existing options except the default
+      while (elements.templateSelect.options.length > 1) {
+        elements.templateSelect.remove(1);
       }
       
-      // Add template items
-      Object.keys(templates).forEach(name => {
+      // Add template entries to dropdown
+      for (const templateName in templates) {
         const option = document.createElement('option');
-        option.value = name;
-        option.textContent = name;
-        templateSelect.appendChild(option);
-      });
-    } catch (e) {
-      console.error('Error updating templates dropdown:', e);
+        option.value = templateName;
+        option.text = templateName;
+        elements.templateSelect.appendChild(option);
+      }
+    } catch (error) {
+      console.error("Error updating templates dropdown:", error);
     }
   }
   
-  // Toggle analysis panel
-  function toggleAnalysisPanel(show) {
-    const content = xmlAnalysisSection.querySelector('.analysis-content');
-    content.style.display = show ? 'block' : 'none';
-    
-    const icon = toggleAnalysisButton.querySelector('.icon');
-    icon.textContent = show ? '▲' : '▼';
-  }
-  
-  // Analyze XML
-  function analyzeXml(xmlDoc) {
+  // Load templates from localStorage
+  function loadTemplates() {
     try {
-      // Extract elements
-      const elements = extractElements(xmlDoc);
-      displayElements(elements);
-      
-      // Generate tree visualization
-      generateTreeVisualization(xmlDoc);
-      
-    } catch (e) {
-      console.error('Error analyzing XML:', e);
-      clearAnalysis();
+      updateTemplatesDropdown();
+    } catch (error) {
+      console.error("Error loading templates:", error);
     }
   }
   
-  // Extract elements from XML document
-  function extractElements(xmlDoc) {
-    const elements = {};
-    
-    function traverseNode(node) {
-      if (node.nodeType === Node.ELEMENT_NODE) {
-        const nodeName = node.nodeName;
-        if (!elements[nodeName]) {
-          elements[nodeName] = {
-            count: 1,
-            attributes: {}
-          };
-        } else {
-          elements[nodeName].count++;
-        }
-        
-        // Count attributes
-        for (let i = 0; i < node.attributes.length; i++) {
-          const attr = node.attributes[i];
-          if (!elements[nodeName].attributes[attr.name]) {
-            elements[nodeName].attributes[attr.name] = 1;
-          } else {
-            elements[nodeName].attributes[attr.name]++;
-          }
-        }
-      }
-      
-      // Process child nodes
-      for (let i = 0; i < node.childNodes.length; i++) {
-        traverseNode(node.childNodes[i]);
-      }
-    }
-    
-    // Start traversal from document element
-    traverseNode(xmlDoc.documentElement);
-    
-    return elements;
-  }
+  // Set up cleanup on page unload
+  window.addEventListener('unload', cleanup);
   
-  // Display elements in the analysis panel
-  function displayElements(elements) {
-    let html = '<ul class="elements-list">';
-    
-    for (const [element, data] of Object.entries(elements)) {
-      html += `<li><strong>${element}</strong> (${data.count})`;
-      
-      // Show attributes if any
-      const attributes = Object.keys(data.attributes);
-      if (attributes.length > 0) {
-        html += '<ul class="attribute-list">';
-        attributes.forEach(attr => {
-          html += `<li>${attr} (${data.attributes[attr]})</li>`;
-        });
-        html += '</ul>';
-      }
-      
-      html += '</li>';
-    }
-    
-    html += '</ul>';
-    
-    elementsListContainer.innerHTML = html;
+  // Start the formatter once DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
   }
-  
-  // Generate tree visualization of XML structure
-  function generateTreeVisualization(xmlDoc) {
-    function createTreeNodeHTML(node, isLast = false) {
-      if (node.nodeType !== Node.ELEMENT_NODE) {
-        return '';
-      }
-      
-      let html = '<div class="tree-node"' + (isLast ? ' data-last="true"' : '') + '>';
-      
-      // Node content
-      html += '<div class="tree-node-content">';
-      html += `<span class="element-name">${node.nodeName}</span>`;
-      
-      // Add attributes if any
-      if (node.attributes.length > 0) {
-        html += ' (';
-        const attrs = [];
-        for (let i = 0; i < node.attributes.length; i++) {
-          attrs.push(`${node.attributes[i].name}="${node.attributes[i].value}"`);
-        }
-        html += attrs.join(', ');
-        html += ')';
-      }
-      
-      html += '</div>';
-      
-      // Add children
-      const childElements = Array.from(node.childNodes).filter(n => n.nodeType === Node.ELEMENT_NODE);
-      
-      if (childElements.length > 0) {
-        for (let i = 0; i < childElements.length; i++) {
-          html += createTreeNodeHTML(childElements[i], i === childElements.length - 1);
-        }
-      }
-      
-      html += '</div>';
-      return html;
-    }
-    
-    // Create tree from root element
-    const rootElement = xmlDoc.documentElement;
-    const treeHTML = createTreeNodeHTML(rootElement);
-    
-    treeDiagramContainer.innerHTML = treeHTML;
-  }
-  
-  // Clear analysis
-  function clearAnalysis() {
-    elementsListContainer.innerHTML = '';
-    treeDiagramContainer.innerHTML = '';
-    validationResultsContainer.innerHTML = '';
-  }
-  
-  // Initialize on load
-  init();
-}); 
+})(); 
