@@ -178,6 +178,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/sql.min.js"></script>
 <script src="/js/sql-formatter.js"></script>
+{{ if eq (getenv "HUGO_ENV") "development" }}
+<script src="/js/sql-formatter.test.js"></script>
+{{ end }}
 
 <style>
 .navigation-width {
