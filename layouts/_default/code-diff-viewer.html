@@ -1,0 +1,196 @@
+{{ define "main" }}
+<div class="container">
+  <article>
+    <header>
+      <h1>{{ .Title }}</h1>
+      <p>{{ .Description }}</p>
+    </header>
+    
+    <!-- Add loading class to document during page load -->
+    <script>document.documentElement.classList.add('loading');</script>
+    
+    <!-- Critical CSS for immediate rendering -->
+    <style>
+      .code-diff-viewer-container {
+        display: none;
+      }
+      .code-diff-viewer-container.loaded {
+        display: block;
+      }
+      html.loading .code-diff-viewer-container {
+        display: none !important;
+      }
+    </style>
+    
+    <!-- Code Diff Viewer Tool -->
+    <div class="code-diff-viewer-container">
+      <div class="code-diff-header">
+        <h1>Code Diff Viewer</h1>
+        <p>Compare code snippets and visualize the differences with syntax highlighting</p>
+      </div>
+      
+      <!-- Top controls panel -->
+      <div class="control-panel">
+        <div>
+          <label for="language-select">Language:</label>
+          <select id="language-select">
+            <option value="auto">Auto-detect</option>
+            <option value="javascript">JavaScript</option>
+            <option value="typescript">TypeScript</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+            <option value="csharp">C#</option>
+            <option value="cpp">C++</option>
+            <option value="php">PHP</option>
+            <option value="ruby">Ruby</option>
+            <option value="go">Go</option>
+            <option value="rust">Rust</option>
+            <option value="swift">Swift</option>
+            <option value="kotlin">Kotlin</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="xml">XML</option>
+            <option value="json">JSON</option>
+            <option value="sql">SQL</option>
+            <option value="plaintext">Plain Text</option>
+          </select>
+        </div>
+        
+        <div>
+          <label for="view-mode">View Mode:</label>
+          <select id="view-mode">
+            <option value="side-by-side">Side by Side</option>
+            <option value="unified">Unified</option>
+            <option value="inline">Inline</option>
+          </select>
+        </div>
+        
+        <div class="checkbox-control">
+          <input type="checkbox" id="ignore-whitespace" />
+          <label for="ignore-whitespace">Ignore Whitespace</label>
+        </div>
+        
+        <div>
+          <label for="context-lines">Context Lines:</label>
+          <input type="number" id="context-lines" min="0" max="20" value="3" />
+        </div>
+      </div>
+      
+      <!-- Input areas -->
+      <div class="input-container">
+        <!-- Original code column -->
+        <div class="code-column">
+          <div class="column-header">
+            <h3>Original Code</h3>
+            <button id="clear-original-button" class="secondary-button">Clear</button>
+          </div>
+          <textarea id="original-code" spellcheck="false" placeholder="Enter original code here..."></textarea>
+        </div>
+        
+        <!-- Modified code column -->
+        <div class="code-column">
+          <div class="column-header">
+            <h3>Modified Code</h3>
+            <button id="clear-modified-button" class="secondary-button">Clear</button>
+          </div>
+          <textarea id="modified-code" spellcheck="false" placeholder="Enter modified code here..."></textarea>
+        </div>
+      </div>
+      
+      <!-- Controls container -->
+      <div class="controls-container">
+        <div class="left-controls">
+          <button id="compare-button" class="primary-button">Compare</button>
+          <button id="swap-button" class="secondary-button">Swap</button>
+          <button id="clear-all-button" class="secondary-button">Clear All</button>
+        </div>
+        <div class="right-controls">
+          <button id="toggle-line-numbers" class="secondary-button">Toggle Line Numbers</button>
+        </div>
+      </div>
+      
+      <!-- Diff result area -->
+      <div class="diff-result-container">
+        <div class="diff-result-header">
+          <div>
+            <h3>Diff Result</h3>
+            <div id="diff-stats"></div>
+          </div>
+          <div class="diff-actions">
+            <button id="copy-diff-button" class="secondary-button">Copy</button>
+            <button id="download-diff-button" class="secondary-button">Download</button>
+          </div>
+        </div>
+        
+        <div id="diff-output">
+          <div class="empty-state">
+            <p>Enter code in both panels and click "Compare" to see the differences</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Keyboard shortcuts -->
+      <div class="keyboard-shortcuts">
+        <h3>Keyboard Shortcuts</h3>
+        <ul class="shortcuts-list">
+          <li class="shortcut-item">
+            <span class="shortcut-key">Ctrl+Enter</span>
+            <span>Compare</span>
+          </li>
+          <li class="shortcut-item">
+            <span class="shortcut-key">Ctrl+Shift+S</span>
+            <span>Swap</span>
+          </li>
+          <li class="shortcut-item">
+            <span class="shortcut-key">Ctrl+Shift+C</span>
+            <span>Copy Diff</span>
+          </li>
+          <li class="shortcut-item">
+            <span class="shortcut-key">Ctrl+Shift+X</span>
+            <span>Clear All</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Load CSS -->
+    <link rel="stylesheet" href="/css/code-diff-viewer.css">
+    
+    <!-- Load vendor script which will load all dependencies -->
+    <script src="/js/code-diff-vendor.js"></script>
+    
+    <!-- Load the main script with event listener to wait for dependencies -->
+    <script>
+      document.addEventListener('code-diff-libraries-loaded', function() {
+        // Load the main script after dependencies are ready
+        const script = document.createElement('script');
+        script.src = '/js/code-diff-viewer.js';
+        document.head.appendChild(script);
+      });
+      
+      // Fallback if libraries don't load within 5 seconds
+      setTimeout(function() {
+        if (!window.Diff || !window.hljs) {
+          console.warn('Dependencies did not load in time, loading main script anyway');
+          const script = document.createElement('script');
+          script.src = '/js/code-diff-viewer.js';
+          document.head.appendChild(script);
+        }
+      }, 5000);
+    </script>
+    
+    {{ if eq (getenv "HUGO_ENV") "development" }}
+    <!-- Load test script in development mode -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          const testScript = document.createElement('script');
+          testScript.src = '/js/code-diff-viewer.test.js';
+          document.body.appendChild(testScript);
+        }, 1000); // Delay loading test script to ensure main script is loaded
+      });
+    </script>
+    {{ end }}
+  </article>
+</div>
+{{ end }} 
