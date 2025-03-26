@@ -1,0 +1,512 @@
+{{ define "main" }}
+<div class="post-content navigation-width">
+  <div class="devtools-content-wrapper">
+    <!-- Left side vertical ad -->
+    <div class="side-ad-container left-ad">
+      <div class="ad-container sidebar">
+        <div class="ad-placeholder">Ad Space<br>180x600</div>
+        {{ partial "sidebar-ad.html" . }}
+      </div>
+    </div>
+    
+    <div class="full-width-content">
+      <header class="post-header compact-header">
+        <h2 class="tool-title">{{ .Title }}</h2>
+        <!-- Display the description from front matter if available -->
+        {{ with .Description }}
+        <div class="tool-description-header">
+          {{ . }}
+        </div>
+        {{ end }}
+      </header>
+
+      <!-- SQL Formatter Tool Content -->
+      <div class="tool-content">
+        <div class="sql-formatter-container">
+          <div class="dialect-container">
+            <label for="sql-dialect">SQL Dialect:</label>
+            <select id="sql-dialect" aria-label="Select SQL dialect">
+              <option value="standard">Standard SQL</option>
+              <option value="mysql">MySQL</option>
+              <option value="postgresql">PostgreSQL</option>
+              <option value="tsql">T-SQL (SQL Server)</option>
+              <option value="oracle">Oracle</option>
+            </select>
+          </div>
+          
+          <div class="input-output-container">
+            <div class="input-section">
+              <div class="section-header">
+                <h3 id="input-section-header">SQL Input</h3>
+              </div>
+              <div id="sql-input-container">
+                <label for="sql-input" class="sr-only">Input SQL query</label>
+                <textarea id="sql-input" placeholder="Paste your SQL query here..." aria-labelledby="input-section-header"></textarea>
+              </div>
+            </div>
+            <div class="output-section">
+              <div class="section-header">
+                <h3 id="output-section-header">Formatted SQL</h3>
+              </div>
+              <div id="sql-output-container">
+                <pre id="sql-output" aria-labelledby="output-section-header"></pre>
+              </div>
+            </div>
+          </div>
+          
+          <div class="controls-container">
+            <div class="button-container">
+              <button id="format-button" class="primary-button" aria-label="Format SQL query">Format SQL</button>
+              <button id="clear-button" class="secondary-button" aria-label="Clear input and output areas">Clear</button>
+            </div>
+            <div class="formatting-options">
+              <div class="indent-container">
+                <label for="indent-size">Indent Size:</label>
+                <select id="indent-size" aria-label="Select indent size">
+                  <option value="2">2 spaces</option>
+                  <option value="4" selected>4 spaces</option>
+                  <option value="8">8 spaces</option>
+                </select>
+              </div>
+              <div class="uppercase-container">
+                <label>
+                  <input type="checkbox" id="uppercase-keywords" checked>
+                  Uppercase Keywords
+                </label>
+              </div>
+            </div>
+            <div class="status-container">
+              <button id="copy-button" class="secondary-button" aria-label="Copy formatted SQL to clipboard">Copy</button>
+            </div>
+          </div>
+          
+          <!-- Tool description in the tool content section -->
+          <div class="tool-description compact-description">
+            {{ .Content }}
+          </div>
+        </div>
+      </div>
+      
+      <!-- Bottom horizontal ad -->
+      <div class="ad-container inline bottom-ad">
+        <div class="ad-placeholder">Ad Space<br>728x90</div>
+      </div>
+    </div>
+    
+    <!-- Right side vertical ad -->
+    <div class="side-ad-container right-ad">
+      <div class="ad-container sidebar">
+        <div class="ad-placeholder">Ad Space<br>180x600</div>
+        {{ partial "sidebar-ad.html" . }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/sql-formatter.js"></script>
+
+<style>
+.navigation-width {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 25px !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
+.full-width, .main, .post-content {
+  max-width: none !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.full-width-content {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.tool-title {
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: normal;
+  width: 100% !important;
+}
+
+.tool-description-header {
+  margin-bottom: 1.5rem;
+  text-align: left;
+  width: 100% !important;
+  line-height: 1.5;
+}
+
+.compact-header {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+.compact-header h1, .compact-header h2 {
+  text-align: left;
+  margin-top: 0;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.tool-content {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.sql-formatter-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.dialect-container {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dialect-container label {
+  font-weight: 500;
+}
+
+.dialect-container select {
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.dark .dialect-container select {
+  background-color: #2a2a2a;
+  color: #d4d4d4;
+  border-color: #444;
+}
+
+.input-output-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .input-output-container {
+    flex-direction: row;
+  }
+  .input-section, .output-section {
+    width: calc(50% - 2px);
+  }
+}
+
+.input-section, .output-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.section-header h3 {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+#sql-input, #sql-output {
+  height: 450px;
+  padding: 4px;
+  font-family: monospace;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+#sql-input {
+  resize: vertical;
+}
+
+#sql-output {
+  background-color: #f5f5f5;
+  margin-top: 0;
+  white-space: pre-wrap;
+  overflow: auto;
+}
+
+.dark #sql-input {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  border-color: #444;
+}
+
+.dark #sql-output {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  border-color: #444;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.formatting-options {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.indent-container, .uppercase-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.indent-container select {
+  padding: 4px 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.dark .indent-container select {
+  background-color: #2a2a2a;
+  color: #d4d4d4;
+  border-color: #444;
+}
+
+/* Screen reader only class for accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+
+.status-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.primary-button, .secondary-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.primary-button {
+  background-color: #2563eb;
+  color: white;
+}
+
+.primary-button:hover {
+  background-color: #1d4ed8;
+}
+
+.dark .primary-button {
+  background-color: #3b82f6;
+}
+
+.dark .primary-button:hover {
+  background-color: #2563eb;
+}
+
+.secondary-button {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.secondary-button:hover {
+  background-color: #d1d5db;
+}
+
+.dark .secondary-button {
+  background-color: #4b5563;
+  color: #e5e7eb;
+}
+
+.dark .secondary-button:hover {
+  background-color: #6b7280;
+}
+
+.compact-description {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.compact-description p {
+  margin: 0.5rem 0;
+}
+
+.compact-description h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.compact-description ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+.ad-container {
+  padding: 0;
+}
+
+/* Bottom ad styling */
+.bottom-ad {
+  margin-top: 2rem;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.dark .bottom-ad {
+  background-color: #2a2a2a;
+}
+
+.bottom-ad .ad-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Wrapper for content and side ads */
+.devtools-content-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Main content takes most of the space */
+.devtools-content-wrapper .full-width-content {
+  flex: 1;
+  min-width: 0; /* Prevent flex item from overflowing */
+}
+
+/* Side ad container */
+.side-ad-container {
+  width: 180px;
+  height: 600px;
+  display: none; /* Hidden on mobile */
+  position: sticky;
+  top: 2rem;
+  flex-shrink: 0;
+}
+
+/* Side ad container styling */
+.side-ad-container .ad-container {
+  width: 180px;
+  height: 600px;
+  position: relative;
+}
+
+/* Ad placeholder styling */
+.ad-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Show side ads on desktop */
+@media (min-width: 1400px) {
+  .side-ad-container {
+    display: block;
+  }
+}
+
+/* Only show left ad on medium-sized screens */
+@media (min-width: 1100px) and (max-width: 1399px) {
+  .left-ad {
+    display: block;
+  }
+  .right-ad {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  #sql-input, #sql-output {
+    height: 550px;
+  }
+}
+
+/* This ensures the layout matches across all tool pages */
+body.single main, body.tool-page main {
+  width: 100% !important;
+  margin: 0 auto !important;
+  overflow-x: hidden !important;
+}
+
+/* Mobile adaptations */
+@media (max-width: 767px) {
+  .controls-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .formatting-options {
+    margin: 0.5rem 0;
+    flex-wrap: wrap;
+  }
+}
+</style>
+{{ end }} 
