@@ -23,15 +23,34 @@
       <!-- SQL Formatter Tool Content -->
       <div class="tool-content">
         <div class="sql-formatter-container">
-          <div class="dialect-container">
-            <label for="sql-dialect">SQL Dialect:</label>
-            <select id="sql-dialect" aria-label="Select SQL dialect">
-              <option value="standard">Standard SQL</option>
-              <option value="mysql">MySQL</option>
-              <option value="postgresql">PostgreSQL</option>
-              <option value="tsql">T-SQL (SQL Server)</option>
-              <option value="oracle">Oracle</option>
-            </select>
+          <div class="top-controls">
+            <div class="dialect-container">
+              <label for="sql-dialect">SQL Dialect:</label>
+              <select id="sql-dialect" aria-label="Select SQL dialect">
+                <option value="standard">Standard SQL</option>
+                <option value="mysql">MySQL</option>
+                <option value="postgresql">PostgreSQL</option>
+                <option value="tsql">T-SQL (SQL Server)</option>
+                <option value="oracle">Oracle</option>
+              </select>
+            </div>
+            
+            <div class="history-container">
+              <label for="history-select">History:</label>
+              <select id="history-select" aria-label="SQL history">
+                <option value="">-- Recent Queries --</option>
+              </select>
+            </div>
+            
+            <div class="template-container">
+              <label for="template-select">Templates:</label>
+              <select id="template-select" aria-label="Formatting templates">
+                <option value="">-- Format Templates --</option>
+              </select>
+              <button id="save-template-button" class="icon-button" title="Save current settings as template">
+                <span class="icon">💾</span>
+              </button>
+            </div>
           </div>
           
           <div class="input-output-container">
@@ -47,9 +66,39 @@
             <div class="output-section">
               <div class="section-header">
                 <h3 id="output-section-header">Formatted SQL</h3>
+                <div class="output-options">
+                  <button id="toggle-line-numbers" class="icon-button" title="Toggle line numbers">
+                    <span class="icon">#</span>
+                  </button>
+                </div>
               </div>
               <div id="sql-output-container">
                 <pre id="sql-output" aria-labelledby="output-section-header"></pre>
+              </div>
+            </div>
+          </div>
+          
+          <div class="sql-analysis" id="sql-analysis">
+            <div class="analysis-header">
+              <h3>Query Analysis</h3>
+              <button id="toggle-analysis" class="icon-button" title="Toggle analysis panel">
+                <span class="icon">▼</span>
+              </button>
+            </div>
+            <div class="analysis-content">
+              <div class="analysis-panel">
+                <div id="tables-panel" class="analysis-section">
+                  <h4>Tables Referenced</h4>
+                  <div id="tables-list"></div>
+                </div>
+                <div id="schema-viz" class="analysis-section">
+                  <h4>Schema Visualization</h4>
+                  <div id="schema-diagram"></div>
+                </div>
+                <div id="query-info" class="analysis-section">
+                  <h4>Query Information</h4>
+                  <div id="query-stats"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -74,9 +123,16 @@
                   Uppercase Keywords
                 </label>
               </div>
+              <div class="comments-container">
+                <label>
+                  <input type="checkbox" id="preserve-comments" checked>
+                  Preserve Comments
+                </label>
+              </div>
             </div>
             <div class="status-container">
               <button id="copy-button" class="secondary-button" aria-label="Copy formatted SQL to clipboard">Copy</button>
+              <button id="download-button" class="secondary-button" aria-label="Download formatted SQL as file">Download</button>
             </div>
           </div>
           
@@ -103,6 +159,24 @@
   </div>
 </div>
 
+<!-- Template save modal -->
+<div id="template-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h3>Save Formatting Template</h3>
+    <div class="form-group">
+      <label for="template-name">Template Name:</label>
+      <input type="text" id="template-name" placeholder="My Template">
+    </div>
+    <div class="form-actions">
+      <button id="save-template-confirm" class="primary-button">Save</button>
+      <button id="cancel-template" class="secondary-button">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/sql.min.js"></script>
 <script src="/js/sql-formatter.js"></script>
 
 <style>
@@ -172,25 +246,33 @@
   margin: 0;
 }
 
-.dialect-container {
+.top-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
   margin-bottom: 1rem;
+  align-items: center;
+}
+
+.dialect-container, .history-container, .template-container {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.dialect-container label {
+.dialect-container label, .history-container label, .template-container label {
   font-weight: 500;
 }
 
-.dialect-container select {
+.dialect-container select, .history-container select, .template-container select {
   padding: 6px 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #fff;
+  min-width: 150px;
 }
 
-.dark .dialect-container select {
+.dark .dialect-container select, .dark .history-container select, .dark .template-container select {
   background-color: #2a2a2a;
   color: #d4d4d4;
   border-color: #444;
@@ -231,8 +313,13 @@
   font-size: 0.9rem;
 }
 
+.output-options {
+  display: flex;
+  gap: 0.25rem;
+}
+
 #sql-input, #sql-output {
-  height: 450px;
+  height: 350px;
   padding: 4px;
   font-family: monospace;
   font-size: 13px;
@@ -279,9 +366,10 @@
   display: flex;
   gap: 1rem;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-.indent-container, .uppercase-container {
+.indent-container, .uppercase-container, .comments-container {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -298,6 +386,192 @@
   background-color: #2a2a2a;
   color: #d4d4d4;
   border-color: #444;
+}
+
+.sql-analysis {
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.dark .sql-analysis {
+  border-color: #444;
+}
+
+.analysis-header {
+  padding: 0.5rem;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dark .analysis-header {
+  background-color: #2a2a2a;
+}
+
+.analysis-header h3 {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.analysis-content {
+  padding: 0.5rem;
+}
+
+.analysis-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.analysis-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.analysis-section h4 {
+  margin-top: 0;
+  font-size: 0.85rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.25rem;
+}
+
+.dark .analysis-section h4 {
+  border-color: #444;
+}
+
+#schema-diagram {
+  height: 150px;
+  border: 1px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark #schema-diagram {
+  border-color: #555;
+}
+
+/* Icon button styling */
+.icon-button {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  transition: all 0.2s;
+  padding: 0;
+}
+
+.dark .icon-button {
+  border-color: #555;
+  color: #d4d4d4;
+}
+
+.icon-button:hover {
+  background-color: #f0f0f0;
+}
+
+.dark .icon-button:hover {
+  background-color: #3a3a3a;
+}
+
+/* Line numbers styling */
+.line-numbers {
+  counter-reset: line;
+}
+
+.line-numbers .line {
+  counter-increment: line;
+  position: relative;
+  display: block;
+}
+
+.line-numbers .line::before {
+  content: counter(line);
+  display: inline-block;
+  width: 3em;
+  padding-right: 0.5em;
+  margin-right: 0.5em;
+  text-align: right;
+  color: #888;
+  border-right: 1px solid #ddd;
+}
+
+.dark .line-numbers .line::before {
+  color: #666;
+  border-color: #444;
+}
+
+/* Modal styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 4px;
+  width: 350px;
+  max-width: 90%;
+}
+
+.dark .modal-content {
+  background-color: #2a2a2a;
+  color: #d4d4d4;
+}
+
+.close-modal {
+  float: right;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.close-modal:hover {
+  color: #888;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.dark .form-group input {
+  background-color: #333;
+  color: #d4d4d4;
+  border-color: #555;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
 }
 
 /* Screen reader only class for accessibility */
@@ -485,7 +759,7 @@
 
 @media (min-width: 1280px) {
   #sql-input, #sql-output {
-    height: 550px;
+    height: 450px;
   }
 }
 
@@ -498,7 +772,7 @@ body.single main, body.tool-page main {
 
 /* Mobile adaptations */
 @media (max-width: 767px) {
-  .controls-container {
+  .controls-container, .top-controls {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -507,6 +781,67 @@ body.single main, body.tool-page main {
     margin: 0.5rem 0;
     flex-wrap: wrap;
   }
+  
+  .analysis-panel {
+    flex-direction: column;
+  }
+}
+
+/* Syntax highlighting styles */
+.hljs-keyword {
+  color: #0000ff;
+  font-weight: bold;
+}
+
+.hljs-string {
+  color: #a31515;
+}
+
+.hljs-number {
+  color: #098658;
+}
+
+.hljs-comment {
+  color: #008000;
+  font-style: italic;
+}
+
+.dark .hljs-keyword {
+  color: #569cd6;
+}
+
+.dark .hljs-string {
+  color: #ce9178;
+}
+
+.dark .hljs-number {
+  color: #b5cea8;
+}
+
+.dark .hljs-comment {
+  color: #6a9955;
+}
+
+/* SQL tooltips */
+.sql-keyword {
+  position: relative;
+  text-decoration: underline dotted;
+  cursor: help;
+}
+
+.sql-keyword:hover::after {
+  content: attr(data-docs);
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background-color: #333;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 10;
+  width: 200px;
+  pointer-events: none;
 }
 </style>
 {{ end }} 
